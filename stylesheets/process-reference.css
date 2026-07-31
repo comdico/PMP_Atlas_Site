@@ -1,0 +1,1593 @@
+/* Shared Process Reference framework. */
+:root {
+  /*
+   * Atlas lifecycle phase tokens.
+   * Use these tokens only for lifecycle orientation: Initiating, Planning,
+   * Executing, Monitoring and Controlling, and Closing.
+   */
+  --atlas-process-phase-initiating: #465f6c;
+  --atlas-process-phase-initiating-bg: #edf2f4;
+  --atlas-process-phase-planning: #1d5877;
+  --atlas-process-phase-planning-bg: #e7f1f6;
+  --atlas-process-phase-executing: #2f674b;
+  --atlas-process-phase-executing-bg: #e9f3ed;
+  --atlas-process-phase-monitoring: #604d75;
+  --atlas-process-phase-monitoring-bg: #f0edf4;
+  --atlas-process-phase-closing: #705b34;
+  --atlas-process-phase-closing-bg: #f5f0e6;
+  --atlas-process-ink: #172a3a;
+  --atlas-process-muted: #526572;
+  --atlas-process-line: #cbd5dc;
+  --atlas-process-paper: #ffffff;
+  --atlas-process-panel: #f6f8f9;
+  --atlas-process-input: #315f72;
+  --atlas-process-input-bg: #edf5f7;
+  --atlas-process-current: var(--atlas-process-phase-planning);
+  --atlas-process-current-bg: var(--atlas-process-phase-planning-bg);
+  --atlas-process-active-subject-bg: #fbf0e1;
+  --atlas-process-active-subject-edge: #dcc5a3;
+  --atlas-process-selected-area-bg: #eef5f8;
+  --atlas-process-selected-area-border: #5f879a;
+  --atlas-process-selected-area-hover: #e1edf2;
+  --atlas-process-current-process-bg: #dceef7;
+  --atlas-process-current-process-border: #155675;
+  --atlas-process-created: var(--atlas-process-phase-planning);
+  --atlas-process-created-bg: var(--atlas-process-phase-planning-bg);
+  /*
+   * Updated-artifact status is intentionally achromatic. It remains distinct
+   * from every lifecycle phase in color and in grayscale reproduction.
+   */
+  --atlas-process-updated: #343b40;
+  --atlas-process-updated-bg: #f0f1f2;
+  --atlas-process-downstream: var(--atlas-process-phase-monitoring);
+  --atlas-process-downstream-bg: var(--atlas-process-phase-monitoring-bg);
+  --atlas-process-danger: #87443c;
+  --atlas-process-danger-bg: #fbf2f0;
+  --atlas-process-exam: #496575;
+  --atlas-process-exam-bg: #f1f5f6;
+  --atlas-process-exam-edge: #b8c9d1;
+  --atlas-process-radius: 0.3rem;
+}
+
+.md-typeset .atlas-download-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-weight: 650;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.md-typeset .atlas-download-link::before {
+  content: "↓";
+  font-size: 1.05em;
+  line-height: 1;
+}
+
+/* Lifecycle Guide: orientation and relationships, distinct from process mechanics. */
+.md-typeset:has(.atlas-lifecycle-marker) {
+  color: var(--atlas-process-ink);
+  font-size: 0.98rem;
+  line-height: 1.67;
+  max-width: 78rem;
+  min-width: 0;
+}
+
+.md-typeset:has(.atlas-lifecycle-marker) > p,
+.md-typeset:has(.atlas-lifecycle-marker) > ol,
+.md-typeset:has(.atlas-lifecycle-marker) > ul {
+  max-width: 52rem;
+}
+
+.atlas-lifecycle-hero {
+  border-bottom: 3px solid #315f72;
+  margin-bottom: 1.4rem;
+  padding: 0.7rem 0 1.45rem;
+  min-width: 0;
+}
+
+.atlas-lifecycle-eyebrow,
+.atlas-lifecycle-hero__eyebrow {
+  color: var(--atlas-process-muted);
+  font-size: 0.68rem;
+  font-weight: 750;
+  letter-spacing: 0.09em;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.atlas-lifecycle-hero h1 {
+  color: var(--atlas-process-ink);
+  font-size: clamp(2.25rem, 5vw, 4rem);
+  letter-spacing: -0.045em;
+  line-height: 1.04;
+  margin: 0.35rem 0 0.65rem;
+  max-width: 18ch;
+  overflow-wrap: anywhere;
+}
+
+.atlas-lifecycle-hero__summary {
+  color: #314855;
+  font-size: 1.14rem;
+  margin: 0;
+  max-width: 58rem;
+}
+
+.atlas-lifecycle-orientation {
+  background: #f7f9fa;
+  border-block: 1px solid var(--atlas-process-line);
+  margin: 1.5rem 0 2rem;
+  padding: 1.15rem 1.25rem 1.35rem;
+  box-sizing: border-box;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.atlas-lifecycle-orientation h2 {
+  font-size: 1.35rem;
+  margin: 0.15rem 0 0.2rem;
+}
+
+.atlas-lifecycle-orientation__note {
+  color: var(--atlas-process-muted);
+  font-size: 0.76rem;
+  margin: 0 0 0.85rem !important;
+  max-width: 50rem;
+}
+
+.atlas-lifecycle-phases {
+  display: grid !important;
+  gap: 0.55rem;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  list-style: none;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.atlas-lifecycle-phase {
+  background: #fff;
+  border: 1px solid var(--atlas-process-line);
+  border-top: 0.22rem solid #8a969d;
+  margin: 0 !important;
+  min-width: 0;
+  padding: 0.55rem 0.6rem;
+}
+
+.atlas-lifecycle-phase span,
+.atlas-lifecycle-phase small {
+  display: block;
+}
+
+.atlas-lifecycle-phase span {
+  font-size: 0.73rem;
+  font-weight: 720;
+  line-height: 1.25;
+}
+
+.atlas-lifecycle-phase small {
+  color: var(--atlas-process-muted);
+  font-size: 0.61rem;
+  margin-top: 0.22rem;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.atlas-lifecycle-phase--active {
+  border-width: 2px;
+  border-top-width: 0.3rem;
+}
+
+.atlas-lifecycle-phase--initiating.atlas-lifecycle-phase--active { background: var(--atlas-process-phase-initiating-bg); border-color: var(--atlas-process-phase-initiating); }
+.atlas-lifecycle-phase--planning.atlas-lifecycle-phase--active { background: var(--atlas-process-phase-planning-bg); border-color: var(--atlas-process-phase-planning); }
+.atlas-lifecycle-phase--executing.atlas-lifecycle-phase--active { background: var(--atlas-process-phase-executing-bg); border-color: var(--atlas-process-phase-executing); }
+.atlas-lifecycle-phase--monitoring.atlas-lifecycle-phase--active { background: var(--atlas-process-phase-monitoring-bg); border-color: var(--atlas-process-phase-monitoring); }
+.atlas-lifecycle-phase--closing.atlas-lifecycle-phase--active { background: var(--atlas-process-phase-closing-bg); border-color: var(--atlas-process-phase-closing); }
+
+.atlas-lifecycle-sequence {
+  border-left: 3px solid #638391;
+  margin: 1rem 0 1.5rem !important;
+  max-width: 58rem !important;
+  padding-left: 1.8rem !important;
+}
+
+.atlas-lifecycle-sequence li {
+  margin-bottom: 0.55rem;
+  padding-left: 0.25rem;
+}
+
+.atlas-lifecycle-handoff-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 1rem 0 1.5rem;
+}
+
+.atlas-lifecycle-handoff-grid > section {
+  background: #fff;
+  border: 1px solid var(--atlas-process-line);
+  padding: 0.9rem 1rem;
+}
+
+.atlas-lifecycle-handoff-grid h3 { font-size: 0.92rem; margin: 0 0 0.35rem; }
+.atlas-lifecycle-handoff-grid p { font-size: 0.82rem; margin: 0; }
+
+.atlas-lifecycle-connections {
+  background: var(--atlas-process-panel);
+  border: 1px solid var(--atlas-process-line);
+  margin: 3rem 0 1.5rem;
+  padding: 0 1.1rem 1rem;
+}
+
+.atlas-lifecycle-connections h2 { margin-top: 1rem; }
+.atlas-lifecycle-connections h3 { font-size: 0.9rem; margin-top: 1.1rem; }
+.atlas-lifecycle-connections ul { columns: 2; font-size: 0.76rem; max-width: none !important; }
+.atlas-lifecycle-connections li,
+.atlas-lifecycle-connections a { overflow-wrap: anywhere; }
+.atlas-lifecycle-deferred { color: var(--atlas-process-muted); display: block; font-size: 0.68rem; }
+.atlas-lifecycle-provenance dl { display: grid; gap: 0.3rem 0.8rem; grid-template-columns: 9rem minmax(0, 1fr); }
+.atlas-lifecycle-provenance dt { font-weight: 700; }
+.atlas-lifecycle-provenance dd { margin: 0; min-width: 0; }
+.atlas-lifecycle-provenance dd ul { margin: 0; padding-left: 1rem; }
+.atlas-lifecycle-provenance code { overflow-wrap: anywhere; white-space: normal; word-break: break-word; }
+
+.atlas-lifecycle-provenance {
+  border-top: 1px solid var(--atlas-process-line);
+  color: var(--atlas-process-muted);
+  font-size: 0.72rem;
+  margin: 1.5rem 0;
+  padding-top: 0.7rem;
+}
+
+.atlas-lifecycle-provenance summary { cursor: pointer; font-weight: 700; }
+
+@media screen and (max-width: 60rem) {
+  .atlas-lifecycle-phases { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .atlas-lifecycle-handoff-grid { grid-template-columns: 1fr; }
+}
+
+@media screen and (max-width: 36rem) {
+  .atlas-lifecycle-phases { grid-template-columns: 1fr; }
+  .atlas-lifecycle-phase { display: block; }
+  .atlas-lifecycle-phase small { margin: 0.2rem 0 0; text-align: left; }
+  .atlas-lifecycle-connections ul { columns: 1; }
+  .atlas-lifecycle-hero h1 { font-size: clamp(2rem, 11vw, 2.65rem); }
+  .atlas-lifecycle-provenance dl { display: block; }
+  .atlas-lifecycle-provenance dd { margin: 0 0 0.55rem; }
+}
+
+.md-typeset:has(.atlas-process-reference-marker) {
+  color: var(--atlas-process-ink);
+  font-size: 0.98rem;
+  line-height: 1.67;
+  max-width: 78rem;
+}
+
+.md-typeset:has(.atlas-process-reference-marker) > p,
+.md-typeset:has(.atlas-process-reference-marker) > ol {
+  max-width: 50rem;
+}
+
+.md-typeset:has(.atlas-process-reference-marker) > h2 {
+  border-top: 1px solid var(--atlas-process-line);
+  color: var(--atlas-process-ink);
+  font-size: 1.55rem;
+  letter-spacing: -0.015em;
+  margin-top: 3.6rem;
+  padding-top: 1.5rem;
+}
+
+.md-typeset:has(.atlas-process-reference-marker) > h3 {
+  color: var(--atlas-process-ink);
+  font-size: 1.08rem;
+  margin-top: 2rem;
+}
+
+.md-typeset:has(.atlas-process-reference-marker) a {
+  color: #1f5d79;
+  text-decoration-thickness: 0.06em;
+  text-underline-offset: 0.14em;
+}
+
+.atlas-process-hero {
+  border-bottom: 3px solid var(--atlas-process-current);
+  margin-bottom: 1.5rem;
+  padding: 0.6rem 0 1.6rem;
+  position: relative;
+}
+
+.atlas-process-hero__eyebrow,
+.atlas-process-section-label,
+.atlas-process-flow__kind,
+.atlas-process-output-panel__label,
+.atlas-process-callout__label,
+.atlas-process-artifact-card > span {
+  color: var(--atlas-process-muted);
+  font-size: 0.68rem;
+  font-weight: 750;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.atlas-process-hero h1 {
+  color: var(--atlas-process-ink);
+  font-size: clamp(2.3rem, 5vw, 4.1rem);
+  font-weight: 720;
+  letter-spacing: -0.045em;
+  line-height: 1.02;
+  margin: 0.35rem 0 0.7rem;
+  max-width: 15ch;
+}
+
+.atlas-process-hero__summary {
+  color: #314855;
+  font-size: 1.16rem;
+  line-height: 1.55;
+  margin: 0 0 1.25rem;
+  max-width: 58rem;
+}
+
+.atlas-process-classification {
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+}
+
+.atlas-process-classification p {
+  border-left: 2px solid var(--atlas-process-line);
+  margin: 0;
+  padding-left: 0.65rem;
+}
+
+.atlas-process-classification span {
+  color: var(--atlas-process-muted);
+  display: block;
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.atlas-process-classification strong {
+  color: var(--atlas-process-ink);
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 650;
+  margin: 0.08rem 0 0;
+}
+
+.atlas-process-draft {
+  background: var(--atlas-process-danger-bg);
+  border: 1px solid #d9b8b3;
+  color: var(--atlas-process-danger);
+  font-size: 0.68rem;
+  font-weight: 750;
+  letter-spacing: 0.065em;
+  margin: 1.25rem 0 0;
+  padding: 0.34rem 0.55rem;
+  text-transform: uppercase;
+  width: fit-content;
+}
+
+.atlas-process-orientation {
+  background: linear-gradient(180deg, #f7f9fa 0%, #fbfcfc 100%);
+  border-block: 1px solid var(--atlas-process-line);
+  box-sizing: border-box;
+  margin: 1.4rem 0 2rem;
+  max-width: 100%;
+  padding: 1.3rem 1.35rem 1.5rem;
+}
+
+.atlas-process-orientation__header {
+  align-items: baseline;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.atlas-process-orientation h2 {
+  color: var(--atlas-process-ink);
+  font-size: 1.48rem;
+  margin: 0.18rem 0 0;
+}
+
+.atlas-process-orientation__master-link {
+  flex: none;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.atlas-process-lifecycle-flow,
+.atlas-process-planning-sequence {
+  list-style: none;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.atlas-process-lifecycle-flow {
+  display: grid !important;
+  gap: 0.75rem;
+  grid-template-columns: 0.85fr 1.25fr 0.85fr 1.25fr 0.85fr;
+}
+
+.atlas-process-lifecycle-flow__phase {
+  align-items: flex-start;
+  background: var(--atlas-process-paper);
+  border: 1px solid var(--atlas-process-line);
+  border-top: 0.22rem solid #8a969d;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+  min-height: 4.7rem;
+  min-width: 0;
+  padding: 0.55rem 0.65rem;
+  position: relative;
+}
+
+.atlas-process-lifecycle-flow > li,
+.atlas-process-planning-sequence > li {
+  grid-column: auto !important;
+}
+
+.atlas-process-lifecycle-flow__phase span {
+  color: var(--atlas-process-muted);
+  font-size: 0.65rem;
+  font-weight: 750;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.atlas-process-lifecycle-flow__phase strong {
+  color: var(--atlas-process-ink);
+  font-size: 0.76rem;
+  line-height: 1.25;
+  margin-top: 0.22rem;
+}
+
+.atlas-process-lifecycle-flow__phase a {
+  align-items: flex-start;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  margin: -0.43rem -0.58rem;
+  padding: 0.43rem 0.58rem;
+  text-decoration: none;
+  width: calc(100% + 1.16rem);
+}
+
+.atlas-process-lifecycle-flow__phase a strong {
+  text-decoration: underline;
+  text-decoration-thickness: 0.06em;
+  text-underline-offset: 0.16em;
+}
+
+.atlas-process-lifecycle-flow__phase--current {
+  border: 2px solid var(--atlas-process-phase-planning);
+  border-top-width: 0.32rem;
+  padding: 0.43rem 0.58rem;
+  z-index: 1;
+}
+
+.atlas-process-lifecycle-flow__phase--current > a > span:first-child::before {
+  content: "●";
+  margin-right: 0.25rem;
+}
+
+.atlas-process-lifecycle-flow__phase--current::after {
+  background: var(--atlas-process-phase-planning);
+  bottom: -2rem;
+  content: "";
+  height: 2rem;
+  left: calc(50% - 1px);
+  position: absolute;
+  width: 2px;
+}
+
+.atlas-process-lifecycle-flow__phase--initiating.atlas-process-lifecycle-flow__phase--current {
+  border-color: var(--atlas-process-phase-initiating);
+}
+
+.atlas-process-lifecycle-flow__phase--initiating.atlas-process-lifecycle-flow__phase--current::after {
+  background: var(--atlas-process-phase-initiating);
+}
+
+.atlas-process-lifecycle-flow__phase--executing.atlas-process-lifecycle-flow__phase--current {
+  border-color: var(--atlas-process-phase-executing);
+}
+
+.atlas-process-lifecycle-flow__phase--executing.atlas-process-lifecycle-flow__phase--current::after {
+  background: var(--atlas-process-phase-executing);
+}
+
+.atlas-process-lifecycle-flow__phase--monitoring.atlas-process-lifecycle-flow__phase--current {
+  border-color: var(--atlas-process-phase-monitoring);
+}
+
+.atlas-process-lifecycle-flow__phase--monitoring.atlas-process-lifecycle-flow__phase--current::after {
+  background: var(--atlas-process-phase-monitoring);
+}
+
+.atlas-process-lifecycle-flow__phase--closing.atlas-process-lifecycle-flow__phase--current {
+  border-color: var(--atlas-process-phase-closing);
+}
+
+.atlas-process-lifecycle-flow__phase--closing.atlas-process-lifecycle-flow__phase--current::after {
+  background: var(--atlas-process-phase-closing);
+}
+
+.atlas-process-lifecycle-flow__phase--initiating {
+  background: var(--atlas-process-phase-initiating-bg);
+  border-top-color: var(--atlas-process-phase-initiating);
+}
+
+.atlas-process-lifecycle-flow__phase--planning {
+  background: var(--atlas-process-phase-planning-bg);
+  border-top-color: var(--atlas-process-phase-planning);
+}
+
+.atlas-process-lifecycle-flow__phase--executing {
+  background: var(--atlas-process-phase-executing-bg);
+  border-top-color: var(--atlas-process-phase-executing);
+}
+
+.atlas-process-lifecycle-flow__phase--monitoring {
+  background: var(--atlas-process-phase-monitoring-bg);
+  border-top-color: var(--atlas-process-phase-monitoring);
+}
+
+.atlas-process-lifecycle-flow__phase--closing {
+  background: var(--atlas-process-phase-closing-bg);
+  border-top-color: var(--atlas-process-phase-closing);
+}
+
+.atlas-process-orientation__planning {
+  box-sizing: border-box;
+  border-left: 0.25rem solid var(--atlas-process-phase-planning);
+  margin: 2rem 0 0 2.5%;
+  padding: 0.2rem 0 0 1.15rem;
+  position: relative;
+  width: 97.5%;
+}
+
+.atlas-process-orientation__planning--initiating {
+  border-left-color: var(--atlas-process-phase-initiating);
+}
+
+.atlas-process-orientation__planning--executing {
+  border-left-color: var(--atlas-process-phase-executing);
+}
+
+.atlas-process-orientation__planning--monitoring {
+  border-left-color: var(--atlas-process-phase-monitoring);
+}
+
+.atlas-process-orientation__planning--closing {
+  border-left-color: var(--atlas-process-phase-closing);
+}
+
+.atlas-process-orientation__stage-heading > span {
+  color: var(--atlas-process-muted);
+  display: block;
+  font-size: 0.65rem;
+  font-weight: 750;
+  letter-spacing: 0.075em;
+  text-transform: uppercase;
+}
+
+.atlas-process-orientation__stage-heading h3 {
+  color: var(--atlas-process-ink);
+  font-size: 1.22rem;
+  margin: 0.12rem 0 0.75rem;
+}
+
+.atlas-process-orientation__stage-heading h4 {
+  color: var(--atlas-process-ink);
+  font-size: 1.04rem;
+  margin: 0.12rem 0 0.75rem;
+}
+
+.atlas-process-planning-sequence {
+  display: grid !important;
+  gap: 0.7rem;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  position: relative;
+}
+
+.atlas-process-planning-sequence li {
+  display: flex;
+  margin: 0;
+  min-width: 0;
+  position: relative;
+}
+
+.atlas-process-planning-sequence__node {
+  align-items: center;
+  background: #f5fafc;
+  border: 1px solid #8eb0c0;
+  color: #294f63;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 5.2rem;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  padding: 0.48rem 0.32rem;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+}
+
+.atlas-process-planning-sequence__node span {
+  color: var(--atlas-process-muted);
+  font-size: 0.65rem;
+  font-weight: 760;
+  letter-spacing: 0.035em;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+.atlas-process-planning-sequence__node strong {
+  color: #294f63;
+  font-size: 0.72rem;
+  line-height: 1.2;
+  margin-top: 0.28rem;
+  text-decoration: underline;
+  text-decoration-thickness: 0.06em;
+  text-underline-offset: 0.16em;
+}
+
+.atlas-process-planning-sequence__item--current {
+  position: relative;
+}
+
+.atlas-process-planning-sequence__item--current::after {
+  background: var(--atlas-process-phase-planning);
+  bottom: -0.5rem;
+  content: "";
+  height: 0.5rem;
+  left: calc(50% - 1px);
+  position: absolute;
+  width: 2px;
+}
+
+.atlas-process-planning-sequence__node--current {
+  background: var(--atlas-process-phase-planning);
+  border: 2px solid var(--atlas-process-selected-area-border);
+  color: #fff;
+  min-height: 5.2rem;
+}
+
+.atlas-process-planning-sequence__node--current span,
+.atlas-process-planning-sequence__node--current strong {
+  color: #fff;
+}
+
+.atlas-process-orientation__subject {
+  box-sizing: border-box;
+  border-left: 2px solid #8eb0c0;
+  border-top: 2px solid var(--atlas-process-phase-planning);
+  margin: 2rem 0 0;
+  padding: 0.75rem 0 0 1rem;
+  width: 100%;
+}
+
+.atlas-process-active-subject-area {
+  background: var(--atlas-process-active-subject-bg);
+  box-shadow: inset 0 0 0 1px var(--atlas-process-active-subject-edge);
+  padding: 1rem;
+}
+
+.atlas-process-orientation a:focus-visible {
+  outline: 3px solid #286f94;
+  outline-offset: 3px;
+}
+
+.atlas-process-orientation__master-link:hover,
+.atlas-process-planning-sequence__node:hover {
+  background: var(--atlas-process-phase-planning-bg);
+}
+
+.atlas-process-planning-sequence__node--current:hover {
+  background: var(--atlas-process-phase-planning);
+}
+
+.atlas-process-flow__node--link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.atlas-process-flow__node--link strong,
+.atlas-process-flow__inline-link {
+  text-decoration: underline;
+  text-decoration-thickness: 0.06em;
+  text-underline-offset: 0.14em;
+}
+
+.atlas-process-flow__node--link:hover {
+  box-shadow: inset 0 0 0 2px rgba(29, 88, 119, 0.35);
+}
+
+.atlas-process-flow__inline-link:focus-visible {
+  border-radius: 0.1rem;
+  outline: 3px solid #286f94;
+  outline-offset: 2px;
+}
+
+.atlas-references {
+  font-size: 0.875rem;
+  line-height: 1.43;
+  list-style-position: outside;
+  margin-top: 0.7rem !important;
+  max-width: 60rem !important;
+  padding-left: 2rem !important;
+}
+
+.md-typeset .atlas-references li {
+  margin: 0.18rem 0 !important;
+  padding-left: 0.35rem;
+}
+
+.atlas-process-glance {
+  background: var(--atlas-process-panel);
+  border: 1px solid var(--atlas-process-line);
+  border-radius: var(--atlas-process-radius);
+  margin: 1.7rem 0 2.4rem;
+  padding: 1.3rem;
+}
+
+.atlas-process-glance h2 {
+  color: var(--atlas-process-ink);
+  font-size: 1.35rem;
+  margin: 0.2rem 0 0.25rem;
+}
+
+.atlas-process-flow {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 11rem), 1fr));
+}
+
+.atlas-process-flow__node {
+  align-items: center;
+  background: var(--atlas-process-paper);
+  border: 1px solid var(--atlas-process-line);
+  border-top: 0.24rem solid var(--atlas-process-muted);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 8.5rem;
+  padding: 0.55rem 0.45rem 0.65rem;
+  position: relative;
+  text-align: center;
+}
+
+.atlas-process-flow__node strong {
+  color: var(--atlas-process-ink);
+  font-size: 0.74rem;
+  line-height: 1.3;
+}
+
+.atlas-process-flow__step {
+  color: var(--atlas-process-muted);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.055em;
+  margin-bottom: 0.22rem;
+  text-transform: uppercase;
+}
+
+.atlas-process-flow__current-label-line {
+  white-space: nowrap;
+}
+
+.atlas-process-flow__kind {
+  font-size: 0.66rem;
+  margin-bottom: 0.45rem;
+}
+
+.atlas-process-flow__phase {
+  border-top: 1px solid currentColor;
+  font-size: 0.65rem;
+  font-weight: 760;
+  letter-spacing: 0.035em;
+  line-height: 1.2;
+  margin-top: 0.48rem;
+  padding-top: 0.32rem;
+  text-transform: uppercase;
+}
+
+.atlas-process-flow__plus {
+  color: var(--atlas-process-muted);
+  font-size: 0.65rem;
+  margin: 0.18rem 0;
+}
+
+.atlas-process-flow__node--input {
+  background: var(--atlas-process-phase-planning-bg);
+  border-color: var(--atlas-process-phase-planning);
+}
+
+.atlas-process-flow__node--process {
+  border-style: solid;
+  border-width: 2px;
+}
+
+.atlas-process-flow__node--artifact {
+  border-style: dashed;
+  border-width: 2px;
+}
+
+.atlas-process-flow__node--accepted {
+  border-style: double;
+  border-width: 4px;
+}
+
+.atlas-process-flow__node--planning {
+  background: var(--atlas-process-phase-planning);
+  border-color: var(--atlas-process-phase-planning);
+}
+
+.atlas-process-flow__node--planning-output {
+  background: var(--atlas-process-phase-planning-bg);
+  border-color: var(--atlas-process-phase-planning);
+}
+
+.atlas-process-flow__node--initiating {
+  background: var(--atlas-process-phase-initiating);
+  border-color: var(--atlas-process-phase-initiating);
+}
+
+.atlas-process-flow__node--executing {
+  background: var(--atlas-process-phase-executing);
+  border-color: var(--atlas-process-phase-executing);
+}
+
+.atlas-process-flow__node--monitoring {
+  background: var(--atlas-process-phase-monitoring);
+  border-color: var(--atlas-process-phase-monitoring);
+}
+
+.atlas-process-flow__node--closing {
+  background: var(--atlas-process-phase-closing);
+  border-color: var(--atlas-process-phase-closing);
+}
+
+.atlas-process-flow__node--monitoring-artifact {
+  background: var(--atlas-process-phase-monitoring-bg);
+  border-color: var(--atlas-process-phase-monitoring);
+}
+
+.atlas-process-flow__node--planning strong,
+.atlas-process-flow__node--planning .atlas-process-flow__step,
+.atlas-process-flow__node--planning .atlas-process-flow__kind,
+.atlas-process-flow__node--planning .atlas-process-flow__phase,
+.atlas-process-flow__node--executing strong,
+.atlas-process-flow__node--executing .atlas-process-flow__step,
+.atlas-process-flow__node--executing .atlas-process-flow__kind,
+.atlas-process-flow__node--executing .atlas-process-flow__phase,
+.atlas-process-flow__node--monitoring strong,
+.atlas-process-flow__node--monitoring .atlas-process-flow__step,
+.atlas-process-flow__node--monitoring .atlas-process-flow__kind,
+.atlas-process-flow__node--monitoring .atlas-process-flow__phase {
+  color: #fff;
+}
+
+.atlas-process-flow__node--initiating strong,
+.atlas-process-flow__node--initiating .atlas-process-flow__step,
+.atlas-process-flow__node--initiating .atlas-process-flow__kind,
+.atlas-process-flow__node--initiating .atlas-process-flow__phase,
+.atlas-process-flow__node--closing strong,
+.atlas-process-flow__node--closing .atlas-process-flow__step,
+.atlas-process-flow__node--closing .atlas-process-flow__kind,
+.atlas-process-flow__node--closing .atlas-process-flow__phase {
+  color: #fff;
+}
+
+.atlas-process-flow__node--current {
+  background: var(--atlas-process-phase-planning);
+  border-color: var(--atlas-process-current-process-border);
+  border-width: 3px;
+  box-shadow: 0 0 0 2px rgba(21, 86, 117, 0.16);
+}
+
+.atlas-process-flow__node--current strong,
+.atlas-process-flow__node--current .atlas-process-flow__step,
+.atlas-process-flow__node--current .atlas-process-flow__kind,
+.atlas-process-flow__node--current .atlas-process-flow__phase {
+  color: #fff;
+}
+
+.atlas-process-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin: 0.85rem 0 0;
+}
+
+.atlas-process-key {
+  color: var(--atlas-process-muted);
+  font-size: 0.68rem;
+}
+
+.atlas-process-key::before,
+.atlas-process-shape-key::before {
+  background: var(--atlas-process-muted);
+  content: "";
+  display: inline-block;
+  height: 0.48rem;
+  margin-right: 0.3rem;
+  width: 0.48rem;
+}
+
+.atlas-process-key--initiating::before { background: var(--atlas-process-phase-initiating); }
+.atlas-process-key--planning::before { background: var(--atlas-process-phase-planning); }
+.atlas-process-key--executing::before { background: var(--atlas-process-phase-executing); }
+.atlas-process-key--monitoring::before { background: var(--atlas-process-phase-monitoring); }
+.atlas-process-key--closing::before { background: var(--atlas-process-phase-closing); }
+
+.atlas-process-shape-key {
+  color: var(--atlas-process-muted);
+  font-size: 0.68rem;
+}
+
+.atlas-process-shape-key::before {
+  background: transparent;
+  border: 1px solid var(--atlas-process-muted);
+  box-sizing: border-box;
+}
+
+.atlas-process-shape-key--artifact::before {
+  border-style: dashed;
+}
+
+.atlas-process-shape-key--accepted::before {
+  border-style: double;
+  border-width: 2px;
+}
+
+.atlas-process-glance__grid {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.atlas-process-glance__item {
+  background: var(--atlas-process-paper);
+  border-left: 0.2rem solid #7c8991;
+  padding: 0.8rem 0.9rem;
+}
+
+.atlas-process-glance__item h3 {
+  color: var(--atlas-process-ink);
+  font-size: 0.78rem;
+  margin: 0 0 0.4rem;
+  text-transform: uppercase;
+}
+
+.atlas-process-glance__item p,
+.atlas-process-glance__item ol {
+  color: #3e515c;
+  font-size: 0.76rem;
+  line-height: 1.45;
+  margin: 0;
+}
+
+.atlas-process-glance__item ol {
+  padding-left: 1.1rem;
+}
+
+.atlas-process-glance__item--purpose { border-left-color: var(--atlas-process-current); }
+.atlas-process-glance__item--input { border-left-color: var(--atlas-process-input); }
+.atlas-process-glance__item--created { border-left-color: var(--atlas-process-created); }
+.atlas-process-glance__item--updated { border-left-color: var(--atlas-process-updated); }
+.atlas-process-glance__item--next { border-left-color: var(--atlas-process-downstream); }
+
+.atlas-process-unfolding {
+  counter-reset: quality-sequence;
+  list-style: none;
+  margin: 0.8rem 0 1rem !important;
+  padding: 0 !important;
+}
+
+.atlas-process-unfolding li {
+  border-bottom: 1px solid var(--atlas-process-line);
+  counter-increment: quality-sequence;
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: 1.5rem 10.5rem minmax(0, 1fr);
+  padding: 0.75rem 0;
+}
+
+.atlas-process-unfolding li::before {
+  color: var(--atlas-process-muted);
+  content: counter(quality-sequence, decimal-leading-zero);
+  font-size: 0.67rem;
+  font-weight: 760;
+  padding-top: 0.18rem;
+}
+
+.atlas-process-unfolding p {
+  color: #3d515d;
+  font-size: 0.82rem;
+  line-height: 1.48;
+  margin: 0;
+}
+
+.atlas-process-unfolding p strong {
+  color: var(--atlas-process-ink);
+}
+
+.atlas-process-phase-badge {
+  align-self: start;
+  border: 1px solid currentColor;
+  color: #fff;
+  font-size: 0.58rem;
+  font-weight: 760;
+  letter-spacing: 0.035em;
+  line-height: 1.2;
+  padding: 0.25rem 0.35rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.atlas-process-phase-badge--planning {
+  background: var(--atlas-process-phase-planning);
+}
+
+.atlas-process-phase-badge--executing {
+  background: var(--atlas-process-phase-executing);
+}
+
+.atlas-process-phase-badge--monitoring {
+  background: var(--atlas-process-phase-monitoring);
+}
+
+.atlas-process-input-grid,
+.atlas-process-artifact-grid {
+  display: grid;
+  gap: 0.8rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.atlas-process-input-card,
+.atlas-process-artifact-card {
+  border: 1px solid var(--atlas-process-line);
+  border-top: 0.2rem solid var(--atlas-process-input);
+  padding: 0.9rem;
+}
+
+.atlas-process-input-card h4,
+.atlas-process-artifact-card h3 {
+  color: var(--atlas-process-ink);
+  font-size: 0.88rem;
+  line-height: 1.25;
+  margin: 0 0 0.4rem;
+}
+
+.atlas-process-input-card p,
+.atlas-process-artifact-card p {
+  color: var(--atlas-process-muted);
+  font-size: 0.76rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.atlas-process-output-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 1.4rem;
+}
+
+.atlas-process-output-panel {
+  border: 1px solid var(--atlas-process-line);
+  padding: 1rem;
+}
+
+.atlas-process-output-panel--created {
+  background: var(--atlas-process-created-bg);
+  border-top: 0.28rem solid var(--atlas-process-created);
+}
+
+.atlas-process-output-panel--updated {
+  background: var(--atlas-process-updated-bg);
+  border-top: 0.28rem dashed var(--atlas-process-updated);
+}
+
+.atlas-process-output-panel h3 {
+  color: var(--atlas-process-ink);
+  font-size: 1rem;
+  margin: 0.1rem 0 0.7rem;
+}
+
+.atlas-process-output-panel article {
+  background: rgba(255, 255, 255, 0.72);
+  border-left: 2px solid var(--atlas-process-created);
+  margin-top: 0.55rem;
+  padding: 0.65rem;
+}
+
+.atlas-process-output-panel article h4 {
+  font-size: 0.82rem;
+  margin: 0 0 0.2rem;
+}
+
+.atlas-process-output-panel p,
+.atlas-process-output-panel ol {
+  color: #41525c;
+  font-size: 0.77rem;
+  line-height: 1.48;
+}
+
+.atlas-process-output-panel ol {
+  padding-left: 1.2rem;
+}
+
+.atlas-process-output-panel__note {
+  border-top: 1px solid #b8bec2;
+  margin-bottom: 0;
+  padding-top: 0.65rem;
+}
+
+.atlas-process-artifact-grid {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+}
+
+.atlas-process-artifact-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 13.5rem;
+}
+
+.atlas-process-artifact-card--created { border-top-color: var(--atlas-process-created); }
+.atlas-process-artifact-card--evidence { border-top-color: var(--atlas-process-input); }
+.atlas-process-artifact-card--accepted { border-top-color: var(--atlas-process-downstream); }
+
+.atlas-process-artifact-card > span {
+  font-size: 0.66rem;
+  margin-bottom: 0.45rem;
+}
+
+.atlas-process-artifact-card dl {
+  font-size: 0.7rem;
+  margin: 0.7rem 0;
+}
+
+.atlas-process-artifact-card dt {
+  color: var(--atlas-process-muted);
+  font-weight: 600;
+}
+
+.atlas-process-artifact-card dd {
+  color: var(--atlas-process-ink);
+  font-weight: 700;
+  margin: 0;
+}
+
+.atlas-process-card-link {
+  border-top: 1px solid var(--atlas-process-line);
+  font-size: 0.72rem;
+  font-weight: 700;
+  margin-top: auto;
+  padding-top: 0.55rem;
+}
+
+.atlas-process-table-wrap {
+  border: 1px solid var(--atlas-process-line);
+  margin: 0.8rem 0;
+  overflow-x: auto;
+}
+
+.atlas-process-comparison {
+  border-collapse: collapse;
+  font-size: 0.78rem;
+  margin: 0 !important;
+  min-width: 42rem;
+  width: 100%;
+}
+
+.atlas-process-comparison th {
+  background: var(--atlas-process-current);
+  color: #fff;
+  font-size: 0.67rem;
+  letter-spacing: 0.055em;
+  padding: 0.65rem 0.7rem;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.atlas-process-comparison td {
+  border-bottom: 1px solid var(--atlas-process-line);
+  color: #354b58;
+  line-height: 1.4;
+  padding: 0.65rem 0.7rem;
+  vertical-align: top;
+}
+
+.atlas-process-comparison td:first-child {
+  color: var(--atlas-process-ink);
+  font-weight: 700;
+  width: 25%;
+}
+
+.atlas-process-comparison td:last-child {
+  font-weight: 650;
+  width: 23%;
+}
+
+.atlas-process-comparison tr:last-child td { border-bottom: 0; }
+.atlas-process-comparison tbody tr:nth-child(even) { background: var(--atlas-process-panel); }
+
+.atlas-process-callout {
+  border: 1px solid #d8c0bc;
+  border-left: 0.3rem solid var(--atlas-process-danger);
+  background: var(--atlas-process-danger-bg);
+  padding: 1rem 1.1rem;
+}
+
+.atlas-process-callout ol {
+  color: #4d4140;
+  font-size: 0.83rem;
+  margin: 0.5rem 0 0;
+  padding-left: 1.25rem;
+}
+
+.atlas-process-callout li + li {
+  margin-top: 0.42rem;
+}
+
+.atlas-process-callout--exam {
+  background: var(--atlas-process-exam-bg);
+  border-color: var(--atlas-process-exam-edge);
+  border-left-color: var(--atlas-process-exam);
+}
+
+.atlas-process-callout--exam .atlas-process-callout__label {
+  color: var(--atlas-process-exam);
+}
+
+.atlas-process-callout--exam ol {
+  color: #334b58;
+}
+
+.atlas-process-example {
+  border: 1px solid var(--atlas-process-line);
+  border-top: 0.25rem solid var(--atlas-process-current);
+}
+
+.atlas-process-example__intro {
+  background: var(--atlas-process-current-bg);
+  padding: 0.9rem 1rem;
+}
+
+.atlas-process-example__intro h3 {
+  color: var(--atlas-process-ink);
+  margin: 0.1rem 0 0.2rem;
+}
+
+.atlas-process-example__intro p {
+  color: var(--atlas-process-muted);
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+.atlas-process-example__steps {
+  counter-reset: example;
+  list-style: none;
+  margin: 0 !important;
+  padding: 0.3rem 1rem 0.7rem !important;
+}
+
+.atlas-process-example__steps li {
+  border-bottom: 1px solid var(--atlas-process-line);
+  counter-increment: example;
+  display: grid;
+  gap: 0.3rem 0.8rem;
+  grid-template-columns: 1.2rem 9rem 1fr;
+  padding: 0.65rem 0;
+}
+
+.atlas-process-example__steps li::before {
+  color: var(--atlas-process-current);
+  content: counter(example, decimal-leading-zero);
+  font-size: 0.68rem;
+  font-weight: 750;
+}
+
+.atlas-process-example__steps li:last-child { border-bottom: 0; }
+.atlas-process-example__steps strong { color: var(--atlas-process-ink); font-size: 0.76rem; }
+.atlas-process-example__steps span { color: var(--atlas-process-muted); font-size: 0.76rem; line-height: 1.45; }
+
+@media screen and (min-width: 48.01rem) and (max-width: 82rem) {
+  .atlas-process-flow {
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 11rem), 1fr));
+  }
+
+  .atlas-process-flow__node {
+    min-height: 7.2rem;
+  }
+}
+
+@media screen and (max-width: 48rem) {
+  .md-typeset:has(.atlas-process-reference-marker) {
+    font-size: 0.94rem;
+  }
+
+  .atlas-process-hero h1 {
+    font-size: 2.45rem;
+  }
+
+  .atlas-process-classification {
+    flex-direction: column;
+    gap: 0.55rem;
+  }
+
+  .atlas-process-orientation__header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .atlas-process-lifecycle-flow {
+    grid-template-columns: 1fr;
+  }
+
+  .atlas-process-lifecycle-flow__phase {
+    min-height: 3.7rem;
+  }
+
+  .atlas-process-lifecycle-flow__phase a {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0.43rem 0.58rem;
+    width: 100%;
+  }
+
+  .atlas-process-lifecycle-flow__phase--current::after {
+    content: none;
+  }
+
+  .atlas-process-orientation__planning {
+    margin-left: 0;
+    padding-left: 0.75rem;
+    width: 100%;
+  }
+
+  .atlas-process-planning-sequence {
+    gap: 1rem;
+    grid-template-columns: 1fr;
+  }
+
+  .atlas-process-planning-sequence__node {
+    min-height: 4.2rem;
+  }
+
+  .atlas-process-planning-sequence li:not(:last-child)::after {
+    background: transparent;
+    bottom: -1.05rem;
+    color: #71808a;
+    content: "↓";
+    font-size: 1rem;
+    font-weight: 800;
+    height: auto;
+    left: calc(50% - 0.35rem);
+    position: absolute;
+    width: auto;
+    z-index: 2;
+  }
+
+  .atlas-process-orientation__subject {
+    margin-left: 0;
+    padding-left: 0.65rem;
+    width: 100%;
+  }
+
+  .atlas-process-orientation,
+  .atlas-process-glance {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0.85rem;
+  }
+
+  .atlas-process-flow {
+    gap: 1rem;
+    grid-template-columns: 1fr;
+  }
+
+  .atlas-process-flow__node {
+    min-height: 4.2rem;
+  }
+
+  .atlas-process-flow__node:not(:last-child)::after {
+    bottom: -1.05rem;
+    content: "↓";
+    left: calc(50% - 0.35rem);
+    right: auto;
+    top: auto;
+  }
+
+  .atlas-process-glance__grid,
+  .atlas-process-input-grid,
+  .atlas-process-output-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .atlas-process-unfolding li {
+    grid-template-columns: 1.5rem minmax(0, 1fr);
+  }
+
+  .atlas-process-unfolding p {
+    grid-column: 2;
+  }
+
+  .atlas-process-artifact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .atlas-process-artifact-card {
+    grid-column: auto;
+    min-height: 0;
+  }
+
+  .atlas-process-comparison {
+    min-width: 0;
+  }
+
+  .atlas-process-comparison,
+  .atlas-process-comparison tbody,
+  .atlas-process-comparison tr,
+  .atlas-process-comparison td {
+    display: block;
+    width: 100%;
+  }
+
+  .atlas-process-comparison thead {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+
+  .atlas-process-comparison tr {
+    border-bottom: 1px solid var(--atlas-process-line);
+    padding: 0.55rem 0.7rem;
+  }
+
+  .atlas-process-comparison td,
+  .atlas-process-comparison td:first-child,
+  .atlas-process-comparison td:last-child {
+    border: 0;
+    display: grid;
+    gap: 0.7rem;
+    grid-template-columns: 6.5rem 1fr;
+    padding: 0.25rem 0;
+    width: 100%;
+  }
+
+  .atlas-process-comparison td::before {
+    color: var(--atlas-process-muted);
+    content: attr(data-label);
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .atlas-process-example__steps li {
+    grid-template-columns: 1.2rem 1fr;
+  }
+
+  .atlas-process-example__steps li span {
+    grid-column: 2;
+  }
+}
+
+@media print {
+  @page {
+    margin: 11mm 12mm 13mm;
+    size: A4 landscape;
+  }
+
+  body:has(.atlas-process-reference-marker) .md-header,
+  body:has(.atlas-process-reference-marker) .md-sidebar,
+  body:has(.atlas-process-reference-marker) .md-footer,
+  body:has(.atlas-process-reference-marker) .md-top,
+  body:has(.atlas-process-reference-marker) .md-dialog {
+    display: none !important;
+  }
+
+  body:has(.atlas-process-reference-marker) .md-main__inner,
+  body:has(.atlas-process-reference-marker) .md-content,
+  body:has(.atlas-process-reference-marker) .md-content__inner {
+    margin: 0 !important;
+    max-width: none !important;
+    padding: 0 !important;
+  }
+
+  .md-typeset:has(.atlas-process-reference-marker) {
+    color: #111;
+    font-size: 9.5pt;
+    line-height: 1.45;
+    max-width: none;
+  }
+
+  .atlas-process-hero h1 {
+    font-size: 30pt;
+  }
+
+  .atlas-process-orientation,
+  .atlas-process-glance,
+  .atlas-process-output-grid,
+  .atlas-process-artifact-grid,
+  .atlas-process-callout,
+  .atlas-process-example,
+  .atlas-process-table-wrap {
+    break-inside: avoid;
+  }
+
+  .atlas-process-flow {
+    gap: 8pt;
+    grid-template-columns: repeat(auto-fit, minmax(68pt, 1fr));
+  }
+
+  .atlas-process-lifecycle-flow {
+    gap: 8pt;
+    grid-template-columns: 0.85fr 1.25fr 0.85fr 1.25fr 0.85fr;
+  }
+
+  .atlas-process-lifecycle-flow__phase {
+    min-height: 42pt;
+    padding: 4pt 5pt;
+  }
+
+  .atlas-process-lifecycle-flow__phase--current::after,
+  .atlas-process-planning-sequence__item--current::after {
+    display: none;
+  }
+
+  .atlas-process-flow__node {
+    min-height: 64pt;
+    padding: 5pt;
+  }
+
+  .atlas-process-flow__node strong {
+    font-size: 7.2pt;
+  }
+
+  .atlas-process-glance__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .atlas-process-input-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .atlas-process-artifact-card {
+    min-height: 105pt;
+  }
+
+  .md-typeset:has(.atlas-process-reference-marker) a {
+    color: #17465a;
+    text-decoration: none;
+  }
+
+  .md-typeset:has(.atlas-process-reference-marker) h2,
+  .md-typeset:has(.atlas-process-reference-marker) h3,
+  .atlas-process-input-card,
+  .atlas-process-output-panel,
+  .atlas-process-artifact-card,
+  .atlas-process-example__steps li {
+    break-inside: avoid;
+  }
+
+  .md-typeset:has(.atlas-process-reference-marker) h2,
+  .md-typeset:has(.atlas-process-reference-marker) h3 {
+    break-after: avoid;
+  }
+}
