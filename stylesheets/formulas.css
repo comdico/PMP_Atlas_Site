@@ -1,0 +1,40 @@
+.atlas-formula-lede { max-width: 72ch; font-size: 1.08rem; color: var(--md-default-fg-color--light); }
+.atlas-formula-hub, .atlas-formula-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin: 1.25rem 0 2rem; }
+.atlas-formula-hub a, .atlas-formula-card { border: 1px solid rgba(38, 59, 70, .18); border-radius: .6rem; background: var(--md-default-bg-color); box-shadow: 0 2px 10px rgba(20, 38, 48, .06); }
+.atlas-formula-hub a { display: flex; flex-direction: column; gap: .25rem; padding: 1rem; color: inherit; }
+.atlas-formula-hub span { color: var(--md-default-fg-color--light); }
+.atlas-formula-card { padding: 1rem 1.1rem; break-inside: avoid; }
+.atlas-formula-card h3 { margin: .65rem 0 .5rem; }
+.atlas-formula-card__meta { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem; font-size: .72rem; text-transform: uppercase; letter-spacing: .035em; color: var(--md-default-fg-color--light); }
+.atlas-formula-expression { overflow-wrap: anywhere; padding: .8rem; border-left: .25rem solid #477b8f; background: #eef5f8; font: 600 1.05rem/1.45 ui-monospace, SFMono-Regular, Menlo, monospace; }
+.atlas-formula-variables { display: grid; grid-template-columns: minmax(4rem, auto) 1fr; gap: .25rem .75rem; margin: .75rem 0; font-size: .88rem; }
+.atlas-formula-variables dt { font-weight: 700; }
+.atlas-formula-variables dd { margin: 0; }
+.atlas-formula-exam { padding-top: .65rem; border-top: 1px solid rgba(38, 59, 70, .15); }
+.atlas-formula-badges { margin: .3rem 0 .8rem; }
+.atlas-network { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .75rem; margin: 1.25rem 0; }
+.atlas-network-node { position: relative; padding: .8rem; border: 2px solid #8799a3; border-radius: .55rem; background: #fff; }
+.atlas-network-node--critical { border-color: #93423c; background: #fff7f6; }
+.atlas-network-node h3 { margin: 0 0 .3rem; font-size: .92rem; }
+.atlas-network-node p { min-height: 3.2em; font-size: .78rem; }
+.atlas-network-node dl { display: grid; grid-template-columns: repeat(5, 1fr); gap: .2rem; margin: 0; text-align: center; }
+.atlas-network-node dl div { padding: .25rem; background: rgba(38, 59, 70, .07); }
+.atlas-network-node dt { font-size: .65rem; font-weight: 700; }
+.atlas-network-node dd { margin: 0; font-size: .8rem; }
+.atlas-budget-stack { max-width: 42rem; margin: 1.5rem auto; }
+.atlas-budget-stack > div { display: flex; justify-content: space-between; gap: 1rem; padding: .7rem 1rem; border: 1px solid rgba(38, 59, 70, .2); }
+.atlas-budget-stack__bar--estimate { background: #eef5f8; }
+.atlas-budget-stack__bar--contingency { background: #f7f4e9; }
+.atlas-budget-stack__bar--management { margin-top: .65rem; background: #f5f0f8; }
+.atlas-budget-stack__subtotal, .atlas-budget-stack__total { font-weight: 700; background: #223746; color: #fff; }
+.atlas-evm-chart { margin: 1.5rem 0; overflow-x: auto; }
+.atlas-evm-chart svg { display: block; min-width: 620px; width: 100%; height: auto; background: #fff; border: 1px solid rgba(38, 59, 70, .18); }
+.atlas-evm-chart line, .atlas-evm-chart path { fill: none; stroke-width: 3; }
+.atlas-evm-chart line { stroke: #53656e; stroke-width: 1.5; }
+.atlas-evm-chart .status { stroke-dasharray: 7 5; }
+.atlas-evm-chart .pv { stroke: #2f6f92; fill: #2f6f92; }
+.atlas-evm-chart .ev { stroke: #6b3f86; fill: #6b3f86; stroke-dasharray: 8 4; }
+.atlas-evm-chart .ac { stroke: #9a5a20; fill: #9a5a20; stroke-dasharray: 2 4; }
+.atlas-evm-chart text { fill: #263b46; font: 14px system-ui, sans-serif; }
+@media (max-width: 64rem) { .atlas-network { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 44rem) { .atlas-formula-hub, .atlas-formula-grid, .atlas-network { grid-template-columns: 1fr; } .atlas-formula-card { padding: .85rem; } .atlas-formula-variables { grid-template-columns: 1fr; } .atlas-formula-variables dd { margin-bottom: .35rem; } .atlas-budget-stack > div { flex-direction: column; gap: .15rem; } }
