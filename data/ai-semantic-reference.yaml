@@ -1,0 +1,1437 @@
+metadata:
+  title: AI Semantic Reference
+  subtitle: Semantic contract for AI agents, retrieval systems, generators, validators, and advanced readers.
+  purpose: A public semantic contract for consistent Atlas terminology, boundaries, ownership, precedence, applicability, and verification status.
+  independent_resource: true
+  site_url: https://comdico.github.io/PMP_Atlas_Site/
+  page_url: https://comdico.github.io/PMP_Atlas_Site/guidelines/shared-knowledge/
+  json_url: https://comdico.github.io/PMP_Atlas_Site/data/ai-semantic-reference.json
+  yaml_url: https://comdico.github.io/PMP_Atlas_Site/data/ai-semantic-reference.yaml
+  version: 1.0.0
+  last_reviewed: '2026-07-31'
+  content_hash: sha256:19e16b93755b17304bf8979a29e0405d821310e473495a96288914555886d567
+verification_status_labels:
+  verified: Verified
+  atlas_synthesis: Atlas synthesis
+  source_limited: Source-limited
+public_sources:
+- id: atlas-process-reference
+  title: Atlas Process Reference
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/
+- id: atlas-lifecycle-guide
+  title: Atlas Project Lifecycle Guide
+  public_url: https://comdico.github.io/PMP_Atlas_Site/lifecycle/
+- id: atlas-planning-lifecycle
+  title: Atlas Integrated Planning lifecycle chapter
+  public_url: https://comdico.github.io/PMP_Atlas_Site/lifecycle/integrated-planning/
+- id: atlas-quality-lifecycle
+  title: Atlas Quality lifecycle chapter
+  public_url: https://comdico.github.io/PMP_Atlas_Site/lifecycle/quality/
+- id: atlas-risk-lifecycle
+  title: Atlas Risk, Compliance, and Procurement lifecycle chapter
+  public_url: https://comdico.github.io/PMP_Atlas_Site/lifecycle/risk-compliance-procurement/
+- id: atlas-execution-lifecycle
+  title: Atlas Execution and Team Leadership lifecycle chapter
+  public_url: https://comdico.github.io/PMP_Atlas_Site/lifecycle/execution-leadership/
+- id: atlas-monitoring-lifecycle
+  title: Atlas Monitoring and Change lifecycle chapter
+  public_url: https://comdico.github.io/PMP_Atlas_Site/lifecycle/monitoring-change/
+- id: atlas-adaptive-lifecycle
+  title: Atlas Adaptive and Hybrid Delivery lifecycle chapter
+  public_url: https://comdico.github.io/PMP_Atlas_Site/lifecycle/adaptive-hybrid/
+- id: atlas-completion-lifecycle
+  title: Atlas Verification, Acceptance, Transition, and Closure lifecycle chapter
+  public_url: https://comdico.github.io/PMP_Atlas_Site/lifecycle/acceptance-transition-closure/
+precedence:
+- id: PRE-001
+  rank: 1
+  rule: A dedicated canonical registry has precedence over a cross-reference record.
+- id: PRE-002
+  rank: 2
+  rule: The Formula registry owns formula expressions and verification status.
+- id: PRE-003
+  rank: 3
+  rule: Process definitions own process-specific mechanics and authority.
+- id: PRE-004
+  rank: 4
+  rule: Artifact definitions own artifact structure and state.
+- id: PRE-005
+  rank: 5
+  rule: Lifecycle definitions own sequence, handoffs, and lifecycle context.
+- id: PRE-006
+  rank: 6
+  rule: Decision Guides own scenario-specific action and escalation paths.
+- id: PRE-007
+  rank: 7
+  rule: Shared semantic records define cross-cutting terminology and interpretation.
+- id: PRE-008
+  rank: 8
+  rule: Current verified source material has precedence over Atlas synthesis.
+- id: PRE-009
+  rank: 9
+  rule: Source-limited or synthesized material must be labeled as such.
+- id: PRE-010
+  rank: 10
+  rule: When authority varies by organization, do not invent a universal rule.
+ai_usage:
+  recommended:
+  - Follow canonical links for full explanations.
+  - Preserve verification labels.
+  - Distinguish official source material from Atlas synthesis.
+  - State uncertainty when a record is source-limited.
+  - Do not infer that missing applicability means prohibition.
+  - Do not treat commercial templates as PMI-prescribed forms.
+  - Do not treat process groups as sequential lifecycle phases.
+  - Do not equate waterfall with every form of predictive delivery.
+  - Do not equate Scrum or Kanban with all adaptive delivery.
+  avoid:
+  - Inventing authority.
+  - Merging risk, issue, and impediment.
+  - Stating earned value as merely a percentage.
+  - Placing management reserve inside BAC.
+  - Describing all hybrid work as a separate standardized framework.
+  - Presenting Atlas-generated crosswalks as official PMI mappings.
+concepts:
+- id: SEM-ROL-SPONSOR
+  family: roles_authority
+  preferred_term: Sponsor
+  aliases:
+  - project sponsor
+  concise_definition: Champions the initiative and connects it to authorization, funding, strategic direction, and escalation authority.
+  scope: Commonly associated with authorization, strategic alignment, funding sponsorship, and decisions beyond delegated project authority.
+  distinctions:
+  - The sponsor is not automatically the customer, acceptance authority, operational owner, or benefits owner.
+  - Specific approval rights come from the organization's governance model.
+  does_not_mean:
+  - Universal owner of every project decision
+  applicability:
+  - organization_specific
+  - common_across_approaches
+  canonical_public_pages:
+  - https://comdico.github.io/PMP_Atlas_Site/lifecycle/conception-authorization/
+  related_processes:
+  - &id014
+    id: PRC-DEVELOP-PROJECT-CHARTER
+    title: Develop Project Charter
+    public_url: https://comdico.github.io/PMP_Atlas_Site/processes/develop-project-charter/
+  - &id015
+    id: PRC-PERFORM-INTEGRATED-CHANGE-CONTROL
+    title: Perform Integrated Change Control
+    public_url: https://comdico.github.io/PMP_Atlas_Site/processes/perform-integrated-change-control/
+  - &id010
+    id: PRC-CLOSE-PROJECT-OR-PHASE
+    title: Close Project or Phase
+    public_url: https://comdico.github.io/PMP_Atlas_Site/processes/close-project-or-phase/
+  related_artifacts:
+  - &id016
+    id: ART-CHR-001
+    title: Project Charter
+    public_url: https://comdico.github.io/PMP_Atlas_Site/artifacts/project-charter/
+  - &id022
+    id: ART-BEN-001
+    title: Benefits Management Information
+    public_url: https://comdico.github.io/PMP_Atlas_Site/artifacts/benefits-management-information/
+  - &id011
+    id: ART-CLS-002
+    title: Formal Closure Record
+    public_url: https://comdico.github.io/PMP_Atlas_Site/artifacts/formal-closure-record/
+  related_lifecycle_chapters:
+  - &id018
+    id: LFC-001
+    title: Conception and Authorization
+    public_url: https://comdico.github.io/PMP_Atlas_Site/lifecycle/conception-authorization/
+  - &id001
+    id: LFC-008
+    title: Monitoring and Change
+    public_url: https://comdico.github.io/PMP_Atlas_Site/lifecycle/monitoring-change/
+  - &id012
+    id: LFC-010
+    title: Verification, Acceptance, Transition, and Closure
+    public_url: https://comdico.github.io/PMP_Atlas_Site/lifecycle/acceptance-transition-closure/
+  related_decision_guides:
+  - &id002
+    id: DEC-CHG-001
+    title: A Stakeholder Requests a Baseline Change
+    public_url: https://comdico.github.io/PMP_Atlas_Site/decisions/stakeholder-baseline-change/
+  - &id003
+    id: DEC-CLS-001
+    title: Transition or Closure Is Requested with Unresolved Obligations
+    public_url: https://comdico.github.io/PMP_Atlas_Site/decisions/transition-closure-readiness/
+  - &id021
+    id: DEC-BEN-001
+    title: Expected Benefits Are Not Yet Realized at Project Closure
+    public_url: https://comdico.github.io/PMP_Atlas_Site/decisions/benefits-not-realized-at-closure/
+  precedence: PRE-010
+  verification_status: source_limited
+  public_source_ids:
+  - atlas-lifecycle-guide
+  - atlas-monitoring-lifecycle
+  - atlas-completion-lifecycle
+  atlas_synthesis_note: Exact sponsor authority varies by organization and initiative governance.
+  ai_guidance:
+    use_when: Identifying authorization, strategic direction, funding sponsorship, or an escalation destination.
+    avoid: Do not assign the sponsor every approval or post-project ownership duty.
+    answer_pattern: State the commonly associated purpose, then qualify the exact authority as governance-dependent.
+  last_reviewed: '2026-07-31'
+  version: 1.0.0
+- id: SEM-ROL-PROJECT-MANAGER
+  family: roles_authority
+  preferred_term: Project manager
+  aliases:
+  - PM
+  concise_definition: Integrates project work, information, and decisions within delegated authority.
+  scope: Commonly coordinates planning, execution, monitoring, communication, and escalation across the project system.
+  distinctions:
+  - Integration responsibility does not automatically grant specialist, sponsor, procurement, compliance, or acceptance authority.
+  - Matters outside delegated limits are escalated through the governing route.
+  does_not_mean:
+  - Universal approver
+  - Sole producer of project work
+  applicability:
+  - common_across_approaches
+  - organization_specific
+  canonical_public_pages:
+  - https://comdico.github.io/PMP_Atlas_Site/processes/
+  related_processes:
+  - &id031
+    id: PRC-DEVELOP-PROJECT-MANAGEMENT-PLAN
+    title: Develop Project Management Plan
+    public_url: https://comdico.github.io/PMP_Atlas_Site/processes/develop-project-management-plan/
+  - &id004
+    id: PRC-DIRECT-AND-MANAGE-PROJECT-WORK
+    title: Direct and Manage Project Work
+    public_url: https://comdico.github.io/PMP_Atlas_Site/processes/direct-and-manage-project-work/
+  - &id019
+    id: PRC-MONITOR-AND-CONTROL-PROJECT-WORK
+    title: Monitor and Control Project Work
+    public_url: https://comdico.github.io/PMP_Atlas_Site/processes/monitor-and-control-project-work/
+  related_artifacts:
+  - &id017
+    id: ART-PLN-001
+    title: Project Management Plan
+    public_url: https://comdico.github.io/PMP_Atlas_Site/artifacts/project-management-plan/
+  - id: ART-WPR-001
+    title: Work Performance Reports
+    public_url: https://comdico.github.io/PMP_Atlas_Site/artifacts/work-performance-reports/
+  - &id027
+    id: ART-ISS-001
+    title: Issue Log
+    public_url: https://comdico.github.io/PMP_Atlas_Site/artifacts/issue-log/
+  related_lifecycle_chapters:
+  - &id032
+    id: LFC-002
+    title: Integrated Planning
+    public_url: https://comdico.github.io/PMP_Atlas_Site/lifecycle/integrated-planning/
+  - &id005
+    id: LFC-007
+    title: Execution and Team Leadership
+    public_url: https://comdico.github.io/PMP_Atlas_Site/lifecycle/execution-leadership/
+  - *id001
+  related_decision_guides:
+  - *id002
+  - &id006
+    id: DEC-ISS-001
+    title: A Risk Occurs or an Impediment Exceeds Team Authority
+    public_url: https://comdico.github.io/PMP_Atlas_Site/decisions/risk-issue-impediment-escalation/
+  - *id003
+  precedence: PRE-003
+  verification_status: source_limited
+  public_source_ids:
+  - atlas-process-reference
+  - atlas-planning-lifecycle
+  - atlas-monitoring-lifecycle
+  atlas_synthesis_note: The extent of project-manager decision rights depends on delegated governance.
+  ai_guidance:
+    use_when: Explaining integration, coordination, analysis, routing, and escalation.
+    avoid: Do not infer unrestricted authority from the role title.
+    answer_pattern: Describe integration responsibility and name the authority boundary relevant to the scenario.
+  last_reviewed: '2026-07-31'
+  version: 1.0.0
+- id: SEM-ROL-PROJECT-TEAM
+  family: roles_authority
+  preferred_term: Project team
+  aliases:
+  - team
+  - delivery team
+  concise_definition: Performs and coordinates project work, contributes estimates and evidence, and resolves matters within team authority.
+  scope: Commonly owns execution details, collaboration, learning, and evidence produced by the work.
+  distinctions:
+  - Self-management may shape how work is performed without removing external governance or acceptance limits.
+  does_not_mean:
+  - Freedom from governance
+  - Automatic formal acceptance authority
+  applicability:
+  - common_across_approaches
+  - organization_specific
+  canonical_public_pages:
+  - https://comdico.github.io/PMP_Atlas_Site/lifecycle/execution-leadership/
+  related_processes:
+  - *id004
+  - id: PRC-DEVELOP-TEAM
+    title: Develop Team
+    public_url: https://comdico.github.io/PMP_Atlas_Site/processes/develop-team/
+  - &id039
+    id: PRC-MANAGE-TEAM
+    title: Manage Team
+    public_url: https://comdico.github.io/PMP_Atlas_Site/processes/manage-team/
+  related_artifacts:
+  - &id007
+    id: ART-DEL-001
+    title: Deliverables
+    public_url: https://comdico.github.io/PMP_Atlas_Site/artifacts/deliverables/
+  - id: ART-INT-002
+    title: Lessons Learned Register
+    public_url: https://comdico.github.io/PMP_Atlas_Site/artifacts/lessons-learned-register/
+  - &id008
+    id: ART-ISS-002
+    title: Impediment Record
+    public_url: https://comdico.github.io/PMP_Atlas_Site/artifacts/impediment-record/
+  related_lifecycle_chapters:
+  - *id005
+  - &id009
+    id: LFC-009
+    title: Adaptive and Hybrid Delivery
+    public_url: https://comdico.github.io/PMP_Atlas_Site/lifecycle/adaptive-hybrid/
+  related_decision_guides:
+  - &id026
+    id: DEC-QLT-001
+    title: A Deliverable Fails Quality Inspection
+    public_url: https://comdico.github.io/PMP_Atlas_Site/decisions/quality-inspection-failure/
+  - *id006
+  precedence: PRE-010
+  verification_status: source_limited
+  public_source_ids:
+  - atlas-execution-lifecycle
+  - atlas-adaptive-lifecycle
+  atlas_synthesis_note: Team composition and decision rights are tailored to the delivery and governance model.
+  ai_guidance:
+    use_when: Explaining who performs work, estimates, collaborates, or removes team-level constraints.
+    avoid: Do not treat self-management as unlimited organizational authority.
+    answer_pattern: State the team's work purpose and separate team authority from external decision rights.
+  last_reviewed: '2026-07-31'
+  version: 1.0.0
+- id: SEM-ROL-PRODUCT-OWNER
+  family: roles_authority
+  preferred_term: Product owner
+  aliases:
+  - PO
+  concise_definition: In product-oriented adaptive contexts, orders value-focused work and makes product decisions within the governing model.
+  scope: Most precise as a Scrum accountability; other adaptive approaches may use different product roles.
+  distinctions:
+  - Product prioritization is separate from technical verification and formal acceptance unless governance explicitly combines them.
+  does_not_mean:
+  - Generic name for every adaptive leader
+  - Automatic formal acceptance authority
+  applicability:
+  - scrum_specific
+  - adaptive
+  - hybrid
+  - organization_specific
+  canonical_public_pages:
+  - https://comdico.github.io/PMP_Atlas_Site/lifecycle/adaptive-hybrid/
+  related_processes:
+  - *id004
+  - id: PRC-MANAGE-STAKEHOLDER-ENGAGEMENT
+    title: Manage Stakeholder Engagement
+    public_url: https://comdico.github.io/PMP_Atlas_Site/processes/manage-stakeholder-engagement/
+  related_artifacts:
+  - &id033
+    id: ART-REQ-001
+    title: Requirements Documentation
+    public_url: https://comdico.github.io/PMP_Atlas_Site/artifacts/requirements-documentation/
+  - *id007
+  - *id008
+  related_lifecycle_chapters:
+  - *id005
+  - *id009
+  related_decision_guides:
+  - *id006
+  - &id013
+    id: DEC-ACC-001
+    title: A Verified Deliverable Is Rejected During Acceptance
+    public_url: https://comdico.github.io/PMP_Atlas_Site/decisions/verified-deliverable-rejected/
+  precedence: PRE-010
+  verification_status: source_limited
+  public_source_ids:
+  - atlas-adaptive-lifecycle
+  atlas_synthesis_note: Product-role naming and authority vary outside Scrum and across organizations.
+  ai_guidance:
+    use_when: A Scrum or product-oriented context explicitly assigns value ordering or product decisions.
+    avoid: Do not generalize the accountability to all adaptive delivery or formal acceptance.
+    answer_pattern: Name the framework or governance context before describing product-owner authority.
+  last_reviewed: '2026-07-31'
+  version: 1.0.0
+- id: SEM-ROL-ACCEPTANCE-AUTHORITY
+  family: roles_authority
+  preferred_term: Customer or acceptance authority
+  aliases:
+  - customer
+  - acceptance authority
+  - accepting authority
+  concise_definition: Formally accepts verified deliverables or scope results under the applicable agreement or governance model.
+  scope: Commonly associated with the decision that completed, verified results satisfy agreed acceptance criteria.
+  distinctions:
+  - Technical verification and formal acceptance are separate states and decisions.
+  does_not_mean:
+  - Quality inspector
+  - Automatic sponsor or product owner
+  applicability:
+  - common_across_approaches
+  - organization_specific
+  canonical_public_pages:
+  - https://comdico.github.io/PMP_Atlas_Site/processes/validate-scope/
+  related_processes:
+  - &id028
+    id: PRC-VALIDATE-SCOPE
+    title: Validate Scope
+    public_url: https://comdico.github.io/PMP_Atlas_Site/processes/validate-scope/
+  - &id023
+    id: PRC-CONTROL-QUALITY
+    title: Control Quality
+    public_url: https://comdico.github.io/PMP_Atlas_Site/processes/control-quality/
+  - *id010
+  related_artifacts:
+  - &id024
+    id: ART-QLT-004
+    title: Verified Deliverables
+    public_url: https://comdico.github.io/PMP_Atlas_Site/artifacts/verified-deliverables/
+  - &id045
+    id: ART-QLT-005
+    title: Accepted Deliverables
+    public_url: https://comdico.github.io/PMP_Atlas_Site/artifacts/accepted-deliverables/
+  - *id011
+  related_lifecycle_chapters:
+  - &id025
+    id: LFC-005
+    title: Quality
+    public_url: https://comdico.github.io/PMP_Atlas_Site/lifecycle/quality/
+  - *id012
+  related_decision_guides:
+  - *id013
+  - *id003
+  precedence: PRE-003
+  verification_status: source_limited
+  public_source_ids:
+  - atlas-quality-lifecycle
+  - atlas-completion-lifecycle
+  atlas_synthesis_note: The accepting party and evidence required depend on governance and agreements.
+  ai_guidance:
+    use_when: Explaining formal acceptance after technical verification.
+    avoid: Do not collapse verification into acceptance or invent the accepting role.
+    answer_pattern: Identify the verified state, acceptance criteria, and governance-designated decision maker.
+  last_reviewed: '2026-07-31'
+  version: 1.0.0
+- id: SEM-ROL-GOVERNANCE-BODY
+  family: roles_authority
+  preferred_term: Governance body
+  aliases:
+  - steering committee
+  - governing body
+  concise_definition: Provides organizational direction and decisions under the initiative's governance model.
+  scope: May decide funding, continuation, exceptions, baselines, escalation, or closure when those rights are explicitly assigned.
+  distinctions:
+  - Its mandate is defined by organizational governance rather than by a universal Atlas rule.
+  does_not_mean:
+  - A required committee with identical powers in every organization
+  applicability:
+  - organization_specific
+  - common_across_approaches
+  canonical_public_pages:
+  - https://comdico.github.io/PMP_Atlas_Site/lifecycle/conception-authorization/
+  related_processes:
+  - *id014
+  - *id015
+  - *id010
+  related_artifacts:
+  - *id016
+  - *id017
+  - *id011
+  related_lifecycle_chapters:
+  - *id018
+  - *id001
+  - *id012
+  related_decision_guides:
+  - *id002
+  - &id020
+    id: DEC-CMP-001
+    title: A Compliance Problem Is Discovered
+    public_url: https://comdico.github.io/PMP_Atlas_Site/decisions/compliance-problem/
+  - *id003
+  precedence: PRE-010
+  verification_status: source_limited
+  public_source_ids:
+  - atlas-lifecycle-guide
+  - atlas-monitoring-lifecycle
+  - atlas-completion-lifecycle
+  atlas_synthesis_note: Governance structures and mandates are organization-specific.
+  ai_guidance:
+    use_when: A decision exceeds delegated project, team, or specialist authority.
+    avoid: Do not assume a committee exists or assign it unstated powers.
+    answer_pattern: Refer to the designated governance route and qualify its authority as organization-specific.
+  last_reviewed: '2026-07-31'
+  version: 1.0.0
+- id: SEM-ROL-CHANGE-AUTHORITY
+  family: roles_authority
+  preferred_term: Change-control authority or CCB
+  aliases:
+  - change authority
+  - change control board
+  - CCB
+  concise_definition: Evaluates and disposes controlled changes within an approved mandate.
+  scope: Commonly decides changes that affect controlled commitments, baselines, or other governance thresholds.
+  distinctions:
+  - A standing CCB is one governance design; change authority may be assigned differently.
+  does_not_mean:
+  - Required review body for every adaptive reprioritization
+  applicability:
+  - predictive
+  - hybrid
+  - organization_specific
+  canonical_public_pages:
+  - https://comdico.github.io/PMP_Atlas_Site/processes/perform-integrated-change-control/
+  related_processes:
+  - *id019
+  - *id015
+  related_artifacts:
+  - &id034
+    id: ART-CHG-001
+    title: Change Requests
+    public_url: https://comdico.github.io/PMP_Atlas_Site/artifacts/change-requests/
+  - id: ART-CHG-004
+    title: Change Log
+    public_url: https://comdico.github.io/PMP_Atlas_Site/artifacts/change-log/
+  - *id017
+  related_lifecycle_chapters:
+  - *id001
+  - *id009
+  related_decision_guides:
+  - *id002
+  - *id020
+  precedence: PRE-003
+  verification_status: source_limited
+  public_source_ids:
+  - atlas-monitoring-lifecycle
+  - atlas-adaptive-lifecycle
+  atlas_synthesis_note: Thresholds and decision rights are defined by the governing change-control model.
+  ai_guidance:
+    use_when: A proposed action may alter a controlled baseline or commitment.
+    avoid: Do not require CCB review for every work-level adjustment.
+    answer_pattern: Identify the controlled commitment, threshold, and designated change authority.
+  last_reviewed: '2026-07-31'
+  version: 1.0.0
+- id: SEM-ROL-OPERATIONAL-OWNER
+  family: roles_authority
+  preferred_term: Operational owner
+  aliases:
+  - operations owner
+  - receiving owner
+  concise_definition: Accepts operational responsibility for transferred outputs, support, controls, and residual obligations.
+  scope: Commonly associated with transition readiness and continuing operation after handoff.
+  distinctions:
+  - Operational ownership is distinct from formal project closure and benefits ownership.
+  does_not_mean:
+  - Universal post-project benefits owner
+  applicability:
+  - organization_specific
+  - common_across_approaches
+  canonical_public_pages:
+  - https://comdico.github.io/PMP_Atlas_Site/lifecycle/acceptance-transition-closure/
+  related_processes:
+  - *id010
+  related_artifacts:
+  - &id046
+    id: ART-TRN-001
+    title: Transition Package
+    public_url: https://comdico.github.io/PMP_Atlas_Site/artifacts/transition-package/
+  - id: ART-CLS-001
+    title: Final Report
+    public_url: https://comdico.github.io/PMP_Atlas_Site/artifacts/final-report/
+  - *id011
+  related_lifecycle_chapters:
+  - *id012
+  related_decision_guides:
+  - *id003
+  - *id021
+  precedence: PRE-005
+  verification_status: source_limited
+  public_source_ids:
+  - atlas-completion-lifecycle
+  atlas_synthesis_note: The receiving organization and its authority are organization-specific.
+  ai_guidance:
+    use_when: Explaining transition, operational readiness, or post-transfer support responsibility.
+    avoid: Do not assume operations also owns every intended benefit.
+    answer_pattern: Name the receiving role, transferred responsibilities, evidence, and unresolved obligations.
+  last_reviewed: '2026-07-31'
+  version: 1.0.0
+- id: SEM-ROL-BENEFITS-OWNER
+  family: roles_authority
+  preferred_term: Benefits owner
+  aliases:
+  - benefit owner
+  concise_definition: Owns defined benefit measures, dependencies, reviews, and continuing action after explicit handoff.
+  scope: Commonly associated with measurement and action after outputs transition into use.
+  distinctions:
+  - The project manager does not universally retain this role after formal closure.
+  does_not_mean:
+  - A universal authority model prescribed by the Atlas
+  applicability:
+  - organization_specific
+  - common_across_approaches
+  canonical_public_pages:
+  - https://comdico.github.io/PMP_Atlas_Site/decisions/benefits-not-realized-at-closure/
+  related_processes:
+  - *id014
+  - *id010
+  related_artifacts:
+  - *id022
+  - &id047
+    id: ART-BEN-002
+    title: Benefits Handoff Record
+    public_url: https://comdico.github.io/PMP_Atlas_Site/artifacts/benefits-handoff-record/
+  - *id011
+  related_lifecycle_chapters:
+  - *id018
+  - *id012
+  related_decision_guides:
+  - *id021
+  precedence: PRE-010
+  verification_status: source_limited
+  public_source_ids:
+  - atlas-completion-lifecycle
+  atlas_synthesis_note: Post-project benefits authority depends on the organizational operating model.
+  ai_guidance:
+    use_when: Explaining who continues measurement after project closure.
+    avoid: Do not assign continuing benefits ownership to the project manager by default.
+    answer_pattern: Identify the explicit owner, measures, dates, dependencies, and escalation route.
+  last_reviewed: '2026-07-31'
+  version: 1.0.0
+- id: SEM-ROL-QUALITY-AUTHORITY
+  family: roles_authority
+  preferred_term: Quality authority
+  aliases:
+  - quality approver
+  - quality reviewer
+  concise_definition: Determines or advises whether defined quality criteria and verification requirements are satisfied within an assigned mandate.
+  scope: May be advisory, performing, approving, or auditing depending on the quality system.
+  distinctions:
+  - Technical verification does not itself create formal customer acceptance.
+  does_not_mean:
+  - Acceptance authority
+  - Universal owner of corrective action
+  applicability:
+  - organization_specific
+  - common_across_approaches
+  canonical_public_pages:
+  - https://comdico.github.io/PMP_Atlas_Site/lifecycle/quality/
+  related_processes:
+  - &id041
+    id: PRC-PLAN-QUALITY-MANAGEMENT
+    title: Plan Quality Management
+    public_url: https://comdico.github.io/PMP_Atlas_Site/processes/plan-quality-management/
+  - id: PRC-MANAGE-QUALITY
+    title: Manage Quality
+    public_url: https://comdico.github.io/PMP_Atlas_Site/processes/manage-quality/
+  - *id023
+  related_artifacts:
+  - id: ART-QLT-001
+    title: Quality Management Plan
+    public_url: https://comdico.github.io/PMP_Atlas_Site/artifacts/quality-management-plan/
+  - id: ART-QLT-003
+    title: Quality-Control Measurements
+    public_url: https://comdico.github.io/PMP_Atlas_Site/artifacts/quality-control-measurements/
+  - *id024
+  related_lifecycle_chapters:
+  - *id025
+  - *id012
+  related_decision_guides:
+  - *id026
+  - *id013
+  - *id020
+  precedence: PRE-003
+  verification_status: source_limited
+  public_source_ids:
+  - atlas-quality-lifecycle
+  - atlas-completion-lifecycle
+  atlas_synthesis_note: The quality role's mandate depends on the organization's quality system.
+  ai_guidance:
+    use_when: Explaining technical criteria, inspection, testing, or verification decisions.
+    avoid: Do not equate verification authority with formal acceptance authority.
+    answer_pattern: State the quality decision and then identify any separate acceptance or change decision.
+  last_reviewed: '2026-07-31'
+  version: 1.0.0
+- id: SEM-ROL-RISK-AUTHORITY
+  family: roles_authority
+  preferred_term: Risk authority
+  aliases:
+  - risk owner
+  - risk approver
+  concise_definition: Owns or decides risk action, acceptance, escalation, or reporting within an assigned risk-governance mandate.
+  scope: May include individual risk owners, project risk leadership, or governance-level risk decision makers.
+  distinctions:
+  - Risk ownership and authority to accept exposure may be assigned to different roles.
+  does_not_mean:
+  - One universal role for every risk decision
+  applicability:
+  - organization_specific
+  - common_across_approaches
+  canonical_public_pages:
+  - https://comdico.github.io/PMP_Atlas_Site/lifecycle/risk-compliance-procurement/
+  related_processes:
+  - id: PRC-PLAN-RISK-MANAGEMENT
+    title: Plan Risk Management
+    public_url: https://comdico.github.io/PMP_Atlas_Site/processes/plan-risk-management/
+  - &id036
+    id: PRC-IDENTIFY-RISKS
+    title: Identify Risks
+    public_url: https://comdico.github.io/PMP_Atlas_Site/processes/identify-risks/
+  - &id035
+    id: PRC-MONITOR-RISKS
+    title: Monitor Risks
+    public_url: https://comdico.github.io/PMP_Atlas_Site/processes/monitor-risks/
+  related_artifacts:
+  - &id037
+    id: ART-RSK-001
+    title: Risk Register
+    public_url: https://comdico.github.io/PMP_Atlas_Site/artifacts/risk-register/
+  - &id038
+    id: ART-RSK-003
+    title: Risk Report
+    public_url: https://comdico.github.io/PMP_Atlas_Site/artifacts/risk-report/
+  - *id027
+  related_lifecycle_chapters:
+  - &id029
+    id: LFC-006
+    title: Risk, Compliance, and Procurement
+    public_url: https://comdico.github.io/PMP_Atlas_Site/lifecycle/risk-compliance-procurement/
+  - *id001
+  related_decision_guides:
+  - *id006
+  - *id020
+  precedence: PRE-010
+  verification_status: source_limited
+  public_source_ids:
+  - atlas-risk-lifecycle
+  - atlas-monitoring-lifecycle
+  atlas_synthesis_note: Risk thresholds, ownership, and acceptance authority vary by governance model.
+  ai_guidance:
+    use_when: Explaining risk ownership, escalation, response, or exposure acceptance.
+    avoid: Do not assume the named risk owner can accept every level of exposure.
+    answer_pattern: Separate action ownership from the authority to accept or escalate exposure.
+  last_reviewed: '2026-07-31'
+  version: 1.0.0
+- id: SEM-ROL-COMPLIANCE-AUTHORITY
+  family: roles_authority
+  preferred_term: Compliance authority
+  aliases:
+  - regulatory authority
+  - compliance approver
+  concise_definition: Determines the sufficiency of compliance evidence or routes exception decisions within the applicable legal, regulatory, contractual, and organizational environment.
+  scope: Authority may be internal, external, advisory, approving, auditing, or controlling.
+  distinctions:
+  - Compliance obligations can affect scope
+  - risk
+  - quality
+  - procurement
+  - acceptance
+  - transition
+  - and closure.
+  does_not_mean:
+  - Quality-team preference
+  - Universal permission to waive an obligation
+  applicability:
+  - organization_specific
+  - context_specific
+  canonical_public_pages:
+  - https://comdico.github.io/PMP_Atlas_Site/decisions/compliance-problem/
+  related_processes:
+  - *id023
+  - &id030
+    id: PRC-CONTROL-PROCUREMENTS
+    title: Control Procurements
+    public_url: https://comdico.github.io/PMP_Atlas_Site/processes/control-procurements/
+  - *id028
+  related_artifacts:
+  - &id043
+    id: ART-CMP-001
+    title: Compliance Evidence and Traceability
+    public_url: https://comdico.github.io/PMP_Atlas_Site/artifacts/compliance-evidence-traceability/
+  - &id042
+    id: ART-QLT-007
+    title: Test and Evaluation Documents
+    public_url: https://comdico.github.io/PMP_Atlas_Site/artifacts/test-evaluation-documents/
+  - *id027
+  related_lifecycle_chapters:
+  - *id025
+  - *id029
+  - *id012
+  related_decision_guides:
+  - *id020
+  - *id003
+  precedence: PRE-010
+  verification_status: source_limited
+  public_source_ids:
+  - atlas-risk-lifecycle
+  - atlas-quality-lifecycle
+  - atlas-completion-lifecycle
+  atlas_synthesis_note: Exact authority comes from the obligation and governing environment.
+  ai_guidance:
+    use_when: An obligation, evidence gap, exception, release, or stop-work decision is involved.
+    avoid: Do not invent an exception right or treat compliance as optional quality guidance.
+    answer_pattern: Trace the obligation and evidence, then name the designated decision or escalation route.
+  last_reviewed: '2026-07-31'
+  version: 1.0.0
+- id: SEM-ROL-PROCUREMENT-AUTHORITY
+  family: roles_authority
+  preferred_term: Procurement authority
+  aliases:
+  - contract authority
+  - commercial authority
+  concise_definition: Exercises sourcing, agreement, remedy, change, or closure rights within an assigned commercial mandate.
+  scope: Commonly associated with procurement strategy, source selection, agreements, seller administration, and commercial closure.
+  distinctions:
+  - The project manager integrates project impacts but does not automatically hold commercial authority.
+  does_not_mean:
+  - Universal owner of seller work
+  - Automatic project change authority
+  applicability:
+  - organization_specific
+  - context_specific
+  canonical_public_pages:
+  - https://comdico.github.io/PMP_Atlas_Site/lifecycle/risk-compliance-procurement/
+  related_processes:
+  - id: PRC-PLAN-PROCUREMENT-MANAGEMENT
+    title: Plan Procurement Management
+    public_url: https://comdico.github.io/PMP_Atlas_Site/processes/plan-procurement-management/
+  - id: PRC-CONDUCT-PROCUREMENTS
+    title: Conduct Procurements
+    public_url: https://comdico.github.io/PMP_Atlas_Site/processes/conduct-procurements/
+  - *id030
+  related_artifacts:
+  - &id044
+    id: ART-PRC-003
+    title: Agreements
+    public_url: https://comdico.github.io/PMP_Atlas_Site/artifacts/agreements/
+  - id: ART-PRC-004
+    title: Procurement Strategy
+    public_url: https://comdico.github.io/PMP_Atlas_Site/artifacts/procurement-strategy/
+  - id: ART-PRC-007
+    title: Closed Procurement
+    public_url: https://comdico.github.io/PMP_Atlas_Site/artifacts/closed-procurement/
+  related_lifecycle_chapters:
+  - *id029
+  - *id012
+  related_decision_guides:
+  - id: DEC-PRC-001
+    title: Seller Performance Threatens Project Objectives
+    public_url: https://comdico.github.io/PMP_Atlas_Site/decisions/seller-performance-threat/
+  - *id020
+  - *id003
+  precedence: PRE-010
+  verification_status: source_limited
+  public_source_ids:
+  - atlas-risk-lifecycle
+  - atlas-completion-lifecycle
+  atlas_synthesis_note: Commercial decision rights depend on agreements and organizational delegation.
+  ai_guidance:
+    use_when: A sourcing, agreement, remedy, seller, or commercial closure decision is involved.
+    avoid: Do not assign contract rights to the project manager without evidence.
+    answer_pattern: Identify the agreement right, commercial mandate, and project-impact coordination required.
+  last_reviewed: '2026-07-31'
+  version: 1.0.0
+- id: SEM-DEL-PREDICTIVE
+  family: delivery_terminology
+  preferred_term: Predictive
+  aliases:
+  - predictive delivery
+  concise_definition: A delivery approach that establishes a comparatively broad authorized plan and baselines when work can be usefully defined in advance.
+  scope: Planning and control are tailored; prediction does not eliminate iteration, learning, or change.
+  distinctions:
+  - Predictive is a delivery approach
+  - not a claim that the future is perfectly known.
+  does_not_mean:
+  - No iteration
+  - No change
+  applicability:
+  - predictive
+  canonical_public_pages:
+  - https://comdico.github.io/PMP_Atlas_Site/lifecycle/adaptive-hybrid/
+  related_processes:
+  - *id031
+  - *id015
+  related_artifacts:
+  - *id017
+  - id: ART-SCP-001
+    title: Scope Baseline
+    public_url: https://comdico.github.io/PMP_Atlas_Site/artifacts/scope-baseline/
+  - &id048
+    id: ART-SCH-005
+    title: Schedule Baseline
+    public_url: https://comdico.github.io/PMP_Atlas_Site/artifacts/schedule-baseline/
+  - &id049
+    id: ART-CST-002
+    title: Cost Baseline
+    public_url: https://comdico.github.io/PMP_Atlas_Site/artifacts/cost-baseline/
+  related_lifecycle_chapters:
+  - *id032
+  - *id009
+  precedence: PRE-005
+  verification_status: atlas_synthesis
+  public_source_ids:
+  - atlas-planning-lifecycle
+  - atlas-adaptive-lifecycle
+  atlas_synthesis_note: The concise contrast is an Atlas synthesis of the registered delivery-approach source set.
+  ai_guidance:
+    use_when: Work can be planned comparatively broadly and governed through authorized plans or baselines.
+    avoid: Do not describe predictive delivery as non-iterative or immune to change.
+    answer_pattern: Describe the planning horizon, control model, and tailoring context.
+  last_reviewed: '2026-07-31'
+  version: 1.0.0
+- id: SEM-DEL-WATERFALL
+  family: delivery_terminology
+  preferred_term: Waterfall
+  aliases:
+  - waterfall delivery
+  concise_definition: A familiar explanatory label for a comparatively sequential form of predictive delivery.
+  scope: Useful as a plain-language label when sequence and phase completion are emphasized.
+  distinctions:
+  - Waterfall is related to predictive delivery but is not a synonym for every predictive implementation.
+  does_not_mean:
+  - Every predictive project
+  applicability:
+  - predictive
+  - context_specific
+  canonical_public_pages:
+  - https://comdico.github.io/PMP_Atlas_Site/lifecycle/adaptive-hybrid/
+  related_lifecycle_chapters:
+  - *id009
+  precedence: PRE-007
+  verification_status: source_limited
+  public_source_ids:
+  - atlas-adaptive-lifecycle
+  atlas_synthesis_note: The registered sources support predictive terminology more directly than the informal waterfall label.
+  ai_guidance:
+    use_when: A source or user explicitly uses waterfall to describe sequential predictive delivery.
+    avoid: Do not substitute waterfall for every predictive approach.
+    answer_pattern: Treat waterfall as a familiar related label and prefer predictive for the broader category.
+  last_reviewed: '2026-07-31'
+  version: 1.0.0
+- id: SEM-DEL-ADAPTIVE
+  family: delivery_terminology
+  preferred_term: Adaptive
+  aliases:
+  - adaptive delivery
+  concise_definition: A delivery approach using short planning and delivery horizons with frequent review when learning and change are expected.
+  scope: Includes multiple frameworks and methods; form, cadence, roles, and artifacts vary.
+  distinctions:
+  - Adaptive is broader than Scrum or Kanban.
+  does_not_mean:
+  - Scrum only
+  - Kanban only
+  - No governance
+  applicability:
+  - adaptive
+  canonical_public_pages:
+  - https://comdico.github.io/PMP_Atlas_Site/lifecycle/adaptive-hybrid/
+  related_processes:
+  - &id040
+    id: PRC-COLLECT-REQUIREMENTS
+    title: Collect Requirements
+    public_url: https://comdico.github.io/PMP_Atlas_Site/processes/collect-requirements/
+  - *id004
+  - *id019
+  related_artifacts:
+  - *id033
+  - *id007
+  - *id008
+  related_lifecycle_chapters:
+  - *id009
+  precedence: PRE-005
+  verification_status: atlas_synthesis
+  public_source_ids:
+  - atlas-adaptive-lifecycle
+  atlas_synthesis_note: Cross-approach process applicability is Atlas synthesis, not an official PMI agile crosswalk.
+  ai_guidance:
+    use_when: Learning, feedback, and changing priorities call for short planning and delivery horizons.
+    avoid: Do not infer one mandatory framework or remove governance constraints.
+    answer_pattern: Describe the feedback cadence and tailored roles, artifacts, and controls.
+  last_reviewed: '2026-07-31'
+  version: 1.0.0
+- id: SEM-DEL-AGILE
+  family: delivery_terminology
+  preferred_term: Agile
+  aliases:
+  - agile delivery
+  concise_definition: A broad family of values, principles, and practices associated with adaptive and iterative delivery.
+  scope: Use as a broad orientation unless a specific framework or method is named.
+  distinctions:
+  - Agile is not interchangeable with Scrum
+  - Kanban
+  - or every adaptive implementation.
+  does_not_mean:
+  - Scrum
+  - Kanban
+  - Absence of planning
+  applicability:
+  - adaptive
+  - hybrid
+  - context_specific
+  canonical_public_pages:
+  - https://comdico.github.io/PMP_Atlas_Site/lifecycle/adaptive-hybrid/
+  related_lifecycle_chapters:
+  - *id009
+  precedence: PRE-007
+  verification_status: source_limited
+  public_source_ids:
+  - atlas-adaptive-lifecycle
+  atlas_synthesis_note: The term is used broadly; specific claims require a named framework or method source.
+  ai_guidance:
+    use_when: Referring broadly to adaptive values and practices without asserting a specific framework mechanic.
+    avoid: Do not attribute Scrum- or Kanban-specific rules to all agile work.
+    answer_pattern: Use the broad term, then name the specific approach when mechanics matter.
+  last_reviewed: '2026-07-31'
+  version: 1.0.0
+- id: SEM-DEL-HYBRID
+  family: delivery_terminology
+  preferred_term: Hybrid
+  aliases:
+  - hybrid delivery
+  concise_definition: A delivery approach that deliberately combines cadences or governance models and defines how their evidence and decisions reconnect.
+  scope: May combine adaptive product delivery with predictive funding, milestones, contracts, compliance, transition, or governance.
+  distinctions:
+  - Hybrid is a delivery approach
+  - not a separate standardized set of 49 PMI processes.
+  does_not_mean:
+  - A universal framework
+  - A separate process catalog
+  applicability:
+  - hybrid
+  canonical_public_pages:
+  - https://comdico.github.io/PMP_Atlas_Site/lifecycle/adaptive-hybrid/
+  related_processes:
+  - *id031
+  - *id004
+  - *id015
+  related_artifacts:
+  - *id017
+  - *id007
+  - *id034
+  related_lifecycle_chapters:
+  - *id009
+  precedence: PRE-005
+  verification_status: atlas_synthesis
+  public_source_ids:
+  - atlas-adaptive-lifecycle
+  atlas_synthesis_note: Atlas mappings describe management-purpose applicability and are not official PMI framework crosswalks.
+  ai_guidance:
+    use_when: Different components or governance levels intentionally use different cadences or controls.
+    avoid: Do not present hybrid as one standardized framework or a second process set.
+    answer_pattern: Name the combined approaches and explain how evidence, authority, and decisions reconnect.
+  last_reviewed: '2026-07-31'
+  version: 1.0.0
+- id: SEM-DEL-SCRUM
+  family: delivery_terminology
+  preferred_term: Scrum-specific
+  aliases:
+  - Scrum
+  concise_definition: Refers to accountabilities, events, artifacts, or rules specific to the Scrum framework.
+  scope: Use only when the framework context is explicit and the claim is actually Scrum-specific.
+  distinctions:
+  - Scrum is one framework within the broader adaptive landscape.
+  does_not_mean:
+  - All adaptive work
+  - All agile work
+  applicability:
+  - scrum_specific
+  - adaptive
+  - hybrid
+  canonical_public_pages:
+  - https://comdico.github.io/PMP_Atlas_Site/lifecycle/adaptive-hybrid/
+  related_lifecycle_chapters:
+  - *id009
+  precedence: PRE-007
+  verification_status: source_limited
+  public_source_ids:
+  - atlas-adaptive-lifecycle
+  atlas_synthesis_note: Framework-specific mechanics should be verified against an applicable Scrum source before being asserted.
+  ai_guidance:
+    use_when: The framework is explicitly Scrum and the concept is one of its defined mechanics.
+    avoid: Do not generalize Scrum accountabilities, events, or artifacts to all adaptive delivery.
+    answer_pattern: Label the statement Scrum-specific and separate it from broader adaptive guidance.
+  last_reviewed: '2026-07-31'
+  version: 1.0.0
+- id: SEM-DEL-KANBAN
+  family: delivery_terminology
+  preferred_term: Kanban-specific
+  aliases:
+  - Kanban
+  concise_definition: Refers to flow-oriented practices such as visualization, work-in-progress control, pull, and flow measures in a Kanban context.
+  scope: Use when the method or practice context is explicit.
+  distinctions:
+  - Kanban is not a synonym for every visual board or every adaptive approach.
+  does_not_mean:
+  - All adaptive work
+  - Any task board
+  applicability:
+  - kanban_specific
+  - adaptive
+  - hybrid
+  canonical_public_pages:
+  - https://comdico.github.io/PMP_Atlas_Site/lifecycle/adaptive-hybrid/
+  related_lifecycle_chapters:
+  - *id009
+  precedence: PRE-007
+  verification_status: source_limited
+  public_source_ids:
+  - atlas-adaptive-lifecycle
+  atlas_synthesis_note: Method-specific mechanics require an applicable Kanban source before being asserted.
+  ai_guidance:
+    use_when: Flow, pull, WIP limits, or Kanban measures are explicitly in scope.
+    avoid: Do not label every board or adaptive practice Kanban.
+    answer_pattern: Name the flow practice and keep it distinct from broader adaptive terminology.
+  last_reviewed: '2026-07-31'
+  version: 1.0.0
+- id: SEM-DEL-COMMON
+  family: delivery_terminology
+  preferred_term: Common across approaches
+  aliases:
+  - common applicability
+  concise_definition: The management purpose remains broadly applicable even when form, cadence, ownership, or storage changes.
+  scope: An Atlas applicability label used to describe a persistent management need across delivery approaches.
+  distinctions:
+  - Missing applicability means insufficient mapping
+  - not prohibition.
+  does_not_mean:
+  - Identical implementation
+  - Official PMI process-to-agile mapping
+  applicability:
+  - common_across_approaches
+  canonical_public_pages:
+  - https://comdico.github.io/PMP_Atlas_Site/processes/
+  related_processes:
+  - id: PRC-IDENTIFY-STAKEHOLDERS
+    title: Identify Stakeholders
+    public_url: https://comdico.github.io/PMP_Atlas_Site/processes/identify-stakeholders/
+  - id: PRC-MANAGE-COMMUNICATIONS
+    title: Manage Communications
+    public_url: https://comdico.github.io/PMP_Atlas_Site/processes/manage-communications/
+  - *id035
+  related_lifecycle_chapters:
+  - id: LFC-000
+    title: Project Start to Completion
+    public_url: https://comdico.github.io/PMP_Atlas_Site/lifecycle/
+  - *id009
+  precedence: PRE-007
+  verification_status: atlas_synthesis
+  public_source_ids:
+  - atlas-process-reference
+  - atlas-adaptive-lifecycle
+  atlas_synthesis_note: Applicability mappings are an Atlas synthesis where the sources do not provide an official PMI agile crosswalk.
+  ai_guidance:
+    use_when: The underlying management purpose persists across approaches with tailored implementation.
+    avoid: Do not imply identical artifacts, roles, cadence, or storage.
+    answer_pattern: State the common purpose and then describe how implementation may vary.
+  last_reviewed: '2026-07-31'
+  version: 1.0.0
+- id: SEM-STATE-RISK
+  family: risk_issue_impediment
+  preferred_term: Risk
+  aliases:
+  - project risk
+  concise_definition: An uncertain event or condition that can affect objectives.
+  scope: Tracked while uncertainty remains and analyzed, owned, responded to, and monitored according to the risk approach.
+  distinctions:
+  - A realized risk may become an issue; not every issue began as a risk.
+  does_not_mean:
+  - A current problem already requiring corrective action
+  applicability:
+  - common_across_approaches
+  canonical_public_pages:
+  - https://comdico.github.io/PMP_Atlas_Site/artifacts/risk-register/
+  related_processes:
+  - *id036
+  - id: PRC-PLAN-RISK-RESPONSES
+    title: Plan Risk Responses
+    public_url: https://comdico.github.io/PMP_Atlas_Site/processes/plan-risk-responses/
+  - *id035
+  related_artifacts:
+  - *id037
+  - *id038
+  - *id027
+  related_lifecycle_chapters:
+  - *id029
+  - *id001
+  related_decision_guides:
+  - *id006
+  precedence: PRE-003
+  verification_status: verified
+  public_source_ids:
+  - atlas-risk-lifecycle
+  - atlas-monitoring-lifecycle
+  ai_guidance:
+    use_when: The event or condition is still uncertain.
+    avoid: Do not keep describing an occurred condition only as uncertain.
+    answer_pattern: State the uncertainty, objective effect, owner, response, and monitoring route.
+  last_reviewed: '2026-07-31'
+  version: 1.0.0
+- id: SEM-STATE-ISSUE
+  family: risk_issue_impediment
+  preferred_term: Issue
+  aliases:
+  - current issue
+  concise_definition: A current condition requiring action, ownership, and possibly escalation or change.
+  scope: Captures current problems, decisions, or conditions that need resolution and traceability.
+  distinctions:
+  - A realized risk may create an issue
+  - but not every issue began as a risk.
+  does_not_mean:
+  - An uncertain future event
+  applicability:
+  - common_across_approaches
+  canonical_public_pages:
+  - https://comdico.github.io/PMP_Atlas_Site/artifacts/issue-log/
+  related_processes:
+  - *id019
+  - *id039
+  related_artifacts:
+  - *id027
+  - *id037
+  - *id034
+  related_lifecycle_chapters:
+  - *id005
+  - *id001
+  related_decision_guides:
+  - *id006
+  - *id020
+  precedence: PRE-004
+  verification_status: verified
+  public_source_ids:
+  - atlas-execution-lifecycle
+  - atlas-monitoring-lifecycle
+  ai_guidance:
+    use_when: A present condition requires action or a decision.
+    avoid: Do not require every issue to have originated as a registered risk.
+    answer_pattern: State the current condition, owner, action, due route, and escalation threshold.
+  last_reviewed: '2026-07-31'
+  version: 1.0.0
+- id: SEM-STATE-IMPEDIMENT
+  family: risk_issue_impediment
+  preferred_term: Impediment
+  aliases:
+  - blocker
+  - flow constraint
+  concise_definition: Something currently blocking or slowing work.
+  scope: May be removed within team authority or tracked through issue management when broader action or traceability is required.
+  distinctions:
+  - Impediment terminology is not exclusive to Scrum.
+  does_not_mean:
+  - Every risk
+  - Scrum-only record
+  applicability:
+  - common_across_approaches
+  - adaptive
+  - hybrid
+  canonical_public_pages:
+  - https://comdico.github.io/PMP_Atlas_Site/artifacts/impediment-record/
+  related_processes:
+  - *id039
+  - *id019
+  related_artifacts:
+  - *id008
+  - *id027
+  - *id034
+  related_lifecycle_chapters:
+  - *id005
+  - *id001
+  - *id009
+  related_decision_guides:
+  - *id006
+  precedence: PRE-004
+  verification_status: verified
+  public_source_ids:
+  - atlas-execution-lifecycle
+  - atlas-monitoring-lifecycle
+  - atlas-adaptive-lifecycle
+  ai_guidance:
+    use_when: Something presently blocks or slows work.
+    avoid: Do not restrict the term to Scrum or treat every impediment as a baseline change.
+    answer_pattern: State the constraint, owner, removal path, and when it becomes a broader issue.
+  last_reviewed: '2026-07-31'
+  version: 1.0.0
+- id: SEM-CMP-TRACEABILITY
+  family: compliance_traceability
+  preferred_term: Compliance traceability
+  aliases:
+  - compliance evidence chain
+  concise_definition: A cross-cutting evidence chain connecting an obligation to implementation, verification, acceptance, transition, and closure records.
+  scope: Obligation or requirement → scope and acceptance criteria → risk and planning → quality and test evidence → procurement or agreement obligation where relevant → verification → acceptance → transition and closure evidence.
+  distinctions:
+  - Compliance is not one isolated process.
+  - Exact authority depends on the regulatory, contractual, and organizational environment.
+  does_not_mean:
+  - One universal compliance framework
+  - Permission to omit specialist review
+  applicability:
+  - context_specific
+  - common_across_approaches
+  canonical_public_pages:
+  - https://comdico.github.io/PMP_Atlas_Site/artifacts/compliance-evidence-traceability/
+  related_processes:
+  - *id040
+  - *id041
+  - *id023
+  - *id030
+  - *id028
+  - *id010
+  related_artifacts:
+  - *id033
+  - id: ART-REQ-002
+    title: Requirements Traceability Matrix
+    public_url: https://comdico.github.io/PMP_Atlas_Site/artifacts/requirements-traceability-matrix/
+  - *id037
+  - *id042
+  - *id043
+  - *id044
+  - *id045
+  - *id046
+  - *id011
+  related_lifecycle_chapters:
+  - id: LFC-003
+    title: Requirements and Scope
+    public_url: https://comdico.github.io/PMP_Atlas_Site/lifecycle/requirements-scope/
+  - *id025
+  - *id029
+  - *id012
+  related_decision_guides:
+  - *id020
+  - *id003
+  precedence: PRE-005
+  verification_status: atlas_synthesis
+  public_source_ids:
+  - atlas-quality-lifecycle
+  - atlas-risk-lifecycle
+  - atlas-completion-lifecycle
+  atlas_synthesis_note: The chain organizes registered evidence without claiming one universal compliance method.
+  ai_guidance:
+    use_when: Explaining how an obligation remains traceable through delivery and closure.
+    avoid: Do not isolate compliance in one process or invent authority to waive obligations.
+    answer_pattern: Walk the obligation through criteria, plans, evidence, verification, acceptance, transition, and closure.
+  last_reviewed: '2026-07-31'
+  version: 1.0.0
+- id: SEM-CLS-BENEFITS-HANDOFF
+  family: closure_benefits_handoff
+  preferred_term: Closure and benefits handoff
+  aliases:
+  - benefits transition
+  - post-project benefits handoff
+  concise_definition: The explicit separation and connection among formal acceptance, transition, formal project closure, operational ownership, benefits ownership, and continuing benefits measurement.
+  scope: Formal acceptance confirms agreed results; transition transfers readiness and responsibility; formal closure completes project or phase obligations; operational and benefits owners continue assigned post-project responsibilities.
+  distinctions:
+  - Formal project closure may occur before all benefits are realized.
+  - Continuing measurement requires an explicit handoff.
+  - Operational ownership and benefits ownership may be assigned to different roles.
+  - The Atlas does not assert a universal benefits-authority model.
+  does_not_mean:
+  - All benefits must be realized before closure
+  - The project manager owns benefits indefinitely
+  applicability:
+  - organization_specific
+  - common_across_approaches
+  canonical_public_pages:
+  - https://comdico.github.io/PMP_Atlas_Site/lifecycle/acceptance-transition-closure/
+  related_processes:
+  - *id028
+  - *id010
+  related_artifacts:
+  - *id045
+  - *id046
+  - *id022
+  - *id047
+  - *id011
+  related_lifecycle_chapters:
+  - *id012
+  related_decision_guides:
+  - *id003
+  - *id021
+  precedence: PRE-005
+  verification_status: source_limited
+  public_source_ids:
+  - atlas-completion-lifecycle
+  atlas_synthesis_note: Post-project operational and benefits authority depends on the receiving organization.
+  ai_guidance:
+    use_when: Explaining acceptance, transition, closure, or responsibility after project completion.
+    avoid: Do not delay closure until every benefit occurs or assign universal post-project ownership.
+    answer_pattern: Separate each state and name the explicit operational and benefits handoffs.
+  last_reviewed: '2026-07-31'
+  version: 1.0.0
+- id: SEM-FRM-OWNERSHIP
+  family: formula_ownership
+  preferred_term: Formula registry ownership
+  aliases:
+  - quantitative-method ownership
+  - formula precedence
+  concise_definition: The Formula registry is the canonical structured owner for formula expressions and verification status; this semantic reference only points to that owner.
+  scope: Formula and Quantitative Methods is the canonical public explanation for estimating, schedule, reserves, and earned-value formula families.
+  distinctions:
+  - Formula verification status must come from the Formula registry.
+  - Shared semantics never independently assigns a formula-family verification status.
+  - When records conflict, the Formula registry has precedence.
+  does_not_mean:
+  - A second formula registry
+  - Independent formula verification
+  applicability:
+  - common_across_approaches
+  - context_specific
+  canonical_public_pages:
+  - https://comdico.github.io/PMP_Atlas_Site/formulas/
+  related_processes:
+  - id: PRC-ESTIMATE-ACTIVITY-DURATIONS
+    title: Estimate Activity Durations
+    public_url: https://comdico.github.io/PMP_Atlas_Site/processes/estimate-activity-durations/
+  - id: PRC-DEVELOP-SCHEDULE
+    title: Develop Schedule
+    public_url: https://comdico.github.io/PMP_Atlas_Site/processes/develop-schedule/
+  - id: PRC-ESTIMATE-COSTS
+    title: Estimate Costs
+    public_url: https://comdico.github.io/PMP_Atlas_Site/processes/estimate-costs/
+  - id: PRC-DETERMINE-BUDGET
+    title: Determine Budget
+    public_url: https://comdico.github.io/PMP_Atlas_Site/processes/determine-budget/
+  - id: PRC-CONTROL-COSTS
+    title: Control Costs
+    public_url: https://comdico.github.io/PMP_Atlas_Site/processes/control-costs/
+  related_artifacts:
+  - id: ART-SCH-004
+    title: Project Schedule
+    public_url: https://comdico.github.io/PMP_Atlas_Site/artifacts/project-schedule/
+  - *id048
+  - id: ART-CST-001
+    title: Cost Estimates
+    public_url: https://comdico.github.io/PMP_Atlas_Site/artifacts/cost-estimates/
+  - *id049
+  related_lifecycle_chapters:
+  - id: LFC-004
+    title: Schedule, Resources, and Cost
+    public_url: https://comdico.github.io/PMP_Atlas_Site/lifecycle/schedule-resources-cost/
+  related_formula_families:
+  - id: estimating
+    title: Estimating
+    public_url: https://comdico.github.io/PMP_Atlas_Site/formulas/estimating/
+  - id: schedule
+    title: Schedule Analysis
+    public_url: https://comdico.github.io/PMP_Atlas_Site/formulas/schedule-analysis/
+  - id: reserves
+    title: Reserves and Baselines
+    public_url: https://comdico.github.io/PMP_Atlas_Site/formulas/reserves-and-baselines/
+  - id: evm
+    title: Earned Value
+    public_url: https://comdico.github.io/PMP_Atlas_Site/formulas/earned-value/
+  precedence: PRE-002
+  verification_status: verified
+  public_source_ids:
+  - atlas-planning-lifecycle
+  ai_guidance:
+    use_when: Resolving where formula expressions, examples, or verification status are owned.
+    avoid: Do not infer a formula's status from this semantic record or duplicate an expression here.
+    answer_pattern: Follow the Formula and Quantitative Methods link and preserve the registry's current status label.
+  last_reviewed: '2026-07-31'
+  version: 1.0.0

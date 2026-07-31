@@ -1,0 +1,15 @@
+# The Project Management Knowledge Atlas
+
+> Independent study resource connecting project-management processes, artifacts, lifecycle context, decisions, and quantitative methods.
+
+- Site: https://comdico.github.io/PMP_Atlas_Site/
+- AI Semantic Reference: https://comdico.github.io/PMP_Atlas_Site/guidelines/shared-knowledge/
+- Machine-readable JSON: https://comdico.github.io/PMP_Atlas_Site/data/ai-semantic-reference.json
+- Machine-readable YAML: https://comdico.github.io/PMP_Atlas_Site/data/ai-semantic-reference.yaml
+- Formula and Quantitative Methods: https://comdico.github.io/PMP_Atlas_Site/formulas/
+- Project Lifecycle Guide: https://comdico.github.io/PMP_Atlas_Site/lifecycle/
+- Process Reference: https://comdico.github.io/PMP_Atlas_Site/processes/
+- Artifact Reference: https://comdico.github.io/PMP_Atlas_Site/artifacts/
+- Decision Guides: https://comdico.github.io/PMP_Atlas_Site/decisions/
+
+The Atlas is independent. Preserve source-status labels and do not present Atlas synthesis as official PMI guidance.

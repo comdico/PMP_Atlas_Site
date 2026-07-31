@@ -1,0 +1,42 @@
+.semantic-record {
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-left: 0.25rem solid var(--md-primary-fg-color);
+  border-radius: 0.25rem;
+  margin: 1.25rem 0;
+  padding: 0.25rem 1rem 0.75rem;
+  scroll-margin-top: 4.5rem;
+}
+
+.semantic-record > h3 {
+  margin-top: 0.8rem;
+}
+
+.semantic-status {
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.025em;
+  line-height: 1.6;
+  margin: 0 0.35rem 0.4rem 0;
+  padding: 0 0.55rem;
+  text-transform: uppercase;
+}
+
+.semantic-status--verified { color: #16794b; }
+.semantic-status--atlas-synthesis { color: #8a5b00; }
+.semantic-status--source-limited { color: #8b3d54; }
+
+@media (max-width: 44.984375em) {
+  .semantic-record {
+    margin-inline: 0;
+    overflow-wrap: anywhere;
+    padding-inline: 0.75rem;
+  }
+
+  .md-typeset .md-button {
+    margin-bottom: 0.45rem;
+    white-space: normal;
+  }
+}
