@@ -10,7 +10,7 @@
     "yaml_url": "https://comdico.github.io/PMP_Atlas_Site/data/ai-semantic-reference.yaml",
     "version": "1.3.0",
     "last_reviewed": "2026-08-01",
-    "content_hash": "sha256:56611a547ee14312fd29ea92304a551549e10fcf54bbfe64822d196f7ec271de"
+    "content_hash": "sha256:a588fbbf41c30910c9819e43acd60c5fd3cee218ae8eb7a6a18c04888240a1b0"
   },
   "verification_status_labels": {
     "verified": "Verified",
@@ -37,6 +37,11 @@
       "id": "atlas-process-reference",
       "title": "Atlas Process Reference",
       "public_url": "https://comdico.github.io/PMP_Atlas_Site/processes/"
+    },
+    {
+      "id": "atlas-stakeholder-engagement-matrix",
+      "title": "Atlas Stakeholder Engagement Assessment Matrix",
+      "public_url": "https://comdico.github.io/PMP_Atlas_Site/artifacts/stakeholder-engagement-assessment-matrix/"
     },
     {
       "id": "atlas-lifecycle-guide",
@@ -153,6 +158,152 @@
     ]
   },
   "concepts": [
+    {
+      "id": "SEM-STK-ENGAGEMENT-ASSESSMENT-MATRIX",
+      "family": "delivery_terminology",
+      "preferred_term": "Stakeholder Engagement Assessment Matrix",
+      "aliases": [
+        "stakeholder engagement assessment",
+        "current-and-desired engagement matrix"
+      ],
+      "concise_definition": "A working assessment that compares each stakeholder identifier's current and desired engagement state so the team can identify gaps and tailor engagement actions.",
+      "scope": "The matrix uses Unaware, Resistant, Neutral, Supportive, and Leading states with C for current, D for desired, and C/D when the states are the same; identifiers should replace personal names where assessment information is sensitive.",
+      "distinctions": [
+        "The matrix assesses engagement state; the Stakeholder Register owns stakeholder identity, influence, authority, and broader profile information.",
+        "The matrix informs the Stakeholder Engagement Plan but is not the plan itself.",
+        "The matrix may inform communication choices but is not the Communications Management Plan.",
+        "A power-interest or similar stakeholder grid classifies influence or interest; it does not show current-versus-desired engagement.",
+        "The matrix is a working assessment tool and is not asserted as a formal process output."
+      ],
+      "does_not_mean": [
+        "Stakeholder Register",
+        "Stakeholder Engagement Plan",
+        "Communications Management Plan",
+        "Power-interest grid",
+        "Formal process output"
+      ],
+      "applicability": [
+        "predictive",
+        "adaptive",
+        "hybrid",
+        "context_specific"
+      ],
+      "canonical_public_pages": [
+        "https://comdico.github.io/PMP_Atlas_Site/artifacts/stakeholder-engagement-assessment-matrix/"
+      ],
+      "related_processes": [
+        {
+          "id": "PRC-IDENTIFY-STAKEHOLDERS",
+          "title": "Identify Stakeholders",
+          "public_url": "https://comdico.github.io/PMP_Atlas_Site/processes/identify-stakeholders/"
+        },
+        {
+          "id": "PRC-PLAN-STAKEHOLDER-ENGAGEMENT",
+          "title": "Plan Stakeholder Engagement",
+          "public_url": "https://comdico.github.io/PMP_Atlas_Site/processes/plan-stakeholder-engagement/"
+        },
+        {
+          "id": "PRC-MANAGE-STAKEHOLDER-ENGAGEMENT",
+          "title": "Manage Stakeholder Engagement",
+          "public_url": "https://comdico.github.io/PMP_Atlas_Site/processes/manage-stakeholder-engagement/"
+        },
+        {
+          "id": "PRC-MONITOR-STAKEHOLDER-ENGAGEMENT",
+          "title": "Monitor Stakeholder Engagement",
+          "public_url": "https://comdico.github.io/PMP_Atlas_Site/processes/monitor-stakeholder-engagement/"
+        },
+        {
+          "id": "PRC-PLAN-COMMUNICATIONS-MANAGEMENT",
+          "title": "Plan Communications Management",
+          "public_url": "https://comdico.github.io/PMP_Atlas_Site/processes/plan-communications-management/"
+        },
+        {
+          "id": "PRC-MANAGE-COMMUNICATIONS",
+          "title": "Manage Communications",
+          "public_url": "https://comdico.github.io/PMP_Atlas_Site/processes/manage-communications/"
+        },
+        {
+          "id": "PRC-MONITOR-COMMUNICATIONS",
+          "title": "Monitor Communications",
+          "public_url": "https://comdico.github.io/PMP_Atlas_Site/processes/monitor-communications/"
+        }
+      ],
+      "related_artifacts": [
+        {
+          "id": "ART-STK-001",
+          "title": "Stakeholder Register",
+          "public_url": "https://comdico.github.io/PMP_Atlas_Site/artifacts/stakeholder-register/"
+        },
+        {
+          "id": "ART-STK-002",
+          "title": "Stakeholder Engagement Plan"
+        },
+        {
+          "id": "ART-COM-001",
+          "title": "Communications Management Plan"
+        },
+        {
+          "id": "ART-ISS-001",
+          "title": "Issue Log",
+          "public_url": "https://comdico.github.io/PMP_Atlas_Site/artifacts/issue-log/"
+        },
+        {
+          "id": "ART-RSK-001",
+          "title": "Risk Register",
+          "public_url": "https://comdico.github.io/PMP_Atlas_Site/artifacts/risk-register/"
+        },
+        {
+          "id": "ART-INT-002",
+          "title": "Lessons Learned Register",
+          "public_url": "https://comdico.github.io/PMP_Atlas_Site/artifacts/lessons-learned-register/"
+        },
+        {
+          "id": "ART-CHG-001",
+          "title": "Change Requests",
+          "public_url": "https://comdico.github.io/PMP_Atlas_Site/artifacts/change-requests/"
+        },
+        {
+          "id": "ART-STK-003",
+          "title": "Stakeholder Engagement Assessment Matrix",
+          "public_url": "https://comdico.github.io/PMP_Atlas_Site/artifacts/stakeholder-engagement-assessment-matrix/"
+        }
+      ],
+      "related_lifecycle_chapters": [
+        {
+          "id": "LFC-002",
+          "title": "Integrated Planning",
+          "public_url": "https://comdico.github.io/PMP_Atlas_Site/lifecycle/integrated-planning/"
+        },
+        {
+          "id": "LFC-007",
+          "title": "Execution and Team Leadership",
+          "public_url": "https://comdico.github.io/PMP_Atlas_Site/lifecycle/execution-leadership/"
+        },
+        {
+          "id": "LFC-008",
+          "title": "Monitoring and Change",
+          "public_url": "https://comdico.github.io/PMP_Atlas_Site/lifecycle/monitoring-change/"
+        },
+        {
+          "id": "LFC-009",
+          "title": "Adaptive and Hybrid Delivery",
+          "public_url": "https://comdico.github.io/PMP_Atlas_Site/lifecycle/adaptive-hybrid/"
+        }
+      ],
+      "precedence": "PRE-001",
+      "verification_status": "verified",
+      "public_source_ids": [
+        "atlas-stakeholder-engagement-matrix"
+      ],
+      "atlas_synthesis_note": "Lesson 3 supports the five-state current-versus-desired model; the extended evidence, action, owner, and review fields are clearly identified as an Atlas working-resource design.",
+      "ai_guidance": {
+        "use_when": "Comparing observed stakeholder engagement with the engagement needed for project success or explaining the resulting engagement gap.",
+        "avoid": "Do not expose sensitive personal assessments, substitute the matrix for its related registers or plans, or present it as a required formal output in every delivery approach.",
+        "answer_pattern": "Define the five states and C/D markers, explain the gap, then distinguish the matrix from the register, engagement plan, communications plan, and influence-interest grids."
+      },
+      "last_reviewed": "2026-08-01",
+      "version": "1.0.0"
+    },
     {
       "id": "SEM-ROL-SPONSOR",
       "family": "roles_authority",
