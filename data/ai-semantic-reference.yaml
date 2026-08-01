@@ -7,14 +7,17 @@ metadata:
   page_url: https://comdico.github.io/PMP_Atlas_Site/guidelines/shared-knowledge/
   json_url: https://comdico.github.io/PMP_Atlas_Site/data/ai-semantic-reference.json
   yaml_url: https://comdico.github.io/PMP_Atlas_Site/data/ai-semantic-reference.yaml
-  version: 1.1.0
+  version: 1.2.0
   last_reviewed: '2026-08-01'
-  content_hash: sha256:013b1845c8f83e1e13d0df3c5e16e6bb70ba419fdfac69a438781de354f4f420
+  content_hash: sha256:4263e5cc6ff3e9b50bd8f889cf060690d7f164e12acc14b1dadb256a371d4610
 verification_status_labels:
   verified: Verified
   atlas_synthesis: Atlas synthesis
   source_limited: Source-limited
 public_sources:
+- id: atlas-scrum-events
+  title: Atlas Scrum Events and Adaptive Cadences
+  public_url: https://comdico.github.io/PMP_Atlas_Site/lifecycle/scrum-events-and-adaptive-cadences/
 - id: atlas-roles-reference
   title: Atlas Roles, Responsibilities, and Authority Reference
   public_url: https://comdico.github.io/PMP_Atlas_Site/roles/
@@ -1036,10 +1039,12 @@ concepts:
   preferred_term: Scrum-specific
   aliases:
   - Scrum
-  concise_definition: Refers to accountabilities, events, artifacts, or rules specific to the Scrum framework.
+  - Agile ceremonies
+  concise_definition: Refers to accountabilities, events, artifacts, or rules specific to Scrum; the informal phrase Agile ceremonies often means Scrum events but is not a universal agile meeting set.
   scope: Use only when the framework context is explicit and the claim is actually Scrum-specific.
   distinctions:
   - Scrum is one framework within the broader adaptive landscape.
+  - Scrum defines events; backlog refinement is ongoing activity rather than a formal event.
   does_not_mean:
   - All adaptive work
   - All agile work
@@ -1048,13 +1053,13 @@ concepts:
   - adaptive
   - hybrid
   canonical_public_pages:
-  - https://comdico.github.io/PMP_Atlas_Site/lifecycle/adaptive-hybrid/
+  - https://comdico.github.io/PMP_Atlas_Site/lifecycle/scrum-events-and-adaptive-cadences/
   related_lifecycle_chapters:
   - *id009
   precedence: PRE-007
   verification_status: source_limited
   public_source_ids:
-  - atlas-adaptive-lifecycle
+  - atlas-scrum-events
   atlas_synthesis_note: Framework-specific mechanics should be verified against an applicable Scrum source before being asserted.
   ai_guidance:
     use_when: The framework is explicitly Scrum and the concept is one of its defined mechanics.
@@ -1079,13 +1084,13 @@ concepts:
   - adaptive
   - hybrid
   canonical_public_pages:
-  - https://comdico.github.io/PMP_Atlas_Site/lifecycle/adaptive-hybrid/
+  - https://comdico.github.io/PMP_Atlas_Site/lifecycle/scrum-events-and-adaptive-cadences/
   related_lifecycle_chapters:
   - *id009
   precedence: PRE-007
   verification_status: source_limited
   public_source_ids:
-  - atlas-adaptive-lifecycle
+  - atlas-scrum-events
   atlas_synthesis_note: Method-specific mechanics require an applicable Kanban source before being asserted.
   ai_guidance:
     use_when: Flow, pull, WIP limits, or Kanban measures are explicitly in scope.

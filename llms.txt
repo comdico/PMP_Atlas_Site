@@ -8,6 +8,7 @@
 - Machine-readable YAML: https://comdico.github.io/PMP_Atlas_Site/data/ai-semantic-reference.yaml
 - Formula and Quantitative Methods: https://comdico.github.io/PMP_Atlas_Site/formulas/
 - Project Lifecycle Guide: https://comdico.github.io/PMP_Atlas_Site/lifecycle/
+- Scrum Events and Adaptive Cadences: https://comdico.github.io/PMP_Atlas_Site/lifecycle/scrum-events-and-adaptive-cadences/
 - Process Reference: https://comdico.github.io/PMP_Atlas_Site/processes/
 - Roles, Responsibilities, and Authority: https://comdico.github.io/PMP_Atlas_Site/roles/
 - Process Role Map: https://comdico.github.io/PMP_Atlas_Site/roles/process-role-map/
