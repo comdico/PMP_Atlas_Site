@@ -58,6 +58,8 @@
     
       <link rel="stylesheet" href="../../stylesheets/adaptive-practices.css">
     
+      <link rel="stylesheet" href="../../stylesheets/adaptive-metrics.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -5301,6 +5303,8 @@
       
         
       
+        
+      
     
     
     
@@ -5467,6 +5471,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../formulas/adaptive-metrics-and-visual-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adaptive Metrics and Visual Management
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -5504,7 +5536,7 @@
 <pre><code>This page defines the preferred terminology, conceptual boundaries, ownership rules, precedence, applicability, and verification status used throughout The Project Management Knowledge Atlas. It is designed primarily for AI agents and retrieval systems, while remaining readable to advanced human users. It is not a narrative PMP study chapter.
 </code></pre>
 <p>The Atlas is an independent study resource. Source status must be respected, and an <strong>Atlas synthesis</strong> must not be presented as official PMI guidance. Linked canonical pages contain the full reader-facing explanation. For operational role assignments, use the <a href="../../roles/">Roles Reference</a> and its 49-process role map; this semantic contract remains concise.</p>
-<p><strong>Contract version:</strong> 1.2.0 · <strong>Last reviewed:</strong> 2026-08-01</p>
+<p><strong>Contract version:</strong> 1.3.0 · <strong>Last reviewed:</strong> 2026-08-01</p>
 <p><a class="md-button" href="../../data/ai-semantic-reference.json">Machine-readable JSON</a> <a class="md-button" href="../../data/ai-semantic-reference.yaml">Machine-readable YAML</a></p>
 <h2 id="how-to-resolve-conflicts">How to resolve conflicts</h2>
 <ol>
@@ -6065,6 +6097,170 @@
 <li><strong>Answer pattern:</strong> State the common purpose and then describe how implementation may vary.</li>
 </ul>
 </article>
+<article class="semantic-record" id="sem-met-velocity">
+<h3 id="velocity">Velocity</h3>
+<p><span class="semantic-status semantic-status--verified">Verified</span> <code>SEM-MET-VELOCITY</code></p>
+<p>Estimated work fully completed by one team during one iteration in that team's chosen estimation unit.</p>
+<p><strong>Scope:</strong> Concise semantic entry only; the Adaptive Metrics registry owns calculation, examples, and misuse boundaries.</p>
+<p><strong>Aliases:</strong> iteration velocity, Sprint velocity</p>
+<p><strong>Distinctions:</strong></p>
+<ul>
+<li>Only Done work counts.</li>
+<li>Team-specific story points are not hours or comparable across teams.</li>
+</ul>
+<p><strong>Does not mean:</strong> Productivity; Partial-completion credit</p>
+<p><strong>Applicability:</strong> adaptive, scrum specific, hybrid, context specific</p>
+<p><strong>Canonical public pages:</strong> <a href="https://comdico.github.io/PMP_Atlas_Site/formulas/adaptive-metrics-and-visual-management/">Open reference</a></p>
+<p><strong>AI guidance:</strong></p>
+<ul>
+<li><strong>Use when:</strong> Same-team iteration forecasting is in scope.</li>
+<li><strong>Avoid:</strong> Never compare teams or count unfinished work.</li>
+<li><strong>Answer pattern:</strong> Define the team and iteration and link to the canonical metric page.</li>
+</ul>
+</article>
+<article class="semantic-record" id="sem-met-throughput">
+<h3 id="throughput">Throughput</h3>
+<p><span class="semantic-status semantic-status--verified">Verified</span> <code>SEM-MET-THROUGHPUT</code></p>
+<p>The exact count of work items finished per unit of time.</p>
+<p><strong>Scope:</strong> Canonical mechanics and example remain in the Adaptive Metrics registry.</p>
+<p><strong>Aliases:</strong> delivery rate</p>
+<p><strong>Distinctions:</strong></p>
+<ul>
+<li>Counts items rather than story points.</li>
+<li>The time period must be stated.</li>
+</ul>
+<p><strong>Does not mean:</strong> Velocity</p>
+<p><strong>Applicability:</strong> adaptive, kanban specific, hybrid</p>
+<p><strong>Canonical public pages:</strong> <a href="https://comdico.github.io/PMP_Atlas_Site/formulas/adaptive-metrics-and-visual-management/">Open reference</a></p>
+<p><strong>AI guidance:</strong></p>
+<ul>
+<li><strong>Use when:</strong> Finished-item flow rate is in scope.</li>
+<li><strong>Avoid:</strong> Do not omit the time unit.</li>
+<li><strong>Answer pattern:</strong> State the item count and observation period.</li>
+</ul>
+</article>
+<article class="semantic-record" id="sem-met-cycle-time">
+<h3 id="cycle-time">Cycle time</h3>
+<p><span class="semantic-status semantic-status--verified">Verified</span> <code>SEM-MET-CYCLE-TIME</code></p>
+<p>Elapsed time from when a work item started until it finished.</p>
+<p><strong>Scope:</strong> Requires explicit workflow start and finish points.</p>
+<p><strong>Aliases:</strong> cycle time</p>
+<p><strong>Distinctions:</strong></p>
+<ul>
+<li>Includes active work and waiting inside the measured workflow.</li>
+</ul>
+<p><strong>Does not mean:</strong> Lead time with an earlier request start</p>
+<p><strong>Applicability:</strong> adaptive, kanban specific, hybrid</p>
+<p><strong>Canonical public pages:</strong> <a href="https://comdico.github.io/PMP_Atlas_Site/formulas/adaptive-metrics-and-visual-management/">Open reference</a></p>
+<p><strong>AI guidance:</strong></p>
+<ul>
+<li><strong>Use when:</strong> Flow elapsed time is discussed.</li>
+<li><strong>Avoid:</strong> Do not compare undefined endpoints.</li>
+<li><strong>Answer pattern:</strong> Name the workflow start and finish.</li>
+</ul>
+</article>
+<article class="semantic-record" id="sem-met-lead-time">
+<h3 id="lead-time">Lead time</h3>
+<p><span class="semantic-status semantic-status--verified">Verified</span> <code>SEM-MET-LEAD-TIME</code></p>
+<p>Elapsed time from a defined request, commitment, or selected start until delivery.</p>
+<p><strong>Scope:</strong> The selected start point must be stated.</p>
+<p><strong>Aliases:</strong> customer lead time, commitment lead time</p>
+<p><strong>Distinctions:</strong></p>
+<ul>
+<li>May include waiting before active work and is normally at least compatible cycle time.</li>
+</ul>
+<p><strong>Does not mean:</strong> Cycle time unless endpoints match</p>
+<p><strong>Applicability:</strong> adaptive, hybrid, context specific</p>
+<p><strong>Canonical public pages:</strong> <a href="https://comdico.github.io/PMP_Atlas_Site/formulas/adaptive-metrics-and-visual-management/">Open reference</a></p>
+<p><strong>AI guidance:</strong></p>
+<ul>
+<li><strong>Use when:</strong> Customer or commitment responsiveness is discussed.</li>
+<li><strong>Avoid:</strong> Do not leave the starting convention implicit.</li>
+<li><strong>Answer pattern:</strong> State start finish and time convention.</li>
+</ul>
+</article>
+<article class="semantic-record" id="sem-met-burndown">
+<h3 id="burndown">Burndown</h3>
+<p><span class="semantic-status semantic-status--verified">Verified</span> <code>SEM-MET-BURNDOWN</code></p>
+<p>A chart of work remaining over time.</p>
+<p><strong>Scope:</strong> Canonical chart mechanics and shared example data remain in the Adaptive Metrics registry.</p>
+<p><strong>Aliases:</strong> burndown chart</p>
+<p><strong>Distinctions:</strong></p>
+<ul>
+<li>Scope additions can make the remaining-work line rise.</li>
+</ul>
+<p><strong>Does not mean:</strong> A mandatory commitment line</p>
+<p><strong>Applicability:</strong> adaptive, scrum specific, hybrid, context specific</p>
+<p><strong>Canonical public pages:</strong> <a href="https://comdico.github.io/PMP_Atlas_Site/formulas/adaptive-metrics-and-visual-management/">Open reference</a></p>
+<p><strong>AI guidance:</strong></p>
+<ul>
+<li><strong>Use when:</strong> Remaining work over time is discussed.</li>
+<li><strong>Avoid:</strong> Do not hide changing total scope.</li>
+<li><strong>Answer pattern:</strong> Name the work unit horizon and scope convention.</li>
+</ul>
+</article>
+<article class="semantic-record" id="sem-met-burnup">
+<h3 id="burnup">Burnup</h3>
+<p><span class="semantic-status semantic-status--verified">Verified</span> <code>SEM-MET-BURNUP</code></p>
+<p>A chart of completed work increasing toward a separately displayed total-scope line.</p>
+<p><strong>Scope:</strong> Canonical chart mechanics and shared example data remain in the Adaptive Metrics registry.</p>
+<p><strong>Aliases:</strong> burnup chart</p>
+<p><strong>Distinctions:</strong></p>
+<ul>
+<li>A separate scope line makes scope change explicit.</li>
+</ul>
+<p><strong>Does not mean:</strong> Burndown</p>
+<p><strong>Applicability:</strong> adaptive, scrum specific, hybrid, context specific</p>
+<p><strong>Canonical public pages:</strong> <a href="https://comdico.github.io/PMP_Atlas_Site/formulas/adaptive-metrics-and-visual-management/">Open reference</a></p>
+<p><strong>AI guidance:</strong></p>
+<ul>
+<li><strong>Use when:</strong> Completed work and total scope are plotted together.</li>
+<li><strong>Avoid:</strong> Do not omit the total-scope series.</li>
+<li><strong>Answer pattern:</strong> Distinguish completed work from current total scope.</li>
+</ul>
+</article>
+<article class="semantic-record" id="sem-met-cfd">
+<h3 id="cumulative-flow-diagram">Cumulative flow diagram</h3>
+<p><span class="semantic-status semantic-status--verified">Verified</span> <code>SEM-MET-CFD</code></p>
+<p>A stacked view of cumulative work-item counts in workflow states over time.</p>
+<p><strong>Scope:</strong> Canonical interpretation and example remain in the Adaptive Metrics registry.</p>
+<p><strong>Aliases:</strong> CFD</p>
+<p><strong>Distinctions:</strong></p>
+<ul>
+<li>Band thickness represents inventory in a state.</li>
+<li>A widening band can signal accumulation.</li>
+</ul>
+<p><strong>Does not mean:</strong> Proof of a bottleneck cause</p>
+<p><strong>Applicability:</strong> adaptive, kanban specific, hybrid</p>
+<p><strong>Canonical public pages:</strong> <a href="https://comdico.github.io/PMP_Atlas_Site/formulas/adaptive-metrics-and-visual-management/">Open reference</a></p>
+<p><strong>AI guidance:</strong></p>
+<ul>
+<li><strong>Use when:</strong> Workflow-state accumulation over time is discussed.</li>
+<li><strong>Avoid:</strong> Do not infer causation from one diagram.</li>
+<li><strong>Answer pattern:</strong> Name the state band and the observed pattern.</li>
+</ul>
+</article>
+<article class="semantic-record" id="sem-met-radiator">
+<h3 id="information-radiator">Information radiator</h3>
+<p><span class="semantic-status semantic-status--verified">Verified</span> <code>SEM-MET-RADIATOR</code></p>
+<p>A highly visible and current display of information useful to a team and stakeholders.</p>
+<p><strong>Scope:</strong> A category of visual management rather than one required chart type.</p>
+<p><strong>Aliases:</strong> visible information display</p>
+<p><strong>Distinctions:</strong></p>
+<ul>
+<li>It should support conversation and action.</li>
+<li>Digital displays can serve distributed teams.</li>
+</ul>
+<p><strong>Does not mean:</strong> One specific chart; A useful display when stale</p>
+<p><strong>Applicability:</strong> common across approaches, adaptive, hybrid, context specific</p>
+<p><strong>Canonical public pages:</strong> <a href="https://comdico.github.io/PMP_Atlas_Site/formulas/adaptive-metrics-and-visual-management/">Open reference</a></p>
+<p><strong>AI guidance:</strong></p>
+<ul>
+<li><strong>Use when:</strong> Highly visible current team information is discussed.</li>
+<li><strong>Avoid:</strong> Do not define it as one chart type.</li>
+<li><strong>Answer pattern:</strong> Name audience currency and intended action.</li>
+</ul>
+</article>
 <h2 id="risk-issue-and-impediment">Risk, issue, and impediment</h2>
 <article class="semantic-record" id="sem-state-risk">
 <h3 id="risk">Risk</h3>
@@ -6225,6 +6421,7 @@
 <h2 id="references-and-public-source-identifiers">References and public source identifiers</h2>
 <p>Public source IDs resolve to reader-safe Atlas pages. Internal source locations and workflow identifiers are deliberately excluded.</p>
 <ul>
+<li><strong>atlas-adaptive-metrics:</strong> <a href="https://comdico.github.io/PMP_Atlas_Site/formulas/adaptive-metrics-and-visual-management/">Atlas Adaptive Metrics and Visual Management</a></li>
 <li><strong>atlas-scrum-events:</strong> <a href="https://comdico.github.io/PMP_Atlas_Site/lifecycle/scrum-events-and-adaptive-cadences/">Atlas Scrum Events and Adaptive Cadences</a></li>
 <li><strong>atlas-roles-reference:</strong> <a href="https://comdico.github.io/PMP_Atlas_Site/roles/">Atlas Roles, Responsibilities, and Authority Reference</a></li>
 <li><strong>atlas-process-reference:</strong> <a href="https://comdico.github.io/PMP_Atlas_Site/processes/">Atlas Process Reference</a></li>
