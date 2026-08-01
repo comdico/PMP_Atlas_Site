@@ -5671,6 +5671,67 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Lead time">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#predictive-procurement-lead-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Predictive procurement lead time
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#predictive-schedule-lead" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Predictive schedule lead
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adaptive-and-kanban-boundaries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adaptive and Kanban boundaries
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#boundary-visual" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Boundary visual
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#work-item-age" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Work item age
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -5998,7 +6059,7 @@
 
 <h2 id="task-board-or-kanban-board">Task board or Kanban board</h2>
 <p>The simple path is <strong>Ready → In Progress → Review → Done</strong>. A board visualizes work state, blocked and aging items, ownership, and collaboration. A Kanban system additionally needs a Definition of Workflow with explicit start and finish points, states, policies, WIP controls, and a service level expectation. WIP control enables pull-based movement.</p>
-<div class="adm-board" role="img" aria-label="ServiceBridge four-column board. In Progress limit three and Review limit two. SB-116 is blocked; SB-118 is aging at nine days."><section><h3>Ready</h3><p>SB-120 · audit export</p><p>SB-121 · notice copy</p></section><section><h3>In Progress <small>WIP 2/3</small></h3><p>SB-116 · identity sync <strong>BLOCKED</strong></p><p>SB-118 · billing rules <strong>AGING 9 DAYS</strong></p></section><section><h3>Review <small>WIP 2/2</small></h3><p>SB-114 · intake form</p><p>SB-115 · search filter</p></section><section><h3>Done</h3><p>SB-109 · case detail</p><p>SB-112 · agent notes</p></section></div>
+<div class="adm-board" role="img" aria-label="ServiceBridge four-column board. In Progress limit three and Review limit two. SB-116 is blocked; SB-118 is aging at nine days on May 19."><section><h3>Ready</h3><p>SB-120 · audit export</p><p>SB-121 · notice copy</p></section><section><h3>In Progress <small>WIP 2/3</small></h3><p>SB-116 · identity sync <strong>BLOCKED</strong></p><p>SB-118 · billing rules <strong>AGING 9 DAYS · MAY 19</strong></p></section><section><h3>Review <small>WIP 2/2</small></h3><p>SB-114 · intake form</p><p>SB-115 · search filter</p></section><section><h3>Done</h3><p>SB-109 · case detail</p><p>SB-112 · agent notes</p></section></div>
 
 <p>Not every task board is a complete Kanban system. A board alone does not establish Kanban. Scrum teams may use boards without the full Kanban method, and hybrid projects may use a board inside broader predictive governance.</p>
 <h2 id="throughput">Throughput</h2>
@@ -6030,11 +6091,120 @@
 </tbody>
 </table>
 <h2 id="cycle-time">Cycle time</h2>
-<p>Cycle time is elapsed time from the exact point active workflow begins until the item is completed. It includes active work and waiting inside the measured workflow. In this working-day convention, work begins Monday morning (day 2 on the shared timeline) and reaches Done Thursday afternoon (day 5.5): <strong>3.5 working days</strong>. Shorter can improve responsiveness, but an average can hide variation.</p>
+<p><strong>Cycle time is elapsed time from the defined started point until the defined finished point.</strong> It includes active work and internal waiting after the item enters the measured workflow. A request-to-delivery interval is not cycle time unless the Definition of Workflow explicitly makes the request point its started boundary.</p>
 <h2 id="lead-time">Lead time</h2>
-<p>Lead time is elapsed time from a defined request, commitment, or selected start until delivery. It can include waiting before active work and is generally at least cycle time when endpoints are compatible. Customer and commitment lead time can start at different points, so name the convention.</p>
-<div class="adm-timeline" role="img" aria-label="Request received at day zero, work begins at day two, and delivery occurs at day five point five. Lead time is five point five working days and cycle time is three point five working days."><ol><li><strong>Day 0</strong><span>Request received</span></li><li><strong>Days 0–2</strong><span>Waiting</span></li><li><strong>Day 2</strong><span>Work begins</span></li><li><strong>Days 2–5.5</strong><span>Work proceeds</span></li><li><strong>Day 5.5</strong><span>Delivery</span></li></ol><p><b>Lead time: request → delivery = 5.5 days</b><b>Cycle time: work begins → delivery = 3.5 days</b></p></div>
+<p><strong>Lead time is elapsed time from a defined request, order, or commitment point until delivery.</strong> The label is incomplete unless its start and finish boundaries are named.</p>
+<table>
+<thead>
+<tr>
+<th>Concept</th>
+<th>Start point</th>
+<th>End point</th>
+<th>Primary use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Procurement lead time</td>
+<td>Order or requisition</td>
+<td>Item available or delivered</td>
+<td>Predictive procurement and scheduling</td>
+</tr>
+<tr>
+<td>Schedule lead</td>
+<td>Relative predecessor point</td>
+<td>Earlier successor start</td>
+<td>Predictive network scheduling</td>
+</tr>
+<tr>
+<td>Customer lead time</td>
+<td>Customer request</td>
+<td>Customer delivery</td>
+<td>End-to-end responsiveness</td>
+</tr>
+<tr>
+<td>Commitment lead time</td>
+<td>Work commitment or selection</td>
+<td>Delivery</td>
+<td>Delivery forecasting</td>
+</tr>
+<tr>
+<td>Cycle time</td>
+<td>Work started</td>
+<td>Work finished</td>
+<td>Workflow performance</td>
+</tr>
+<tr>
+<td>Work item age</td>
+<td>Work started</td>
+<td>Current date while unfinished</td>
+<td>Managing aging WIP</td>
+</tr>
+</tbody>
+</table>
+<p>Exact boundaries must be defined by the organization or the Kanban system’s Definition of Workflow.</p>
+<h3 id="predictive-procurement-lead-time">Predictive procurement lead time</h3>
+<p>ServiceBridge orders a specialized infrastructure appliance on <strong>March 1, 2026</strong>, and it is delivered on <strong>April 15, 2026</strong>. Using elapsed calendar days—subtract the start date from the end date, excluding the start and including the end—procurement lead time is <strong>45 days</strong>.</p>
+<p>The schedule models that elapsed acquisition interval or the resulting availability constraint before installation. If the plan allows too little time, the dependent installation can be delayed. This is procurement lead time, not a precedence-relationship lead. See <a href="../schedule-analysis/">Schedule Analysis</a>, <a href="../../lifecycle/risk-compliance-procurement/">Risk, Compliance, and Procurement</a>, and <a href="../../processes/plan-procurement-management/">Plan Procurement Management</a>.</p>
+<h3 id="predictive-schedule-lead">Predictive schedule lead</h3>
+<p><strong>Coding</strong> is the predecessor and <strong>Testing</strong> is the successor. Testing may begin <strong>2 working days before Coding is fully complete</strong>. That two-day schedule lead overlaps the activities and may shorten the modeled sequence, while increasing coordination and rework risk.</p>
+<p>Schedule lead is a precedence-relationship adjustment. It is not customer lead time, commitment lead time, or procurement lead time. The complete network treatment remains in <a href="../schedule-analysis/">Schedule Analysis</a>.</p>
+<h3 id="adaptive-and-kanban-boundaries">Adaptive and Kanban boundaries</h3>
+<p>One ServiceBridge work item has these milestones:</p>
+<table>
+<thead>
+<tr>
+<th>Milestone</th>
+<th>Date</th>
+<th>Workflow meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Request received</td>
+<td>May 1</td>
+<td>Backlog; waiting outside WIP under this Definition of Workflow</td>
+</tr>
+<tr>
+<td>Committed or selected</td>
+<td>May 8</td>
+<td>Ready; committed but still waiting outside WIP</td>
+</tr>
+<tr>
+<td>Work started</td>
+<td>May 10</td>
+<td>Enters In Progress and becomes WIP</td>
+</tr>
+<tr>
+<td>Review started</td>
+<td>May 17</td>
+<td>Remains WIP in Review</td>
+</tr>
+<tr>
+<td>Finished and delivered</td>
+<td>May 20</td>
+<td>Reaches Done and leaves WIP</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Date-counting convention:</strong> elapsed calendar days calculated as end date minus start date; the start date is excluded and the end date is included.</p>
+<ul>
+<li>Customer lead time = May 20 − May 1 = <strong>19 days</strong>.</li>
+<li>Commitment lead time = May 20 − May 8 = <strong>12 days</strong>.</li>
+<li>Cycle time = May 20 − May 10 = <strong>10 days</strong>.</li>
+<li>Waiting before work starts = May 10 − May 1 = <strong>9 days</strong>; two of those days follow commitment.</li>
+<li>On May 15, while the item is still unfinished, work item age = May 15 − May 10 = <strong>5 days</strong>.</li>
+</ul>
+<div class="adm-flow-board" role="img" aria-label="ServiceBridge item moves from Backlog to Ready to In Progress to Review to Done. Before In Progress it is waiting outside WIP under this Definition of Workflow. In Progress and Review are WIP. Done ends cycle time."><span><b>Backlog</b><small>request · May 1</small></span><i aria-hidden="true">→</i><span><b>Ready</b><small>commitment · May 8</small></span><i aria-hidden="true">→</i><span><b>In Progress</b><small>started · May 10 · WIP</small></span><i aria-hidden="true">→</i><span><b>Review</b><small>May 17 · WIP</small></span><i aria-hidden="true">→</i><span><b>Done</b><small>finished · May 20</small></span></div>
 
+<p>Before In Progress, the item is waiting but is not WIP under this Definition of Workflow. From In Progress through Review it is WIP. At Done, its completed start-to-finish duration is cycle time. While started but unfinished, start-to-current duration is work item age. <strong>WIP is the number or set of started, unfinished items; it is not itself an elapsed-time metric.</strong> Do not call time spent as WIP “lead time” unless the selected lead-time boundary is also the workflow’s started point.</p>
+<h3 id="boundary-visual">Boundary visual</h3>
+<div class="adm-timeline" role="img" aria-label="Request May 1, commitment May 8, work started May 10, review May 17, finished and delivered May 20. Customer lead time is 19 days; commitment lead time 12 days; cycle time 10 days. Work item age measured while unfinished on May 15 is 5 days."><ol><li><strong>May 1</strong><span>Request</span></li><li><strong>May 1–8</strong><span>Waiting</span></li><li><strong>May 8</strong><span>Commitment</span></li><li><strong>May 8–10</strong><span>Waiting</span></li><li><strong>May 10</strong><span>Started</span></li><li><strong>May 10–17</strong><span>Active work + internal waiting</span></li><li><strong>May 17</strong><span>Review</span></li><li><strong>May 20</strong><span>Finished → delivered</span></li></ol><div class="adm-boundaries"><p><b>Customer lead time</b><span>Request → delivery · 19 days</span></p><p><b>Commitment lead time</b><span>Commitment → delivery · 12 days</span></p><p><b>Cycle time</b><span>Started → finished · 10 days</span></p><p><b>Work item age on May 15</b><span>Started → current measurement while unfinished · 5 days</span></p></div></div>
+
+<h3 id="work-item-age">Work item age</h3>
+<p><strong>Work item age is elapsed time from the defined started point until the current measurement date for an unfinished item.</strong> Once the item finishes, report its cycle time rather than continuing to calculate work item age. See the <a href="#task-board-or-kanban-board">Task Board or Kanban Board</a>, <a href="#cycle-time">Cycle Time</a>, and the current <a href="https://kanbanguides.org/the-kanban-guide/2025.5/">Kanban Guide</a>.</p>
+<p>!!! note "Why labels vary"
+    Teams and tools sometimes use “lead time” and “cycle time” differently. The Kanban system’s Definition of Workflow must specify the measured start and finish points. The Atlas therefore names each boundary explicitly rather than treating a vendor tool’s default column calculation as universal.</p>
 <h2 id="control-chart">Control chart</h2>
 <p>A control chart plots a process measure over time and may include a center line and control limits. Cycle time is a useful adaptive example. Points or nonrandom patterns outside expected variation may suggest special-cause variation; investigate rather than blame. Control limits describe process behavior and are <strong>not specification limits</strong>.</p>
 <div class="adm-chart" role="img" aria-label="Cycle times [4, 5, 4, 6, 5, 12, 5, 4]; mean 5.625; supplied illustrative lower and upper limits 2 and 9.">
@@ -6078,7 +6248,10 @@
 <li>A rising burndown may mean scope was added.</li>
 <li>A widening cumulative-flow band can signal a bottleneck.</li>
 <li>Throughput counts completed items, not points.</li>
-<li>Lead and cycle time require defined start points; compatible lead time generally includes more waiting.</li>
+<li>A predictive schedule lead overlaps predecessor and successor activities; procurement lead time is the time needed to obtain an external item or service.</li>
+<li>Adaptive lead time normally begins before active work; cycle time starts when work begins.</li>
+<li>Work item age applies only to started, unfinished work. WIP is a count or state, not elapsed time.</li>
+<li>Lead time is at least cycle time only when both share a finish and lead time starts earlier. Always identify the question’s boundaries.</li>
 <li>A board alone does not establish Kanban.</li>
 <li>Daily Scrum is not a manager status meeting, and no Scrum event requires a chart.</li>
 <li>Charts support decisions; they do not replace conversation and judgment.</li>

@@ -9,7 +9,7 @@ metadata:
   yaml_url: https://comdico.github.io/PMP_Atlas_Site/data/ai-semantic-reference.yaml
   version: 1.3.0
   last_reviewed: '2026-08-01'
-  content_hash: sha256:dc23f71a99c3e831e23c2ed6f284a78ea48a40403e0f185e918b1363952a1da1
+  content_hash: sha256:56611a547ee14312fd29ea92304a551549e10fcf54bbfe64822d196f7ec271de
 verification_status_labels:
   verified: Verified
   atlas_synthesis: Atlas synthesis
@@ -1235,12 +1235,15 @@ concepts:
   aliases:
   - customer lead time
   - commitment lead time
-  concise_definition: Elapsed time from a defined request, commitment, or selected start until delivery.
-  scope: The selected start point must be stated.
+  concise_definition: Elapsed time from a defined request, order, or commitment point until delivery.
+  scope: The selected start and finish points must be stated; the Adaptive Metrics registry separately owns customer, commitment, procurement, and schedule-lead distinctions.
   distinctions:
-  - May include waiting before active work and is normally at least compatible cycle time.
+  - May include waiting before active work.
+  - It is at least cycle time only when the finish is shared and its start is earlier.
+  - Predictive schedule lead is a precedence adjustment rather than this elapsed metric.
   does_not_mean:
   - Cycle time unless endpoints match
+  - Schedule lead
   applicability:
   - adaptive
   - hybrid
@@ -1252,8 +1255,8 @@ concepts:
   public_source_ids:
   - atlas-adaptive-metrics
   ai_guidance:
-    use_when: Customer or commitment responsiveness is discussed.
-    avoid: Do not leave the starting convention implicit.
+    use_when: Customer commitment or procurement responsiveness is discussed.
+    avoid: Do not leave boundaries implicit or confuse elapsed lead time with schedule lead.
     answer_pattern: State start finish and time convention.
   last_reviewed: '2026-08-01'
   version: 1.0.0

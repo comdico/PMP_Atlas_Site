@@ -6162,20 +6162,22 @@
 <article class="semantic-record" id="sem-met-lead-time">
 <h3 id="lead-time">Lead time</h3>
 <p><span class="semantic-status semantic-status--verified">Verified</span> <code>SEM-MET-LEAD-TIME</code></p>
-<p>Elapsed time from a defined request, commitment, or selected start until delivery.</p>
-<p><strong>Scope:</strong> The selected start point must be stated.</p>
+<p>Elapsed time from a defined request, order, or commitment point until delivery.</p>
+<p><strong>Scope:</strong> The selected start and finish points must be stated; the Adaptive Metrics registry separately owns customer, commitment, procurement, and schedule-lead distinctions.</p>
 <p><strong>Aliases:</strong> customer lead time, commitment lead time</p>
 <p><strong>Distinctions:</strong></p>
 <ul>
-<li>May include waiting before active work and is normally at least compatible cycle time.</li>
+<li>May include waiting before active work.</li>
+<li>It is at least cycle time only when the finish is shared and its start is earlier.</li>
+<li>Predictive schedule lead is a precedence adjustment rather than this elapsed metric.</li>
 </ul>
-<p><strong>Does not mean:</strong> Cycle time unless endpoints match</p>
+<p><strong>Does not mean:</strong> Cycle time unless endpoints match; Schedule lead</p>
 <p><strong>Applicability:</strong> adaptive, hybrid, context specific</p>
 <p><strong>Canonical public pages:</strong> <a href="https://comdico.github.io/PMP_Atlas_Site/formulas/adaptive-metrics-and-visual-management/">Open reference</a></p>
 <p><strong>AI guidance:</strong></p>
 <ul>
-<li><strong>Use when:</strong> Customer or commitment responsiveness is discussed.</li>
-<li><strong>Avoid:</strong> Do not leave the starting convention implicit.</li>
+<li><strong>Use when:</strong> Customer commitment or procurement responsiveness is discussed.</li>
+<li><strong>Avoid:</strong> Do not leave boundaries implicit or confuse elapsed lead time with schedule lead.</li>
 <li><strong>Answer pattern:</strong> State start finish and time convention.</li>
 </ul>
 </article>
