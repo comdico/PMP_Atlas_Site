@@ -9,6 +9,8 @@
 - Formula and Quantitative Methods: https://comdico.github.io/PMP_Atlas_Site/formulas/
 - Project Lifecycle Guide: https://comdico.github.io/PMP_Atlas_Site/lifecycle/
 - Process Reference: https://comdico.github.io/PMP_Atlas_Site/processes/
+- Roles, Responsibilities, and Authority: https://comdico.github.io/PMP_Atlas_Site/roles/
+- Process Role Map: https://comdico.github.io/PMP_Atlas_Site/roles/process-role-map/
 - Artifact Reference: https://comdico.github.io/PMP_Atlas_Site/artifacts/
 - Decision Guides: https://comdico.github.io/PMP_Atlas_Site/decisions/
 

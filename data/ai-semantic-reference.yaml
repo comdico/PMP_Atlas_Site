@@ -7,14 +7,17 @@ metadata:
   page_url: https://comdico.github.io/PMP_Atlas_Site/guidelines/shared-knowledge/
   json_url: https://comdico.github.io/PMP_Atlas_Site/data/ai-semantic-reference.json
   yaml_url: https://comdico.github.io/PMP_Atlas_Site/data/ai-semantic-reference.yaml
-  version: 1.0.0
-  last_reviewed: '2026-07-31'
-  content_hash: sha256:19e16b93755b17304bf8979a29e0405d821310e473495a96288914555886d567
+  version: 1.1.0
+  last_reviewed: '2026-08-01'
+  content_hash: sha256:013b1845c8f83e1e13d0df3c5e16e6bb70ba419fdfac69a438781de354f4f420
 verification_status_labels:
   verified: Verified
   atlas_synthesis: Atlas synthesis
   source_limited: Source-limited
 public_sources:
+- id: atlas-roles-reference
+  title: Atlas Roles, Responsibilities, and Authority Reference
+  public_url: https://comdico.github.io/PMP_Atlas_Site/roles/
 - id: atlas-process-reference
   title: Atlas Process Reference
   public_url: https://comdico.github.io/PMP_Atlas_Site/processes/
@@ -51,10 +54,10 @@ precedence:
   rule: The Formula registry owns formula expressions and verification status.
 - id: PRE-003
   rank: 3
-  rule: Process definitions own process-specific mechanics and authority.
+  rule: The Roles registry owns public role definitions; the Process Role Map owns contextual process assignments and authority boundaries.
 - id: PRE-004
   rank: 4
-  rule: Artifact definitions own artifact structure and state.
+  rule: Artifact definitions own structure and state; the Artifact Role Map owns contextual creation, custody, review, approval, verification, acceptance, and receipt assignments.
 - id: PRE-005
   rank: 5
   rule: Lifecycle definitions own sequence, handoffs, and lifecycle context.
