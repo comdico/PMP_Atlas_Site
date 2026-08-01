@@ -9,7 +9,7 @@ metadata:
   yaml_url: https://comdico.github.io/PMP_Atlas_Site/data/ai-semantic-reference.yaml
   version: 1.3.0
   last_reviewed: '2026-08-01'
-  content_hash: sha256:a588fbbf41c30910c9819e43acd60c5fd3cee218ae8eb7a6a18c04888240a1b0
+  content_hash: sha256:b60a1a1885add84fa093ad85bb611d648399c5d7222b4d5e23299f0253f97e93
 verification_status_labels:
   verified: Verified
   atlas_synthesis: Atlas synthesis
@@ -146,14 +146,16 @@ concepts:
   - id: PRC-MONITOR-STAKEHOLDER-ENGAGEMENT
     title: Monitor Stakeholder Engagement
     public_url: https://comdico.github.io/PMP_Atlas_Site/processes/monitor-stakeholder-engagement/
-  - id: PRC-PLAN-COMMUNICATIONS-MANAGEMENT
+  - &id052
+    id: PRC-PLAN-COMMUNICATIONS-MANAGEMENT
     title: Plan Communications Management
     public_url: https://comdico.github.io/PMP_Atlas_Site/processes/plan-communications-management/
   - &id039
     id: PRC-MANAGE-COMMUNICATIONS
     title: Manage Communications
     public_url: https://comdico.github.io/PMP_Atlas_Site/processes/manage-communications/
-  - id: PRC-MONITOR-COMMUNICATIONS
+  - &id053
+    id: PRC-MONITOR-COMMUNICATIONS
     title: Monitor Communications
     public_url: https://comdico.github.io/PMP_Atlas_Site/processes/monitor-communications/
   related_artifacts:
@@ -162,7 +164,8 @@ concepts:
     public_url: https://comdico.github.io/PMP_Atlas_Site/artifacts/stakeholder-register/
   - id: ART-STK-002
     title: Stakeholder Engagement Plan
-  - id: ART-COM-001
+  - &id056
+    id: ART-COM-001
     title: Communications Management Plan
   - &id002
     id: ART-ISS-001
@@ -957,11 +960,11 @@ concepts:
   - id: ART-SCP-001
     title: Scope Baseline
     public_url: https://comdico.github.io/PMP_Atlas_Site/artifacts/scope-baseline/
-  - &id052
+  - &id054
     id: ART-SCH-005
     title: Schedule Baseline
     public_url: https://comdico.github.io/PMP_Atlas_Site/artifacts/schedule-baseline/
-  - &id053
+  - &id055
     id: ART-CST-002
     title: Cost Baseline
     public_url: https://comdico.github.io/PMP_Atlas_Site/artifacts/cost-baseline/
@@ -1693,7 +1696,7 @@ concepts:
   - quantitative-method ownership
   - formula precedence
   concise_definition: The Formula registry is the canonical structured owner for formula expressions and verification status; this semantic reference only points to that owner.
-  scope: Formula and Quantitative Methods is the canonical public explanation for estimating, schedule, reserves, and earned-value formula families.
+  scope: Formula and Quantitative Methods is the canonical public explanation for estimating, schedule, reserves, earned-value, and communication-channel formula families.
   distinctions:
   - Formula verification status must come from the Formula registry.
   - Shared semantics never independently assigns a formula-family verification status.
@@ -1706,6 +1709,7 @@ concepts:
   - context_specific
   canonical_public_pages:
   - https://comdico.github.io/PMP_Atlas_Site/formulas/
+  - https://comdico.github.io/PMP_Atlas_Site/formulas/communication-channels/
   related_processes:
   - id: PRC-ESTIMATE-ACTIVITY-DURATIONS
     title: Estimate Activity Durations
@@ -1722,19 +1726,28 @@ concepts:
   - id: PRC-CONTROL-COSTS
     title: Control Costs
     public_url: https://comdico.github.io/PMP_Atlas_Site/processes/control-costs/
+  - *id052
+  - *id039
+  - *id053
   related_artifacts:
   - id: ART-SCH-004
     title: Project Schedule
     public_url: https://comdico.github.io/PMP_Atlas_Site/artifacts/project-schedule/
-  - *id052
+  - *id054
   - id: ART-CST-001
     title: Cost Estimates
     public_url: https://comdico.github.io/PMP_Atlas_Site/artifacts/cost-estimates/
-  - *id053
+  - *id055
+  - *id056
+  - id: ART-COM-002
+    title: Project Communications
   related_lifecycle_chapters:
+  - *id003
   - id: LFC-004
     title: Schedule, Resources, and Cost
     public_url: https://comdico.github.io/PMP_Atlas_Site/lifecycle/schedule-resources-cost/
+  - *id004
+  - *id001
   related_formula_families:
   - id: estimating
     title: Estimating
@@ -1748,6 +1761,9 @@ concepts:
   - id: evm
     title: Earned Value
     public_url: https://comdico.github.io/PMP_Atlas_Site/formulas/earned-value/
+  - id: communications
+    title: Communication Channels
+    public_url: https://comdico.github.io/PMP_Atlas_Site/formulas/communication-channels/
   precedence: PRE-002
   verification_status: verified
   public_source_ids:

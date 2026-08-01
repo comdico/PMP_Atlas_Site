@@ -38,3 +38,10 @@
 .atlas-evm-chart text { fill: #263b46; font: 14px system-ui, sans-serif; }
 @media (max-width: 64rem) { .atlas-network { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 44rem) { .atlas-formula-hub, .atlas-formula-grid, .atlas-network { grid-template-columns: 1fr; } .atlas-formula-card { padding: .85rem; } .atlas-formula-variables { grid-template-columns: 1fr; } .atlas-formula-variables dd { margin-bottom: .35rem; } .atlas-budget-stack > div { flex-direction: column; gap: .15rem; } }
+.communication-network { margin: 1.5rem 0; padding: 1rem; border: 1px solid var(--md-default-fg-color--lightest); border-radius: .5rem; }
+.communication-network__nodes, .communication-network__pairs { display: flex; flex-wrap: wrap; gap: .6rem; align-items: center; }
+.communication-network__nodes span { display: inline-grid; place-items: center; min-width: 2.6rem; min-height: 2.6rem; border: 2px solid var(--md-primary-fg-color); border-radius: 50%; font-weight: 700; }
+.communication-network__nodes strong { margin-left: auto; }
+.communication-network__pairs { margin-top: 1rem; }
+.communication-network__pairs span { padding: .3rem .55rem; border: 1px solid var(--md-default-fg-color--lightest); border-radius: 999px; font-family: var(--md-code-font-family); }
+@media (max-width: 600px) { .communication-network__nodes strong { width: 100%; margin-left: 0; } }

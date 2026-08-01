@@ -63,3 +63,7 @@
     min-width: 38rem;
   }
 }
+.power-interest-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .8rem; margin: 1.5rem 0; }
+.power-interest-quadrant { min-height: 9rem; padding: 1rem; border: 2px solid var(--md-default-fg-color--lightest); border-left: .35rem solid var(--md-primary-fg-color); border-radius: .45rem; }
+.power-interest-quadrant h3 { margin-top: 0; }
+@media (max-width: 650px) { .power-interest-grid { grid-template-columns: 1fr; } }

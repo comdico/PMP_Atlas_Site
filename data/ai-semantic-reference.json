@@ -10,7 +10,7 @@
     "yaml_url": "https://comdico.github.io/PMP_Atlas_Site/data/ai-semantic-reference.yaml",
     "version": "1.3.0",
     "last_reviewed": "2026-08-01",
-    "content_hash": "sha256:a588fbbf41c30910c9819e43acd60c5fd3cee218ae8eb7a6a18c04888240a1b0"
+    "content_hash": "sha256:b60a1a1885add84fa093ad85bb611d648399c5d7222b4d5e23299f0253f97e93"
   },
   "verification_status_labels": {
     "verified": "Verified",
@@ -2903,7 +2903,7 @@
         "formula precedence"
       ],
       "concise_definition": "The Formula registry is the canonical structured owner for formula expressions and verification status; this semantic reference only points to that owner.",
-      "scope": "Formula and Quantitative Methods is the canonical public explanation for estimating, schedule, reserves, and earned-value formula families.",
+      "scope": "Formula and Quantitative Methods is the canonical public explanation for estimating, schedule, reserves, earned-value, and communication-channel formula families.",
       "distinctions": [
         "Formula verification status must come from the Formula registry.",
         "Shared semantics never independently assigns a formula-family verification status.",
@@ -2918,7 +2918,8 @@
         "context_specific"
       ],
       "canonical_public_pages": [
-        "https://comdico.github.io/PMP_Atlas_Site/formulas/"
+        "https://comdico.github.io/PMP_Atlas_Site/formulas/",
+        "https://comdico.github.io/PMP_Atlas_Site/formulas/communication-channels/"
       ],
       "related_processes": [
         {
@@ -2945,6 +2946,21 @@
           "id": "PRC-CONTROL-COSTS",
           "title": "Control Costs",
           "public_url": "https://comdico.github.io/PMP_Atlas_Site/processes/control-costs/"
+        },
+        {
+          "id": "PRC-PLAN-COMMUNICATIONS-MANAGEMENT",
+          "title": "Plan Communications Management",
+          "public_url": "https://comdico.github.io/PMP_Atlas_Site/processes/plan-communications-management/"
+        },
+        {
+          "id": "PRC-MANAGE-COMMUNICATIONS",
+          "title": "Manage Communications",
+          "public_url": "https://comdico.github.io/PMP_Atlas_Site/processes/manage-communications/"
+        },
+        {
+          "id": "PRC-MONITOR-COMMUNICATIONS",
+          "title": "Monitor Communications",
+          "public_url": "https://comdico.github.io/PMP_Atlas_Site/processes/monitor-communications/"
         }
       ],
       "related_artifacts": [
@@ -2967,13 +2983,36 @@
           "id": "ART-CST-002",
           "title": "Cost Baseline",
           "public_url": "https://comdico.github.io/PMP_Atlas_Site/artifacts/cost-baseline/"
+        },
+        {
+          "id": "ART-COM-001",
+          "title": "Communications Management Plan"
+        },
+        {
+          "id": "ART-COM-002",
+          "title": "Project Communications"
         }
       ],
       "related_lifecycle_chapters": [
         {
+          "id": "LFC-002",
+          "title": "Integrated Planning",
+          "public_url": "https://comdico.github.io/PMP_Atlas_Site/lifecycle/integrated-planning/"
+        },
+        {
           "id": "LFC-004",
           "title": "Schedule, Resources, and Cost",
           "public_url": "https://comdico.github.io/PMP_Atlas_Site/lifecycle/schedule-resources-cost/"
+        },
+        {
+          "id": "LFC-007",
+          "title": "Execution and Team Leadership",
+          "public_url": "https://comdico.github.io/PMP_Atlas_Site/lifecycle/execution-leadership/"
+        },
+        {
+          "id": "LFC-008",
+          "title": "Monitoring and Change",
+          "public_url": "https://comdico.github.io/PMP_Atlas_Site/lifecycle/monitoring-change/"
         }
       ],
       "related_formula_families": [
@@ -2996,6 +3035,11 @@
           "id": "evm",
           "title": "Earned Value",
           "public_url": "https://comdico.github.io/PMP_Atlas_Site/formulas/earned-value/"
+        },
+        {
+          "id": "communications",
+          "title": "Communication Channels",
+          "public_url": "https://comdico.github.io/PMP_Atlas_Site/formulas/communication-channels/"
         }
       ],
       "precedence": "PRE-002",
