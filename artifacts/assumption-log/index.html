@@ -66,6 +66,8 @@
     
       <link rel="stylesheet" href="../../stylesheets/stakeholder-matrix.css">
     
+      <link rel="stylesheet" href="../../stylesheets/instructional-depth.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -4258,6 +4260,94 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#what-an-assumption-is" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What an assumption is
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contents-and-rationale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contents and rationale
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#validation-and-lifecycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validation and lifecycle
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nearby-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nearby concepts
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#servicebridge-worked-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ServiceBridge worked example
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#failure-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Failure modes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exam-distinctions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exam distinctions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sources-and-synthesis-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sources and synthesis status
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#definition-and-purpose" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -5923,6 +6013,34 @@
     <li><a href="#references">References</a></li>
   </ol></nav>
 </details>
+
+<!-- BEGIN GENERATED: instructional-depth-narrative -->
+<section class="instructional-depth-narrative">
+<h2 id="what-an-assumption-is">What an assumption is</h2>
+<p>An assumption is something the project temporarily treats as true for a decision or plan even though complete proof is not yet available. Assumptions exist during initiation because authorization must occur before every requirement, estimate, supplier condition, technical fact, and stakeholder response is known. The danger is not uncertainty itself; it is allowing an untested belief to behave like a fact without an owner or consequence.</p>
+<p>An Assumption Log makes those beliefs visible and testable. It records what is assumed, why the belief appears reasonable, who can validate it, when validation is needed, what method and evidence will be used, and what happens if it proves false. This transforms hidden uncertainty into managed project information.</p>
+<h2 id="contents-and-rationale">Contents and rationale</h2>
+<p>The assumption statement must be specific enough to test. Its basis records the evidence or reasoning available when the assumption was made. An owner is the person able to coordinate validation—not necessarily the person who first stated it. A validation method and due date keep the assumption from remaining indefinitely open.</p>
+<p>The <strong>impact if false</strong> links the belief to scope, schedule, cost, quality, risk, procurement, stakeholder, benefit, or transition consequences. Status and result fields show whether the assumption is open, validating, confirmed, disproved, superseded, or closed. Related risks, decisions, dependencies, and changes preserve traceability when validation changes the project’s direction.</p>
+<h2 id="validation-and-lifecycle">Validation and lifecycle</h2>
+<p>Assumptions are captured from needs assessment, the Business Case, benefits planning, agreements, charter development, stakeholder discussions, estimates, technical analysis, and environmental conditions. The project manager coordinates the log, but specialists, sponsors, functional leaders, sellers, product roles, and operational owners validate assumptions within their authority and expertise.</p>
+<p>During planning, assumptions shape estimates, requirements, approaches, and reserves; they should be tested before irreversible commitments where practical. During execution, new evidence may confirm or disprove them. A disproved assumption is not automatically a formal change request: first assess the consequence. If a controlled baseline, contract, funding decision, or other reserved commitment must change, route the appropriate decision through its governing process.</p>
+<p>Predictive work may review assumptions at planning gates and control dates. Adaptive work often converts uncertain beliefs into hypotheses, spikes, experiments, prototypes, or early increments. Scrum and Kanban do not prescribe an Assumption Log, though their feedback practices can supply validation evidence. Hybrid work can connect rapid experiments to formal milestone, contract, compliance, and funding decisions.</p>
+<h2 id="nearby-concepts">Nearby concepts</h2>
+<p>A <strong>fact</strong> is supported as true for the current decision. A <strong>constraint</strong> limits available options, such as a law or fixed deadline. A <strong>dependency</strong> is a reliance between work, parties, decisions, or conditions. A <strong>risk</strong> is uncertainty that may affect objectives; an assumption can be a source of risk when its failure would matter. A <strong>decision</strong> selects an action or position from available information. These concepts can be related without being synonyms.</p>
+<p>For example, “the statute requires seven-year retention” is a constraint when verified. “The selected platform supports compliant retention without customization” is an assumption until tested. Reliance on the seller’s configuration is a dependency. The possibility that the capability fails and delays acceptance is a risk. Selecting an extension after analysis is a decision.</p>
+<h2 id="servicebridge-worked-example">ServiceBridge worked example</h2>
+<p>ServiceBridge assumes that active customer records can be mapped to the cloud platform with acceptable quality before the transition window. The basis is a preliminary sample and seller documentation. The migration lead owns validation through a rehearsal and control-total reconciliation by the planning checkpoint. If false, migration scope, schedule, cost, acceptance evidence, and the 2027-11-19 transition may be affected.</p>
+<p>The related risk is that migrated-record quality delays acceptance. If rehearsal evidence disproves the assumption, the team analyzes correction, phased migration, additional tooling, or schedule options. The project manager can coordinate analysis but cannot exceed the USD 2.4 million authority, change the seller agreement, or move an acceptance decision unilaterally; those consequences go to the appropriate sponsor, change, procurement, and acceptance authorities.</p>
+<h2 id="failure-modes">Failure modes</h2>
+<p>Unstated assumptions create surprise because stakeholders discover too late that they planned from different beliefs. Vague entries such as “resources will be available” cannot be tested. Entries without owners or dates remain permanent uncertainty, while marking an assumption “confirmed” without recording evidence creates false confidence.</p>
+<p>Another failure is converting every unknown into a risk entry without clarifying the underlying belief, or treating every disproved assumption as automatic scope change. A useful log keeps statements testable, validates them at decision-relevant times, and routes consequences according to authority.</p>
+<h2 id="exam-distinctions">Exam distinctions</h2>
+<p>Assumption is not fact, constraint, risk, dependency, issue, or decision. A false assumption can create or change a risk; once an uncertain event occurs it may become an issue; and a response may require a change request only when a controlled commitment is affected. The charter contains high-level assumptions, while the Assumption Log maintains fuller validation information through the lifecycle.</p>
+<h2 id="sources-and-synthesis-status">Sources and synthesis status</h2>
+<p>The verified conception source supports initial assumptions, charter and assumption-log relationships, ownership, validation, and later planning use. Existing Atlas relationship and decision data supports links to risk and change. The detailed distinctions, ServiceBridge validation path, and failure modes are Atlas synthesis constrained by those sources; no universal assumption status set, experiment method, or approval workflow is asserted.</p>
+</section>
+<!-- END GENERATED: instructional-depth-narrative -->
 
 <h2 id="definition-and-purpose">Definition and purpose</h2>
 <p>Records assumptions and constraints that affect project decisions.</p>
