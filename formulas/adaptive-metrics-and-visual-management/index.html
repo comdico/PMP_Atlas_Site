@@ -6074,8 +6074,10 @@
 
 <p>Velocity, flow measures, burn charts, cumulative flow, and visual tools for adaptive and hybrid delivery.</p>
 <p><a class="md-button md-button--primary" href="../../downloads/formulas/adaptive-metrics-and-visual-management.xlsx">Download the editable workbook</a> <a class="md-button" href="#course-source-coverage">See every course source mapped</a></p>
-<p>!!! note "Source boundary"
-    The July 2026 course supports these measures and visualizations. The current Scrum Guide does <strong>not</strong> prescribe velocity or a particular chart. The May 2025 Kanban Guide requires teams using its minimal definition to track WIP, throughput, work item age, and cycle time. Atlas examples are original ServiceBridge illustrations.</p>
+<div class="admonition note">
+<p class="admonition-title">Source boundary</p>
+<p>The July 2026 course supports these measures and visualizations. The current Scrum Guide does <strong>not</strong> prescribe velocity or a particular chart. The May 2025 Kanban Guide requires teams using its minimal definition to track WIP, throughput, work item age, and cycle time. Atlas examples are original ServiceBridge illustrations.</p>
+</div>
 <h2 id="velocity">Velocity</h2>
 <p><strong>Velocity is the amount of estimated work fully completed by one team during one iteration, measured using that team’s chosen estimation unit, commonly story points.</strong></p>
 <div class="adm-formula" aria-label="Velocity equals the sum of estimates for items completed to the agreed Definition of Done during the iteration"><strong>Velocity</strong> = Σ estimates of items completed to the agreed Definition of Done during the iteration</div>
@@ -6162,8 +6164,10 @@
 <li>Velocity does not replace inspection of outcomes, quality, customer value, or flow.</li>
 <li>A substantial team-membership change can make history less predictive.</li>
 </ul>
-<p>!!! tip "Exam note"
-    When asked to calculate iteration velocity, count only work completed to the agreed Definition of Done. Story points are not hours.</p>
+<div class="admonition tip">
+<p class="admonition-title">Exam note</p>
+<p>When asked to calculate iteration velocity, count only work completed to the agreed Definition of Done. Story points are not hours.</p>
+</div>
 <h2 id="burndown-chart">Burndown chart</h2>
 <p>A burndown shows <strong>work remaining</strong> vertically over time or iterations horizontally. Its endpoint is zero remaining. The actual line may be compared with an ideal or guideline line, but that guideline is not a mandatory commitment. Scope additions or re-estimation can make remaining work rise; unfinished work stays in the total. Sprint burndown focuses on one Sprint, while release or product burndown covers a broader horizon. Without a visible total-scope series, burndown can obscure why the curve changed.</p>
 <div class="adm-chart" role="img" aria-label="Remaining work by period: 100, 84, 87, 70, 69, 48, 22, 0. It rises after scope is added.">
@@ -6361,8 +6365,10 @@
 
 <h3 id="work-item-age">Work item age</h3>
 <p><strong>Work item age is elapsed time from the defined started point until the current measurement date for an unfinished item.</strong> Once the item finishes, report its cycle time rather than continuing to calculate work item age. See the <a href="#task-board-or-kanban-board">Task Board or Kanban Board</a>, <a href="#cycle-time">Cycle Time</a>, and the current <a href="https://kanbanguides.org/the-kanban-guide/2025.5/">Kanban Guide</a>.</p>
-<p>!!! note "Why labels vary"
-    Teams and tools sometimes use “lead time” and “cycle time” differently. The Kanban system’s Definition of Workflow must specify the measured start and finish points. The Atlas therefore names each boundary explicitly rather than treating a vendor tool’s default column calculation as universal.</p>
+<div class="admonition note">
+<p class="admonition-title">Why labels vary</p>
+<p>Teams and tools sometimes use “lead time” and “cycle time” differently. The Kanban system’s Definition of Workflow must specify the measured start and finish points. The Atlas therefore names each boundary explicitly rather than treating a vendor tool’s default column calculation as universal.</p>
+</div>
 <h2 id="control-chart">Control chart</h2>
 <p>A control chart plots a process measure over time and may include a center line and control limits. Cycle time is a useful adaptive example. Points or nonrandom patterns outside expected variation may suggest special-cause variation; investigate rather than blame. Control limits describe process behavior and are <strong>not specification limits</strong>.</p>
 <div class="adm-chart" role="img" aria-label="Cycle times [4, 5, 4, 6, 5, 12, 5, 4]; mean 5.625; supplied illustrative lower and upper limits 2 and 9.">

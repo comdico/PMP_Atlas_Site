@@ -5867,8 +5867,10 @@
 <p><strong>EV — Earned Value:</strong> authorized budgeted value of work actually completed by the status date. A simple example may calculate EV as percent complete × budget for the measured work, but the measured budget may be a project, control account, work package, or other defined performance scope—EV is not merely “a percentage of BAC.”</p>
 <p><strong>AC — Actual Cost:</strong> actual cost incurred for the completed work by the status date.</p>
 <p><strong>BAC — Budget at Completion:</strong> approved cost baseline at completion for the measured scope.</p>
-<p>!!! note "Schedule variance uses cost units"
-    SV and CV use cost units because PV, EV, and AC are monetary budget values. SV is not directly a number of calendar days ahead or behind schedule.</p>
+<div class="admonition note">
+<p class="admonition-title">Schedule variance uses cost units</p>
+<p>SV and CV use cost units because PV, EV, and AC are monetary budget values. SV is not directly a number of calendar days ahead or behind schedule.</p>
+</div>
 <h2 id="formula-reference">Formula reference</h2>
 <div class="atlas-formula-grid">
 <article class="atlas-formula-card" id="frm-evm-001">
@@ -5936,39 +5938,6 @@
   <p><strong>Units:</strong> Currency.</p>
   <dl class="atlas-formula-variables"><dt>ETC</dt><dd>forecast remaining cost</dd><dt>EAC</dt><dd>forecast total cost</dd><dt>AC</dt><dd>actual cost to date</dd></dl>
   <p class="atlas-formula-exam"><strong>Exam note:</strong> EAC is total forecast; ETC is remaining forecast.</p>
-</article>
-<article class="atlas-formula-card" id="frm-evm-007">
-  <div class="atlas-formula-card__meta"><span>Supplemental · official PMI</span><code>FRM-EVM-007</code></div>
-  <h3>EAC — remaining work at original rate</h3>
-  <p class="atlas-formula-expression" aria-label="Formula: EAC = AC + (BAC - EV)">EAC = AC + (BAC - EV)</p>
-  <span class="atlas-approach-badges atlas-formula-badges" role="list" aria-label="Applicable delivery approaches"><span class="atlas-approach-badge atlas-approach-badge--predictive" role="listitem">Predictive</span><span class="atlas-approach-badge atlas-approach-badge--hybrid" role="listitem">Hybrid</span></span>
-  <p><strong>Interpretation:</strong> Adds actual cost to the original budget for uncompleted work.</p>
-  <p><strong>Assumptions:</strong> Past variance is atypical and remaining work will perform at the original budgeted rate.</p>
-  <p><strong>Units:</strong> Currency.</p>
-  <dl class="atlas-formula-variables"><dt>EAC</dt><dd>forecast total cost</dd><dt>AC</dt><dd>actual cost</dd><dt>BAC</dt><dd>Budget at Completion</dd><dt>EV</dt><dd>earned value</dd></dl>
-  <p class="atlas-formula-exam"><strong>Exam note:</strong> The assumption distinguishes this formula from BAC divided by CPI.</p>
-</article>
-<article class="atlas-formula-card" id="frm-evm-008">
-  <div class="atlas-formula-card__meta"><span>Verified · current 2026 course</span><code>FRM-EVM-008</code></div>
-  <h3>EAC — cost and schedule influence remaining work</h3>
-  <p class="atlas-formula-expression" aria-label="Formula: EAC = AC + ((BAC - EV) / (CPI × SPI))">EAC = AC + ((BAC - EV) / (CPI × SPI))</p>
-  <span class="atlas-approach-badges atlas-formula-badges" role="list" aria-label="Applicable delivery approaches"><span class="atlas-approach-badge atlas-approach-badge--predictive" role="listitem">Predictive</span><span class="atlas-approach-badge atlas-approach-badge--hybrid" role="listitem">Hybrid</span></span>
-  <p><strong>Interpretation:</strong> Adjusts remaining work for both cost and schedule performance.</p>
-  <p><strong>Assumptions:</strong> Both current cost and schedule performance are expected to influence remaining cost; CPI and SPI are nonzero.</p>
-  <p><strong>Units:</strong> Currency.</p>
-  <dl class="atlas-formula-variables"><dt>EAC</dt><dd>forecast total cost</dd><dt>AC</dt><dd>actual cost</dd><dt>BAC</dt><dd>Budget at Completion</dd><dt>EV</dt><dd>earned value</dd><dt>CPI</dt><dd>cost performance index</dd><dt>SPI</dt><dd>schedule performance index</dd></dl>
-  <p class="atlas-formula-exam"><strong>Exam note:</strong> Use only when the question says both performance factors continue to affect remaining work.</p>
-</article>
-<article class="atlas-formula-card" id="frm-evm-009">
-  <div class="atlas-formula-card__meta"><span>Verified · current 2026 course</span><code>FRM-EVM-009</code></div>
-  <h3>EAC — bottom-up remaining estimate</h3>
-  <p class="atlas-formula-expression" aria-label="Formula: EAC = AC + bottom-up ETC">EAC = AC + bottom-up ETC</p>
-  <span class="atlas-approach-badges atlas-formula-badges" role="list" aria-label="Applicable delivery approaches"><span class="atlas-approach-badge atlas-approach-badge--predictive" role="listitem">Predictive</span><span class="atlas-approach-badge atlas-approach-badge--hybrid" role="listitem">Hybrid</span></span>
-  <p><strong>Interpretation:</strong> Replaces statistical extrapolation with a new detailed remaining-work estimate.</p>
-  <p><strong>Assumptions:</strong> The original estimate is no longer reliable and the remaining work has been re-estimated.</p>
-  <p><strong>Units:</strong> Currency.</p>
-  <dl class="atlas-formula-variables"><dt>EAC</dt><dd>forecast total cost</dd><dt>AC</dt><dd>actual cost</dd><dt>bottom-up ETC</dt><dd>new detailed estimate of remaining work</dd></dl>
-  <p class="atlas-formula-exam"><strong>Exam note:</strong> Bottom-up ETC is an input from re-estimating, not a value derived from CPI.</p>
 </article>
 <article class="atlas-formula-card" id="frm-evm-010">
   <div class="atlas-formula-card__meta"><span>Supplemental · official PMI</span><code>FRM-EVM-010</code></div>
@@ -6066,7 +6035,7 @@
 <h2 id="references">References</h2>
 <h3 id="source-trace">Source trace</h3>
 <ul>
-<li>Verified Confluence snapshot — schedule, resources, and cost — <code>sources/confluence-2026-07-30/canonical/04-schedule-resources-cost.md</code></li>
+<li>PMI Instructor-Led PMP Exam Prep Course — Lesson 5, Core Planning: Scope, Value, Resources, Finance, Risk (<code>SRC-PMI-COURSE-LESSON-5-2026</code>; registered private source)</li>
 <li><a href="https://www.pmi.org/learning/library/earned-value-analysis-forecast-outcomes-7898">PMI — Applications and Extensions of Earned Value Analysis</a> — Supports core EVM measures, EAC using continuing CPI, and VAC interpretation.</li>
 <li><a href="https://www.pmi.org/learning/library/to-complete-performance-index-tcpi-6009">PMI — To-Complete Performance Index</a> — Supports TCPI against BAC and an approved EAC target.</li>
 </ul>
