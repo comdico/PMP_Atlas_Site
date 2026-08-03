@@ -64,6 +64,8 @@
     
       <link rel="stylesheet" href="../../stylesheets/adaptive-metrics.css">
     
+      <link rel="stylesheet" href="../../stylesheets/adaptive-depth.css">
+    
       <link rel="stylesheet" href="../../stylesheets/stakeholder-matrix.css">
     
       <link rel="stylesheet" href="../../stylesheets/instructional-depth.css">
@@ -716,6 +718,17 @@
     <span class="md-ellipsis">
       
         Predictive, adaptive, and hybrid treatment
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#technical-practices-that-support-adaptive-delivery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Technical Practices That Support Adaptive Delivery
       
     </span>
   </a>
@@ -5900,6 +5913,24 @@
 </section>
 <!-- END GENERATED: lifecycle-orientation -->
 
+<h2 id="technical-practices-that-support-adaptive-delivery">Technical Practices That Support Adaptive Delivery</h2>
+<p>These framework-neutral practices can shorten quality feedback and reduce delivery risk when the product, tooling, and team context support them. They are not required Scrum events and are not mandatory in every industry.</p>
+<div class="atlas-practice-grid">
+  <article><h3>Spike</h3><p>A time-limited investigation with an explicit question or learning objective. Its result may be knowledge, a prototype, a decision, or revised estimates—not production-ready functionality. Stop at the limit; do not let it become indefinite research.</p></article>
+  <article><h3>Pairing</h3><p>Two people collaborate closely on one work item. Rapid review can share knowledge, prevent defects, and reduce single-person dependency. It is optional, not a prescription for every task.</p></article>
+  <article><h3>Swarming</h3><p>Several team members focus on finishing or unblocking a high-priority item rather than starting more work. The purpose is lower WIP and earlier completion, not uncontrolled staffing.</p></article>
+  <article><h3>Continuous integration</h3><p>Changes are integrated frequently and verified rapidly so integration problems appear early and large late merges are reduced. Continuous integration does not automatically mean continuous deployment.</p></article>
+  <article><h3>Automated testing</h3><p>Repeatable checks can protect regression behavior, speed feedback, and make change safer. Automation complements rather than eliminates exploratory, usability, specialist, and other manual testing.</p></article>
+  <article><h3>TDD and ATDD</h3><p>Test-driven development uses short test-and-implementation feedback cycles. Acceptance test-driven development clarifies expected behavior collaboratively before implementation. Neither is a Scrum event, and automated acceptance tests do not constitute formal contractual acceptance.</p></article>
+  <article><h3>Refactoring</h3><p>Improve a solution’s internal structure without intentionally changing its external behavior. Done responsibly, it can reduce future delivery friction and make change safer.</p></article>
+  <article><h3>Technical debt</h3><p>Make accumulated consequences of expedient or deferred technical work visible. Debt can affect quality, speed, reliability, and maintainability; mitigate or repay it through risk, backlog, quality, and planning choices. It is neither a productivity score nor automatic evidence of misconduct.</p></article>
+</div>
+
+<p>These practices connect to quality planning, prevention before inspection, item-level acceptance criteria, the shared Definition of Done where Scrum applies, continuous improvement, adaptive metrics, and risk reduction. A usable Increment must meet its Definition of Done; verification and formal acceptance remain separate decisions.</p>
+<p>For ServiceBridge, an integration spike answers whether the legacy identity interface can meet the response-time constraint. The result is an architecture decision and revised estimate, not a deployable feature. Later, automated regression checks expose a conflict between the portal and case-management service. The Product Owner can order technical-debt mitigation within product authority; a release, contract, or compliance effect follows its named decision route.</p>
+<blockquote>
+<p><strong>Source alignment.</strong> Lesson 6 PDF page 55 directly recognizes refactoring and technical debt. Compatible older official PMI support comes from <em>Agile Practice Guide</em> §5.2.7, PDF pages 71–72 (printed pages 56–57), with related troubleshooting on PDF pages 72–75 (printed pages 57–60). Practice boundaries and the ServiceBridge application are Atlas synthesis constrained by current Scrum terminology and Atlas authority rules.</p>
+</blockquote>
 <h2 id="local-sequence">Local sequence</h2>
 <ol class="atlas-lifecycle-sequence">
   <li>Use requirements, traceability, scope, risk, stakeholder, and compliance information to plan quality.</li>

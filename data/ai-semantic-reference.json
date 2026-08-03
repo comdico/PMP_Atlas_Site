@@ -10,7 +10,7 @@
     "yaml_url": "https://comdico.github.io/PMP_Atlas_Site/data/ai-semantic-reference.yaml",
     "version": "1.3.0",
     "last_reviewed": "2026-08-01",
-    "content_hash": "sha256:b60a1a1885add84fa093ad85bb611d648399c5d7222b4d5e23299f0253f97e93"
+    "content_hash": "sha256:42bd791e14306fb85aa4d7ba870af2f3105cf2017ff9b50f64bcbfa0f05ec6f3"
   },
   "verification_status_labels": {
     "verified": "Verified",
@@ -2892,6 +2892,310 @@
         "answer_pattern": "Separate each state and name the explicit operational and benefits handoffs."
       },
       "last_reviewed": "2026-07-31",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SEM-ADP-SUITABILITY",
+      "family": "delivery_terminology",
+      "preferred_term": "Delivery-approach suitability",
+      "aliases": [
+        "approach selection",
+        "lifecycle suitability"
+      ],
+      "concise_definition": "A contextual judgment about which predictive, iterative, incremental, adaptive, or hybrid treatment fits the work and its components.",
+      "scope": "Product, technical, people, stakeholder, governance, compliance, procurement, dependency, urgency, criticality, and organizational factors inform the decision without producing a universal score.",
+      "distinctions": [
+        "Different components may use different treatments.",
+        "The Atlas factor map is not a PMI formula.",
+        "Predictive does not simply mean waterfall and adaptive does not mean Scrum."
+      ],
+      "does_not_mean": [
+        "Universal agile score",
+        "One approach for every component"
+      ],
+      "applicability": [
+        "predictive",
+        "adaptive",
+        "hybrid",
+        "context_specific"
+      ],
+      "canonical_public_pages": [
+        "https://comdico.github.io/PMP_Atlas_Site/lifecycle/adaptive-hybrid/"
+      ],
+      "related_processes": [
+        {
+          "id": "PRC-DEVELOP-PROJECT-MANAGEMENT-PLAN",
+          "title": "Develop Project Management Plan",
+          "public_url": "https://comdico.github.io/PMP_Atlas_Site/processes/develop-project-management-plan/"
+        }
+      ],
+      "related_artifacts": [
+        {
+          "id": "ART-PLN-001",
+          "title": "Project Management Plan",
+          "public_url": "https://comdico.github.io/PMP_Atlas_Site/artifacts/project-management-plan/"
+        },
+        {
+          "id": "ART-RSK-001",
+          "title": "Risk Register",
+          "public_url": "https://comdico.github.io/PMP_Atlas_Site/artifacts/risk-register/"
+        }
+      ],
+      "related_lifecycle_chapters": [
+        {
+          "id": "LFC-009",
+          "title": "Adaptive and Hybrid Delivery",
+          "public_url": "https://comdico.github.io/PMP_Atlas_Site/lifecycle/adaptive-hybrid/"
+        }
+      ],
+      "precedence": "PRE-008",
+      "verification_status": "verified",
+      "public_source_ids": [
+        "atlas-adaptive-lifecycle"
+      ],
+      "atlas_synthesis_note": "The decision aid organizes source-supported factors without copying or calculating the older guide's suitability questionnaire.",
+      "ai_guidance": {
+        "use_when": "Explaining why an approach fits a project or component.",
+        "avoid": "Do not calculate a universal agile score or force one approach across every component.",
+        "answer_pattern": "Organize the factors by context then state treatment boundaries and authority."
+      },
+      "last_reviewed": "2026-08-03",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SEM-ADP-CROSS-FUNCTIONAL",
+      "family": "delivery_terminology",
+      "preferred_term": "Cross-functional team",
+      "aliases": [
+        "collective delivery capability"
+      ],
+      "concise_definition": "A team that collectively has the capabilities needed to deliver value.",
+      "scope": "Individuals may retain deep specialties; a generalizing specialist can add collaborative breadth without becoming a new Scrum accountability.",
+      "distinctions": [
+        "Collective capability does not mean identical individual skill.",
+        "Specialists and shared authorities may remain.",
+        "Colocation and full dedication are contextual rather than mandatory."
+      ],
+      "does_not_mean": [
+        "Every person has every skill",
+        "Generalizing specialist as a Scrum accountability",
+        "Prohibition on specialist roles"
+      ],
+      "applicability": [
+        "adaptive",
+        "hybrid",
+        "context_specific"
+      ],
+      "canonical_public_pages": [
+        "https://comdico.github.io/PMP_Atlas_Site/lifecycle/execution-leadership/"
+      ],
+      "related_processes": [
+        {
+          "id": "PRC-ACQUIRE-RESOURCES",
+          "title": "Acquire Resources",
+          "public_url": "https://comdico.github.io/PMP_Atlas_Site/processes/acquire-resources/"
+        },
+        {
+          "id": "PRC-DEVELOP-TEAM",
+          "title": "Develop Team",
+          "public_url": "https://comdico.github.io/PMP_Atlas_Site/processes/develop-team/"
+        },
+        {
+          "id": "PRC-MANAGE-TEAM",
+          "title": "Manage Team",
+          "public_url": "https://comdico.github.io/PMP_Atlas_Site/processes/manage-team/"
+        }
+      ],
+      "related_lifecycle_chapters": [
+        {
+          "id": "LFC-007",
+          "title": "Execution and Team Leadership",
+          "public_url": "https://comdico.github.io/PMP_Atlas_Site/lifecycle/execution-leadership/"
+        }
+      ],
+      "precedence": "PRE-008",
+      "verification_status": "verified",
+      "public_source_ids": [
+        "atlas-execution-lifecycle"
+      ],
+      "ai_guidance": {
+        "use_when": "Explaining adaptive team capability and topology.",
+        "avoid": "Do not require every person to be a generalist or remove necessary specialist authority.",
+        "answer_pattern": "Describe collective capability then make shared specialists and handoffs explicit."
+      },
+      "last_reviewed": "2026-08-03",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SEM-ADP-TECHNICAL-PRACTICES",
+      "family": "delivery_terminology",
+      "preferred_term": "Adaptive technical practices",
+      "aliases": [
+        "technical quality practices"
+      ],
+      "concise_definition": "Optional context-dependent practices such as spikes, pairing, swarming, continuous integration, automated testing, TDD, ATDD, and refactoring that can shorten feedback and reduce technical risk.",
+      "scope": "These practices support delivery and quality but are not Scrum events or universal requirements.",
+      "distinctions": [
+        "Continuous integration is not continuous deployment.",
+        "Automated tests do not replace all manual testing.",
+        "ATDD does not grant formal acceptance.",
+        "A spike has a question and time limit."
+      ],
+      "does_not_mean": [
+        "Required Scrum events",
+        "Formal acceptance",
+        "Universal software prescription"
+      ],
+      "applicability": [
+        "adaptive",
+        "hybrid",
+        "context_specific"
+      ],
+      "canonical_public_pages": [
+        "https://comdico.github.io/PMP_Atlas_Site/lifecycle/quality/"
+      ],
+      "related_processes": [
+        {
+          "id": "PRC-MANAGE-QUALITY",
+          "title": "Manage Quality",
+          "public_url": "https://comdico.github.io/PMP_Atlas_Site/processes/manage-quality/"
+        },
+        {
+          "id": "PRC-CONTROL-QUALITY",
+          "title": "Control Quality",
+          "public_url": "https://comdico.github.io/PMP_Atlas_Site/processes/control-quality/"
+        },
+        {
+          "id": "PRC-VALIDATE-SCOPE",
+          "title": "Validate Scope",
+          "public_url": "https://comdico.github.io/PMP_Atlas_Site/processes/validate-scope/"
+        }
+      ],
+      "related_artifacts": [
+        {
+          "id": "ART-QLT-002",
+          "title": "Quality Metrics",
+          "public_url": "https://comdico.github.io/PMP_Atlas_Site/artifacts/quality-metrics/"
+        },
+        {
+          "id": "ART-QLT-004",
+          "title": "Verified Deliverables",
+          "public_url": "https://comdico.github.io/PMP_Atlas_Site/artifacts/verified-deliverables/"
+        },
+        {
+          "id": "ART-QLT-005",
+          "title": "Accepted Deliverables",
+          "public_url": "https://comdico.github.io/PMP_Atlas_Site/artifacts/accepted-deliverables/"
+        }
+      ],
+      "related_lifecycle_chapters": [
+        {
+          "id": "LFC-005",
+          "title": "Quality",
+          "public_url": "https://comdico.github.io/PMP_Atlas_Site/lifecycle/quality/"
+        }
+      ],
+      "precedence": "PRE-009",
+      "verification_status": "verified",
+      "public_source_ids": [
+        "atlas-quality-lifecycle"
+      ],
+      "ai_guidance": {
+        "use_when": "Relating technical delivery practices to quality feedback and risk.",
+        "avoid": "Do not make them Scrum events or equate automated acceptance checks with acceptance authority.",
+        "answer_pattern": "State the purpose the optional boundary and the quality or authority connection."
+      },
+      "last_reviewed": "2026-08-03",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SEM-ADP-CONTRACTING",
+      "family": "delivery_terminology",
+      "preferred_term": "Adaptive contracting treatment",
+      "aliases": [
+        "incremental contracting",
+        "staged procurement"
+      ],
+      "concise_definition": "A qualified procurement treatment that aligns commercial guardrails, acceptance, review, and change authority with iterative or incremental discovery and delivery.",
+      "scope": "Fixed-scope, time-and-materials, staged, and hybrid structures allocate flexibility and risk differently; law and procurement policy control.",
+      "distinctions": [
+        "No contract pattern is universal.",
+        "Product ordering does not alter an agreement.",
+        "Formal acceptance and contract-change authority remain explicit."
+      ],
+      "does_not_mean": [
+        "Legal advice",
+        "Contract template",
+        "Uncontrolled variable scope"
+      ],
+      "applicability": [
+        "predictive",
+        "adaptive",
+        "hybrid",
+        "context_specific"
+      ],
+      "canonical_public_pages": [
+        "https://comdico.github.io/PMP_Atlas_Site/lifecycle/risk-compliance-procurement/"
+      ],
+      "related_processes": [
+        {
+          "id": "PRC-PLAN-PROCUREMENT-MANAGEMENT",
+          "title": "Plan Procurement Management",
+          "public_url": "https://comdico.github.io/PMP_Atlas_Site/processes/plan-procurement-management/"
+        },
+        {
+          "id": "PRC-CONDUCT-PROCUREMENTS",
+          "title": "Conduct Procurements",
+          "public_url": "https://comdico.github.io/PMP_Atlas_Site/processes/conduct-procurements/"
+        },
+        {
+          "id": "PRC-CONTROL-PROCUREMENTS",
+          "title": "Control Procurements",
+          "public_url": "https://comdico.github.io/PMP_Atlas_Site/processes/control-procurements/"
+        }
+      ],
+      "related_artifacts": [
+        {
+          "id": "ART-PRC-001",
+          "title": "Procurement Management Plan"
+        },
+        {
+          "id": "ART-PRC-003",
+          "title": "Agreements",
+          "public_url": "https://comdico.github.io/PMP_Atlas_Site/artifacts/agreements/"
+        },
+        {
+          "id": "ART-QLT-005",
+          "title": "Accepted Deliverables",
+          "public_url": "https://comdico.github.io/PMP_Atlas_Site/artifacts/accepted-deliverables/"
+        }
+      ],
+      "related_lifecycle_chapters": [
+        {
+          "id": "LFC-006",
+          "title": "Risk, Compliance, and Procurement",
+          "public_url": "https://comdico.github.io/PMP_Atlas_Site/lifecycle/risk-compliance-procurement/"
+        }
+      ],
+      "related_decision_guides": [
+        {
+          "id": "DEC-PRC-001",
+          "title": "Seller Performance Threatens Project Objectives",
+          "public_url": "https://comdico.github.io/PMP_Atlas_Site/decisions/seller-performance-threat/"
+        }
+      ],
+      "precedence": "PRE-010",
+      "verification_status": "source_limited",
+      "public_source_ids": [
+        "atlas-risk-lifecycle"
+      ],
+      "atlas_synthesis_note": "The comparison is instructional project-management guidance and does not recommend binding language or replace legal and procurement review.",
+      "ai_guidance": {
+        "use_when": "Explaining how procurement can accommodate iterative discovery.",
+        "avoid": "Do not recommend a universal contract type or invent legal terms.",
+        "answer_pattern": "State what is fixed what may vary authority acceptance conditions and major risk."
+      },
+      "last_reviewed": "2026-08-03",
       "version": "1.0.0"
     },
     {
