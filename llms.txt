@@ -10,6 +10,7 @@
 - Project Lifecycle Guide: https://comdico.github.io/PMP_Atlas_Site/lifecycle/
 - Scrum Events and Adaptive Cadences: https://comdico.github.io/PMP_Atlas_Site/lifecycle/scrum-events-and-adaptive-cadences/
 - Process Reference: https://comdico.github.io/PMP_Atlas_Site/processes/
+- Tools and Techniques: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/
 - Roles, Responsibilities, and Authority: https://comdico.github.io/PMP_Atlas_Site/roles/
 - Process Role Map: https://comdico.github.io/PMP_Atlas_Site/roles/process-role-map/
 - Artifact Reference: https://comdico.github.io/PMP_Atlas_Site/artifacts/

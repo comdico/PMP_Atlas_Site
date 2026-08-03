@@ -9,7 +9,7 @@ metadata:
   yaml_url: https://comdico.github.io/PMP_Atlas_Site/data/ai-semantic-reference.yaml
   version: 1.3.1
   last_reviewed: '2026-08-03'
-  content_hash: sha256:6100b1572ec4f9a6e782777700955c4e646aefc85dc11c475dac00b2f407d17f
+  content_hash: sha256:7aacada60dddfcd57b13223818bc3a0f9964277c644611ddd89f5b1b03bcdb22
 verification_status_labels:
   verified: Verified
   atlas_synthesis: Atlas synthesis
@@ -190,7 +190,7 @@ concepts:
   - A relationship does not transfer approval, staffing, procurement, or acceptance authority.
   - Verification establishes conformance evidence; acceptance records the designated acceptance authority's decision.
   - Work performance data, information, and reports are successive analytical forms rather than synonyms.
-  - Inputs, outputs, updates, direct dependencies, and supported transitions are complete across all 49 processes; comprehensive techniques remain deferred to Pass 3C.
+  - Inputs, outputs, updates, tools and techniques, direct dependencies, and supported transitions are complete across all 49 processes for the registered supplemental guide.
   applicability:
   - predictive
   - hybrid
@@ -289,7 +289,8 @@ concepts:
     id: PRC-IDENTIFY-STAKEHOLDERS
     title: Identify Stakeholders
     public_url: https://comdico.github.io/PMP_Atlas_Site/processes/identify-stakeholders/
-  - id: PRC-PLAN-STAKEHOLDER-ENGAGEMENT
+  - &id070
+    id: PRC-PLAN-STAKEHOLDER-ENGAGEMENT
     title: Plan Stakeholder Engagement
     public_url: https://comdico.github.io/PMP_Atlas_Site/processes/plan-stakeholder-engagement/
   - &id022
@@ -918,7 +919,8 @@ concepts:
   canonical_public_pages:
   - https://comdico.github.io/PMP_Atlas_Site/lifecycle/risk-compliance-procurement/
   related_processes:
-  - id: PRC-PLAN-RISK-MANAGEMENT
+  - &id081
+    id: PRC-PLAN-RISK-MANAGEMENT
     title: Plan Risk Management
     public_url: https://comdico.github.io/PMP_Atlas_Site/processes/plan-risk-management/
   - &id047
@@ -1610,7 +1612,8 @@ concepts:
   - https://comdico.github.io/PMP_Atlas_Site/artifacts/risk-register/
   related_processes:
   - *id047
-  - id: PRC-PLAN-RISK-RESPONSES
+  - &id068
+    id: PRC-PLAN-RISK-RESPONSES
     title: Plan Risk Responses
     public_url: https://comdico.github.io/PMP_Atlas_Site/processes/plan-risk-responses/
   - *id008
@@ -1886,7 +1889,8 @@ concepts:
   canonical_public_pages:
   - https://comdico.github.io/PMP_Atlas_Site/lifecycle/execution-leadership/
   related_processes:
-  - id: PRC-ACQUIRE-RESOURCES
+  - &id086
+    id: PRC-ACQUIRE-RESOURCES
     title: Acquire Resources
     public_url: https://comdico.github.io/PMP_Atlas_Site/processes/acquire-resources/
   - *id056
@@ -2016,15 +2020,18 @@ concepts:
   - https://comdico.github.io/PMP_Atlas_Site/formulas/
   - https://comdico.github.io/PMP_Atlas_Site/formulas/communication-channels/
   related_processes:
-  - id: PRC-ESTIMATE-ACTIVITY-DURATIONS
+  - &id066
+    id: PRC-ESTIMATE-ACTIVITY-DURATIONS
     title: Estimate Activity Durations
     public_url: https://comdico.github.io/PMP_Atlas_Site/processes/estimate-activity-durations/
   - *id003
-  - id: PRC-ESTIMATE-COSTS
+  - &id067
+    id: PRC-ESTIMATE-COSTS
     title: Estimate Costs
     public_url: https://comdico.github.io/PMP_Atlas_Site/processes/estimate-costs/
   - *id004
-  - id: PRC-CONTROL-COSTS
+  - &id072
+    id: PRC-CONTROL-COSTS
     title: Control Costs
     public_url: https://comdico.github.io/PMP_Atlas_Site/processes/control-costs/
   - *id061
@@ -2075,3 +2082,5398 @@ concepts:
     answer_pattern: Follow the Formula and Quantitative Methods link and preserve the registry's current status label.
   last_reviewed: '2026-07-31'
   version: 1.0.0
+techniques:
+- id: TNT-ACTIVE-LISTENING
+  name: Active listening
+  aliases: []
+  family: interpersonal_and_team_skills
+  type: skill
+  definition: Applies active listening to improve collaboration, understanding, or coordinated action among people.
+  purpose: Enable effective human interaction and coordinated work.
+  applicable_processes:
+  - *id007
+  - &id077
+    id: PRC-MANAGE-PROJECT-KNOWLEDGE
+    title: Manage Project Knowledge
+    public_url: https://comdico.github.io/PMP_Atlas_Site/processes/manage-project-knowledge/
+  - *id010
+  related_artifact_ids:
+  - ART-INT-002
+  - ART-STK-001
+  - ART-ORG-001
+  - ART-ORG-002
+  - ART-RES-001
+  - ART-COM-001
+  - ART-STK-002
+  - ART-ISS-001
+  - ART-RSK-001
+  - ART-COM-002
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-STAKEHOLDER
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-active-listening
+- id: TNT-ADVERTISING
+  name: Advertising
+  aliases: []
+  family: procurement
+  type: method
+  definition: Uses advertising to support a procurement activity within the applicable agreement and delegated authority.
+  purpose: Support fair, controlled acquisition and agreement administration.
+  applicable_processes:
+  - *id059
+  related_artifact_ids:
+  - ART-SCP-003
+  - ART-REQ-003
+  - ART-COM-001
+  - ART-RSK-002
+  - ART-PRC-001
+  - ART-PLN-003
+  - ART-CST-002
+  - ART-INT-002
+  - ART-PRC-012
+  - ART-PRC-003
+  - ART-CHG-001
+  - ART-QLT-001
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-PROCUREMENT-AUTHORITY
+  - ROL-SELLER
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-advertising
+- id: TNT-AFFINITY-DIAGRAMS
+  name: Affinity diagrams
+  aliases: []
+  family: data_representation
+  type: data_representation
+  definition: Organizes project information through affinity diagrams so relationships, patterns, or status can be interpreted.
+  purpose: Make complex information easier to interpret and discuss.
+  applicable_processes:
+  - *id002
+  - *id057
+  related_artifact_ids:
+  - ART-INT-002
+  - ART-ORG-002
+  - ART-CHR-001
+  - ART-SCP-003
+  - ART-REQ-003
+  - ART-STK-002
+  - ART-INT-001
+  - ART-STK-001
+  - ART-REQ-001
+  - ART-REQ-002
+  - ART-QLT-006
+  - ART-QLT-007
+  - ART-CHG-001
+  - ART-QLT-001
+  - ART-SCP-001
+  - ART-SCH-005
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-affinity-diagrams
+- id: TNT-AGILE-RELEASE-PLANNING
+  name: Agile release planning
+  aliases: []
+  family: scheduling
+  type: quantitative_method
+  definition: Uses agile release planning to model, develop, or adjust the timing and dependency logic of project work.
+  purpose: Develop or assess feasible time and dependency logic.
+  applicable_processes:
+  - *id003
+  related_artifact_ids:
+  - ART-SCH-007
+  - ART-SCP-001
+  - ART-SCH-008
+  - ART-SCH-001
+  - ART-INT-001
+  - ART-EST-001
+  - ART-SCH-003
+  - ART-INT-002
+  - ART-SCH-005
+  - ART-SCH-004
+  - ART-SCH-010
+  - ART-SCH-011
+  - ART-CHG-001
+  - ART-CST-002
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-agile-release-planning
+- id: TNT-ALTERNATIVES-ANALYSIS
+  name: Alternatives analysis
+  aliases: []
+  family: data_analysis
+  type: method
+  definition: Evaluates identified options to select an approach for performing project work within constraints.
+  purpose: Turn available evidence into decision-relevant insight.
+  applicable_processes:
+  - &id071
+    id: PRC-CONTROL-RESOURCES
+    title: Control Resources
+    public_url: https://comdico.github.io/PMP_Atlas_Site/processes/control-resources/
+  - &id076
+    id: PRC-DEFINE-SCOPE
+    title: Define Scope
+    public_url: https://comdico.github.io/PMP_Atlas_Site/processes/define-scope/
+  - *id066
+  - &id069
+    id: PRC-ESTIMATE-ACTIVITY-RESOURCES
+    title: Estimate Activity Resources
+    public_url: https://comdico.github.io/PMP_Atlas_Site/processes/estimate-activity-resources/
+  - *id067
+  - *id057
+  - *id032
+  - *id010
+  - *id028
+  - &id080
+    id: PRC-PLAN-COST-MANAGEMENT
+    title: Plan Cost Management
+    public_url: https://comdico.github.io/PMP_Atlas_Site/processes/plan-cost-management/
+  - *id068
+  - &id082
+    id: PRC-PLAN-SCHEDULE-MANAGEMENT
+    title: Plan Schedule Management
+    public_url: https://comdico.github.io/PMP_Atlas_Site/processes/plan-schedule-management/
+  - &id083
+    id: PRC-PLAN-SCOPE-MANAGEMENT
+    title: Plan Scope Management
+    public_url: https://comdico.github.io/PMP_Atlas_Site/processes/plan-scope-management/
+  related_artifact_ids:
+  - ART-ORG-002
+  - ART-ORG-001
+  - ART-RSK-001
+  - ART-INT-002
+  - ART-RES-001
+  - ART-CHR-001
+  - ART-INT-001
+  - ART-SCP-001
+  - ART-CHG-001
+  - ART-ISS-001
+  - ART-SCH-005
+  - ART-CST-002
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-alternatives-analysis
+- id: TNT-ANALOGOUS-ESTIMATING
+  name: Analogous estimating
+  aliases: []
+  family: estimating
+  type: quantitative_method
+  definition: Uses analogous estimating to develop or assess an estimate from the information and uncertainty available.
+  purpose: Produce an estimate suited to the decision and available detail.
+  applicable_processes:
+  - *id066
+  - *id069
+  - *id067
+  related_artifact_ids:
+  - ART-SCP-001
+  - ART-RSK-001
+  - ART-ORG-001
+  - ART-ORG-002
+  - ART-SCH-008
+  - ART-SCH-001
+  - ART-INT-001
+  - ART-INT-002
+  - ART-EST-001
+  - ART-SCH-003
+  - ART-RES-002
+  - ART-RES-008
+  - ART-CST-001
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs:
+  - MET-EST-ANALOGOUS
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-analogous-estimating
+- id: TNT-ASSESSMENT-OF-OTHER-RISK-PARAMETERS
+  name: Assessment of other risk parameters
+  aliases: []
+  family: data_analysis
+  type: method
+  definition: Examines project information using assessment of other risk parameters to reveal patterns, implications, options, or performance conditions.
+  purpose: Turn available evidence into decision-relevant insight.
+  applicable_processes:
+  - &id078
+    id: PRC-PERFORM-QUALITATIVE-RISK-ANALYSIS
+    title: Perform Qualitative Risk Analysis
+    public_url: https://comdico.github.io/PMP_Atlas_Site/processes/perform-qualitative-risk-analysis/
+  related_artifact_ids:
+  - ART-RSK-002
+  - ART-INT-001
+  - ART-RSK-001
+  - ART-STK-001
+  - ART-ORG-001
+  - ART-ORG-002
+  - ART-ISS-001
+  - ART-RSK-003
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-assessment-of-other-risk-parameters
+- id: TNT-ASSUMPTION-AND-CONSTRAINT-ANALYSIS
+  name: Assumption and constraint analysis
+  aliases: []
+  family: data_analysis
+  type: method
+  definition: Examines project information using assumption and constraint analysis to reveal patterns, implications, options, or performance conditions.
+  purpose: Turn available evidence into decision-relevant insight.
+  applicable_processes:
+  - *id047
+  - *id070
+  related_artifact_ids:
+  - ART-RES-001
+  - ART-RSK-002
+  - ART-INT-001
+  - ART-ISS-001
+  - ART-STK-001
+  - ART-PRC-003
+  - ART-ORG-001
+  - ART-ORG-002
+  - ART-RSK-001
+  - ART-RSK-003
+  - ART-STK-002
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-assumption-and-constraint-analysis
+- id: TNT-AUDITS
+  name: Audits
+  aliases: []
+  family: method
+  type: method
+  definition: Applies audits as a tailored method to support project analysis or action.
+  purpose: Support a tailored project decision or work activity.
+  applicable_processes:
+  - *id009
+  - *id057
+  - *id008
+  related_artifact_ids:
+  - ART-INT-002
+  - ART-RSK-002
+  - ART-RSK-001
+  - ART-WPD-001
+  - ART-ORG-002
+  - ART-RSK-003
+  - ART-REQ-003
+  - ART-PRC-001
+  - ART-CHG-001
+  - ART-WPI-001
+  - ART-SCH-005
+  - ART-CST-002
+  - ART-ISS-001
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-audits
+- id: TNT-AUTOCRATIC-DECISION-MAKING
+  name: Autocratic decision making
+  aliases: []
+  family: decision_making
+  type: method
+  definition: Uses autocratic decision making to compare, prioritize, or select among alternatives within delegated decision authority.
+  purpose: Reach a traceable selection or priority.
+  applicable_processes:
+  - *id028
+  related_artifact_ids:
+  - ART-PLN-002
+  - ART-PLN-003
+  - ART-SCP-001
+  - ART-SCH-005
+  - ART-CST-002
+  - ART-EST-001
+  - ART-CHG-004
+  - ART-REQ-002
+  - ART-PLN-001
+  - ART-CHG-002
+  - ART-CHG-003
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-GOVERNANCE-BOARD
+  - ROL-DELIVERY-TEAM
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - The method supports a choice but does not override reserved governance, acceptance, product, or contractual authority.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-autocratic-decision-making
+- id: TNT-BENCHMARKING
+  name: Benchmarking
+  aliases: []
+  family: data_gathering
+  type: method
+  definition: Compares planned practices or results with relevant reference points.
+  purpose: Build a sufficiently reliable evidence base.
+  applicable_processes:
+  - *id002
+  - *id005
+  - *id070
+  related_artifact_ids:
+  - ART-CHR-001
+  - ART-INT-001
+  - ART-STK-001
+  - ART-ORG-001
+  - ART-ORG-002
+  - ART-REQ-003
+  - ART-STK-002
+  - ART-PRC-003
+  - ART-REQ-002
+  - ART-REQ-001
+  - ART-QLT-001
+  - ART-QLT-002
+  - ART-PLN-001
+  - ART-DOC-001
+  - ART-RSK-002
+  - ART-SCP-001
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs: []
+  delivery_treatment: current_course_supported_with_predictive_locator
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: exact_locator_available
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-benchmarking
+- id: TNT-BIDDER-CONFERENCES
+  name: Bidder conferences
+  aliases: []
+  family: procurement
+  type: method
+  definition: Uses bidder conferences to support a procurement activity within the applicable agreement and delegated authority.
+  purpose: Support fair, controlled acquisition and agreement administration.
+  applicable_processes:
+  - *id059
+  related_artifact_ids:
+  - ART-SCP-003
+  - ART-REQ-003
+  - ART-COM-001
+  - ART-RSK-002
+  - ART-PRC-001
+  - ART-PLN-003
+  - ART-CST-002
+  - ART-INT-002
+  - ART-PRC-012
+  - ART-PRC-003
+  - ART-CHG-001
+  - ART-QLT-001
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-PROCUREMENT-AUTHORITY
+  - ROL-SELLER
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-bidder-conferences
+- id: TNT-BOTTOM-UP-ESTIMATING
+  name: Bottom-up estimating
+  aliases: []
+  family: estimating
+  type: quantitative_method
+  definition: Estimates lower-level work components and aggregates them into the estimate for the activity or higher-level work.
+  purpose: Produce an estimate suited to the decision and available detail.
+  applicable_processes:
+  - *id066
+  - *id069
+  - *id067
+  related_artifact_ids:
+  - ART-SCP-001
+  - ART-RSK-001
+  - ART-ORG-001
+  - ART-ORG-002
+  - ART-SCH-008
+  - ART-SCH-001
+  - ART-INT-001
+  - ART-INT-002
+  - ART-EST-001
+  - ART-SCH-003
+  - ART-RES-002
+  - ART-RES-008
+  - ART-CST-001
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs:
+  - MET-EST-BOTTOM-UP
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-bottom-up-estimating
+- id: TNT-BRAINSTORMING
+  name: Brainstorming
+  aliases: []
+  family: data_gathering
+  type: method
+  definition: Collects relevant project information through brainstorming so the team can understand needs, conditions, or evidence.
+  purpose: Build a sufficiently reliable evidence base.
+  applicable_processes:
+  - *id002
+  - *id001
+  - *id044
+  - *id047
+  - *id046
+  - *id005
+  related_artifact_ids:
+  - ART-ORG-001
+  - ART-ORG-002
+  - ART-CHR-001
+  - ART-PRC-003
+  - ART-REQ-003
+  - ART-STK-002
+  - ART-INT-001
+  - ART-STK-001
+  - ART-RSK-001
+  - ART-REQ-002
+  - ART-PLN-001
+  - ART-RSK-002
+  - ART-REQ-001
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs: []
+  delivery_treatment: current_course_supported_with_predictive_locator
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: exact_locator_available
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-brainstorming
+- id: TNT-CAUSE-AND-EFFECT-DIAGRAMS
+  name: Cause-and-effect diagrams
+  aliases: []
+  family: data_representation
+  type: data_representation
+  definition: Organizes project information through cause-and-effect diagrams so relationships, patterns, or status can be interpreted.
+  purpose: Make complex information easier to interpret and discuss.
+  applicable_processes:
+  - *id037
+  - *id057
+  related_artifact_ids:
+  - ART-QLT-001
+  - ART-INT-002
+  - ART-QLT-002
+  - ART-ORG-002
+  - ART-QLT-007
+  - ART-CHG-002
+  - ART-DEL-001
+  - ART-WPD-001
+  - ART-CHG-001
+  - ART-ISS-001
+  - ART-RSK-001
+  - ART-QLT-003
+  - ART-WPI-001
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-cause-and-effect-diagrams
+- id: TNT-CHANGE-CONTROL-TOOLS
+  name: Change control tools
+  aliases: []
+  family: tool_system
+  type: tool_or_system
+  definition: Uses change control tools to record, integrate, analyze, route, or control project information and work.
+  purpose: Support controlled, traceable project information or workflow.
+  applicable_processes:
+  - *id028
+  related_artifact_ids:
+  - ART-PLN-002
+  - ART-PLN-003
+  - ART-SCP-001
+  - ART-SCH-005
+  - ART-CST-002
+  - ART-EST-001
+  - ART-CHG-004
+  - ART-REQ-002
+  - ART-PLN-001
+  - ART-CHG-002
+  - ART-CHG-003
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-PMO
+  - ROL-DELIVERY-TEAM
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-change-control-tools
+- id: TNT-CHECK-SHEETS
+  name: Check sheets
+  aliases: []
+  family: data_gathering
+  type: method
+  definition: Collects relevant project information through check sheets so the team can understand needs, conditions, or evidence.
+  purpose: Build a sufficiently reliable evidence base.
+  applicable_processes:
+  - *id037
+  related_artifact_ids:
+  - ART-QLT-001
+  - ART-INT-002
+  - ART-QLT-002
+  - ART-QLT-007
+  - ART-CHG-002
+  - ART-DEL-001
+  - ART-WPD-001
+  - ART-ORG-001
+  - ART-QLT-003
+  - ART-WPI-001
+  - ART-CHG-001
+  - ART-ISS-001
+  - ART-RSK-001
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-check-sheets
+- id: TNT-CHECKLISTS
+  name: Checklists
+  aliases: []
+  family: data_gathering
+  type: method
+  definition: Collects relevant project information through checklists so the team can understand needs, conditions, or evidence.
+  purpose: Build a sufficiently reliable evidence base.
+  applicable_processes:
+  - *id037
+  - *id044
+  - *id047
+  - *id057
+  related_artifact_ids:
+  - ART-ORG-002
+  - ART-QLT-001
+  - ART-INT-002
+  - ART-ORG-001
+  - ART-QLT-002
+  - ART-QLT-007
+  - ART-CHG-002
+  - ART-DEL-001
+  - ART-RSK-001
+  - ART-CHG-001
+  - ART-ISS-001
+  - ART-QLT-003
+  - ART-WPI-001
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs: []
+  delivery_treatment: current_course_supported_with_predictive_locator
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: exact_locator_available
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-checklists
+- id: TNT-CLAIMS-ADMINISTRATION
+  name: Claims administration
+  aliases: []
+  family: procurement
+  type: method
+  definition: Uses claims administration to support a procurement activity within the applicable agreement and delegated authority.
+  purpose: Support fair, controlled acquisition and agreement administration.
+  applicable_processes:
+  - *id009
+  related_artifact_ids:
+  - ART-REQ-003
+  - ART-RSK-002
+  - ART-PRC-001
+  - ART-PLN-002
+  - ART-SCH-005
+  - ART-INT-001
+  - ART-INT-002
+  - ART-SCH-009
+  - ART-WPI-001
+  - ART-CHG-001
+  - ART-PRC-002
+  - ART-CST-002
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-PROCUREMENT-AUTHORITY
+  - ROL-SELLER
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-claims-administration
+- id: TNT-COLOCATION
+  name: Colocation
+  aliases: []
+  family: resource_team
+  type: method
+  definition: Uses colocation to plan, organize, or enable people and physical resources.
+  purpose: Enable feasible resource organization and team performance.
+  applicable_processes:
+  - *id056
+  related_artifact_ids:
+  - ART-RES-001
+  - ART-INT-002
+  - ART-SCH-004
+  - ART-RES-003
+  - ART-RES-007
+  - ART-RES-006
+  - ART-ORG-001
+  - ART-ORG-002
+  - ART-RES-005
+  - ART-CHG-001
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-FUNCTIONAL-MANAGER
+  - ROL-DELIVERY-TEAM
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-colocation
+- id: TNT-COMMUNICATION-COMPETENCE
+  name: Communication competence
+  aliases: []
+  family: communication
+  type: skill
+  definition: Uses communication competence to improve how project information is prepared, exchanged, understood, or acted upon.
+  purpose: Support shared understanding and appropriate information flow.
+  applicable_processes:
+  - *id007
+  related_artifact_ids:
+  - ART-RES-001
+  - ART-COM-001
+  - ART-STK-002
+  - ART-CHG-004
+  - ART-ISS-001
+  - ART-INT-002
+  - ART-QLT-006
+  - ART-RSK-003
+  - ART-COM-002
+  - ART-SCH-004
+  - ART-RSK-001
+  - ART-STK-001
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-STAKEHOLDER
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-communication-competence
+- id: TNT-COMMUNICATION-METHODS
+  name: Communication methods
+  aliases: []
+  family: communication
+  type: skill
+  definition: Uses communication methods to improve how project information is prepared, exchanged, understood, or acted upon.
+  purpose: Support shared understanding and appropriate information flow.
+  applicable_processes:
+  - *id007
+  - *id061
+  related_artifact_ids:
+  - ART-RES-001
+  - ART-STK-002
+  - ART-STK-001
+  - ART-ORG-001
+  - ART-ORG-002
+  - ART-COM-001
+  - ART-CHG-004
+  - ART-ISS-001
+  - ART-SCH-004
+  - ART-COM-002
+  - ART-INT-002
+  - ART-RSK-001
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-STAKEHOLDER
+  formula_refs: []
+  delivery_treatment: current_course_supported_with_predictive_locator
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: exact_locator_available
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-communication-methods
+- id: TNT-COMMUNICATION-MODELS
+  name: Communication models
+  aliases: []
+  family: communication
+  type: model
+  definition: Uses communication models to improve how project information is prepared, exchanged, understood, or acted upon.
+  purpose: Support shared understanding and appropriate information flow.
+  applicable_processes:
+  - *id061
+  related_artifact_ids:
+  - ART-CHR-001
+  - ART-RES-001
+  - ART-STK-002
+  - ART-REQ-001
+  - ART-STK-001
+  - ART-ORG-001
+  - ART-ORG-002
+  - ART-COM-001
+  - ART-SCH-004
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-STAKEHOLDER
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-communication-models
+- id: TNT-COMMUNICATION-REQUIREMENTS-ANALYSIS
+  name: Communication requirements analysis
+  aliases: []
+  family: communication
+  type: skill
+  definition: Uses communication requirements analysis to improve how project information is prepared, exchanged, understood, or acted upon.
+  purpose: Support shared understanding and appropriate information flow.
+  applicable_processes:
+  - *id061
+  related_artifact_ids:
+  - ART-CHR-001
+  - ART-RES-001
+  - ART-STK-002
+  - ART-REQ-001
+  - ART-STK-001
+  - ART-ORG-001
+  - ART-ORG-002
+  - ART-COM-001
+  - ART-SCH-004
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-STAKEHOLDER
+  formula_refs:
+  - FRM-COM-001
+  delivery_treatment: current_course_supported_with_predictive_locator
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: exact_locator_available
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-communication-requirements-analysis
+- id: TNT-COMMUNICATION-STYLES-ASSESSMENT
+  name: Communication styles assessment
+  aliases: []
+  family: interpersonal_and_team_skills
+  type: skill
+  definition: Applies communication styles assessment to improve collaboration, understanding, or coordinated action among people.
+  purpose: Enable effective human interaction and coordinated work.
+  applicable_processes:
+  - *id061
+  related_artifact_ids:
+  - ART-CHR-001
+  - ART-RES-001
+  - ART-STK-002
+  - ART-REQ-001
+  - ART-STK-001
+  - ART-ORG-001
+  - ART-ORG-002
+  - ART-COM-001
+  - ART-SCH-004
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-STAKEHOLDER
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-communication-styles-assessment
+- id: TNT-COMMUNICATION-TECHNOLOGY
+  name: Communication technology
+  aliases: []
+  family: communication
+  type: skill
+  definition: Uses communication technology to improve how project information is prepared, exchanged, understood, or acted upon.
+  purpose: Support shared understanding and appropriate information flow.
+  applicable_processes:
+  - *id056
+  - *id007
+  - *id061
+  related_artifact_ids:
+  - ART-RES-001
+  - ART-ORG-001
+  - ART-ORG-002
+  - ART-INT-002
+  - ART-STK-002
+  - ART-STK-001
+  - ART-SCH-004
+  - ART-RES-003
+  - ART-COM-001
+  - ART-RES-005
+  - ART-CHG-001
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-STAKEHOLDER
+  formula_refs: []
+  delivery_treatment: current_course_supported_with_predictive_locator
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: exact_locator_available
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-communication-technology
+- id: TNT-CONFLICT-MANAGEMENT
+  name: Conflict management
+  aliases: []
+  family: interpersonal_and_team_skills
+  type: skill
+  definition: Addresses differences constructively using an approach suited to their importance, urgency, power context, and relationship needs.
+  purpose: Enable effective human interaction and coordinated work.
+  applicable_processes:
+  - *id001
+  - *id044
+  - *id056
+  - *id007
+  - *id022
+  - *id049
+  related_artifact_ids:
+  - ART-ORG-001
+  - ART-ORG-002
+  - ART-INT-002
+  - ART-RES-001
+  - ART-ISS-001
+  - ART-RES-003
+  - ART-RES-006
+  - ART-COM-001
+  - ART-CHG-001
+  - ART-SCH-004
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-STAKEHOLDER
+  formula_refs: []
+  delivery_treatment: current_course_supported_with_predictive_locator
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: exact_locator_available
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-conflict-management
+- id: TNT-CONTEXT-DIAGRAM
+  name: Context diagram
+  aliases: []
+  family: data_representation
+  type: data_representation
+  definition: Organizes project information through context diagram so relationships, patterns, or status can be interpreted.
+  purpose: Make complex information easier to interpret and discuss.
+  applicable_processes:
+  - *id002
+  related_artifact_ids:
+  - ART-CHR-001
+  - ART-SCP-003
+  - ART-REQ-003
+  - ART-STK-002
+  - ART-INT-001
+  - ART-INT-002
+  - ART-STK-001
+  - ART-BIZ-001
+  - ART-REQ-001
+  - ART-REQ-002
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-context-diagram
+- id: TNT-CONTINGENT-RESPONSE-STRATEGIES
+  name: Contingent response strategies
+  aliases: []
+  family: risk
+  type: quantitative_method
+  definition: Uses contingent response strategies to identify, assess, model, respond to, or monitor uncertainty.
+  purpose: Improve decisions under uncertainty.
+  applicable_processes:
+  - *id068
+  related_artifact_ids:
+  - ART-RES-001
+  - ART-RSK-002
+  - ART-CST-002
+  - ART-INT-002
+  - ART-SCH-004
+  - ART-RES-003
+  - ART-RES-007
+  - ART-RSK-001
+  - ART-CHG-001
+  - ART-SCH-007
+  - ART-CST-004
+  - ART-QLT-001
+  - ART-PRC-001
+  - ART-SCP-001
+  - ART-SCH-005
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-RISK-OWNER
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-contingent-response-strategies
+- id: TNT-CONTROL-CHARTS
+  name: Control charts
+  aliases: []
+  family: data_representation
+  type: data_representation
+  definition: Organizes project information through control charts so relationships, patterns, or status can be interpreted.
+  purpose: Make complex information easier to interpret and discuss.
+  applicable_processes:
+  - *id037
+  related_artifact_ids:
+  - ART-QLT-001
+  - ART-INT-002
+  - ART-QLT-002
+  - ART-QLT-007
+  - ART-CHG-002
+  - ART-DEL-001
+  - ART-WPD-001
+  - ART-ORG-001
+  - ART-QLT-003
+  - ART-WPI-001
+  - ART-CHG-001
+  - ART-ISS-001
+  - ART-RSK-001
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs: []
+  delivery_treatment: current_course_supported_with_predictive_locator
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: exact_locator_available
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-control-charts
+- id: TNT-COST-AGGREGATION
+  name: Cost aggregation
+  aliases: []
+  family: financial
+  type: quantitative_method
+  definition: Uses cost aggregation to aggregate, assess, or constrain project funding and cost information.
+  purpose: Support cost and funding decisions.
+  applicable_processes:
+  - *id004
+  related_artifact_ids:
+  - ART-CST-004
+  - ART-RES-001
+  - ART-SCP-001
+  - ART-EST-001
+  - ART-CST-001
+  - ART-SCH-004
+  - ART-RSK-001
+  - ART-BIZ-001
+  - ART-CST-002
+  - ART-CST-005
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-SPONSOR
+  - ROL-GOVERNANCE-BOARD
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-cost-aggregation
+- id: TNT-COST-OF-QUALITY
+  name: Cost of quality
+  aliases: []
+  family: data_analysis
+  type: method
+  definition: Examines project information using cost of quality to reveal patterns, implications, options, or performance conditions.
+  purpose: Turn available evidence into decision-relevant insight.
+  applicable_processes:
+  - *id067
+  - *id005
+  related_artifact_ids:
+  - ART-SCP-001
+  - ART-RSK-001
+  - ART-ORG-001
+  - ART-ORG-002
+  - ART-CST-004
+  - ART-QLT-001
+  - ART-INT-002
+  - ART-SCH-004
+  - ART-CST-001
+  - ART-EST-001
+  - ART-INT-001
+  - ART-QLT-002
+  - ART-PLN-001
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs: []
+  delivery_treatment: current_course_supported_with_predictive_locator
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: exact_locator_available
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-cost-of-quality
+- id: TNT-COST-BENEFIT-ANALYSIS
+  name: Cost-benefit analysis
+  aliases: []
+  family: data_analysis
+  type: method
+  definition: Compares the expected value of a quality action with the cost of performing it.
+  purpose: Turn available evidence into decision-relevant insight.
+  applicable_processes:
+  - *id071
+  - *id032
+  - *id028
+  - *id005
+  - *id068
+  related_artifact_ids:
+  - ART-ORG-002
+  - ART-RSK-001
+  - ART-ORG-001
+  - ART-INT-002
+  - ART-RSK-003
+  - ART-RES-001
+  - ART-ISS-001
+  - ART-SCH-004
+  - ART-CHG-001
+  - ART-PLN-001
+  - ART-SCH-005
+  - ART-CST-002
+  - ART-INT-001
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs: []
+  delivery_treatment: current_course_supported_with_predictive_locator
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: exact_locator_available
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-cost-benefit-analysis
+- id: TNT-CRITICAL-PATH-METHOD
+  name: Critical path method
+  aliases: []
+  family: scheduling
+  type: quantitative_method
+  definition: Uses critical path method to model, develop, or adjust the timing and dependency logic of project work.
+  purpose: Develop or assess feasible time and dependency logic.
+  applicable_processes:
+  - &id073
+    id: PRC-CONTROL-SCHEDULE
+    title: Control Schedule
+    public_url: https://comdico.github.io/PMP_Atlas_Site/processes/control-schedule/
+  - *id003
+  related_artifact_ids:
+  - ART-SCH-007
+  - ART-SCP-001
+  - ART-INT-002
+  - ART-RES-007
+  - ART-ORG-002
+  - ART-SCH-005
+  - ART-PLN-004
+  - ART-SCH-011
+  - ART-CHG-001
+  - ART-CST-002
+  - ART-INT-001
+  - ART-SCH-004
+  - ART-RSK-001
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs:
+  - FRM-SCH-001
+  - FRM-SCH-002
+  - FRM-SCH-003
+  - FRM-SCH-004
+  - FRM-SCH-005
+  delivery_treatment: current_course_supported_with_predictive_locator
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: exact_locator_available
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-critical-path-method
+- id: TNT-CULTURAL-AWARENESS
+  name: Cultural awareness
+  aliases: []
+  family: interpersonal_and_team_skills
+  type: skill
+  definition: Applies cultural awareness to improve collaboration, understanding, or coordinated action among people.
+  purpose: Enable effective human interaction and coordinated work.
+  applicable_processes:
+  - *id007
+  - *id022
+  - *id010
+  - *id061
+  related_artifact_ids:
+  - ART-STK-002
+  - ART-STK-001
+  - ART-ORG-001
+  - ART-ORG-002
+  - ART-RES-001
+  - ART-COM-001
+  - ART-ISS-001
+  - ART-INT-002
+  - ART-SCH-004
+  - ART-RSK-001
+  - ART-CHG-001
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-STAKEHOLDER
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-cultural-awareness
+- id: TNT-DECISION-MAKING
+  name: Decision making
+  aliases: []
+  family: interpersonal_and_team_skills
+  type: skill
+  definition: Applies decision making to improve collaboration, understanding, or coordinated action among people.
+  purpose: Enable effective human interaction and coordinated work.
+  applicable_processes:
+  - *id049
+  related_artifact_ids:
+  - ART-RES-001
+  - ART-ISS-001
+  - ART-INT-002
+  - ART-RES-003
+  - ART-RES-006
+  - ART-WPR-001
+  - ART-RES-005
+  - ART-ORG-001
+  - ART-CHG-001
+  - ART-SCH-005
+  - ART-CST-002
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-STAKEHOLDER
+  formula_refs: []
+  delivery_treatment: current_course_supported_with_predictive_locator
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: exact_locator_available
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-decision-making
+- id: TNT-DECISION-TREE-ANALYSIS
+  name: Decision tree analysis
+  aliases: []
+  family: data_analysis
+  type: method
+  definition: Examines project information using decision tree analysis to reveal patterns, implications, options, or performance conditions.
+  purpose: Turn available evidence into decision-relevant insight.
+  applicable_processes:
+  - &id079
+    id: PRC-PERFORM-QUANTITATIVE-RISK-ANALYSIS
+    title: Perform Quantitative Risk Analysis
+    public_url: https://comdico.github.io/PMP_Atlas_Site/processes/perform-quantitative-risk-analysis/
+  related_artifact_ids:
+  - ART-RSK-002
+  - ART-SCP-001
+  - ART-SCH-005
+  - ART-CST-002
+  - ART-INT-001
+  - ART-EST-001
+  - ART-CST-001
+  - ART-CST-003
+  - ART-RSK-003
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs: []
+  delivery_treatment: current_course_supported_with_predictive_locator
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: exact_locator_available
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-decision-tree-analysis
+- id: TNT-DECOMPOSITION
+  name: Decomposition
+  aliases: []
+  family: scope_product
+  type: method
+  definition: Uses decomposition to define, organize, or analyze product and project scope.
+  purpose: Clarify what is included and how it is structured.
+  applicable_processes:
+  - &id074
+    id: PRC-CREATE-WBS
+    title: Create WBS
+    public_url: https://comdico.github.io/PMP_Atlas_Site/processes/create-wbs/
+  - &id075
+    id: PRC-DEFINE-ACTIVITIES
+    title: Define Activities
+    public_url: https://comdico.github.io/PMP_Atlas_Site/processes/define-activities/
+  related_artifact_ids:
+  - ART-ORG-001
+  - ART-ORG-002
+  - ART-SCP-003
+  - ART-SCP-002
+  - ART-REQ-001
+  - ART-SCH-007
+  - ART-SCP-001
+  - ART-INT-001
+  - ART-SCH-001
+  - ART-SCH-008
+  - ART-SCH-009
+  - ART-CHG-001
+  - ART-SCH-005
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-BUSINESS-ANALYST
+  - ROL-CUSTOMER
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-decomposition
+- id: TNT-DEPENDENCY-DETERMINATION-AND-INTEGRATION
+  name: Dependency determination and integration
+  aliases: []
+  family: method
+  type: method
+  definition: Applies dependency determination and integration as a tailored method to support project analysis or action.
+  purpose: Support a tailored project decision or work activity.
+  applicable_processes:
+  - &id085
+    id: PRC-SEQUENCE-ACTIVITIES
+    title: Sequence Activities
+    public_url: https://comdico.github.io/PMP_Atlas_Site/processes/sequence-activities/
+  related_artifact_ids:
+  - ART-SCH-007
+  - ART-SCP-001
+  - ART-SCH-008
+  - ART-SCH-001
+  - ART-INT-001
+  - ART-SCH-009
+  - ART-ORG-001
+  - ART-ORG-002
+  - ART-SCH-002
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-dependency-determination-and-integration
+- id: TNT-DESIGN-FOR-X
+  name: Design for X
+  aliases: []
+  family: method
+  type: method
+  definition: Applies design for X as a tailored method to support project analysis or action.
+  purpose: Support a tailored project decision or work activity.
+  applicable_processes:
+  - *id057
+  related_artifact_ids:
+  - ART-QLT-001
+  - ART-INT-002
+  - ART-QLT-003
+  - ART-QLT-002
+  - ART-RSK-003
+  - ART-ORG-002
+  - ART-QLT-006
+  - ART-QLT-007
+  - ART-CHG-001
+  - ART-SCP-001
+  - ART-SCH-005
+  - ART-CST-002
+  - ART-ISS-001
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-design-for-x
+- id: TNT-DESIGN-OF-EXPERIMENTS
+  name: Design of experiments
+  aliases: []
+  family: quality
+  type: method
+  definition: Examines how selected factors may influence an outcome.
+  purpose: Support fitness for use, conformance, and prevention or correction of defects.
+  applicable_processes:
+  - *id005
+  related_artifact_ids:
+  - ART-CHR-001
+  - ART-REQ-003
+  - ART-RSK-002
+  - ART-STK-002
+  - ART-SCP-001
+  - ART-INT-001
+  - ART-REQ-001
+  - ART-REQ-002
+  - ART-QLT-001
+  - ART-QLT-002
+  - ART-PLN-001
+  - ART-DOC-001
+  - ART-INT-002
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-QUALITY-AUTHORITY
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-design-of-experiments
+- id: TNT-DOCUMENT-ANALYSIS
+  name: Document analysis
+  aliases: []
+  family: data_analysis
+  type: method
+  definition: Examines project information using document analysis to reveal patterns, implications, options, or performance conditions.
+  purpose: Turn available evidence into decision-relevant insight.
+  applicable_processes:
+  - *id011
+  - *id002
+  - *id047
+  - *id046
+  - *id057
+  related_artifact_ids:
+  - ART-ORG-002
+  - ART-INT-002
+  - ART-PRC-003
+  - ART-CHR-001
+  - ART-INT-001
+  - ART-ISS-001
+  - ART-REQ-001
+  - ART-BIZ-001
+  - ART-RSK-001
+  - ART-CHG-001
+  - ART-CLS-001
+  - ART-TRN-001
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-document-analysis
+- id: TNT-EARNED-VALUE-ANALYSIS
+  name: Earned value analysis
+  aliases: []
+  family: data_analysis
+  type: method
+  definition: Examines project information using earned value analysis to reveal patterns, implications, options, or performance conditions.
+  purpose: Turn available evidence into decision-relevant insight.
+  applicable_processes:
+  - *id072
+  - *id009
+  - *id073
+  - *id032
+  related_artifact_ids:
+  - ART-INT-002
+  - ART-ORG-002
+  - ART-WPD-001
+  - ART-PLN-004
+  - ART-SCH-005
+  - ART-INT-001
+  - ART-SCH-009
+  - ART-QLT-006
+  - ART-CHG-001
+  - ART-RSK-001
+  - ART-WPI-001
+  - ART-CST-002
+  - ART-CST-003
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs:
+  - FRM-EVM-001
+  - FRM-EVM-002
+  - FRM-EVM-003
+  - FRM-EVM-004
+  - FRM-EVM-005
+  - FRM-EVM-006
+  - FRM-EVM-007
+  - FRM-EVM-008
+  - FRM-EVM-009
+  - FRM-EVM-010
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-earned-value-analysis
+- id: TNT-EMOTIONAL-INTELLIGENCE
+  name: Emotional intelligence
+  aliases: []
+  family: interpersonal_and_team_skills
+  type: skill
+  definition: Applies emotional intelligence to improve collaboration, understanding, or coordinated action among people.
+  purpose: Enable effective human interaction and coordinated work.
+  applicable_processes:
+  - *id049
+  related_artifact_ids:
+  - ART-RES-001
+  - ART-ISS-001
+  - ART-INT-002
+  - ART-RES-003
+  - ART-RES-006
+  - ART-WPR-001
+  - ART-RES-005
+  - ART-ORG-001
+  - ART-CHG-001
+  - ART-SCH-005
+  - ART-CST-002
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-STAKEHOLDER
+  formula_refs: []
+  delivery_treatment: current_course_supported_with_predictive_locator
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: exact_locator_available
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-emotional-intelligence
+- id: TNT-EXPERT-JUDGMENT
+  name: Expert judgment
+  aliases: []
+  family: expert_judgment
+  type: method
+  definition: Applies relevant specialized knowledge to a project decision.
+  purpose: Bring specialized experience to a project judgment.
+  applicable_processes:
+  - *id011
+  - *id002
+  - *id059
+  - *id072
+  - *id009
+  - *id074
+  - *id075
+  - *id076
+  - *id004
+  - *id001
+  - *id044
+  - *id018
+  - *id066
+  - *id069
+  - *id067
+  - *id047
+  - *id046
+  - &id084
+    id: PRC-IMPLEMENT-RISK-RESPONSES
+    title: Implement Risk Responses
+    public_url: https://comdico.github.io/PMP_Atlas_Site/processes/implement-risk-responses/
+  - *id077
+  - *id022
+  - *id032
+  - *id062
+  - *id028
+  - *id078
+  - *id079
+  - *id061
+  - *id080
+  - *id058
+  - *id005
+  - *id006
+  - *id081
+  - *id068
+  - *id082
+  - *id083
+  - *id070
+  related_artifact_ids:
+  - ART-ORG-002
+  - ART-ORG-001
+  - ART-RSK-001
+  - ART-INT-002
+  - ART-CHR-001
+  - ART-STK-001
+  - ART-INT-001
+  - ART-REQ-001
+  - ART-CHG-001
+  - ART-ISS-001
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Advice does not transfer approval, acceptance, funding, product, or governance authority to the expert.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-expert-judgment
+- id: TNT-FACILITATION
+  name: Facilitation
+  aliases: []
+  family: interpersonal_and_team_skills
+  type: skill
+  definition: Applies facilitation to improve collaboration, understanding, or coordinated action among people.
+  purpose: Enable effective human interaction and coordinated work.
+  applicable_processes:
+  - *id002
+  - *id076
+  - *id001
+  - *id044
+  - *id047
+  - *id077
+  - *id078
+  - *id079
+  - *id068
+  related_artifact_ids:
+  - ART-ORG-001
+  - ART-ORG-002
+  - ART-INT-001
+  - ART-STK-001
+  - ART-INT-002
+  - ART-RSK-001
+  - ART-RSK-002
+  - ART-CHR-001
+  - ART-RSK-003
+  - ART-REQ-001
+  - ART-REQ-002
+  - ART-PLN-001
+  - ART-SCP-002
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-STAKEHOLDER
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-facilitation
+- id: TNT-FEEDBACK
+  name: Feedback
+  aliases: []
+  family: communication
+  type: skill
+  definition: Uses feedback to improve how project information is prepared, exchanged, understood, or acted upon.
+  purpose: Support shared understanding and appropriate information flow.
+  applicable_processes:
+  - *id007
+  - *id022
+  - *id010
+  related_artifact_ids:
+  - ART-COM-001
+  - ART-STK-002
+  - ART-ISS-001
+  - ART-INT-002
+  - ART-STK-001
+  - ART-ORG-001
+  - ART-ORG-002
+  - ART-RES-001
+  - ART-RSK-001
+  - ART-CHG-001
+  - ART-COM-002
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-STAKEHOLDER
+  formula_refs: []
+  delivery_treatment: current_course_supported_with_predictive_locator
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: exact_locator_available
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-feedback
+- id: TNT-FINANCING
+  name: Financing
+  aliases: []
+  family: financial
+  type: quantitative_method
+  definition: Uses financing to aggregate, assess, or constrain project funding and cost information.
+  purpose: Support cost and funding decisions.
+  applicable_processes:
+  - *id004
+  related_artifact_ids:
+  - ART-CST-004
+  - ART-RES-001
+  - ART-SCP-001
+  - ART-EST-001
+  - ART-CST-001
+  - ART-SCH-004
+  - ART-RSK-001
+  - ART-BIZ-001
+  - ART-CST-002
+  - ART-CST-005
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-SPONSOR
+  - ROL-GOVERNANCE-BOARD
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-financing
+- id: TNT-FLOWCHARTS
+  name: Flowcharts
+  aliases: []
+  family: data_representation
+  type: data_representation
+  definition: Organizes project information through flowcharts so relationships, patterns, or status can be interpreted.
+  purpose: Make complex information easier to interpret and discuss.
+  applicable_processes:
+  - *id057
+  - *id005
+  related_artifact_ids:
+  - ART-ORG-002
+  - ART-QLT-001
+  - ART-INT-002
+  - ART-QLT-003
+  - ART-QLT-002
+  - ART-RSK-003
+  - ART-CHR-001
+  - ART-REQ-003
+  - ART-SCP-001
+  - ART-RSK-001
+  - ART-QLT-006
+  - ART-QLT-007
+  - ART-CHG-001
+  - ART-SCH-005
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-flowcharts
+- id: TNT-FOCUS-GROUPS
+  name: Focus groups
+  aliases: []
+  family: data_gathering
+  type: method
+  definition: Collects relevant project information through focus groups so the team can understand needs, conditions, or evidence.
+  purpose: Build a sufficiently reliable evidence base.
+  applicable_processes:
+  - *id002
+  - *id001
+  - *id044
+  related_artifact_ids:
+  - ART-ORG-001
+  - ART-ORG-002
+  - ART-CHR-001
+  - ART-BIZ-001
+  - ART-PRC-003
+  - ART-SCP-003
+  - ART-REQ-003
+  - ART-STK-002
+  - ART-REQ-001
+  - ART-REQ-002
+  - ART-INT-001
+  - ART-PLN-001
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-focus-groups
+- id: TNT-FUNDING-LIMIT-RECONCILIATION
+  name: Funding limit reconciliation
+  aliases: []
+  family: financial
+  type: quantitative_method
+  definition: Uses funding limit reconciliation to aggregate, assess, or constrain project funding and cost information.
+  purpose: Support cost and funding decisions.
+  applicable_processes:
+  - *id004
+  related_artifact_ids:
+  - ART-CST-004
+  - ART-RES-001
+  - ART-SCP-001
+  - ART-EST-001
+  - ART-CST-001
+  - ART-SCH-004
+  - ART-RSK-001
+  - ART-BIZ-001
+  - ART-CST-002
+  - ART-CST-005
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-SPONSOR
+  - ROL-GOVERNANCE-BOARD
+  formula_refs: []
+  delivery_treatment: current_course_supported_with_predictive_locator
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: exact_locator_available
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-funding-limit-reconciliation
+- id: TNT-GROUND-RULES
+  name: Ground rules
+  aliases: []
+  family: method
+  type: method
+  definition: Applies ground rules as a tailored method to support project analysis or action.
+  purpose: Support a tailored project decision or work activity.
+  applicable_processes:
+  - *id022
+  related_artifact_ids:
+  - ART-COM-001
+  - ART-RSK-002
+  - ART-STK-002
+  - ART-PLN-002
+  - ART-CHG-004
+  - ART-ISS-001
+  - ART-INT-002
+  - ART-STK-001
+  - ART-CHG-001
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs: []
+  delivery_treatment: current_course_supported_with_predictive_locator
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: exact_locator_available
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-ground-rules
+- id: TNT-HIERARCHICAL-CHARTS
+  name: Hierarchical charts
+  aliases: []
+  family: data_representation
+  type: data_representation
+  definition: Organizes project information through hierarchical charts so relationships, patterns, or status can be interpreted.
+  purpose: Make complex information easier to interpret and discuss.
+  applicable_processes:
+  - *id078
+  - *id006
+  related_artifact_ids:
+  - ART-RSK-001
+  - ART-STK-001
+  - ART-ORG-001
+  - ART-ORG-002
+  - ART-RSK-002
+  - ART-INT-001
+  - ART-CHR-001
+  - ART-PLN-001
+  - ART-ISS-001
+  - ART-RSK-003
+  - ART-RES-001
+  - ART-RES-006
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-hierarchical-charts
+- id: TNT-HISTOGRAM
+  name: Histogram
+  aliases:
+  - Histograms
+  family: data_representation
+  type: data_representation
+  definition: Organizes project information through histogram so relationships, patterns, or status can be interpreted.
+  purpose: Make complex information easier to interpret and discuss.
+  applicable_processes:
+  - *id037
+  - *id057
+  related_artifact_ids:
+  - ART-QLT-001
+  - ART-INT-002
+  - ART-QLT-002
+  - ART-ORG-002
+  - ART-QLT-007
+  - ART-CHG-002
+  - ART-DEL-001
+  - ART-WPD-001
+  - ART-CHG-001
+  - ART-ISS-001
+  - ART-RSK-001
+  - ART-QLT-003
+  - ART-WPI-001
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs: []
+  delivery_treatment: current_course_supported_with_predictive_locator
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: exact_locator_available
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-histogram
+- id: TNT-HISTORICAL-INFORMATION-REVIEW
+  name: Historical information review
+  aliases: []
+  family: data_analysis
+  type: method
+  definition: Examines project information using historical information review to reveal patterns, implications, options, or performance conditions.
+  purpose: Turn available evidence into decision-relevant insight.
+  applicable_processes:
+  - *id004
+  related_artifact_ids:
+  - ART-CST-004
+  - ART-RES-001
+  - ART-SCP-001
+  - ART-EST-001
+  - ART-CST-001
+  - ART-SCH-004
+  - ART-RSK-001
+  - ART-BIZ-001
+  - ART-CST-002
+  - ART-CST-005
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-historical-information-review
+- id: TNT-INDIVIDUAL-AND-TEAM-ASSESSMENTS
+  name: Individual and team assessments
+  aliases: []
+  family: method
+  type: method
+  definition: Applies individual and team assessments as a tailored method to support project analysis or action.
+  purpose: Support a tailored project decision or work activity.
+  applicable_processes:
+  - *id056
+  related_artifact_ids:
+  - ART-RES-001
+  - ART-INT-002
+  - ART-SCH-004
+  - ART-RES-003
+  - ART-RES-007
+  - ART-RES-006
+  - ART-ORG-001
+  - ART-ORG-002
+  - ART-RES-005
+  - ART-CHG-001
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-individual-and-team-assessments
+- id: TNT-INFLUENCE-DIAGRAMS
+  name: Influence diagrams
+  aliases: []
+  family: data_analysis
+  type: method
+  definition: Examines project information using influence diagrams to reveal patterns, implications, options, or performance conditions.
+  purpose: Turn available evidence into decision-relevant insight.
+  applicable_processes:
+  - *id079
+  related_artifact_ids:
+  - ART-RSK-002
+  - ART-SCP-001
+  - ART-SCH-005
+  - ART-CST-002
+  - ART-INT-001
+  - ART-EST-001
+  - ART-CST-001
+  - ART-CST-003
+  - ART-RSK-003
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-influence-diagrams
+- id: TNT-INFLUENCING
+  name: Influencing
+  aliases: []
+  family: interpersonal_and_team_skills
+  type: skill
+  definition: Applies influencing to improve collaboration, understanding, or coordinated action among people.
+  purpose: Enable effective human interaction and coordinated work.
+  applicable_processes:
+  - *id071
+  - *id056
+  - *id084
+  - *id049
+  related_artifact_ids:
+  - ART-INT-002
+  - ART-ORG-002
+  - ART-RES-001
+  - ART-ISS-001
+  - ART-SCH-004
+  - ART-RSK-001
+  - ART-RES-003
+  - ART-RES-006
+  - ART-CHG-001
+  - ART-SCH-005
+  - ART-CST-002
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-STAKEHOLDER
+  formula_refs: []
+  delivery_treatment: current_course_supported_with_predictive_locator
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: exact_locator_available
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-influencing
+- id: TNT-INFORMATION-MANAGEMENT
+  name: Information management
+  aliases: []
+  family: method
+  type: method
+  definition: Applies information management as a tailored method to support project analysis or action.
+  purpose: Support a tailored project decision or work activity.
+  applicable_processes:
+  - *id077
+  related_artifact_ids:
+  - ART-PLN-001
+  - ART-INT-002
+  - ART-RES-003
+  - ART-RES-008
+  - ART-STK-001
+  - ART-DEL-001
+  - ART-ORG-001
+  - ART-ORG-002
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs: []
+  delivery_treatment: current_course_supported_with_predictive_locator
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: exact_locator_available
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-information-management
+- id: TNT-INSPECTION
+  name: Inspection
+  aliases: []
+  family: quality
+  type: method
+  definition: Uses inspection to plan, analyze, verify, or communicate quality conditions and results.
+  purpose: Support fitness for use, conformance, and prevention or correction of defects.
+  applicable_processes:
+  - *id009
+  - *id037
+  - *id042
+  related_artifact_ids:
+  - ART-INT-002
+  - ART-WPD-001
+  - ART-REQ-003
+  - ART-QLT-006
+  - ART-REQ-001
+  - ART-REQ-002
+  - ART-CHG-002
+  - ART-ORG-001
+  - ART-WPI-001
+  - ART-CHG-001
+  - ART-RSK-001
+  - ART-PRC-002
+  - ART-RSK-002
+  - ART-PRC-001
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-QUALITY-AUTHORITY
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Inspection supports verification; it does not itself constitute customer acceptance. Tailor use to context and evidence needs.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-inspection
+- id: TNT-INTERVIEWS
+  name: Interviews
+  aliases: []
+  family: data_gathering
+  type: method
+  definition: Collects relevant project information through interviews so the team can understand needs, conditions, or evidence.
+  purpose: Build a sufficiently reliable evidence base.
+  applicable_processes:
+  - *id002
+  - *id001
+  - *id044
+  - *id047
+  - *id078
+  - *id079
+  - *id005
+  - *id068
+  related_artifact_ids:
+  - ART-ORG-001
+  - ART-ORG-002
+  - ART-INT-001
+  - ART-STK-001
+  - ART-RSK-002
+  - ART-RSK-001
+  - ART-CHR-001
+  - ART-REQ-003
+  - ART-RSK-003
+  - ART-REQ-002
+  - ART-PLN-001
+  - ART-QLT-001
+  - ART-SCP-001
+  - ART-INT-002
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs: []
+  delivery_treatment: current_course_supported_with_predictive_locator
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: exact_locator_available
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-interviews
+- id: TNT-ITERATION-BURNDOWN-CHART
+  name: Iteration burndown chart
+  aliases: []
+  family: data_analysis
+  type: method
+  definition: Examines project information using iteration burndown chart to reveal patterns, implications, options, or performance conditions.
+  purpose: Turn available evidence into decision-relevant insight.
+  applicable_processes:
+  - *id073
+  related_artifact_ids:
+  - ART-SCH-007
+  - ART-SCH-005
+  - ART-SCP-001
+  - ART-PLN-004
+  - ART-INT-002
+  - ART-SCH-011
+  - ART-SCH-004
+  - ART-RES-007
+  - ART-WPI-001
+  - ART-SCH-006
+  - ART-CHG-001
+  - ART-CST-002
+  - ART-INT-001
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-iteration-burndown-chart
+- id: TNT-KNOWLEDGE-MANAGEMENT
+  name: Knowledge management
+  aliases: []
+  family: knowledge_management
+  type: method
+  definition: Connects people so they can create new knowledge, share tacit knowledge, and integrate diverse experience.
+  purpose: Make experience usable during and after the work.
+  applicable_processes:
+  - *id077
+  related_artifact_ids:
+  - ART-PLN-001
+  - ART-INT-002
+  - ART-RES-003
+  - ART-RES-008
+  - ART-STK-001
+  - ART-DEL-001
+  - ART-ORG-001
+  - ART-ORG-002
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-KNOWLEDGE-OWNER
+  formula_refs: []
+  delivery_treatment: current_course_supported_with_predictive_locator
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: exact_locator_available
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-knowledge-management
+- id: TNT-LEADERSHIP
+  name: Leadership
+  aliases: []
+  family: interpersonal_and_team_skills
+  type: skill
+  definition: Applies leadership to improve collaboration, understanding, or coordinated action among people.
+  purpose: Enable effective human interaction and coordinated work.
+  applicable_processes:
+  - *id077
+  - *id049
+  - *id010
+  related_artifact_ids:
+  - ART-INT-002
+  - ART-ORG-001
+  - ART-ORG-002
+  - ART-RES-003
+  - ART-STK-001
+  - ART-RES-001
+  - ART-ISS-001
+  - ART-PLN-001
+  - ART-CHG-001
+  - ART-SCH-005
+  - ART-CST-002
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-STAKEHOLDER
+  formula_refs: []
+  delivery_treatment: current_course_supported_with_predictive_locator
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: exact_locator_available
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-leadership
+- id: TNT-LEADS-AND-LAGS
+  name: Leads and lags
+  aliases: []
+  family: method
+  type: method
+  definition: Applies leads and lags as a tailored method to support project analysis or action.
+  purpose: Support a tailored project decision or work activity.
+  applicable_processes:
+  - *id073
+  - *id003
+  - *id085
+  related_artifact_ids:
+  - ART-SCH-007
+  - ART-SCP-001
+  - ART-ORG-002
+  - ART-INT-002
+  - ART-RES-007
+  - ART-SCH-008
+  - ART-SCH-001
+  - ART-INT-001
+  - ART-CHG-001
+  - ART-SCH-005
+  - ART-CST-002
+  - ART-SCH-004
+  - ART-RSK-001
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs: []
+  delivery_treatment: current_course_supported_with_predictive_locator
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: exact_locator_available
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-leads-and-lags
+- id: TNT-LOGICAL-DATA-MODEL
+  name: Logical data model
+  aliases: []
+  family: data_representation
+  type: data_representation
+  definition: Organizes project information through logical data model so relationships, patterns, or status can be interpreted.
+  purpose: Make complex information easier to interpret and discuss.
+  applicable_processes:
+  - *id005
+  related_artifact_ids:
+  - ART-CHR-001
+  - ART-REQ-003
+  - ART-RSK-002
+  - ART-STK-002
+  - ART-SCP-001
+  - ART-INT-001
+  - ART-REQ-001
+  - ART-REQ-002
+  - ART-QLT-001
+  - ART-QLT-002
+  - ART-PLN-001
+  - ART-DOC-001
+  - ART-INT-002
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-logical-data-model
+- id: TNT-MAKE-OR-BUY-ANALYSIS
+  name: Make-or-buy analysis
+  aliases: []
+  family: data_analysis
+  type: method
+  definition: Examines project information using make-or-buy analysis to reveal patterns, implications, options, or performance conditions.
+  purpose: Turn available evidence into decision-relevant insight.
+  applicable_processes:
+  - *id058
+  related_artifact_ids:
+  - ART-CHR-001
+  - ART-BIZ-001
+  - ART-BEN-001
+  - ART-SCP-003
+  - ART-QLT-001
+  - ART-RES-001
+  - ART-SCP-001
+  - ART-SCH-009
+  - ART-PRC-001
+  - ART-PRC-004
+  - ART-PRC-008
+  - ART-PRC-005
+  - ART-PRC-006
+  - ART-PRC-009
+  - ART-PRC-010
+  - ART-CHG-001
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-make-or-buy-analysis
+- id: TNT-MARKET-RESEARCH
+  name: Market research
+  aliases: []
+  family: data_gathering
+  type: method
+  definition: Collects relevant project information through market research so the team can understand needs, conditions, or evidence.
+  purpose: Build a sufficiently reliable evidence base.
+  applicable_processes:
+  - *id058
+  related_artifact_ids:
+  - ART-CHR-001
+  - ART-BIZ-001
+  - ART-BEN-001
+  - ART-SCP-003
+  - ART-QLT-001
+  - ART-RES-001
+  - ART-SCP-001
+  - ART-SCH-009
+  - ART-PRC-001
+  - ART-PRC-004
+  - ART-PRC-008
+  - ART-PRC-005
+  - ART-PRC-006
+  - ART-PRC-009
+  - ART-PRC-010
+  - ART-CHG-001
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-market-research
+- id: TNT-MATRIX-DIAGRAMS
+  name: Matrix diagrams
+  aliases: []
+  family: data_representation
+  type: data_representation
+  definition: Organizes project information through matrix diagrams so relationships, patterns, or status can be interpreted.
+  purpose: Make complex information easier to interpret and discuss.
+  applicable_processes:
+  - *id057
+  - *id005
+  related_artifact_ids:
+  - ART-ORG-002
+  - ART-QLT-001
+  - ART-INT-002
+  - ART-QLT-003
+  - ART-QLT-002
+  - ART-RSK-003
+  - ART-CHR-001
+  - ART-REQ-003
+  - ART-SCP-001
+  - ART-RSK-001
+  - ART-QLT-006
+  - ART-QLT-007
+  - ART-CHG-001
+  - ART-SCH-005
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-matrix-diagrams
+- id: TNT-MEETING-MANAGEMENT
+  name: Meeting management
+  aliases: []
+  family: interpersonal_and_team_skills
+  type: skill
+  definition: Applies meeting management to improve collaboration, understanding, or coordinated action among people.
+  purpose: Enable effective human interaction and coordinated work.
+  applicable_processes:
+  - *id001
+  - *id044
+  - *id007
+  related_artifact_ids:
+  - ART-ORG-001
+  - ART-ORG-002
+  - ART-BIZ-001
+  - ART-BEN-001
+  - ART-PRC-003
+  - ART-CHR-001
+  - ART-DOC-001
+  - ART-RES-001
+  - ART-INT-001
+  - ART-PLN-001
+  - ART-COM-002
+  - ART-COM-001
+  - ART-STK-002
+  - ART-ISS-001
+  - ART-INT-002
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-STAKEHOLDER
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-meeting-management
+- id: TNT-MEETINGS
+  name: Meetings
+  aliases: []
+  family: meetings
+  type: meeting
+  definition: Brings relevant participants together for a defined project purpose, decision, review, or coordination need.
+  purpose: Create a purposeful forum for coordination, review, or decisions.
+  applicable_processes:
+  - *id011
+  - *id037
+  - *id075
+  - *id001
+  - *id044
+  - *id056
+  - *id018
+  - *id066
+  - *id069
+  - *id047
+  - *id046
+  - *id007
+  - *id022
+  - *id032
+  - *id062
+  - *id008
+  - *id010
+  - *id028
+  - *id078
+  - *id061
+  - *id080
+  - *id058
+  - *id005
+  - *id006
+  - *id081
+  - *id082
+  - *id083
+  - *id070
+  related_artifact_ids:
+  - ART-ORG-002
+  - ART-ORG-001
+  - ART-CHR-001
+  - ART-INT-002
+  - ART-RSK-001
+  - ART-STK-001
+  - ART-ISS-001
+  - ART-RES-001
+  - ART-CHG-001
+  - ART-INT-001
+  - ART-STK-002
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-STAKEHOLDER
+  formula_refs: []
+  delivery_treatment: current_course_supported_with_predictive_locator
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: exact_locator_available
+  cautions:
+  - A meeting is a working method, not an output or approval by itself; record decisions through the governing mechanism.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-meetings
+- id: TNT-MIND-MAPPING
+  name: Mind mapping
+  aliases: []
+  family: data_representation
+  type: data_representation
+  definition: Organizes project information through mind mapping so relationships, patterns, or status can be interpreted.
+  purpose: Make complex information easier to interpret and discuss.
+  applicable_processes:
+  - *id002
+  - *id005
+  - *id070
+  related_artifact_ids:
+  - ART-CHR-001
+  - ART-INT-001
+  - ART-STK-001
+  - ART-ORG-001
+  - ART-ORG-002
+  - ART-REQ-003
+  - ART-STK-002
+  - ART-PRC-003
+  - ART-REQ-002
+  - ART-REQ-001
+  - ART-QLT-001
+  - ART-QLT-002
+  - ART-PLN-001
+  - ART-DOC-001
+  - ART-RSK-002
+  - ART-SCP-001
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-mind-mapping
+- id: TNT-MOTIVATION
+  name: Motivation
+  aliases: []
+  family: interpersonal_and_team_skills
+  type: skill
+  definition: Applies motivation to improve collaboration, understanding, or coordinated action among people.
+  purpose: Enable effective human interaction and coordinated work.
+  applicable_processes:
+  - *id056
+  related_artifact_ids:
+  - ART-RES-001
+  - ART-INT-002
+  - ART-SCH-004
+  - ART-RES-003
+  - ART-RES-007
+  - ART-RES-006
+  - ART-ORG-001
+  - ART-ORG-002
+  - ART-RES-005
+  - ART-CHG-001
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-STAKEHOLDER
+  formula_refs: []
+  delivery_treatment: current_course_supported_with_predictive_locator
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: exact_locator_available
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-motivation
+- id: TNT-MULTICRITERIA-DECISION-ANALYSIS
+  name: Multicriteria decision analysis
+  aliases: []
+  family: decision_making
+  type: method
+  definition: Uses multicriteria decision analysis to compare, prioritize, or select among alternatives within delegated decision authority.
+  purpose: Reach a traceable selection or priority.
+  applicable_processes:
+  - *id086
+  - *id002
+  - *id076
+  - *id057
+  - *id010
+  - *id028
+  - *id005
+  - *id068
+  related_artifact_ids:
+  - ART-ORG-002
+  - ART-ORG-001
+  - ART-STK-001
+  - ART-INT-002
+  - ART-RSK-001
+  - ART-RES-001
+  - ART-CST-002
+  - ART-CHR-001
+  - ART-CHG-001
+  - ART-REQ-002
+  - ART-QLT-001
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-GOVERNANCE-BOARD
+  - ROL-DELIVERY-TEAM
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - The method supports a choice but does not override reserved governance, acceptance, product, or contractual authority.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-multicriteria-decision-analysis
+- id: TNT-NEGOTIATION
+  name: Negotiation
+  aliases: []
+  family: interpersonal_and_team_skills
+  type: skill
+  definition: Seeks agreement that supports project work or outcomes while respecting the decision authority of the parties involved.
+  purpose: Enable effective human interaction and coordinated work.
+  applicable_processes:
+  - *id086
+  - *id059
+  - *id071
+  - *id056
+  - *id022
+  related_artifact_ids:
+  - ART-ORG-002
+  - ART-SCH-004
+  - ART-ORG-001
+  - ART-INT-002
+  - ART-RES-001
+  - ART-STK-001
+  - ART-PRC-001
+  - ART-CST-002
+  - ART-CHG-001
+  - ART-RES-007
+  - ART-RSK-001
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-STAKEHOLDER
+  formula_refs: []
+  delivery_treatment: current_course_supported_with_predictive_locator
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: exact_locator_available
+  cautions:
+  - Negotiation does not grant contracting or commitment authority; follow delegated limits and the governing agreement.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-negotiation
+- id: TNT-NETWORKING
+  name: Networking
+  aliases: []
+  family: interpersonal_and_team_skills
+  type: skill
+  definition: Applies networking to improve collaboration, understanding, or coordinated action among people.
+  purpose: Enable effective human interaction and coordinated work.
+  applicable_processes:
+  - *id007
+  - *id077
+  - *id010
+  related_artifact_ids:
+  - ART-INT-002
+  - ART-STK-001
+  - ART-ORG-001
+  - ART-ORG-002
+  - ART-RES-001
+  - ART-COM-001
+  - ART-STK-002
+  - ART-ISS-001
+  - ART-RSK-001
+  - ART-COM-002
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-STAKEHOLDER
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-networking
+- id: TNT-NOMINAL-GROUP-TECHNIQUE
+  name: Nominal group technique
+  aliases: []
+  family: interpersonal_and_team_skills
+  type: skill
+  definition: Applies nominal group technique to improve collaboration, understanding, or coordinated action among people.
+  purpose: Enable effective human interaction and coordinated work.
+  applicable_processes:
+  - *id002
+  related_artifact_ids:
+  - ART-CHR-001
+  - ART-SCP-003
+  - ART-REQ-003
+  - ART-STK-002
+  - ART-INT-001
+  - ART-INT-002
+  - ART-STK-001
+  - ART-BIZ-001
+  - ART-REQ-001
+  - ART-REQ-002
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-STAKEHOLDER
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-nominal-group-technique
+- id: TNT-NONVERBAL
+  name: Nonverbal
+  aliases: []
+  family: communication
+  type: skill
+  definition: Uses nonverbal to improve how project information is prepared, exchanged, understood, or acted upon.
+  purpose: Support shared understanding and appropriate information flow.
+  applicable_processes:
+  - *id007
+  related_artifact_ids:
+  - ART-RES-001
+  - ART-COM-001
+  - ART-STK-002
+  - ART-CHG-004
+  - ART-ISS-001
+  - ART-INT-002
+  - ART-QLT-006
+  - ART-RSK-003
+  - ART-COM-002
+  - ART-SCH-004
+  - ART-RSK-001
+  - ART-STK-001
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-STAKEHOLDER
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-nonverbal
+- id: TNT-OBSERVATION-CONVERSATION
+  name: Observation/conversation
+  aliases: []
+  family: interpersonal_and_team_skills
+  type: skill
+  definition: Applies observation/conversation to improve collaboration, understanding, or coordinated action among people.
+  purpose: Enable effective human interaction and coordinated work.
+  applicable_processes:
+  - *id002
+  - *id022
+  - *id062
+  related_artifact_ids:
+  - ART-STK-002
+  - ART-INT-002
+  - ART-ORG-001
+  - ART-ORG-002
+  - ART-STK-001
+  - ART-COM-001
+  - ART-ISS-001
+  - ART-CHR-001
+  - ART-CHG-001
+  - ART-REQ-001
+  - ART-REQ-002
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-STAKEHOLDER
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-observation-conversation
+- id: TNT-ORGANIZATIONAL-THEORY
+  name: Organizational theory
+  aliases: []
+  family: resource_team
+  type: method
+  definition: Applies knowledge of how people, teams, organizational units, structure, and culture behave to resource planning.
+  purpose: Enable feasible resource organization and team performance.
+  applicable_processes:
+  - *id006
+  related_artifact_ids:
+  - ART-CHR-001
+  - ART-PLN-001
+  - ART-QLT-001
+  - ART-SCP-001
+  - ART-SCH-004
+  - ART-REQ-001
+  - ART-RSK-001
+  - ART-STK-001
+  - ART-RES-001
+  - ART-RES-006
+  - ART-INT-001
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-FUNCTIONAL-MANAGER
+  - ROL-DELIVERY-TEAM
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-organizational-theory
+- id: TNT-PARAMETRIC-ESTIMATING
+  name: Parametric estimating
+  aliases: []
+  family: estimating
+  type: quantitative_method
+  definition: Uses parametric estimating to develop or assess an estimate from the information and uncertainty available.
+  purpose: Produce an estimate suited to the decision and available detail.
+  applicable_processes:
+  - *id066
+  - *id069
+  - *id067
+  related_artifact_ids:
+  - ART-SCP-001
+  - ART-RSK-001
+  - ART-ORG-001
+  - ART-ORG-002
+  - ART-SCH-008
+  - ART-SCH-001
+  - ART-INT-001
+  - ART-INT-002
+  - ART-EST-001
+  - ART-SCH-003
+  - ART-RES-002
+  - ART-RES-008
+  - ART-CST-001
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs:
+  - MET-EST-PARAMETRIC
+  - FRM-EST-001
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-parametric-estimating
+- id: TNT-PERFORMANCE-REVIEWS
+  name: Performance reviews
+  aliases: []
+  family: data_analysis
+  type: method
+  definition: Examines project information using performance reviews to reveal patterns, implications, options, or performance conditions.
+  purpose: Turn available evidence into decision-relevant insight.
+  applicable_processes:
+  - *id009
+  - *id037
+  - *id071
+  - *id073
+  related_artifact_ids:
+  - ART-INT-002
+  - ART-WPD-001
+  - ART-ORG-002
+  - ART-SCH-005
+  - ART-RSK-001
+  - ART-PRC-003
+  - ART-CHG-002
+  - ART-ORG-001
+  - ART-WPI-001
+  - ART-CHG-001
+  - ART-CST-002
+  - ART-ISS-001
+  - ART-INT-001
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs: []
+  delivery_treatment: current_course_supported_with_predictive_locator
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: exact_locator_available
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-performance-reviews
+- id: TNT-POLITICAL-AWARENESS
+  name: Political awareness
+  aliases: []
+  family: interpersonal_and_team_skills
+  type: skill
+  definition: Applies political awareness to improve collaboration, understanding, or coordinated action among people.
+  purpose: Enable effective human interaction and coordinated work.
+  applicable_processes:
+  - *id007
+  - *id077
+  - *id022
+  - *id010
+  - *id061
+  related_artifact_ids:
+  - ART-STK-001
+  - ART-ORG-001
+  - ART-ORG-002
+  - ART-STK-002
+  - ART-INT-002
+  - ART-RES-001
+  - ART-COM-001
+  - ART-ISS-001
+  - ART-SCH-004
+  - ART-RSK-001
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-STAKEHOLDER
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-political-awareness
+- id: TNT-PRE-ASSIGNMENT
+  name: Pre-assignment
+  aliases: []
+  family: resource_team
+  type: method
+  definition: Uses pre-assignment to plan, organize, or enable people and physical resources.
+  purpose: Enable feasible resource organization and team performance.
+  applicable_processes:
+  - *id086
+  related_artifact_ids:
+  - ART-RES-001
+  - ART-PRC-001
+  - ART-CST-002
+  - ART-SCH-004
+  - ART-RES-007
+  - ART-RES-002
+  - ART-STK-001
+  - ART-ORG-001
+  - ART-RES-004
+  - ART-RES-003
+  - ART-CHG-001
+  - ART-INT-002
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-FUNCTIONAL-MANAGER
+  - ROL-DELIVERY-TEAM
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-pre-assignment
+- id: TNT-PRECEDENCE-DIAGRAMMING-METHOD
+  name: Precedence diagramming method
+  aliases: []
+  family: scheduling
+  type: quantitative_method
+  definition: Uses precedence diagramming method to model, develop, or adjust the timing and dependency logic of project work.
+  purpose: Develop or assess feasible time and dependency logic.
+  applicable_processes:
+  - *id085
+  related_artifact_ids:
+  - ART-SCH-007
+  - ART-SCP-001
+  - ART-SCH-008
+  - ART-SCH-001
+  - ART-INT-001
+  - ART-SCH-009
+  - ART-ORG-001
+  - ART-ORG-002
+  - ART-SCH-002
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-precedence-diagramming-method
+- id: TNT-PRESENTATIONS
+  name: Presentations
+  aliases: []
+  family: communication
+  type: skill
+  definition: Uses presentations to improve how project information is prepared, exchanged, understood, or acted upon.
+  purpose: Support shared understanding and appropriate information flow.
+  applicable_processes:
+  - *id007
+  - *id010
+  related_artifact_ids:
+  - ART-RES-001
+  - ART-COM-001
+  - ART-STK-002
+  - ART-ISS-001
+  - ART-INT-002
+  - ART-STK-001
+  - ART-ORG-001
+  - ART-ORG-002
+  - ART-RSK-001
+  - ART-COM-002
+  - ART-SCH-004
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-STAKEHOLDER
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-presentations
+- id: TNT-PRIORITIZATION-RANKING
+  name: Prioritization/ranking
+  aliases: []
+  family: decision_making
+  type: method
+  definition: Uses prioritization/ranking to compare, prioritize, or select among alternatives within delegated decision authority.
+  purpose: Reach a traceable selection or priority.
+  applicable_processes:
+  - *id070
+  related_artifact_ids:
+  - ART-CHR-001
+  - ART-RES-001
+  - ART-COM-001
+  - ART-RSK-002
+  - ART-INT-001
+  - ART-CHG-004
+  - ART-ISS-001
+  - ART-SCH-004
+  - ART-STK-002
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-GOVERNANCE-BOARD
+  - ROL-DELIVERY-TEAM
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - The method supports a choice but does not override reserved governance, acceptance, product, or contractual authority.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-prioritization-ranking
+- id: TNT-PROBABILITY-AND-IMPACT-MATRIX
+  name: Probability and impact matrix
+  aliases: []
+  family: data_representation
+  type: data_representation
+  definition: Organizes project information through probability and impact matrix so relationships, patterns, or status can be interpreted.
+  purpose: Make complex information easier to interpret and discuss.
+  applicable_processes:
+  - *id078
+  related_artifact_ids:
+  - ART-RSK-002
+  - ART-INT-001
+  - ART-RSK-001
+  - ART-STK-001
+  - ART-ORG-001
+  - ART-ORG-002
+  - ART-ISS-001
+  - ART-RSK-003
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs: []
+  delivery_treatment: current_course_supported_with_predictive_locator
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: exact_locator_available
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-probability-and-impact-matrix
+- id: TNT-PROBLEM-SOLVING
+  name: Problem solving
+  aliases: []
+  family: method
+  type: method
+  definition: Applies problem solving as a tailored method to support project analysis or action.
+  purpose: Support a tailored project decision or work activity.
+  applicable_processes:
+  - *id071
+  - *id057
+  related_artifact_ids:
+  - ART-INT-002
+  - ART-ORG-002
+  - ART-RES-001
+  - ART-ISS-001
+  - ART-RES-004
+  - ART-SCH-004
+  - ART-RES-008
+  - ART-RES-002
+  - ART-CHG-001
+  - ART-SCH-005
+  - ART-CST-002
+  - ART-RSK-001
+  - ART-WPI-001
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-problem-solving
+- id: TNT-PROCESS-ANALYSIS
+  name: Process analysis
+  aliases: []
+  family: data_analysis
+  type: method
+  definition: Examines project information using process analysis to reveal patterns, implications, options, or performance conditions.
+  purpose: Turn available evidence into decision-relevant insight.
+  applicable_processes:
+  - *id057
+  related_artifact_ids:
+  - ART-QLT-001
+  - ART-INT-002
+  - ART-QLT-003
+  - ART-QLT-002
+  - ART-RSK-003
+  - ART-ORG-002
+  - ART-QLT-006
+  - ART-QLT-007
+  - ART-CHG-001
+  - ART-SCP-001
+  - ART-SCH-005
+  - ART-CST-002
+  - ART-ISS-001
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-process-analysis
+- id: TNT-PRODUCT-ANALYSIS
+  name: Product analysis
+  aliases: []
+  family: data_analysis
+  type: method
+  definition: Examines project information using product analysis to reveal patterns, implications, options, or performance conditions.
+  purpose: Turn available evidence into decision-relevant insight.
+  applicable_processes:
+  - *id076
+  related_artifact_ids:
+  - ART-CHR-001
+  - ART-SCP-003
+  - ART-INT-001
+  - ART-REQ-001
+  - ART-RSK-001
+  - ART-ORG-001
+  - ART-ORG-002
+  - ART-SCP-002
+  - ART-REQ-002
+  - ART-STK-001
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-product-analysis
+- id: TNT-PROJECT-MANAGEMENT-INFORMATION-SYSTEM
+  name: Project management information system
+  aliases: []
+  family: tool_system
+  type: tool_or_system
+  definition: Uses project management information system to record, integrate, analyze, route, or control project information and work.
+  purpose: Support controlled, traceable project information or workflow.
+  applicable_processes:
+  - *id072
+  - *id071
+  - *id073
+  - *id003
+  - *id018
+  - *id069
+  - *id067
+  - *id084
+  - *id007
+  - *id049
+  - *id062
+  - *id085
+  related_artifact_ids:
+  - ART-ORG-002
+  - ART-INT-002
+  - ART-ORG-001
+  - ART-RSK-001
+  - ART-RES-001
+  - ART-SCP-001
+  - ART-WPD-001
+  - ART-ISS-001
+  - ART-CHG-001
+  - ART-INT-001
+  - ART-CST-002
+  - ART-WPI-001
+  - ART-EST-001
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-PMO
+  - ROL-DELIVERY-TEAM
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-project-management-information-system
+- id: TNT-PROJECT-REPORTING
+  name: Project reporting
+  aliases: []
+  family: method
+  type: method
+  definition: Applies project reporting as a tailored method to support project analysis or action.
+  purpose: Support a tailored project decision or work activity.
+  applicable_processes:
+  - *id007
+  related_artifact_ids:
+  - ART-RES-001
+  - ART-COM-001
+  - ART-STK-002
+  - ART-CHG-004
+  - ART-ISS-001
+  - ART-INT-002
+  - ART-QLT-006
+  - ART-RSK-003
+  - ART-COM-002
+  - ART-SCH-004
+  - ART-RSK-001
+  - ART-STK-001
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs: []
+  delivery_treatment: current_course_supported_with_predictive_locator
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: exact_locator_available
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-project-reporting
+- id: TNT-PROMPT-LISTS
+  name: Prompt lists
+  aliases: []
+  family: method
+  type: method
+  definition: Applies prompt lists as a tailored method to support project analysis or action.
+  purpose: Support a tailored project decision or work activity.
+  applicable_processes:
+  - *id047
+  related_artifact_ids:
+  - ART-REQ-003
+  - ART-SCH-007
+  - ART-CST-004
+  - ART-QLT-001
+  - ART-RES-001
+  - ART-RSK-002
+  - ART-SCP-001
+  - ART-SCH-005
+  - ART-RSK-001
+  - ART-RSK-003
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-prompt-lists
+- id: TNT-PROPOSAL-EVALUATION
+  name: Proposal evaluation
+  aliases: []
+  family: data_analysis
+  type: method
+  definition: Examines project information using proposal evaluation to reveal patterns, implications, options, or performance conditions.
+  purpose: Turn available evidence into decision-relevant insight.
+  applicable_processes:
+  - *id059
+  related_artifact_ids:
+  - ART-SCP-003
+  - ART-REQ-003
+  - ART-COM-001
+  - ART-RSK-002
+  - ART-PRC-001
+  - ART-PLN-003
+  - ART-CST-002
+  - ART-INT-002
+  - ART-PRC-012
+  - ART-PRC-003
+  - ART-CHG-001
+  - ART-QLT-001
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-proposal-evaluation
+- id: TNT-PROTOTYPES
+  name: Prototypes
+  aliases: []
+  family: method
+  type: method
+  definition: Applies prototypes as a tailored method to support project analysis or action.
+  purpose: Support a tailored project decision or work activity.
+  applicable_processes:
+  - *id002
+  related_artifact_ids:
+  - ART-CHR-001
+  - ART-SCP-003
+  - ART-REQ-003
+  - ART-STK-002
+  - ART-INT-001
+  - ART-INT-002
+  - ART-STK-001
+  - ART-BIZ-001
+  - ART-REQ-001
+  - ART-REQ-002
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-prototypes
+- id: TNT-QUALITY-IMPROVEMENT-METHODS
+  name: Quality improvement methods
+  aliases: []
+  family: quality
+  type: method
+  definition: Uses quality improvement methods to plan, analyze, verify, or communicate quality conditions and results.
+  purpose: Support fitness for use, conformance, and prevention or correction of defects.
+  applicable_processes:
+  - *id057
+  related_artifact_ids:
+  - ART-QLT-001
+  - ART-INT-002
+  - ART-QLT-003
+  - ART-QLT-002
+  - ART-RSK-003
+  - ART-ORG-002
+  - ART-QLT-006
+  - ART-QLT-007
+  - ART-CHG-001
+  - ART-SCP-001
+  - ART-SCH-005
+  - ART-CST-002
+  - ART-ISS-001
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-QUALITY-AUTHORITY
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-quality-improvement-methods
+- id: TNT-QUALITY-MANAGEMENT-AND-CONTROL-TOOLS
+  name: Quality management and control tools
+  aliases: []
+  family: quality
+  type: method
+  definition: Structures analysis and communication of quality conditions and decisions.
+  purpose: Support fitness for use, conformance, and prevention or correction of defects.
+  applicable_processes:
+  - *id005
+  related_artifact_ids:
+  - ART-CHR-001
+  - ART-REQ-003
+  - ART-RSK-002
+  - ART-STK-002
+  - ART-SCP-001
+  - ART-INT-001
+  - ART-REQ-001
+  - ART-REQ-002
+  - ART-QLT-001
+  - ART-QLT-002
+  - ART-PLN-001
+  - ART-DOC-001
+  - ART-INT-002
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-QUALITY-AUTHORITY
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-quality-management-and-control-tools
+- id: TNT-QUESTIONNAIRES-AND-SURVEYS
+  name: Questionnaires and surveys
+  aliases: []
+  family: data_gathering
+  type: method
+  definition: Collects relevant project information through questionnaires and surveys so the team can understand needs, conditions, or evidence.
+  purpose: Build a sufficiently reliable evidence base.
+  applicable_processes:
+  - *id002
+  - *id037
+  - *id046
+  related_artifact_ids:
+  - ART-ORG-001
+  - ART-ORG-002
+  - ART-CHR-001
+  - ART-STK-002
+  - ART-INT-002
+  - ART-BIZ-001
+  - ART-PRC-003
+  - ART-SCP-003
+  - ART-CHG-001
+  - ART-ISS-001
+  - ART-RSK-001
+  - ART-REQ-001
+  - ART-REQ-002
+  - ART-QLT-003
+  - ART-WPI-001
+  - ART-QLT-001
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-questionnaires-and-surveys
+- id: TNT-RECOGNITION-AND-REWARDS
+  name: Recognition and rewards
+  aliases: []
+  family: method
+  type: method
+  definition: Applies recognition and rewards as a tailored method to support project analysis or action.
+  purpose: Support a tailored project decision or work activity.
+  applicable_processes:
+  - *id056
+  related_artifact_ids:
+  - ART-RES-001
+  - ART-INT-002
+  - ART-SCH-004
+  - ART-RES-003
+  - ART-RES-007
+  - ART-RES-006
+  - ART-ORG-001
+  - ART-ORG-002
+  - ART-RES-005
+  - ART-CHG-001
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-recognition-and-rewards
+- id: TNT-REGRESSION-ANALYSIS
+  name: Regression analysis
+  aliases: []
+  family: data_analysis
+  type: method
+  definition: Examines project information using regression analysis to reveal patterns, implications, options, or performance conditions.
+  purpose: Turn available evidence into decision-relevant insight.
+  applicable_processes:
+  - *id011
+  related_artifact_ids:
+  - ART-CHR-001
+  - ART-PLN-001
+  - ART-INT-001
+  - ART-EST-001
+  - ART-CHG-004
+  - ART-ISS-001
+  - ART-INT-002
+  - ART-SCH-009
+  - ART-CLS-001
+  - ART-ORG-002
+  - ART-TRN-001
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-regression-analysis
+- id: TNT-REPRESENTATIONS-OF-UNCERTAINTY
+  name: Representations of uncertainty
+  aliases: []
+  family: communication
+  type: skill
+  definition: Uses representations of uncertainty to improve how project information is prepared, exchanged, understood, or acted upon.
+  purpose: Support shared understanding and appropriate information flow.
+  applicable_processes:
+  - *id079
+  related_artifact_ids:
+  - ART-RSK-002
+  - ART-SCP-001
+  - ART-SCH-005
+  - ART-CST-002
+  - ART-INT-001
+  - ART-EST-001
+  - ART-CST-001
+  - ART-CST-003
+  - ART-RSK-003
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-STAKEHOLDER
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-representations-of-uncertainty
+- id: TNT-RESERVE-ANALYSIS
+  name: Reserve analysis
+  aliases: []
+  family: data_analysis
+  type: method
+  definition: Examines project information using reserve analysis to reveal patterns, implications, options, or performance conditions.
+  purpose: Turn available evidence into decision-relevant insight.
+  applicable_processes:
+  - *id072
+  - *id004
+  - *id066
+  - *id067
+  - *id008
+  related_artifact_ids:
+  - ART-INT-002
+  - ART-ORG-002
+  - ART-RSK-001
+  - ART-CST-004
+  - ART-SCP-001
+  - ART-ORG-001
+  - ART-WPD-001
+  - ART-SCH-004
+  - ART-INT-001
+  - ART-EST-001
+  - ART-CST-001
+  - ART-WPI-001
+  - ART-CHG-001
+  - ART-CST-002
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs: []
+  delivery_treatment: current_course_supported_with_predictive_locator
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: exact_locator_available
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-reserve-analysis
+- id: TNT-RESOURCE-OPTIMIZATION
+  name: Resource optimization
+  aliases: []
+  family: scheduling
+  type: quantitative_method
+  definition: Uses resource optimization to model, develop, or adjust the timing and dependency logic of project work.
+  purpose: Develop or assess feasible time and dependency logic.
+  applicable_processes:
+  - *id073
+  - *id003
+  related_artifact_ids:
+  - ART-SCH-007
+  - ART-SCP-001
+  - ART-INT-002
+  - ART-RES-007
+  - ART-ORG-002
+  - ART-SCH-005
+  - ART-PLN-004
+  - ART-SCH-011
+  - ART-CHG-001
+  - ART-CST-002
+  - ART-INT-001
+  - ART-SCH-004
+  - ART-RSK-001
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs:
+  - MET-SCH-SMOOTH
+  - MET-SCH-LEVEL
+  delivery_treatment: current_course_supported_with_predictive_locator
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: exact_locator_available
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-resource-optimization
+- id: TNT-RESPONSIBILITY-ASSIGNMENT-MATRIX
+  name: Responsibility assignment matrix
+  aliases: []
+  family: data_representation
+  type: data_representation
+  definition: Organizes project information through responsibility assignment matrix so relationships, patterns, or status can be interpreted.
+  purpose: Make complex information easier to interpret and discuss.
+  applicable_processes:
+  - *id006
+  related_artifact_ids:
+  - ART-CHR-001
+  - ART-PLN-001
+  - ART-QLT-001
+  - ART-SCP-001
+  - ART-SCH-004
+  - ART-REQ-001
+  - ART-RSK-001
+  - ART-STK-001
+  - ART-RES-001
+  - ART-RES-006
+  - ART-INT-001
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-responsibility-assignment-matrix
+- id: TNT-RISK-CATEGORIZATION
+  name: Risk categorization
+  aliases: []
+  family: risk
+  type: quantitative_method
+  definition: Uses risk categorization to identify, assess, model, respond to, or monitor uncertainty.
+  purpose: Improve decisions under uncertainty.
+  applicable_processes:
+  - *id078
+  related_artifact_ids:
+  - ART-RSK-002
+  - ART-INT-001
+  - ART-RSK-001
+  - ART-STK-001
+  - ART-ORG-001
+  - ART-ORG-002
+  - ART-ISS-001
+  - ART-RSK-003
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-RISK-OWNER
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-risk-categorization
+- id: TNT-RISK-DATA-QUALITY-ASSESSMENT
+  name: Risk data quality assessment
+  aliases: []
+  family: data_analysis
+  type: method
+  definition: Examines project information using risk data quality assessment to reveal patterns, implications, options, or performance conditions.
+  purpose: Turn available evidence into decision-relevant insight.
+  applicable_processes:
+  - *id078
+  related_artifact_ids:
+  - ART-RSK-002
+  - ART-INT-001
+  - ART-RSK-001
+  - ART-STK-001
+  - ART-ORG-001
+  - ART-ORG-002
+  - ART-ISS-001
+  - ART-RSK-003
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-risk-data-quality-assessment
+- id: TNT-RISK-PROBABILITY-AND-IMPACT-ASSESSMENT
+  name: Risk probability and impact assessment
+  aliases: []
+  family: data_analysis
+  type: method
+  definition: Examines project information using risk probability and impact assessment to reveal patterns, implications, options, or performance conditions.
+  purpose: Turn available evidence into decision-relevant insight.
+  applicable_processes:
+  - *id078
+  related_artifact_ids:
+  - ART-RSK-002
+  - ART-INT-001
+  - ART-RSK-001
+  - ART-STK-001
+  - ART-ORG-001
+  - ART-ORG-002
+  - ART-ISS-001
+  - ART-RSK-003
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-risk-probability-and-impact-assessment
+- id: TNT-ROLLING-WAVE-PLANNING
+  name: Rolling wave planning
+  aliases: []
+  family: method
+  type: method
+  definition: Applies rolling wave planning as a tailored method to support project analysis or action.
+  purpose: Support a tailored project decision or work activity.
+  applicable_processes:
+  - *id075
+  related_artifact_ids:
+  - ART-SCH-007
+  - ART-SCP-001
+  - ART-ORG-001
+  - ART-ORG-002
+  - ART-SCH-001
+  - ART-SCH-008
+  - ART-SCH-009
+  - ART-CHG-001
+  - ART-SCH-005
+  - ART-CST-002
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs: []
+  delivery_treatment: current_course_supported_with_predictive_locator
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: exact_locator_available
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-rolling-wave-planning
+- id: TNT-ROOT-CAUSE-ANALYSIS
+  name: Root cause analysis
+  aliases: []
+  family: data_analysis
+  type: method
+  definition: Examines project information using root cause analysis to reveal patterns, implications, options, or performance conditions.
+  purpose: Turn available evidence into decision-relevant insight.
+  applicable_processes:
+  - *id037
+  - *id047
+  - *id057
+  - *id032
+  - *id010
+  - *id070
+  related_artifact_ids:
+  - ART-ORG-002
+  - ART-INT-002
+  - ART-ORG-001
+  - ART-ISS-001
+  - ART-QLT-001
+  - ART-RES-001
+  - ART-INT-001
+  - ART-STK-001
+  - ART-RSK-001
+  - ART-CHG-001
+  - ART-WPI-001
+  - ART-QLT-007
+  - ART-STK-002
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-root-cause-analysis
+- id: TNT-SCATTER-DIAGRAMS
+  name: Scatter diagrams
+  aliases: []
+  family: data_representation
+  type: data_representation
+  definition: Organizes project information through scatter diagrams so relationships, patterns, or status can be interpreted.
+  purpose: Make complex information easier to interpret and discuss.
+  applicable_processes:
+  - *id037
+  - *id057
+  related_artifact_ids:
+  - ART-QLT-001
+  - ART-INT-002
+  - ART-QLT-002
+  - ART-ORG-002
+  - ART-QLT-007
+  - ART-CHG-002
+  - ART-DEL-001
+  - ART-WPD-001
+  - ART-CHG-001
+  - ART-ISS-001
+  - ART-RSK-001
+  - ART-QLT-003
+  - ART-WPI-001
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs: []
+  delivery_treatment: current_course_supported_with_predictive_locator
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: exact_locator_available
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-scatter-diagrams
+- id: TNT-SCHEDULE-COMPRESSION
+  name: Schedule compression
+  aliases: []
+  family: scheduling
+  type: quantitative_method
+  definition: Uses schedule compression to model, develop, or adjust the timing and dependency logic of project work.
+  purpose: Develop or assess feasible time and dependency logic.
+  applicable_processes:
+  - *id073
+  - *id003
+  related_artifact_ids:
+  - ART-SCH-007
+  - ART-SCP-001
+  - ART-INT-002
+  - ART-RES-007
+  - ART-ORG-002
+  - ART-SCH-005
+  - ART-PLN-004
+  - ART-SCH-011
+  - ART-CHG-001
+  - ART-CST-002
+  - ART-INT-001
+  - ART-SCH-004
+  - ART-RSK-001
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs:
+  - MET-SCH-FAST-TRACK
+  - MET-SCH-CRASH
+  delivery_treatment: current_course_supported_with_predictive_locator
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: exact_locator_available
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-schedule-compression
+- id: TNT-SCHEDULE-NETWORK-ANALYSIS
+  name: Schedule network analysis
+  aliases: []
+  family: data_analysis
+  type: method
+  definition: Examines project information using schedule network analysis to reveal patterns, implications, options, or performance conditions.
+  purpose: Turn available evidence into decision-relevant insight.
+  applicable_processes:
+  - *id003
+  related_artifact_ids:
+  - ART-SCH-007
+  - ART-SCP-001
+  - ART-SCH-008
+  - ART-SCH-001
+  - ART-INT-001
+  - ART-EST-001
+  - ART-SCH-003
+  - ART-INT-002
+  - ART-SCH-005
+  - ART-SCH-004
+  - ART-SCH-010
+  - ART-SCH-011
+  - ART-CHG-001
+  - ART-CST-002
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-schedule-network-analysis
+- id: TNT-SENSITIVITY-ANALYSIS
+  name: Sensitivity analysis
+  aliases: []
+  family: data_analysis
+  type: method
+  definition: Examines project information using sensitivity analysis to reveal patterns, implications, options, or performance conditions.
+  purpose: Turn available evidence into decision-relevant insight.
+  applicable_processes:
+  - *id079
+  related_artifact_ids:
+  - ART-RSK-002
+  - ART-SCP-001
+  - ART-SCH-005
+  - ART-CST-002
+  - ART-INT-001
+  - ART-EST-001
+  - ART-CST-001
+  - ART-CST-003
+  - ART-RSK-003
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-sensitivity-analysis
+- id: TNT-SIMULATION
+  name: Simulation
+  aliases:
+  - Simulations
+  family: data_analysis
+  type: method
+  definition: Examines project information using simulation to reveal patterns, implications, options, or performance conditions.
+  purpose: Turn available evidence into decision-relevant insight.
+  applicable_processes:
+  - *id003
+  - *id079
+  related_artifact_ids:
+  - ART-SCP-001
+  - ART-INT-001
+  - ART-EST-001
+  - ART-SCH-003
+  - ART-SCH-009
+  - ART-RES-002
+  - ART-RSK-001
+  - ART-ORG-001
+  - ART-SCH-005
+  - ART-SCH-004
+  - ART-SCH-010
+  - ART-SCH-011
+  - ART-CHG-001
+  - ART-SCH-007
+  - ART-CST-002
+  - ART-SCH-008
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs: []
+  delivery_treatment: current_course_supported_with_predictive_locator
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: exact_locator_available
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-simulation
+- id: TNT-SOURCE-SELECTION-ANALYSIS
+  name: Source selection analysis
+  aliases: []
+  family: data_analysis
+  type: method
+  definition: Examines project information using source selection analysis to reveal patterns, implications, options, or performance conditions.
+  purpose: Turn available evidence into decision-relevant insight.
+  applicable_processes:
+  - *id058
+  related_artifact_ids:
+  - ART-CHR-001
+  - ART-BIZ-001
+  - ART-BEN-001
+  - ART-SCP-003
+  - ART-QLT-001
+  - ART-RES-001
+  - ART-SCP-001
+  - ART-SCH-009
+  - ART-PRC-001
+  - ART-PRC-004
+  - ART-PRC-008
+  - ART-PRC-005
+  - ART-PRC-006
+  - ART-PRC-009
+  - ART-PRC-010
+  - ART-CHG-001
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-source-selection-analysis
+- id: TNT-STAKEHOLDER-ANALYSIS
+  name: Stakeholder analysis
+  aliases: []
+  family: data_analysis
+  type: method
+  definition: Examines project information using stakeholder analysis to reveal patterns, implications, options, or performance conditions.
+  purpose: Turn available evidence into decision-relevant insight.
+  applicable_processes:
+  - *id046
+  - *id010
+  - *id081
+  related_artifact_ids:
+  - ART-ORG-001
+  - ART-ORG-002
+  - ART-CHR-001
+  - ART-COM-001
+  - ART-STK-002
+  - ART-ISS-001
+  - ART-STK-001
+  - ART-BIZ-001
+  - ART-CHG-001
+  - ART-RSK-002
+  - ART-RSK-001
+  - ART-REQ-003
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs: []
+  delivery_treatment: current_course_supported_with_predictive_locator
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: exact_locator_available
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-stakeholder-analysis
+- id: TNT-STAKEHOLDER-ENGAGEMENT-ASSESSMENT-MATRIX
+  name: Stakeholder Engagement Assessment Matrix
+  aliases:
+  - Stakeholder assessment matrix
+  family: data_representation
+  type: data_representation
+  definition: Represents current and desired stakeholder engagement states so the gap can inform engagement planning and continuing monitoring.
+  purpose: Make complex information easier to interpret and discuss.
+  applicable_processes:
+  - *id022
+  - *id062
+  - *id010
+  - *id061
+  - *id070
+  related_artifact_ids:
+  - ART-ORG-001
+  - ART-ORG-002
+  - ART-COM-001
+  - ART-STK-002
+  - ART-ISS-001
+  - ART-STK-001
+  - ART-RES-001
+  - ART-INT-002
+  - ART-CHG-001
+  - ART-WPI-001
+  - ART-CHG-004
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs: []
+  delivery_treatment: current_course_supported_with_predictive_locator
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: exact_locator_available
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-stakeholder-engagement-assessment-matrix
+- id: TNT-STAKEHOLDER-MAPPING-REPRESENTATION
+  name: Stakeholder mapping/representation
+  aliases:
+  - Stakeholder mapping/ representation
+  family: data_representation
+  type: data_representation
+  definition: Organizes project information through stakeholder mapping/representation so relationships, patterns, or status can be interpreted.
+  purpose: Make complex information easier to interpret and discuss.
+  applicable_processes:
+  - *id046
+  related_artifact_ids:
+  - ART-CHR-001
+  - ART-BIZ-001
+  - ART-BEN-001
+  - ART-COM-001
+  - ART-STK-002
+  - ART-CHG-004
+  - ART-ISS-001
+  - ART-REQ-001
+  - ART-STK-001
+  - ART-CHG-001
+  - ART-REQ-003
+  - ART-RSK-002
+  - ART-INT-001
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-stakeholder-mapping-representation
+- id: TNT-STAKEHOLDER-POWER-INTEREST-GRID
+  name: Stakeholder Power–Interest Grid
+  aliases:
+  - Stakeholder mapping grid
+  family: data_representation
+  type: data_representation
+  definition: Maps stakeholders on power and interest axes into Manage closely, Keep satisfied, Keep informed, or Monitor quadrants.
+  purpose: Make complex information easier to interpret and discuss.
+  applicable_processes:
+  - *id046
+  - *id022
+  - *id010
+  - *id070
+  related_artifact_ids:
+  - ART-COM-001
+  - ART-ISS-001
+  - ART-ORG-001
+  - ART-ORG-002
+  - ART-STK-002
+  - ART-CHG-004
+  - ART-STK-001
+  - ART-CHR-001
+  - ART-CHG-001
+  - ART-RSK-001
+  - ART-INT-002
+  - ART-REQ-003
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-stakeholder-power-interest-grid
+- id: TNT-STATISTICAL-SAMPLING
+  name: Statistical sampling
+  aliases: []
+  family: data_gathering
+  type: method
+  definition: Uses a selected sample to support conclusions about a larger population.
+  purpose: Build a sufficiently reliable evidence base.
+  applicable_processes:
+  - *id037
+  - *id005
+  related_artifact_ids:
+  - ART-ORG-001
+  - ART-ORG-002
+  - ART-QLT-001
+  - ART-INT-002
+  - ART-QLT-002
+  - ART-QLT-007
+  - ART-CHG-002
+  - ART-DEL-001
+  - ART-RSK-001
+  - ART-QLT-003
+  - ART-WPI-001
+  - ART-CHG-001
+  - ART-ISS-001
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-statistical-sampling
+- id: TNT-STRATEGIES-FOR-OPPORTUNITIES
+  name: Strategies for opportunities
+  aliases: []
+  family: method
+  type: method
+  definition: Applies strategies for opportunities as a tailored method to support project analysis or action.
+  purpose: Support a tailored project decision or work activity.
+  applicable_processes:
+  - *id068
+  related_artifact_ids:
+  - ART-RES-001
+  - ART-RSK-002
+  - ART-CST-002
+  - ART-INT-002
+  - ART-SCH-004
+  - ART-RES-003
+  - ART-RES-007
+  - ART-RSK-001
+  - ART-CHG-001
+  - ART-SCH-007
+  - ART-CST-004
+  - ART-QLT-001
+  - ART-PRC-001
+  - ART-SCP-001
+  - ART-SCH-005
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-strategies-for-opportunities
+- id: TNT-STRATEGIES-FOR-OVERALL-PROJECT-RISK
+  name: Strategies for overall project risk
+  aliases: []
+  family: risk
+  type: quantitative_method
+  definition: Uses strategies for overall project risk to identify, assess, model, respond to, or monitor uncertainty.
+  purpose: Improve decisions under uncertainty.
+  applicable_processes:
+  - *id068
+  related_artifact_ids:
+  - ART-RES-001
+  - ART-RSK-002
+  - ART-CST-002
+  - ART-INT-002
+  - ART-SCH-004
+  - ART-RES-003
+  - ART-RES-007
+  - ART-RSK-001
+  - ART-CHG-001
+  - ART-SCH-007
+  - ART-CST-004
+  - ART-QLT-001
+  - ART-PRC-001
+  - ART-SCP-001
+  - ART-SCH-005
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-RISK-OWNER
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-strategies-for-overall-project-risk
+- id: TNT-STRATEGIES-FOR-THREATS
+  name: Strategies for threats
+  aliases: []
+  family: method
+  type: method
+  definition: Applies strategies for threats as a tailored method to support project analysis or action.
+  purpose: Support a tailored project decision or work activity.
+  applicable_processes:
+  - *id068
+  related_artifact_ids:
+  - ART-RES-001
+  - ART-RSK-002
+  - ART-CST-002
+  - ART-INT-002
+  - ART-SCH-004
+  - ART-RES-003
+  - ART-RES-007
+  - ART-RSK-001
+  - ART-CHG-001
+  - ART-SCH-007
+  - ART-CST-004
+  - ART-QLT-001
+  - ART-PRC-001
+  - ART-SCP-001
+  - ART-SCH-005
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-strategies-for-threats
+- id: TNT-SWOT-ANALYSIS
+  name: SWOT analysis
+  aliases: []
+  family: data_analysis
+  type: method
+  definition: Examines project information using sWOT analysis to reveal patterns, implications, options, or performance conditions.
+  purpose: Turn available evidence into decision-relevant insight.
+  applicable_processes:
+  - *id047
+  related_artifact_ids:
+  - ART-REQ-003
+  - ART-SCH-007
+  - ART-CST-004
+  - ART-QLT-001
+  - ART-RES-001
+  - ART-RSK-002
+  - ART-SCP-001
+  - ART-SCH-005
+  - ART-RSK-001
+  - ART-RSK-003
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-swot-analysis
+- id: TNT-TEAM-BUILDING
+  name: Team building
+  aliases: []
+  family: interpersonal_and_team_skills
+  type: skill
+  definition: Applies team building to improve collaboration, understanding, or coordinated action among people.
+  purpose: Enable effective human interaction and coordinated work.
+  applicable_processes:
+  - *id056
+  related_artifact_ids:
+  - ART-RES-001
+  - ART-INT-002
+  - ART-SCH-004
+  - ART-RES-003
+  - ART-RES-007
+  - ART-RES-006
+  - ART-ORG-001
+  - ART-ORG-002
+  - ART-RES-005
+  - ART-CHG-001
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-STAKEHOLDER
+  formula_refs: []
+  delivery_treatment: current_course_supported_with_predictive_locator
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: exact_locator_available
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-team-building
+- id: TNT-TECHNICAL-PERFORMANCE-ANALYSIS
+  name: Technical performance analysis
+  aliases: []
+  family: data_analysis
+  type: method
+  definition: Examines project information using technical performance analysis to reveal patterns, implications, options, or performance conditions.
+  purpose: Turn available evidence into decision-relevant insight.
+  applicable_processes:
+  - *id008
+  related_artifact_ids:
+  - ART-RSK-002
+  - ART-ISS-001
+  - ART-INT-002
+  - ART-RSK-001
+  - ART-RSK-003
+  - ART-WPD-001
+  - ART-WPR-001
+  - ART-WPI-001
+  - ART-CHG-001
+  - ART-PLN-001
+  - ART-INT-001
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-technical-performance-analysis
+- id: TNT-TEST-AND-INSPECTION-PLANNING
+  name: Test and inspection planning
+  aliases: []
+  family: quality
+  type: method
+  definition: Uses test and inspection planning to plan, analyze, verify, or communicate quality conditions and results.
+  purpose: Support fitness for use, conformance, and prevention or correction of defects.
+  applicable_processes:
+  - *id005
+  related_artifact_ids:
+  - ART-CHR-001
+  - ART-REQ-003
+  - ART-RSK-002
+  - ART-STK-002
+  - ART-SCP-001
+  - ART-INT-001
+  - ART-REQ-001
+  - ART-REQ-002
+  - ART-QLT-001
+  - ART-QLT-002
+  - ART-PLN-001
+  - ART-DOC-001
+  - ART-INT-002
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-QUALITY-AUTHORITY
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-test-and-inspection-planning
+- id: TNT-TESTING-PRODUCT-EVALUATIONS
+  name: Testing/product evaluations
+  aliases: []
+  family: quality
+  type: method
+  definition: Uses testing/product evaluations to plan, analyze, verify, or communicate quality conditions and results.
+  purpose: Support fitness for use, conformance, and prevention or correction of defects.
+  applicable_processes:
+  - *id037
+  related_artifact_ids:
+  - ART-QLT-001
+  - ART-INT-002
+  - ART-QLT-002
+  - ART-QLT-007
+  - ART-CHG-002
+  - ART-DEL-001
+  - ART-WPD-001
+  - ART-ORG-001
+  - ART-QLT-003
+  - ART-WPI-001
+  - ART-CHG-001
+  - ART-ISS-001
+  - ART-RSK-001
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-QUALITY-AUTHORITY
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-testing-product-evaluations
+- id: TNT-TEXT-ORIENTED-FORMATS
+  name: Text-oriented formats
+  aliases: []
+  family: data_representation
+  type: data_representation
+  definition: Organizes project information through text-oriented formats so relationships, patterns, or status can be interpreted.
+  purpose: Make complex information easier to interpret and discuss.
+  applicable_processes:
+  - *id006
+  related_artifact_ids:
+  - ART-CHR-001
+  - ART-PLN-001
+  - ART-QLT-001
+  - ART-SCP-001
+  - ART-SCH-004
+  - ART-REQ-001
+  - ART-RSK-001
+  - ART-STK-001
+  - ART-RES-001
+  - ART-RES-006
+  - ART-INT-001
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-text-oriented-formats
+- id: TNT-THREE-POINT-ESTIMATING
+  name: Three-point estimating
+  aliases: []
+  family: estimating
+  type: quantitative_method
+  definition: Uses three-point estimating to develop or assess an estimate from the information and uncertainty available.
+  purpose: Produce an estimate suited to the decision and available detail.
+  applicable_processes:
+  - *id066
+  - *id067
+  related_artifact_ids:
+  - ART-SCP-001
+  - ART-INT-002
+  - ART-RES-002
+  - ART-RSK-001
+  - ART-ORG-001
+  - ART-ORG-002
+  - ART-SCH-007
+  - ART-SCH-008
+  - ART-EST-001
+  - ART-INT-001
+  - ART-SCH-003
+  - ART-CST-001
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs:
+  - MET-EST-THREE-POINT
+  - FRM-EST-002
+  - FRM-EST-003
+  - FRM-EST-004
+  delivery_treatment: current_course_supported_with_predictive_locator
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: exact_locator_available
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-three-point-estimating
+- id: TNT-TO-COMPLETE-PERFORMANCE-INDEX
+  name: To-complete performance index
+  aliases: []
+  family: estimating
+  type: quantitative_method
+  definition: Uses to-complete performance index to develop or assess an estimate from the information and uncertainty available.
+  purpose: Produce an estimate suited to the decision and available detail.
+  applicable_processes:
+  - *id072
+  related_artifact_ids:
+  - ART-CST-004
+  - ART-CST-002
+  - ART-PLN-004
+  - ART-INT-002
+  - ART-CST-005
+  - ART-WPD-001
+  - ART-ORG-002
+  - ART-WPI-001
+  - ART-CST-003
+  - ART-CHG-001
+  - ART-INT-001
+  - ART-EST-001
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs:
+  - FRM-EVM-011
+  - FRM-EVM-012
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-to-complete-performance-index
+- id: TNT-TRAINING
+  name: Training
+  aliases: []
+  family: method
+  type: method
+  definition: Applies training as a tailored method to support project analysis or action.
+  purpose: Support a tailored project decision or work activity.
+  applicable_processes:
+  - *id056
+  related_artifact_ids:
+  - ART-RES-001
+  - ART-INT-002
+  - ART-SCH-004
+  - ART-RES-003
+  - ART-RES-007
+  - ART-RES-006
+  - ART-ORG-001
+  - ART-ORG-002
+  - ART-RES-005
+  - ART-CHG-001
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs: []
+  delivery_treatment: current_course_supported_with_predictive_locator
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: exact_locator_available
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-training
+- id: TNT-TREND-ANALYSIS
+  name: Trend analysis
+  aliases: []
+  family: data_analysis
+  type: method
+  definition: Examines project information using trend analysis to reveal patterns, implications, options, or performance conditions.
+  purpose: Turn available evidence into decision-relevant insight.
+  applicable_processes:
+  - *id011
+  - *id072
+  - *id009
+  - *id071
+  - *id073
+  - &id087
+    id: PRC-CONTROL-SCOPE
+    title: Control Scope
+    public_url: https://comdico.github.io/PMP_Atlas_Site/processes/control-scope/
+  - *id032
+  related_artifact_ids:
+  - ART-INT-002
+  - ART-ORG-002
+  - ART-WPD-001
+  - ART-RSK-001
+  - ART-PRC-003
+  - ART-INT-001
+  - ART-ISS-001
+  - ART-SCH-009
+  - ART-CHG-001
+  - ART-WPI-001
+  - ART-CST-002
+  - ART-SCH-005
+  - ART-PLN-004
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-trend-analysis
+- id: TNT-VARIANCE-ANALYSIS
+  name: Variance analysis
+  aliases: []
+  family: data_analysis
+  type: method
+  definition: Examines project information using variance analysis to reveal patterns, implications, options, or performance conditions.
+  purpose: Turn available evidence into decision-relevant insight.
+  applicable_processes:
+  - *id011
+  - *id072
+  - *id073
+  - *id087
+  - *id032
+  related_artifact_ids:
+  - ART-INT-002
+  - ART-ORG-002
+  - ART-PLN-004
+  - ART-WPD-001
+  - ART-PLN-001
+  - ART-INT-001
+  - ART-EST-001
+  - ART-ISS-001
+  - ART-CHG-001
+  - ART-WPI-001
+  - ART-CST-002
+  - ART-RSK-001
+  - ART-CST-003
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-variance-analysis
+- id: TNT-VIRTUAL-TEAMS
+  name: Virtual teams
+  aliases: []
+  family: resource_team
+  type: method
+  definition: Enables people with a shared goal to fulfill roles with little or no face-to-face meeting time.
+  purpose: Enable feasible resource organization and team performance.
+  applicable_processes:
+  - *id086
+  - *id056
+  related_artifact_ids:
+  - ART-RES-001
+  - ART-SCH-004
+  - ART-RES-007
+  - ART-ORG-001
+  - ART-ORG-002
+  - ART-PRC-001
+  - ART-CST-002
+  - ART-RES-002
+  - ART-RES-003
+  - ART-CHG-001
+  - ART-INT-002
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-FUNCTIONAL-MANAGER
+  - ROL-DELIVERY-TEAM
+  formula_refs: []
+  delivery_treatment: current_course_supported_with_predictive_locator
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: exact_locator_available
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-virtual-teams
+- id: TNT-VOTING
+  name: Voting
+  aliases: []
+  family: decision_making
+  type: method
+  definition: Uses voting to compare, prioritize, or select among alternatives within delegated decision authority.
+  purpose: Reach a traceable selection or priority.
+  applicable_processes:
+  - *id002
+  - *id066
+  - *id067
+  - *id032
+  - *id010
+  - *id028
+  - *id042
+  related_artifact_ids:
+  - ART-INT-002
+  - ART-ORG-001
+  - ART-ORG-002
+  - ART-SCP-001
+  - ART-RSK-001
+  - ART-INT-001
+  - ART-SCP-003
+  - ART-REQ-003
+  - ART-CHG-001
+  - ART-REQ-001
+  - ART-REQ-002
+  - ART-EST-001
+  - ART-PLN-001
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-GOVERNANCE-BOARD
+  - ROL-DELIVERY-TEAM
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - The method supports a choice but does not override reserved governance, acceptance, product, or contractual authority.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-voting
+- id: TNT-WHAT-IF-SCENARIO-ANALYSIS
+  name: What-if scenario analysis
+  aliases: []
+  family: data_analysis
+  type: method
+  definition: Examines project information using what-if scenario analysis to reveal patterns, implications, options, or performance conditions.
+  purpose: Turn available evidence into decision-relevant insight.
+  applicable_processes:
+  - *id073
+  - *id003
+  related_artifact_ids:
+  - ART-SCH-007
+  - ART-SCP-001
+  - ART-INT-002
+  - ART-RES-007
+  - ART-ORG-002
+  - ART-SCH-005
+  - ART-PLN-004
+  - ART-SCH-011
+  - ART-CHG-001
+  - ART-CST-002
+  - ART-INT-001
+  - ART-SCH-004
+  - ART-RSK-001
+  related_role_ids:
+  - ROL-PROJECT-MANAGER
+  - ROL-DELIVERY-TEAM
+  - ROL-SUBJECT-MATTER-EXPERT
+  formula_refs: []
+  delivery_treatment: supplemental_predictive_evidence_only
+  delivery_approach_treatment:
+    predictive: verified_s3_process_use
+    adaptive: not_inferred_from_predictive_source
+    hybrid: not_inferred_from_predictive_source
+    current_course_support: no_exact_technique_locator_recorded
+  cautions:
+  - Tailor the method to the delivery context, available evidence, and delegated authority; use does not make the predictive scaffold a mandatory sequence.
+  verification_status: verified
+  public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-what-if-scenario-analysis
