@@ -5653,6 +5653,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#choose-eac-by-the-forecasting-assumption" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Choose EAC by the forecasting assumption
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#evm-status-date-chart" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -5671,6 +5682,23 @@
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="ServiceBridge worked example">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#four-eac-cases-using-the-same-status-date-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Four EAC cases using the same status-date values
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -5939,6 +5967,39 @@
   <dl class="atlas-formula-variables"><dt>ETC</dt><dd>forecast remaining cost</dd><dt>EAC</dt><dd>forecast total cost</dd><dt>AC</dt><dd>actual cost to date</dd></dl>
   <p class="atlas-formula-exam"><strong>Exam note:</strong> EAC is total forecast; ETC is remaining forecast.</p>
 </article>
+<article class="atlas-formula-card" id="frm-evm-007">
+  <div class="atlas-formula-card__meta"><span>Supplemental · official PMI</span><code>FRM-EVM-007</code></div>
+  <h3>EAC — remaining work at original rate</h3>
+  <p class="atlas-formula-expression" aria-label="Formula: EAC = AC + (BAC - EV)">EAC = AC + (BAC - EV)</p>
+  <span class="atlas-approach-badges atlas-formula-badges" role="list" aria-label="Applicable delivery approaches"><span class="atlas-approach-badge atlas-approach-badge--predictive" role="listitem">Predictive</span><span class="atlas-approach-badge atlas-approach-badge--hybrid" role="listitem">Hybrid</span></span>
+  <p><strong>Interpretation:</strong> Adds actual cost to the original budget for uncompleted work.</p>
+  <p><strong>Assumptions:</strong> Current variance is not expected to continue; remaining work is expected to be accomplished at the originally planned rate.</p>
+  <p><strong>Units:</strong> Currency.</p>
+  <dl class="atlas-formula-variables"><dt>EAC</dt><dd>forecast total cost</dd><dt>AC</dt><dd>actual cost</dd><dt>BAC</dt><dd>Budget at Completion</dd><dt>EV</dt><dd>earned value</dd></dl>
+  <p class="atlas-formula-exam"><strong>Exam note:</strong> Select this case when the variance to date is atypical and remaining work will follow the original planned rate; the July 2026 course does not independently supply this variant.</p>
+</article>
+<article class="atlas-formula-card" id="frm-evm-008">
+  <div class="atlas-formula-card__meta"><span>Supplemental · official PMI</span><code>FRM-EVM-008</code></div>
+  <h3>EAC — cost and schedule influence remaining work</h3>
+  <p class="atlas-formula-expression" aria-label="Formula: EAC = AC + ((BAC - EV) / (CPI × SPI))">EAC = AC + ((BAC - EV) / (CPI × SPI))</p>
+  <span class="atlas-approach-badges atlas-formula-badges" role="list" aria-label="Applicable delivery approaches"><span class="atlas-approach-badge atlas-approach-badge--predictive" role="listitem">Predictive</span><span class="atlas-approach-badge atlas-approach-badge--hybrid" role="listitem">Hybrid</span></span>
+  <p><strong>Interpretation:</strong> Adjusts remaining work for both cost and schedule performance.</p>
+  <p><strong>Assumptions:</strong> Both current cost and schedule performance are expected to influence remaining cost; CPI and SPI are nonzero.</p>
+  <p><strong>Units:</strong> Currency.</p>
+  <dl class="atlas-formula-variables"><dt>EAC</dt><dd>forecast total cost</dd><dt>AC</dt><dd>actual cost</dd><dt>BAC</dt><dd>Budget at Completion</dd><dt>EV</dt><dd>earned value</dd><dt>CPI</dt><dd>cost performance index</dd><dt>SPI</dt><dd>schedule performance index</dd></dl>
+  <p class="atlas-formula-exam"><strong>Exam note:</strong> Select this case only when both cost and schedule performance are expected to influence remaining work; it is not universally preferred and is not independently supplied by the July 2026 course.</p>
+</article>
+<article class="atlas-formula-card" id="frm-evm-009">
+  <div class="atlas-formula-card__meta"><span>Supplemental · official PMI</span><code>FRM-EVM-009</code></div>
+  <h3>EAC — bottom-up remaining estimate</h3>
+  <p class="atlas-formula-expression" aria-label="Formula: EAC = AC + bottom-up ETC">EAC = AC + bottom-up ETC</p>
+  <span class="atlas-approach-badges atlas-formula-badges" role="list" aria-label="Applicable delivery approaches"><span class="atlas-approach-badge atlas-approach-badge--predictive" role="listitem">Predictive</span><span class="atlas-approach-badge atlas-approach-badge--hybrid" role="listitem">Hybrid</span></span>
+  <p><strong>Interpretation:</strong> Replaces statistical extrapolation with a new detailed remaining-work estimate.</p>
+  <p><strong>Assumptions:</strong> The original estimate is no longer valid or reliable; the remaining work receives a new detailed bottom-up estimate.</p>
+  <p><strong>Units:</strong> Currency.</p>
+  <dl class="atlas-formula-variables"><dt>EAC</dt><dd>forecast total cost</dd><dt>AC</dt><dd>actual cost</dd><dt>bottom-up ETC</dt><dd>new detailed estimate of remaining work</dd></dl>
+  <p class="atlas-formula-exam"><strong>Exam note:</strong> Select this case when a new detailed ETC replaces the original remaining-work estimate; the July 2026 course does not independently supply this variant.</p>
+</article>
 <article class="atlas-formula-card" id="frm-evm-010">
   <div class="atlas-formula-card__meta"><span>Supplemental · official PMI</span><code>FRM-EVM-010</code></div>
   <h3>Variance at completion</h3>
@@ -5974,6 +6035,41 @@
 </article>
 </div>
 
+<h2 id="choose-eac-by-the-forecasting-assumption">Choose EAC by the forecasting assumption</h2>
+<p>EAC is not one universal calculation. Select the formula whose assumption matches the forecast evidence.</p>
+<table>
+<thead>
+<tr>
+<th>Forecasting assumption</th>
+<th>Canonical formula</th>
+<th>Source status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Current cost performance continues</td>
+<td>EAC = BAC / CPI</td>
+<td>Verified in the July 2026 course</td>
+</tr>
+<tr>
+<td>Remaining work follows the original planned rate</td>
+<td>EAC = AC + (BAC − EV)</td>
+<td>S3 supplemental PMI support</td>
+</tr>
+<tr>
+<td>Remaining work receives a new bottom-up estimate</td>
+<td>EAC = AC + bottom-up ETC</td>
+<td>S3 supplemental PMI support</td>
+</tr>
+<tr>
+<td>Both cost and schedule performance affect remaining work</td>
+<td>EAC = AC + ((BAC − EV) / (CPI × SPI))</td>
+<td>S3 supplemental PMI support</td>
+</tr>
+</tbody>
+</table>
+<p>The three S3 cases are supported by <em>Process Groups: A Practice Guide</em> (Project Management Institute, 2023), Table 10-1, printed page 311. This locator does not make them July 2026 course-verified.</p>
+<p>The final case uses SPI as a dimensionless performance index within a forecast assumption; SPI is not itself a monetary measure, and this variant is not automatically preferred.</p>
 <h2 id="evm-status-date-chart">EVM status-date chart</h2>
 <figure class="atlas-evm-chart"><svg viewBox="0 0 760 360" role="img" aria-labelledby="evm-title evm-desc"><title id="evm-title">ServiceBridge earned value status-date chart</title><desc id="evm-desc">At the status date, planned value is 1.2 million dollars, earned value is 1 million, and actual cost is 1.25 million. The planned curve continues toward BAC of 2.4 million.</desc><line x1="70" y1="30" x2="70" y2="300"/><line x1="70" y1="300" x2="710" y2="300"/><line class="status" x1="400" y1="35" x2="400" y2="300"/><text x="410" y="54">Status date</text><path class="pv" d="M70 300 C210 270 300 205 400 165 S610 70 700 45"/><path class="ev" d="M70 300 C210 275 300 225 400 188"/><path class="ac" d="M70 300 C210 265 300 190 400 150"/><circle class="pv" cx="400" cy="165" r="5"/><circle class="ev" cx="400" cy="188" r="5"/><circle class="ac" cx="400" cy="150" r="5"/><text x="415" y="169">PV $1.20M</text><text x="415" y="194">EV $1.00M</text><text x="415" y="142">AC $1.25M</text><text x="595" y="40">BAC $2.40M</text><g class="legend"><text x="90" y="335">● PV planned</text><text x="250" y="335">■ EV earned</text><text x="400" y="335">▲ AC actual</text></g></svg><figcaption>At the status date, compare labels as well as line styles: EV is below PV while AC is above EV.</figcaption></figure>
 
@@ -6030,6 +6126,45 @@
 </tr>
 </tbody>
 </table>
+<h3 id="four-eac-cases-using-the-same-status-date-values">Four EAC cases using the same status-date values</h3>
+<p>Known values: BAC $2,400,000; EV $1,000,000; AC $1,250,000; CPI 0.8000; SPI 0.8333; separately estimated bottom-up ETC $1,600,000.</p>
+<table>
+<thead>
+<tr>
+<th>Appropriate assumption</th>
+<th>Calculation</th>
+<th style="text-align: right;">Result</th>
+<th>Exam-style distinction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Current cost efficiency continues</td>
+<td>$2,400,000 / 0.8000</td>
+<td style="text-align: right;">$3,000,000</td>
+<td>Extrapolates demonstrated cost performance; this is the current-course case.</td>
+</tr>
+<tr>
+<td>Current variance will not continue; remaining work follows the original planned rate</td>
+<td>$1,250,000 + ($2,400,000 − $1,000,000)</td>
+<td style="text-align: right;">$2,650,000</td>
+<td>Does not carry CPI forward.</td>
+</tr>
+<tr>
+<td>Original estimate is no longer reliable; remaining work is re-estimated</td>
+<td>$1,250,000 + $1,600,000</td>
+<td style="text-align: right;">$2,850,000</td>
+<td>Uses a separately developed ETC, not an index extrapolation.</td>
+</tr>
+<tr>
+<td>Both cost and schedule performance influence remaining work</td>
+<td>$1,250,000 + (($2,400,000 − $1,000,000) / (0.8000 × 0.8333))</td>
+<td style="text-align: right;">$3,350,000</td>
+<td>Uses both indices only when the stated assumption warrants it.</td>
+</tr>
+</tbody>
+</table>
+<p>These numerical cases compare formula behavior. In practice, the forecast assumption must be supported by project evidence; a shared data set does not mean all four assumptions are simultaneously true.</p>
 <p>The project has completed less budgeted work than planned and spent more than the budgeted value of completed work. If current cost performance continues, it is forecast to finish above BAC.</p>
 <p>Formal EVM is strongest where predictive or hybrid control structures provide the necessary baseline measures. Adaptive delivery may use EVM at a release or other suitable performance-baseline level, but not every agile team uses formal EVM.</p>
 <h2 id="references">References</h2>
@@ -6037,6 +6172,7 @@
 <ul>
 <li>PMI Instructor-Led PMP Exam Prep Course — Lesson 5, Core Planning: Scope, Value, Resources, Finance, Risk (<code>SRC-PMI-COURSE-LESSON-5-2026</code>; registered private source)</li>
 <li><a href="https://www.pmi.org/learning/library/earned-value-analysis-forecast-outcomes-7898">PMI — Applications and Extensions of Earned Value Analysis</a> — Supports core EVM measures, EAC using continuing CPI, and VAC interpretation.</li>
+<li>Process Groups: A Practice Guide (<code>SRC-PMI-PROCESS-GROUPS-GUIDE-2022</code>; registered private source)</li>
 <li><a href="https://www.pmi.org/learning/library/to-complete-performance-index-tcpi-6009">PMI — To-Complete Performance Index</a> — Supports TCPI against BAC and an approved EAC target.</li>
 </ul>
 <p>The Atlas is an independent study aid, not official PMI material.</p>
