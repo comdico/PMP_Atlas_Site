@@ -12,6 +12,21 @@ html {
   scroll-padding-top: 7.5rem;
 }
 
+.atlas-table-region {
+  max-width: 100%;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+}
+
+.atlas-table-region:focus-visible {
+  outline: 3px solid var(--md-accent-fg-color);
+  outline-offset: 2px;
+}
+
+.atlas-table-region > table {
+  margin-block: 0;
+}
+
 /* The theme override removes this region; this rule is a defensive fallback. */
 .md-sidebar--secondary {
   display: none;
