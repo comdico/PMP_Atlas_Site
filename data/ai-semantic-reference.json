@@ -8,9 +8,9 @@
     "page_url": "https://comdico.github.io/PMP_Atlas_Site/guidelines/shared-knowledge/",
     "json_url": "https://comdico.github.io/PMP_Atlas_Site/data/ai-semantic-reference.json",
     "yaml_url": "https://comdico.github.io/PMP_Atlas_Site/data/ai-semantic-reference.yaml",
-    "version": "1.3.0",
-    "last_reviewed": "2026-08-01",
-    "content_hash": "sha256:42bd791e14306fb85aa4d7ba870af2f3105cf2017ff9b50f64bcbfa0f05ec6f3"
+    "version": "1.3.1",
+    "last_reviewed": "2026-08-03",
+    "content_hash": "sha256:e3def3225f64cfa88808c8422e8459943f09bc035053424521f316642f0591be"
   },
   "verification_status_labels": {
     "verified": "Verified",
@@ -158,6 +158,267 @@
     ]
   },
   "concepts": [
+    {
+      "id": "SEM-SOURCE-SUPPORTED-PREDICTIVE-RELATIONSHIP",
+      "family": "delivery_terminology",
+      "preferred_term": "Source-supported predictive relationship",
+      "aliases": [
+        "process relationship",
+        "predictive relationship"
+      ],
+      "concise_definition": "A typical input, output, update, technique, or process dependency verified to an exact locator in the current official predictive supplement.",
+      "scope": "The canonical relationship registry owns direction, action, applicability, source class, and locator; process and artifact pages are derived views.",
+      "distinctions": [
+        "It is predictive reference scaffolding, not the July 2026 ECO hierarchy, a lifecycle phase model, or proof of mandatory linear sequence.",
+        "Typical does not mean required on every project; processes can overlap and repeat, and artifacts can be combined."
+      ],
+      "applicability": [
+        "predictive",
+        "hybrid",
+        "context_specific"
+      ],
+      "canonical_public_pages": [
+        "https://comdico.github.io/PMP_Atlas_Site/processes/"
+      ],
+      "related_processes": [
+        {
+          "id": "PRC-PLAN-SCOPE-MANAGEMENT",
+          "title": "Plan Scope Management",
+          "public_url": "https://comdico.github.io/PMP_Atlas_Site/processes/plan-scope-management/"
+        },
+        {
+          "id": "PRC-PLAN-SCHEDULE-MANAGEMENT",
+          "title": "Plan Schedule Management",
+          "public_url": "https://comdico.github.io/PMP_Atlas_Site/processes/plan-schedule-management/"
+        },
+        {
+          "id": "PRC-PLAN-COST-MANAGEMENT",
+          "title": "Plan Cost Management",
+          "public_url": "https://comdico.github.io/PMP_Atlas_Site/processes/plan-cost-management/"
+        },
+        {
+          "id": "PRC-PLAN-RESOURCE-MANAGEMENT",
+          "title": "Plan Resource Management",
+          "public_url": "https://comdico.github.io/PMP_Atlas_Site/processes/plan-resource-management/"
+        },
+        {
+          "id": "PRC-ESTIMATE-ACTIVITY-RESOURCES",
+          "title": "Estimate Activity Resources",
+          "public_url": "https://comdico.github.io/PMP_Atlas_Site/processes/estimate-activity-resources/"
+        },
+        {
+          "id": "PRC-MANAGE-PROJECT-KNOWLEDGE",
+          "title": "Manage Project Knowledge",
+          "public_url": "https://comdico.github.io/PMP_Atlas_Site/processes/manage-project-knowledge/"
+        },
+        {
+          "id": "PRC-ACQUIRE-RESOURCES",
+          "title": "Acquire Resources",
+          "public_url": "https://comdico.github.io/PMP_Atlas_Site/processes/acquire-resources/"
+        },
+        {
+          "id": "PRC-DEVELOP-TEAM",
+          "title": "Develop Team",
+          "public_url": "https://comdico.github.io/PMP_Atlas_Site/processes/develop-team/"
+        },
+        {
+          "id": "PRC-MANAGE-TEAM",
+          "title": "Manage Team",
+          "public_url": "https://comdico.github.io/PMP_Atlas_Site/processes/manage-team/"
+        },
+        {
+          "id": "PRC-CONTROL-RESOURCES",
+          "title": "Control Resources",
+          "public_url": "https://comdico.github.io/PMP_Atlas_Site/processes/control-resources/"
+        }
+      ],
+      "precedence": "PRE-008",
+      "verification_status": "verified",
+      "public_source_ids": [
+        "atlas-process-reference"
+      ],
+      "ai_guidance": {
+        "use_when": "Explaining or navigating a process input, output, update, technique, or dependency.",
+        "avoid": "Do not turn the relationship into a mandatory lifecycle sequence or ECO hierarchy.",
+        "answer_pattern": "Name the relationship action, applicability, exact source status, and tailoring boundary."
+      },
+      "last_reviewed": "2026-08-03",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SEM-TYPICAL-INPUT-AND-OUTPUT",
+      "family": "delivery_terminology",
+      "preferred_term": "Typical input and process output",
+      "aliases": [
+        "typical input",
+        "process output",
+        "artifact update"
+      ],
+      "concise_definition": "A source-supported information or artifact relationship that a predictive process may consume, create, produce, or update when applicable.",
+      "scope": "Creates, produces, and updates remain distinct lifecycle actions; raw work performance data, analyzed information, and reports remain distinct states.",
+      "distinctions": [
+        "An update is not automatically a new artifact, and a listed output need not be a separate document.",
+        "A relationship does not transfer approval, staffing, procurement, or acceptance authority."
+      ],
+      "applicability": [
+        "predictive",
+        "hybrid",
+        "context_specific"
+      ],
+      "canonical_public_pages": [
+        "https://comdico.github.io/PMP_Atlas_Site/processes/"
+      ],
+      "related_processes": [
+        {
+          "id": "PRC-PLAN-SCOPE-MANAGEMENT",
+          "title": "Plan Scope Management",
+          "public_url": "https://comdico.github.io/PMP_Atlas_Site/processes/plan-scope-management/"
+        },
+        {
+          "id": "PRC-PLAN-SCHEDULE-MANAGEMENT",
+          "title": "Plan Schedule Management",
+          "public_url": "https://comdico.github.io/PMP_Atlas_Site/processes/plan-schedule-management/"
+        },
+        {
+          "id": "PRC-PLAN-COST-MANAGEMENT",
+          "title": "Plan Cost Management",
+          "public_url": "https://comdico.github.io/PMP_Atlas_Site/processes/plan-cost-management/"
+        },
+        {
+          "id": "PRC-PLAN-RESOURCE-MANAGEMENT",
+          "title": "Plan Resource Management",
+          "public_url": "https://comdico.github.io/PMP_Atlas_Site/processes/plan-resource-management/"
+        },
+        {
+          "id": "PRC-ESTIMATE-ACTIVITY-RESOURCES",
+          "title": "Estimate Activity Resources",
+          "public_url": "https://comdico.github.io/PMP_Atlas_Site/processes/estimate-activity-resources/"
+        },
+        {
+          "id": "PRC-MANAGE-PROJECT-KNOWLEDGE",
+          "title": "Manage Project Knowledge",
+          "public_url": "https://comdico.github.io/PMP_Atlas_Site/processes/manage-project-knowledge/"
+        },
+        {
+          "id": "PRC-ACQUIRE-RESOURCES",
+          "title": "Acquire Resources",
+          "public_url": "https://comdico.github.io/PMP_Atlas_Site/processes/acquire-resources/"
+        },
+        {
+          "id": "PRC-DEVELOP-TEAM",
+          "title": "Develop Team",
+          "public_url": "https://comdico.github.io/PMP_Atlas_Site/processes/develop-team/"
+        },
+        {
+          "id": "PRC-MANAGE-TEAM",
+          "title": "Manage Team",
+          "public_url": "https://comdico.github.io/PMP_Atlas_Site/processes/manage-team/"
+        },
+        {
+          "id": "PRC-CONTROL-RESOURCES",
+          "title": "Control Resources",
+          "public_url": "https://comdico.github.io/PMP_Atlas_Site/processes/control-resources/"
+        }
+      ],
+      "precedence": "PRE-001",
+      "verification_status": "verified",
+      "public_source_ids": [
+        "atlas-process-reference"
+      ],
+      "ai_guidance": {
+        "use_when": "Distinguishing what a predictive process may consume, create, produce, or update.",
+        "avoid": "Do not reverse direction or collapse creates and updates.",
+        "answer_pattern": "State the artifact, direction, lifecycle action, applicability, and relevant process."
+      },
+      "last_reviewed": "2026-08-03",
+      "version": "1.0.0"
+    },
+    {
+      "id": "SEM-TAILORING-BOUNDARY",
+      "family": "delivery_terminology",
+      "preferred_term": "Relationship tailoring boundary",
+      "aliases": [
+        "tailoring boundary"
+      ],
+      "concise_definition": "The limit on interpreting predictive relationship data as universally required, separately documented, linear, or authority-conferring.",
+      "scope": "Apply relationship detail in proportion to project context, delivery approach, governance, organizational policy, and delegated authority.",
+      "distinctions": [
+        "Process Groups are interacting management-purpose groupings, not lifecycle phases.",
+        "The project manager coordinates within delegated authority and does not universally control organizational resources or contracts."
+      ],
+      "applicability": [
+        "common_across_approaches",
+        "context_specific"
+      ],
+      "canonical_public_pages": [
+        "https://comdico.github.io/PMP_Atlas_Site/processes/"
+      ],
+      "related_processes": [
+        {
+          "id": "PRC-PLAN-SCOPE-MANAGEMENT",
+          "title": "Plan Scope Management",
+          "public_url": "https://comdico.github.io/PMP_Atlas_Site/processes/plan-scope-management/"
+        },
+        {
+          "id": "PRC-PLAN-SCHEDULE-MANAGEMENT",
+          "title": "Plan Schedule Management",
+          "public_url": "https://comdico.github.io/PMP_Atlas_Site/processes/plan-schedule-management/"
+        },
+        {
+          "id": "PRC-PLAN-COST-MANAGEMENT",
+          "title": "Plan Cost Management",
+          "public_url": "https://comdico.github.io/PMP_Atlas_Site/processes/plan-cost-management/"
+        },
+        {
+          "id": "PRC-PLAN-RESOURCE-MANAGEMENT",
+          "title": "Plan Resource Management",
+          "public_url": "https://comdico.github.io/PMP_Atlas_Site/processes/plan-resource-management/"
+        },
+        {
+          "id": "PRC-ESTIMATE-ACTIVITY-RESOURCES",
+          "title": "Estimate Activity Resources",
+          "public_url": "https://comdico.github.io/PMP_Atlas_Site/processes/estimate-activity-resources/"
+        },
+        {
+          "id": "PRC-MANAGE-PROJECT-KNOWLEDGE",
+          "title": "Manage Project Knowledge",
+          "public_url": "https://comdico.github.io/PMP_Atlas_Site/processes/manage-project-knowledge/"
+        },
+        {
+          "id": "PRC-ACQUIRE-RESOURCES",
+          "title": "Acquire Resources",
+          "public_url": "https://comdico.github.io/PMP_Atlas_Site/processes/acquire-resources/"
+        },
+        {
+          "id": "PRC-DEVELOP-TEAM",
+          "title": "Develop Team",
+          "public_url": "https://comdico.github.io/PMP_Atlas_Site/processes/develop-team/"
+        },
+        {
+          "id": "PRC-MANAGE-TEAM",
+          "title": "Manage Team",
+          "public_url": "https://comdico.github.io/PMP_Atlas_Site/processes/manage-team/"
+        },
+        {
+          "id": "PRC-CONTROL-RESOURCES",
+          "title": "Control Resources",
+          "public_url": "https://comdico.github.io/PMP_Atlas_Site/processes/control-resources/"
+        }
+      ],
+      "precedence": "PRE-010",
+      "verification_status": "atlas_synthesis",
+      "public_source_ids": [
+        "atlas-process-reference"
+      ],
+      "atlas_synthesis_note": "Atlas boundary derived from source caveats, current governance decisions, and the separation of relationship evidence from organizational authority.",
+      "ai_guidance": {
+        "use_when": "Preventing a process relationship from being overstated as mandatory, linear, separately documented, or authority-conferring.",
+        "avoid": "Do not infer universal staffing, procurement, baseline, acceptance, or release authority.",
+        "answer_pattern": "Present the typical relationship, then state the relevant tailoring and authority limitation."
+      },
+      "last_reviewed": "2026-08-03",
+      "version": "1.0.0"
+    },
     {
       "id": "SEM-STK-ENGAGEMENT-ASSESSMENT-MATRIX",
       "family": "delivery_terminology",

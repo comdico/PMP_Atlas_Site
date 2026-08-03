@@ -7,9 +7,9 @@ metadata:
   page_url: https://comdico.github.io/PMP_Atlas_Site/guidelines/shared-knowledge/
   json_url: https://comdico.github.io/PMP_Atlas_Site/data/ai-semantic-reference.json
   yaml_url: https://comdico.github.io/PMP_Atlas_Site/data/ai-semantic-reference.yaml
-  version: 1.3.0
-  last_reviewed: '2026-08-01'
-  content_hash: sha256:42bd791e14306fb85aa4d7ba870af2f3105cf2017ff9b50f64bcbfa0f05ec6f3
+  version: 1.3.1
+  last_reviewed: '2026-08-03'
+  content_hash: sha256:e3def3225f64cfa88808c8422e8459943f09bc035053424521f316642f0591be
 verification_status_labels:
   verified: Verified
   atlas_synthesis: Atlas synthesis
@@ -104,6 +104,150 @@ ai_usage:
   - Describing all hybrid work as a separate standardized framework.
   - Presenting Atlas-generated crosswalks as official PMI mappings.
 concepts:
+- id: SEM-SOURCE-SUPPORTED-PREDICTIVE-RELATIONSHIP
+  family: delivery_terminology
+  preferred_term: Source-supported predictive relationship
+  aliases:
+  - process relationship
+  - predictive relationship
+  concise_definition: A typical input, output, update, technique, or process dependency verified to an exact locator in the current official predictive supplement.
+  scope: The canonical relationship registry owns direction, action, applicability, source class, and locator; process and artifact pages are derived views.
+  distinctions:
+  - It is predictive reference scaffolding, not the July 2026 ECO hierarchy, a lifecycle phase model, or proof of mandatory linear sequence.
+  - Typical does not mean required on every project; processes can overlap and repeat, and artifacts can be combined.
+  applicability:
+  - predictive
+  - hybrid
+  - context_specific
+  canonical_public_pages:
+  - https://comdico.github.io/PMP_Atlas_Site/processes/
+  related_processes:
+  - &id001
+    id: PRC-PLAN-SCOPE-MANAGEMENT
+    title: Plan Scope Management
+    public_url: https://comdico.github.io/PMP_Atlas_Site/processes/plan-scope-management/
+  - &id002
+    id: PRC-PLAN-SCHEDULE-MANAGEMENT
+    title: Plan Schedule Management
+    public_url: https://comdico.github.io/PMP_Atlas_Site/processes/plan-schedule-management/
+  - &id003
+    id: PRC-PLAN-COST-MANAGEMENT
+    title: Plan Cost Management
+    public_url: https://comdico.github.io/PMP_Atlas_Site/processes/plan-cost-management/
+  - &id004
+    id: PRC-PLAN-RESOURCE-MANAGEMENT
+    title: Plan Resource Management
+    public_url: https://comdico.github.io/PMP_Atlas_Site/processes/plan-resource-management/
+  - &id005
+    id: PRC-ESTIMATE-ACTIVITY-RESOURCES
+    title: Estimate Activity Resources
+    public_url: https://comdico.github.io/PMP_Atlas_Site/processes/estimate-activity-resources/
+  - &id006
+    id: PRC-MANAGE-PROJECT-KNOWLEDGE
+    title: Manage Project Knowledge
+    public_url: https://comdico.github.io/PMP_Atlas_Site/processes/manage-project-knowledge/
+  - &id007
+    id: PRC-ACQUIRE-RESOURCES
+    title: Acquire Resources
+    public_url: https://comdico.github.io/PMP_Atlas_Site/processes/acquire-resources/
+  - &id008
+    id: PRC-DEVELOP-TEAM
+    title: Develop Team
+    public_url: https://comdico.github.io/PMP_Atlas_Site/processes/develop-team/
+  - &id009
+    id: PRC-MANAGE-TEAM
+    title: Manage Team
+    public_url: https://comdico.github.io/PMP_Atlas_Site/processes/manage-team/
+  - &id010
+    id: PRC-CONTROL-RESOURCES
+    title: Control Resources
+    public_url: https://comdico.github.io/PMP_Atlas_Site/processes/control-resources/
+  precedence: PRE-008
+  verification_status: verified
+  public_source_ids:
+  - atlas-process-reference
+  ai_guidance:
+    use_when: Explaining or navigating a process input, output, update, technique, or dependency.
+    avoid: Do not turn the relationship into a mandatory lifecycle sequence or ECO hierarchy.
+    answer_pattern: Name the relationship action, applicability, exact source status, and tailoring boundary.
+  last_reviewed: '2026-08-03'
+  version: 1.0.0
+- id: SEM-TYPICAL-INPUT-AND-OUTPUT
+  family: delivery_terminology
+  preferred_term: Typical input and process output
+  aliases:
+  - typical input
+  - process output
+  - artifact update
+  concise_definition: A source-supported information or artifact relationship that a predictive process may consume, create, produce, or update when applicable.
+  scope: Creates, produces, and updates remain distinct lifecycle actions; raw work performance data, analyzed information, and reports remain distinct states.
+  distinctions:
+  - An update is not automatically a new artifact, and a listed output need not be a separate document.
+  - A relationship does not transfer approval, staffing, procurement, or acceptance authority.
+  applicability:
+  - predictive
+  - hybrid
+  - context_specific
+  canonical_public_pages:
+  - https://comdico.github.io/PMP_Atlas_Site/processes/
+  related_processes:
+  - *id001
+  - *id002
+  - *id003
+  - *id004
+  - *id005
+  - *id006
+  - *id007
+  - *id008
+  - *id009
+  - *id010
+  precedence: PRE-001
+  verification_status: verified
+  public_source_ids:
+  - atlas-process-reference
+  ai_guidance:
+    use_when: Distinguishing what a predictive process may consume, create, produce, or update.
+    avoid: Do not reverse direction or collapse creates and updates.
+    answer_pattern: State the artifact, direction, lifecycle action, applicability, and relevant process.
+  last_reviewed: '2026-08-03'
+  version: 1.0.0
+- id: SEM-TAILORING-BOUNDARY
+  family: delivery_terminology
+  preferred_term: Relationship tailoring boundary
+  aliases:
+  - tailoring boundary
+  concise_definition: The limit on interpreting predictive relationship data as universally required, separately documented, linear, or authority-conferring.
+  scope: Apply relationship detail in proportion to project context, delivery approach, governance, organizational policy, and delegated authority.
+  distinctions:
+  - Process Groups are interacting management-purpose groupings, not lifecycle phases.
+  - The project manager coordinates within delegated authority and does not universally control organizational resources or contracts.
+  applicability:
+  - common_across_approaches
+  - context_specific
+  canonical_public_pages:
+  - https://comdico.github.io/PMP_Atlas_Site/processes/
+  related_processes:
+  - *id001
+  - *id002
+  - *id003
+  - *id004
+  - *id005
+  - *id006
+  - *id007
+  - *id008
+  - *id009
+  - *id010
+  precedence: PRE-010
+  verification_status: atlas_synthesis
+  public_source_ids:
+  - atlas-process-reference
+  atlas_synthesis_note: Atlas boundary derived from source caveats, current governance decisions, and the separation of relationship evidence from organizational authority.
+  ai_guidance:
+    use_when: Preventing a process relationship from being overstated as mandatory, linear, separately documented, or authority-conferring.
+    avoid: Do not infer universal staffing, procurement, baseline, acceptance, or release authority.
+    answer_pattern: Present the typical relationship, then state the relevant tailoring and authority limitation.
+  last_reviewed: '2026-08-03'
+  version: 1.0.0
 - id: SEM-STK-ENGAGEMENT-ASSESSMENT-MATRIX
   family: delivery_terminology
   preferred_term: Stakeholder Engagement Assessment Matrix
@@ -132,29 +276,29 @@ concepts:
   canonical_public_pages:
   - https://comdico.github.io/PMP_Atlas_Site/artifacts/stakeholder-engagement-assessment-matrix/
   related_processes:
-  - &id038
+  - &id048
     id: PRC-IDENTIFY-STAKEHOLDERS
     title: Identify Stakeholders
     public_url: https://comdico.github.io/PMP_Atlas_Site/processes/identify-stakeholders/
   - id: PRC-PLAN-STAKEHOLDER-ENGAGEMENT
     title: Plan Stakeholder Engagement
     public_url: https://comdico.github.io/PMP_Atlas_Site/processes/plan-stakeholder-engagement/
-  - &id011
+  - &id021
     id: PRC-MANAGE-STAKEHOLDER-ENGAGEMENT
     title: Manage Stakeholder Engagement
     public_url: https://comdico.github.io/PMP_Atlas_Site/processes/manage-stakeholder-engagement/
   - id: PRC-MONITOR-STAKEHOLDER-ENGAGEMENT
     title: Monitor Stakeholder Engagement
     public_url: https://comdico.github.io/PMP_Atlas_Site/processes/monitor-stakeholder-engagement/
-  - &id057
+  - &id065
     id: PRC-PLAN-COMMUNICATIONS-MANAGEMENT
     title: Plan Communications Management
     public_url: https://comdico.github.io/PMP_Atlas_Site/processes/plan-communications-management/
-  - &id039
+  - &id049
     id: PRC-MANAGE-COMMUNICATIONS
     title: Manage Communications
     public_url: https://comdico.github.io/PMP_Atlas_Site/processes/manage-communications/
-  - &id058
+  - &id066
     id: PRC-MONITOR-COMMUNICATIONS
     title: Monitor Communications
     public_url: https://comdico.github.io/PMP_Atlas_Site/processes/monitor-communications/
@@ -164,22 +308,22 @@ concepts:
     public_url: https://comdico.github.io/PMP_Atlas_Site/artifacts/stakeholder-register/
   - id: ART-STK-002
     title: Stakeholder Engagement Plan
-  - &id061
+  - &id069
     id: ART-COM-001
     title: Communications Management Plan
-  - &id002
+  - &id012
     id: ART-ISS-001
     title: Issue Log
     public_url: https://comdico.github.io/PMP_Atlas_Site/artifacts/issue-log/
-  - &id032
+  - &id042
     id: ART-RSK-001
     title: Risk Register
     public_url: https://comdico.github.io/PMP_Atlas_Site/artifacts/risk-register/
-  - &id008
+  - &id018
     id: ART-INT-002
     title: Lessons Learned Register
     public_url: https://comdico.github.io/PMP_Atlas_Site/artifacts/lessons-learned-register/
-  - &id024
+  - &id034
     id: ART-CHG-001
     title: Change Requests
     public_url: https://comdico.github.io/PMP_Atlas_Site/artifacts/change-requests/
@@ -187,19 +331,19 @@ concepts:
     title: Stakeholder Engagement Assessment Matrix
     public_url: https://comdico.github.io/PMP_Atlas_Site/artifacts/stakeholder-engagement-assessment-matrix/
   related_lifecycle_chapters:
-  - &id003
+  - &id013
     id: LFC-002
     title: Integrated Planning
     public_url: https://comdico.github.io/PMP_Atlas_Site/lifecycle/integrated-planning/
-  - &id004
+  - &id014
     id: LFC-007
     title: Execution and Team Leadership
     public_url: https://comdico.github.io/PMP_Atlas_Site/lifecycle/execution-leadership/
-  - &id001
+  - &id011
     id: LFC-008
     title: Monitoring and Change
     public_url: https://comdico.github.io/PMP_Atlas_Site/lifecycle/monitoring-change/
-  - &id009
+  - &id019
     id: LFC-009
     title: Adaptive and Hybrid Delivery
     public_url: https://comdico.github.io/PMP_Atlas_Site/lifecycle/adaptive-hybrid/
@@ -232,51 +376,51 @@ concepts:
   canonical_public_pages:
   - https://comdico.github.io/PMP_Atlas_Site/lifecycle/conception-authorization/
   related_processes:
-  - &id018
+  - &id028
     id: PRC-DEVELOP-PROJECT-CHARTER
     title: Develop Project Charter
     public_url: https://comdico.github.io/PMP_Atlas_Site/processes/develop-project-charter/
-  - &id019
+  - &id029
     id: PRC-PERFORM-INTEGRATED-CHANGE-CONTROL
     title: Perform Integrated Change Control
     public_url: https://comdico.github.io/PMP_Atlas_Site/processes/perform-integrated-change-control/
-  - &id014
+  - &id024
     id: PRC-CLOSE-PROJECT-OR-PHASE
     title: Close Project or Phase
     public_url: https://comdico.github.io/PMP_Atlas_Site/processes/close-project-or-phase/
   related_artifacts:
-  - &id020
+  - &id030
     id: ART-CHR-001
     title: Project Charter
     public_url: https://comdico.github.io/PMP_Atlas_Site/artifacts/project-charter/
-  - &id027
+  - &id037
     id: ART-BEN-001
     title: Benefits Management Information
     public_url: https://comdico.github.io/PMP_Atlas_Site/artifacts/benefits-management-information/
-  - &id015
+  - &id025
     id: ART-CLS-002
     title: Formal Closure Record
     public_url: https://comdico.github.io/PMP_Atlas_Site/artifacts/formal-closure-record/
   related_lifecycle_chapters:
-  - &id022
+  - &id032
     id: LFC-001
     title: Conception and Authorization
     public_url: https://comdico.github.io/PMP_Atlas_Site/lifecycle/conception-authorization/
-  - *id001
-  - &id016
+  - *id011
+  - &id026
     id: LFC-010
     title: Verification, Acceptance, Transition, and Closure
     public_url: https://comdico.github.io/PMP_Atlas_Site/lifecycle/acceptance-transition-closure/
   related_decision_guides:
-  - &id005
+  - &id015
     id: DEC-CHG-001
     title: A Stakeholder Requests a Baseline Change
     public_url: https://comdico.github.io/PMP_Atlas_Site/decisions/stakeholder-baseline-change/
-  - &id006
+  - &id016
     id: DEC-CLS-001
     title: Transition or Closure Is Requested with Unresolved Obligations
     public_url: https://comdico.github.io/PMP_Atlas_Site/decisions/transition-closure-readiness/
-  - &id026
+  - &id036
     id: DEC-BEN-001
     title: Expected Benefits Are Not Yet Realized at Project Closure
     public_url: https://comdico.github.io/PMP_Atlas_Site/decisions/benefits-not-realized-at-closure/
@@ -312,38 +456,38 @@ concepts:
   canonical_public_pages:
   - https://comdico.github.io/PMP_Atlas_Site/processes/
   related_processes:
-  - &id036
+  - &id046
     id: PRC-DEVELOP-PROJECT-MANAGEMENT-PLAN
     title: Develop Project Management Plan
     public_url: https://comdico.github.io/PMP_Atlas_Site/processes/develop-project-management-plan/
-  - &id007
+  - &id017
     id: PRC-DIRECT-AND-MANAGE-PROJECT-WORK
     title: Direct and Manage Project Work
     public_url: https://comdico.github.io/PMP_Atlas_Site/processes/direct-and-manage-project-work/
-  - &id023
+  - &id033
     id: PRC-MONITOR-AND-CONTROL-PROJECT-WORK
     title: Monitor and Control Project Work
     public_url: https://comdico.github.io/PMP_Atlas_Site/processes/monitor-and-control-project-work/
   related_artifacts:
-  - &id021
+  - &id031
     id: ART-PLN-001
     title: Project Management Plan
     public_url: https://comdico.github.io/PMP_Atlas_Site/artifacts/project-management-plan/
   - id: ART-WPR-001
     title: Work Performance Reports
     public_url: https://comdico.github.io/PMP_Atlas_Site/artifacts/work-performance-reports/
-  - *id002
+  - *id012
   related_lifecycle_chapters:
-  - *id003
-  - *id004
-  - *id001
+  - *id013
+  - *id014
+  - *id011
   related_decision_guides:
-  - *id005
-  - &id010
+  - *id015
+  - &id020
     id: DEC-ISS-001
     title: A Risk Occurs or an Impediment Exceeds Team Authority
     public_url: https://comdico.github.io/PMP_Atlas_Site/decisions/risk-issue-impediment-escalation/
-  - *id006
+  - *id016
   precedence: PRE-003
   verification_status: source_limited
   public_source_ids:
@@ -376,34 +520,28 @@ concepts:
   canonical_public_pages:
   - https://comdico.github.io/PMP_Atlas_Site/lifecycle/execution-leadership/
   related_processes:
-  - *id007
-  - &id052
-    id: PRC-DEVELOP-TEAM
-    title: Develop Team
-    public_url: https://comdico.github.io/PMP_Atlas_Site/processes/develop-team/
-  - &id043
-    id: PRC-MANAGE-TEAM
-    title: Manage Team
-    public_url: https://comdico.github.io/PMP_Atlas_Site/processes/manage-team/
+  - *id017
+  - *id008
+  - *id009
   related_artifacts:
-  - &id012
+  - &id022
     id: ART-DEL-001
     title: Deliverables
     public_url: https://comdico.github.io/PMP_Atlas_Site/artifacts/deliverables/
-  - *id008
-  - &id013
+  - *id018
+  - &id023
     id: ART-ISS-002
     title: Impediment Record
     public_url: https://comdico.github.io/PMP_Atlas_Site/artifacts/impediment-record/
   related_lifecycle_chapters:
-  - *id004
-  - *id009
+  - *id014
+  - *id019
   related_decision_guides:
-  - &id031
+  - &id041
     id: DEC-QLT-001
     title: A Deliverable Fails Quality Inspection
     public_url: https://comdico.github.io/PMP_Atlas_Site/decisions/quality-inspection-failure/
-  - *id010
+  - *id020
   precedence: PRE-010
   verification_status: source_limited
   public_source_ids:
@@ -436,21 +574,21 @@ concepts:
   canonical_public_pages:
   - https://comdico.github.io/PMP_Atlas_Site/lifecycle/adaptive-hybrid/
   related_processes:
-  - *id007
-  - *id011
+  - *id017
+  - *id021
   related_artifacts:
-  - &id037
+  - &id047
     id: ART-REQ-001
     title: Requirements Documentation
     public_url: https://comdico.github.io/PMP_Atlas_Site/artifacts/requirements-documentation/
-  - *id012
-  - *id013
+  - *id022
+  - *id023
   related_lifecycle_chapters:
-  - *id004
-  - *id009
+  - *id014
+  - *id019
   related_decision_guides:
-  - *id010
-  - &id017
+  - *id020
+  - &id027
     id: DEC-ACC-001
     title: A Verified Deliverable Is Rejected During Acceptance
     public_url: https://comdico.github.io/PMP_Atlas_Site/decisions/verified-deliverable-rejected/
@@ -485,34 +623,34 @@ concepts:
   canonical_public_pages:
   - https://comdico.github.io/PMP_Atlas_Site/processes/validate-scope/
   related_processes:
-  - &id033
+  - &id043
     id: PRC-VALIDATE-SCOPE
     title: Validate Scope
     public_url: https://comdico.github.io/PMP_Atlas_Site/processes/validate-scope/
-  - &id028
+  - &id038
     id: PRC-CONTROL-QUALITY
     title: Control Quality
     public_url: https://comdico.github.io/PMP_Atlas_Site/processes/control-quality/
-  - *id014
+  - *id024
   related_artifacts:
-  - &id029
+  - &id039
     id: ART-QLT-004
     title: Verified Deliverables
     public_url: https://comdico.github.io/PMP_Atlas_Site/artifacts/verified-deliverables/
-  - &id049
+  - &id058
     id: ART-QLT-005
     title: Accepted Deliverables
     public_url: https://comdico.github.io/PMP_Atlas_Site/artifacts/accepted-deliverables/
-  - *id015
+  - *id025
   related_lifecycle_chapters:
-  - &id030
+  - &id040
     id: LFC-005
     title: Quality
     public_url: https://comdico.github.io/PMP_Atlas_Site/lifecycle/quality/
-  - *id016
+  - *id026
   related_decision_guides:
-  - *id017
-  - *id006
+  - *id027
+  - *id016
   precedence: PRE-003
   verification_status: source_limited
   public_source_ids:
@@ -543,24 +681,24 @@ concepts:
   canonical_public_pages:
   - https://comdico.github.io/PMP_Atlas_Site/lifecycle/conception-authorization/
   related_processes:
-  - *id018
-  - *id019
-  - *id014
+  - *id028
+  - *id029
+  - *id024
   related_artifacts:
-  - *id020
-  - *id021
-  - *id015
+  - *id030
+  - *id031
+  - *id025
   related_lifecycle_chapters:
-  - *id022
-  - *id001
-  - *id016
+  - *id032
+  - *id011
+  - *id026
   related_decision_guides:
-  - *id005
-  - &id025
+  - *id015
+  - &id035
     id: DEC-CMP-001
     title: A Compliance Problem Is Discovered
     public_url: https://comdico.github.io/PMP_Atlas_Site/decisions/compliance-problem/
-  - *id006
+  - *id016
   precedence: PRE-010
   verification_status: source_limited
   public_source_ids:
@@ -594,20 +732,20 @@ concepts:
   canonical_public_pages:
   - https://comdico.github.io/PMP_Atlas_Site/processes/perform-integrated-change-control/
   related_processes:
-  - *id023
-  - *id019
+  - *id033
+  - *id029
   related_artifacts:
-  - *id024
+  - *id034
   - id: ART-CHG-004
     title: Change Log
     public_url: https://comdico.github.io/PMP_Atlas_Site/artifacts/change-log/
-  - *id021
+  - *id031
   related_lifecycle_chapters:
-  - *id001
-  - *id009
+  - *id011
+  - *id019
   related_decision_guides:
-  - *id005
-  - *id025
+  - *id015
+  - *id035
   precedence: PRE-003
   verification_status: source_limited
   public_source_ids:
@@ -638,21 +776,21 @@ concepts:
   canonical_public_pages:
   - https://comdico.github.io/PMP_Atlas_Site/lifecycle/acceptance-transition-closure/
   related_processes:
-  - *id014
+  - *id024
   related_artifacts:
-  - &id050
+  - &id059
     id: ART-TRN-001
     title: Transition Package
     public_url: https://comdico.github.io/PMP_Atlas_Site/artifacts/transition-package/
   - id: ART-CLS-001
     title: Final Report
     public_url: https://comdico.github.io/PMP_Atlas_Site/artifacts/final-report/
-  - *id015
+  - *id025
   related_lifecycle_chapters:
-  - *id016
-  related_decision_guides:
-  - *id006
   - *id026
+  related_decision_guides:
+  - *id016
+  - *id036
   precedence: PRE-005
   verification_status: source_limited
   public_source_ids:
@@ -681,20 +819,20 @@ concepts:
   canonical_public_pages:
   - https://comdico.github.io/PMP_Atlas_Site/decisions/benefits-not-realized-at-closure/
   related_processes:
-  - *id018
-  - *id014
+  - *id028
+  - *id024
   related_artifacts:
-  - *id027
-  - &id051
+  - *id037
+  - &id060
     id: ART-BEN-002
     title: Benefits Handoff Record
     public_url: https://comdico.github.io/PMP_Atlas_Site/artifacts/benefits-handoff-record/
-  - *id015
+  - *id025
   related_lifecycle_chapters:
-  - *id022
-  - *id016
-  related_decision_guides:
+  - *id032
   - *id026
+  related_decision_guides:
+  - *id036
   precedence: PRE-010
   verification_status: source_limited
   public_source_ids:
@@ -725,15 +863,15 @@ concepts:
   canonical_public_pages:
   - https://comdico.github.io/PMP_Atlas_Site/lifecycle/quality/
   related_processes:
-  - &id045
+  - &id054
     id: PRC-PLAN-QUALITY-MANAGEMENT
     title: Plan Quality Management
     public_url: https://comdico.github.io/PMP_Atlas_Site/processes/plan-quality-management/
-  - &id053
+  - &id061
     id: PRC-MANAGE-QUALITY
     title: Manage Quality
     public_url: https://comdico.github.io/PMP_Atlas_Site/processes/manage-quality/
-  - *id028
+  - *id038
   related_artifacts:
   - id: ART-QLT-001
     title: Quality Management Plan
@@ -741,14 +879,14 @@ concepts:
   - id: ART-QLT-003
     title: Quality-Control Measurements
     public_url: https://comdico.github.io/PMP_Atlas_Site/artifacts/quality-control-measurements/
-  - *id029
+  - *id039
   related_lifecycle_chapters:
-  - *id030
-  - *id016
+  - *id040
+  - *id026
   related_decision_guides:
-  - *id031
-  - *id017
-  - *id025
+  - *id041
+  - *id027
+  - *id035
   precedence: PRE-003
   verification_status: source_limited
   public_source_ids:
@@ -782,30 +920,30 @@ concepts:
   - id: PRC-PLAN-RISK-MANAGEMENT
     title: Plan Risk Management
     public_url: https://comdico.github.io/PMP_Atlas_Site/processes/plan-risk-management/
-  - &id041
+  - &id051
     id: PRC-IDENTIFY-RISKS
     title: Identify Risks
     public_url: https://comdico.github.io/PMP_Atlas_Site/processes/identify-risks/
-  - &id040
+  - &id050
     id: PRC-MONITOR-RISKS
     title: Monitor Risks
     public_url: https://comdico.github.io/PMP_Atlas_Site/processes/monitor-risks/
   related_artifacts:
-  - *id032
-  - &id042
+  - *id042
+  - &id052
     id: ART-RSK-003
     title: Risk Report
     public_url: https://comdico.github.io/PMP_Atlas_Site/artifacts/risk-report/
-  - *id002
+  - *id012
   related_lifecycle_chapters:
-  - &id034
+  - &id044
     id: LFC-006
     title: Risk, Compliance, and Procurement
     public_url: https://comdico.github.io/PMP_Atlas_Site/lifecycle/risk-compliance-procurement/
-  - *id001
+  - *id011
   related_decision_guides:
-  - *id010
-  - *id025
+  - *id020
+  - *id035
   precedence: PRE-010
   verification_status: source_limited
   public_source_ids:
@@ -843,29 +981,29 @@ concepts:
   canonical_public_pages:
   - https://comdico.github.io/PMP_Atlas_Site/decisions/compliance-problem/
   related_processes:
-  - *id028
-  - &id035
+  - *id038
+  - &id045
     id: PRC-CONTROL-PROCUREMENTS
     title: Control Procurements
     public_url: https://comdico.github.io/PMP_Atlas_Site/processes/control-procurements/
-  - *id033
+  - *id043
   related_artifacts:
-  - &id047
+  - &id056
     id: ART-CMP-001
     title: Compliance Evidence and Traceability
     public_url: https://comdico.github.io/PMP_Atlas_Site/artifacts/compliance-evidence-traceability/
-  - &id046
+  - &id055
     id: ART-QLT-007
     title: Test and Evaluation Documents
     public_url: https://comdico.github.io/PMP_Atlas_Site/artifacts/test-evaluation-documents/
-  - *id002
+  - *id012
   related_lifecycle_chapters:
-  - *id030
-  - *id034
-  - *id016
+  - *id040
+  - *id044
+  - *id026
   related_decision_guides:
-  - *id025
-  - *id006
+  - *id035
+  - *id016
   precedence: PRE-010
   verification_status: source_limited
   public_source_ids:
@@ -898,17 +1036,17 @@ concepts:
   canonical_public_pages:
   - https://comdico.github.io/PMP_Atlas_Site/lifecycle/risk-compliance-procurement/
   related_processes:
-  - &id054
+  - &id062
     id: PRC-PLAN-PROCUREMENT-MANAGEMENT
     title: Plan Procurement Management
     public_url: https://comdico.github.io/PMP_Atlas_Site/processes/plan-procurement-management/
-  - &id055
+  - &id063
     id: PRC-CONDUCT-PROCUREMENTS
     title: Conduct Procurements
     public_url: https://comdico.github.io/PMP_Atlas_Site/processes/conduct-procurements/
-  - *id035
+  - *id045
   related_artifacts:
-  - &id048
+  - &id057
     id: ART-PRC-003
     title: Agreements
     public_url: https://comdico.github.io/PMP_Atlas_Site/artifacts/agreements/
@@ -919,15 +1057,15 @@ concepts:
     title: Closed Procurement
     public_url: https://comdico.github.io/PMP_Atlas_Site/artifacts/closed-procurement/
   related_lifecycle_chapters:
-  - *id034
-  - *id016
+  - *id044
+  - *id026
   related_decision_guides:
-  - &id056
+  - &id064
     id: DEC-PRC-001
     title: Seller Performance Threatens Project Objectives
     public_url: https://comdico.github.io/PMP_Atlas_Site/decisions/seller-performance-threat/
-  - *id025
-  - *id006
+  - *id035
+  - *id016
   precedence: PRE-010
   verification_status: source_limited
   public_source_ids:
@@ -958,24 +1096,24 @@ concepts:
   canonical_public_pages:
   - https://comdico.github.io/PMP_Atlas_Site/lifecycle/adaptive-hybrid/
   related_processes:
-  - *id036
-  - *id019
+  - *id046
+  - *id029
   related_artifacts:
-  - *id021
+  - *id031
   - id: ART-SCP-001
     title: Scope Baseline
     public_url: https://comdico.github.io/PMP_Atlas_Site/artifacts/scope-baseline/
-  - &id059
+  - &id067
     id: ART-SCH-005
     title: Schedule Baseline
     public_url: https://comdico.github.io/PMP_Atlas_Site/artifacts/schedule-baseline/
-  - &id060
+  - &id068
     id: ART-CST-002
     title: Cost Baseline
     public_url: https://comdico.github.io/PMP_Atlas_Site/artifacts/cost-baseline/
   related_lifecycle_chapters:
-  - *id003
-  - *id009
+  - *id013
+  - *id019
   precedence: PRE-005
   verification_status: atlas_synthesis
   public_source_ids:
@@ -1005,7 +1143,7 @@ concepts:
   canonical_public_pages:
   - https://comdico.github.io/PMP_Atlas_Site/lifecycle/adaptive-hybrid/
   related_lifecycle_chapters:
-  - *id009
+  - *id019
   precedence: PRE-007
   verification_status: source_limited
   public_source_ids:
@@ -1035,18 +1173,18 @@ concepts:
   canonical_public_pages:
   - https://comdico.github.io/PMP_Atlas_Site/lifecycle/adaptive-hybrid/
   related_processes:
-  - &id044
+  - &id053
     id: PRC-COLLECT-REQUIREMENTS
     title: Collect Requirements
     public_url: https://comdico.github.io/PMP_Atlas_Site/processes/collect-requirements/
-  - *id007
-  - *id023
+  - *id017
+  - *id033
   related_artifacts:
-  - *id037
-  - *id012
-  - *id013
+  - *id047
+  - *id022
+  - *id023
   related_lifecycle_chapters:
-  - *id009
+  - *id019
   precedence: PRE-005
   verification_status: atlas_synthesis
   public_source_ids:
@@ -1080,7 +1218,7 @@ concepts:
   canonical_public_pages:
   - https://comdico.github.io/PMP_Atlas_Site/lifecycle/adaptive-hybrid/
   related_lifecycle_chapters:
-  - *id009
+  - *id019
   precedence: PRE-007
   verification_status: source_limited
   public_source_ids:
@@ -1110,15 +1248,15 @@ concepts:
   canonical_public_pages:
   - https://comdico.github.io/PMP_Atlas_Site/lifecycle/adaptive-hybrid/
   related_processes:
-  - *id036
-  - *id007
-  - *id019
+  - *id046
+  - *id017
+  - *id029
   related_artifacts:
-  - *id021
-  - *id012
-  - *id024
+  - *id031
+  - *id022
+  - *id034
   related_lifecycle_chapters:
-  - *id009
+  - *id019
   precedence: PRE-005
   verification_status: atlas_synthesis
   public_source_ids:
@@ -1151,7 +1289,7 @@ concepts:
   canonical_public_pages:
   - https://comdico.github.io/PMP_Atlas_Site/lifecycle/scrum-events-and-adaptive-cadences/
   related_lifecycle_chapters:
-  - *id009
+  - *id019
   precedence: PRE-007
   verification_status: source_limited
   public_source_ids:
@@ -1182,7 +1320,7 @@ concepts:
   canonical_public_pages:
   - https://comdico.github.io/PMP_Atlas_Site/lifecycle/scrum-events-and-adaptive-cadences/
   related_lifecycle_chapters:
-  - *id009
+  - *id019
   precedence: PRE-007
   verification_status: source_limited
   public_source_ids:
@@ -1212,14 +1350,14 @@ concepts:
   canonical_public_pages:
   - https://comdico.github.io/PMP_Atlas_Site/processes/
   related_processes:
-  - *id038
-  - *id039
-  - *id040
+  - *id048
+  - *id049
+  - *id050
   related_lifecycle_chapters:
   - id: LFC-000
     title: Project Start to Completion
     public_url: https://comdico.github.io/PMP_Atlas_Site/lifecycle/
-  - *id009
+  - *id019
   precedence: PRE-007
   verification_status: atlas_synthesis
   public_source_ids:
@@ -1479,20 +1617,20 @@ concepts:
   canonical_public_pages:
   - https://comdico.github.io/PMP_Atlas_Site/artifacts/risk-register/
   related_processes:
-  - *id041
+  - *id051
   - id: PRC-PLAN-RISK-RESPONSES
     title: Plan Risk Responses
     public_url: https://comdico.github.io/PMP_Atlas_Site/processes/plan-risk-responses/
-  - *id040
+  - *id050
   related_artifacts:
-  - *id032
   - *id042
-  - *id002
+  - *id052
+  - *id012
   related_lifecycle_chapters:
-  - *id034
-  - *id001
+  - *id044
+  - *id011
   related_decision_guides:
-  - *id010
+  - *id020
   precedence: PRE-003
   verification_status: verified
   public_source_ids:
@@ -1521,18 +1659,18 @@ concepts:
   canonical_public_pages:
   - https://comdico.github.io/PMP_Atlas_Site/artifacts/issue-log/
   related_processes:
-  - *id023
-  - *id043
+  - *id033
+  - *id009
   related_artifacts:
-  - *id002
-  - *id032
-  - *id024
+  - *id012
+  - *id042
+  - *id034
   related_lifecycle_chapters:
-  - *id004
-  - *id001
+  - *id014
+  - *id011
   related_decision_guides:
-  - *id010
-  - *id025
+  - *id020
+  - *id035
   precedence: PRE-004
   verification_status: verified
   public_source_ids:
@@ -1564,18 +1702,18 @@ concepts:
   canonical_public_pages:
   - https://comdico.github.io/PMP_Atlas_Site/artifacts/impediment-record/
   related_processes:
-  - *id043
-  - *id023
-  related_artifacts:
-  - *id013
-  - *id002
-  - *id024
-  related_lifecycle_chapters:
-  - *id004
-  - *id001
   - *id009
+  - *id033
+  related_artifacts:
+  - *id023
+  - *id012
+  - *id034
+  related_lifecycle_chapters:
+  - *id014
+  - *id011
+  - *id019
   related_decision_guides:
-  - *id010
+  - *id020
   precedence: PRE-004
   verification_status: verified
   public_source_ids:
@@ -1607,34 +1745,34 @@ concepts:
   canonical_public_pages:
   - https://comdico.github.io/PMP_Atlas_Site/artifacts/compliance-evidence-traceability/
   related_processes:
-  - *id044
+  - *id053
+  - *id054
+  - *id038
   - *id045
-  - *id028
-  - *id035
-  - *id033
-  - *id014
+  - *id043
+  - *id024
   related_artifacts:
-  - *id037
+  - *id047
   - id: ART-REQ-002
     title: Requirements Traceability Matrix
     public_url: https://comdico.github.io/PMP_Atlas_Site/artifacts/requirements-traceability-matrix/
-  - *id032
-  - *id046
-  - *id047
-  - *id048
-  - *id049
-  - *id050
-  - *id015
+  - *id042
+  - *id055
+  - *id056
+  - *id057
+  - *id058
+  - *id059
+  - *id025
   related_lifecycle_chapters:
   - id: LFC-003
     title: Requirements and Scope
     public_url: https://comdico.github.io/PMP_Atlas_Site/lifecycle/requirements-scope/
-  - *id030
-  - *id034
-  - *id016
+  - *id040
+  - *id044
+  - *id026
   related_decision_guides:
-  - *id025
-  - *id006
+  - *id035
+  - *id016
   precedence: PRE-005
   verification_status: atlas_synthesis
   public_source_ids:
@@ -1670,19 +1808,19 @@ concepts:
   canonical_public_pages:
   - https://comdico.github.io/PMP_Atlas_Site/lifecycle/acceptance-transition-closure/
   related_processes:
-  - *id033
-  - *id014
+  - *id043
+  - *id024
   related_artifacts:
-  - *id049
-  - *id050
-  - *id027
-  - *id051
-  - *id015
+  - *id058
+  - *id059
+  - *id037
+  - *id060
+  - *id025
   related_lifecycle_chapters:
-  - *id016
-  related_decision_guides:
-  - *id006
   - *id026
+  related_decision_guides:
+  - *id016
+  - *id036
   precedence: PRE-005
   verification_status: source_limited
   public_source_ids:
@@ -1717,12 +1855,12 @@ concepts:
   canonical_public_pages:
   - https://comdico.github.io/PMP_Atlas_Site/lifecycle/adaptive-hybrid/
   related_processes:
-  - *id036
+  - *id046
   related_artifacts:
-  - *id021
-  - *id032
+  - *id031
+  - *id042
   related_lifecycle_chapters:
-  - *id009
+  - *id019
   precedence: PRE-008
   verification_status: verified
   public_source_ids:
@@ -1756,13 +1894,11 @@ concepts:
   canonical_public_pages:
   - https://comdico.github.io/PMP_Atlas_Site/lifecycle/execution-leadership/
   related_processes:
-  - id: PRC-ACQUIRE-RESOURCES
-    title: Acquire Resources
-    public_url: https://comdico.github.io/PMP_Atlas_Site/processes/acquire-resources/
-  - *id052
-  - *id043
+  - *id007
+  - *id008
+  - *id009
   related_lifecycle_chapters:
-  - *id004
+  - *id014
   precedence: PRE-008
   verification_status: verified
   public_source_ids:
@@ -1796,17 +1932,17 @@ concepts:
   canonical_public_pages:
   - https://comdico.github.io/PMP_Atlas_Site/lifecycle/quality/
   related_processes:
-  - *id053
-  - *id028
-  - *id033
+  - *id061
+  - *id038
+  - *id043
   related_artifacts:
   - id: ART-QLT-002
     title: Quality Metrics
     public_url: https://comdico.github.io/PMP_Atlas_Site/artifacts/quality-metrics/
-  - *id029
-  - *id049
+  - *id039
+  - *id058
   related_lifecycle_chapters:
-  - *id030
+  - *id040
   precedence: PRE-009
   verification_status: verified
   public_source_ids:
@@ -1841,18 +1977,18 @@ concepts:
   canonical_public_pages:
   - https://comdico.github.io/PMP_Atlas_Site/lifecycle/risk-compliance-procurement/
   related_processes:
-  - *id054
-  - *id055
-  - *id035
+  - *id062
+  - *id063
+  - *id045
   related_artifacts:
   - id: ART-PRC-001
     title: Procurement Management Plan
-  - *id048
-  - *id049
+  - *id057
+  - *id058
   related_lifecycle_chapters:
-  - *id034
+  - *id044
   related_decision_guides:
-  - *id056
+  - *id064
   precedence: PRE-010
   verification_status: source_limited
   public_source_ids:
@@ -1901,28 +2037,28 @@ concepts:
   - id: PRC-CONTROL-COSTS
     title: Control Costs
     public_url: https://comdico.github.io/PMP_Atlas_Site/processes/control-costs/
-  - *id057
-  - *id039
-  - *id058
+  - *id065
+  - *id049
+  - *id066
   related_artifacts:
   - id: ART-SCH-004
     title: Project Schedule
     public_url: https://comdico.github.io/PMP_Atlas_Site/artifacts/project-schedule/
-  - *id059
+  - *id067
   - id: ART-CST-001
     title: Cost Estimates
     public_url: https://comdico.github.io/PMP_Atlas_Site/artifacts/cost-estimates/
-  - *id060
-  - *id061
+  - *id068
+  - *id069
   - id: ART-COM-002
     title: Project Communications
   related_lifecycle_chapters:
-  - *id003
+  - *id013
   - id: LFC-004
     title: Schedule, Resources, and Cost
     public_url: https://comdico.github.io/PMP_Atlas_Site/lifecycle/schedule-resources-cost/
-  - *id004
-  - *id001
+  - *id014
+  - *id011
   related_formula_families:
   - id: estimating
     title: Estimating

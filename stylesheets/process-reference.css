@@ -1488,6 +1488,55 @@
   }
 }
 
+.atlas-relationship-panel {
+  margin: 2rem 0;
+  padding: clamp(1rem, 2.4vw, 1.6rem);
+  border: 1px solid color-mix(in srgb, var(--atlas-process-accent, #27718d) 35%, transparent);
+  border-radius: 0.8rem;
+  background: color-mix(in srgb, var(--md-default-bg-color) 94%, var(--atlas-process-accent, #27718d));
+}
+
+.atlas-relationship-panel__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.atlas-relationship-panel__grid article {
+  min-width: 0;
+  padding: 0.9rem 1rem;
+  border-radius: 0.55rem;
+  background: var(--md-default-bg-color);
+}
+
+.atlas-relationship-panel__grid h3,
+.atlas-relationship-panel__tailoring h3 {
+  margin-top: 0;
+}
+
+.atlas-relationship-panel__grid ul {
+  margin-bottom: 0;
+  overflow-wrap: anywhere;
+}
+
+.atlas-relationship-panel__tailoring {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-left: 0.3rem solid var(--atlas-process-accent, #27718d);
+  background: color-mix(in srgb, var(--md-default-bg-color) 88%, #d9eef5);
+}
+
+.atlas-relationship-panel__source {
+  margin-bottom: 0;
+  font-size: 0.82rem;
+}
+
+@media screen and (max-width: 48rem) {
+  .atlas-relationship-panel__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media print {
   @page {
     margin: 11mm 12mm 13mm;
