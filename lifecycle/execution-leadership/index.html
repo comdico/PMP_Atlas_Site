@@ -825,6 +825,67 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#project-information-and-artifact-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Project information and artifact control
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Project information and artifact control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-working-version-is-not-an-approved-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A working version is not an approved version
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custody-protection-and-retrieval" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Custody, protection, and retrieval
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-the-records-relate-to-one-another" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How the records relate to one another
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#predictive-adaptive-and-hybrid-information-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Predictive, adaptive, and hybrid information control
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#approach-treatment-and-artifact-states" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -5977,12 +6038,79 @@
 <blockquote>
 <p><strong>Source alignment.</strong> Organizational-change treatment maps ECO Business Environment Task 7 to Lesson 8, PDF pages 7–16 (<code>SRC-PMI-COURSE-LESSON-8-2026</code>). Technology-assisted work maps Lesson 4, PDF page 12 and Lesson 7, PDF page 78 (<code>SRC-PMI-COURSE-LESSON-4-2026</code>; <code>SRC-PMI-COURSE-LESSON-7-2026</code>). The accountability boundary is Atlas synthesis constrained by the course's ethical-and-secure-use instruction and the Atlas authority model.</p>
 </blockquote>
+<h2 id="project-information-and-artifact-control">Project information and artifact control</h2>
+<p>Execution produces two streams at the same time: the deliverables themselves, and the information that describes what was done, decided, measured, and agreed. The second stream needs a home, an owner, and a known state. Without that discipline a team can hold four copies of the same plan, disagree about which one is authorized, and repeat decisions that were already made.</p>
+<p>Four different things are involved, and the exam depends on keeping them apart.</p>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>What it does</th>
+<th>What it is not</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Project management information system (PMIS)</td>
+<td>Collects, stores, integrates, analyzes, and communicates project information so that collection and reporting stay consistent across the project</td>
+<td>Not a single application; scheduling, collaboration, or work-tracking software is a component of a PMIS, not the whole system</td>
+</tr>
+<tr>
+<td>Artifact-management system or repository</td>
+<td>Stores and maintains artifacts, controls who may reach them, and keeps earlier states retrievable</td>
+<td>Not the artifact; a repository holding the schedule is not the schedule, and moving a file does not change its authorized state</td>
+</tr>
+<tr>
+<td>Version control</td>
+<td>Records each change to a document or digital record, normally a version identifier, a date and time, and the person who made the change, so an earlier state can be retrieved</td>
+<td>Does not decide whether a recorded version is authorized, and does not cover physical items, environments, or product configurations</td>
+</tr>
+<tr>
+<td>Configuration management</td>
+<td>Identifies which items are controlled, defines their approved states, controls changes to them, records their status, and verifies that what was delivered matches the approved configuration</td>
+<td>Not the same as version control; version control is one part of it, and the configuration management plan states which items are recorded and updated as a component of the <a href="../../artifacts/project-management-plan/">Project Management Plan</a></td>
+</tr>
+</tbody>
+</table>
+<p>The <a href="../../processes/tools-and-techniques/#tnt-project-management-information-system">project management information system</a> appears as a tool across executing and controlling processes for exactly this reason: it is where work, cost, schedule, communication, and risk information is recorded and routed, not a product the project delivers.</p>
+<h3 id="a-working-version-is-not-an-approved-version">A working version is not an approved version</h3>
+<p>Saving a file creates a new version. It does not create a new approved state, and an updated document is not a new baseline until the authorized role says so. Four kinds of authority can sit with four different people:</p>
+<ol>
+<li><strong>Access</strong> determines who may read the artifact and which parts of it they may see.</li>
+<li><strong>Editing authority</strong> determines who may change the working version.</li>
+<li><strong>Review authority</strong> determines who evaluates the proposed content and confirms that it is complete and correct.</li>
+<li><strong>Approval authority</strong> determines whose decision converts a proposed state into the approved state that other work may rely on.</li>
+</ol>
+<p>A team member may hold all four for a working checklist and only the first for the cost baseline. When someone edits an approved artifact, the result is a proposed state until the approval route completes; the previously approved version remains the reference in the meantime.</p>
+<h3 id="custody-protection-and-retrieval">Custody, protection, and retrieval</h3>
+<ol>
+<li><strong>Ownership and custody.</strong> Each controlled artifact needs a named owner accountable for its content and a custodian responsible for where it lives and how it is maintained. These can be the same person, but the accountability is different.</li>
+<li><strong>Access and permissions.</strong> Permissions follow the information, not the org chart: contract terms, personal data, security findings, and compensation information may be restricted even from people who can see everything else.</li>
+<li><strong>Distribution.</strong> Information reaches the people who need it on the timing the communications approach defines. Making an artifact visible on a board or radiator is a distribution decision, not a storage decision.</li>
+<li><strong>Information security.</strong> Storage, transmission, and sharing must satisfy the applicable data-protection, privacy, and security obligations. A convenient shared link is not automatically an authorized one.</li>
+<li><strong>Maintenance and updating.</strong> Currency is checked as part of routine quality work rather than remembered at the end. A stale register misleads more effectively than a missing one.</li>
+<li><strong>Retention and archival handling.</strong> Records are kept for the period governance, procurement, regulation, or contract requires, and prepared during execution so that closure archives an organized set rather than a rescue effort.</li>
+<li><strong>Retrieval and traceability.</strong> The system must answer three questions later: what state was approved when the work was done, who authorized it, and which record proves it.</li>
+</ol>
+<h3 id="how-the-records-relate-to-one-another">How the records relate to one another</h3>
+<p>Plans state intent. Baselines record the approved reference that performance is compared against. Registers and logs — risk, stakeholder, assumption, issue, change — carry live entries that change as conditions change. Reports are derived views compiled for a decision or an audience. Delivery-system records — backlogs, boards, pipelines, test results, defect records — hold the operational data the team generates while working.</p>
+<p>The direction of dependency matters. A report never becomes the system of record; it summarizes records that live elsewhere, and a correction belongs in the record of origin. A log entry may trigger a change request, and an approved change may update a plan, a baseline, or both. Traceability means being able to walk that chain backward from a delivered result to the requirement, the approved state, the decision, and the evidence.</p>
+<h3 id="predictive-adaptive-and-hybrid-information-control">Predictive, adaptive, and hybrid information control</h3>
+<p><strong>Predictive</strong> work relies on formal plans, baselines, registers, logs, reports, and controlled documents. Configuration and baseline states are approved explicitly, changes to them run through the formal route where the plan requires it, and records are retained for governance, audit, procurement, compliance, and closure.</p>
+<p><strong>Adaptive</strong> work relies more on backlogs, boards, product information, the Definition of Done, increments, working agreements, test results, and collaborative tools. Information is updated more often, is visible to everyone who needs it, and is documented no more heavily than the decision requires. Lighter documentation does not remove control: the team still needs to know which increment was delivered, which version is in the environment, and what "done" meant when the item was accepted.</p>
+<p><strong>Hybrid</strong> work carries both. Adaptive delivery information coexists with predictive baselines, contracts, regulatory records, release milestones, and formal governance, so the system must preserve the links between backlog changes, delivered increments, approved changes, baselines, and acceptance records. When those links break, a team can demonstrate working software that no one can trace to an approved scope or an accepted deliverable.</p>
+<p>For ServiceBridge, the delivery team's backlog and board are the operational record of the day's work, the release repository holds the built increment and its version, and the change log, scope baseline, and compliance evidence live under formal control. When the migration team completes the notification service, the increment record, the test evidence, and the approved requirement can all be reached from one another, which is what makes the later acceptance decision defensible.</p>
+<blockquote>
+<p><strong>Source alignment.</strong> Artifact standardization, storage and distribution, artifact maintenance, the configuration management plan and system, PMIS and artifact-management systems, version control, and maintenance in preparation for archiving map to Lesson 7, PDF pages 5–11 (<code>SRC-PMI-COURSE-LESSON-7-2026</code>), under ECO Process Tasks 2.9.1 through 2.9.4 and 2.9.8 (<code>SRC-PMI-ECO-JULY-2026</code>). Splitting access, editing, review, and approval authority and the record-relationship chain are Atlas synthesis constrained by the Atlas authority model. Control of an approved state during monitoring is developed in <a href="../monitoring-change/">Monitoring and Change</a>.</p>
+</blockquote>
 <h2 id="approach-treatment-and-artifact-states">Approach treatment and artifact states</h2>
 <p>Predictive execution coordinates against approved work packages and plans. Adaptive execution selects near-term items, collaborates through short cycles, demonstrates increments, and learns from feedback. Hybrid execution must keep cross-cadence dependencies and decision rights visible.</p>
 <p>Work performance data are observations from execution. They become <a href="../../artifacts/work-performance-information/">Work Performance Information</a> only after analysis. Completed deliverables are not verified or accepted merely because the team finished production.</p>
+<p>Adaptive execution generates that evidence through boards, backlogs, and flow measures rather than through status collection. Those measures are defined in <a href="../../formulas/adaptive-metrics-and-visual-management/">Adaptive Metrics and Visual Management</a>; <a href="../monitoring-change/#from-work-performed-to-an-authorized-action">Monitoring and Change</a> shows how the data recorded here becomes information, a review, and an authorized action.</p>
 <h2 id="exam-distinctions">Exam distinctions</h2>
 <p>Approved changes are implemented; proposed changes are not. Manage Project Knowledge is continuous rather than a final archive task. Team development and team management are related but distinct. Servant leadership does not remove accountability, governance, or escalation.</p>
 <p>Cross-functional describes collective capability, not identical individual skills. A generalizing specialist is a design pattern, not a Scrum accountability. Full dedication and colocation can help in some contexts but are not mandatory; distributed adaptive teams and retained specialist roles are valid when their coordination is intentional.</p>
+<p>A PMIS is a system, not one application. An artifact-management system stores artifacts; it is not the artifact. Version control records versions; configuration management controls approved states. A working version is not an approved version, and an updated file is not an approved baseline.</p>
 <!-- BEGIN GENERATED: lifecycle-connections -->
 <section class="atlas-lifecycle-connections" aria-labelledby="canonical-connections">
 
