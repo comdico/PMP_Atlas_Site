@@ -923,6 +923,45 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Predictive change control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#four-types-of-change-requests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Four types of change requests
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-a-change-request-moves-from-need-to-updated-record" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How a change request moves from need to updated record
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-a-change-request-does-not-automatically-mean" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What a change request does not automatically mean
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -6233,14 +6272,18 @@
 <h2 id="change-control-across-predictive-adaptive-and-hybrid-delivery">Change control across predictive, adaptive, and hybrid delivery</h2>
 <p>Every delivery approach accepts that projects change. They differ in which decisions the team may make on its own, which require a named authority, and what has to be recorded afterward.</p>
 <h3 id="predictive-change-control">Predictive change control</h3>
-<p>A change request carries one of four intents, and the exam expects the difference:</p>
+<p>Predictive change control asks three questions about any proposed change: what kind of change is it, who decides, and what has to be updated once it is done.</p>
+<h4 id="four-types-of-change-requests">Four types of change requests</h4>
+<p>Every change request is one of four types: <strong>corrective action</strong>, <strong>preventive action</strong>, <strong>defect repair</strong>, or an <strong>update</strong>. The type describes what the request is trying to fix, which is why it is settled early — it points the analysis at the right evidence and often at the right approver.</p>
 <ol>
-<li><strong>Corrective action</strong> brings the performance of the work back into line with the plan after a variance has already occurred.</li>
-<li><strong>Preventive action</strong> reduces the likelihood that future work departs from the plan; nothing has gone wrong yet.</li>
-<li><strong>Defect repair</strong> corrects a component or deliverable that does not conform to its requirement.</li>
-<li><strong>Update</strong> changes a baseline or another controlled document, such as a plan or a contract, so the approved reference matches the authorized reality.</li>
+<li><strong>Corrective action</strong> brings the performance of the work back into line with the plan. Something has already drifted, and this realigns it.</li>
+<li><strong>Preventive action</strong> reduces the chance that future work departs from the plan. Nothing has gone wrong yet; the team has seen a warning sign and acts before it does.</li>
+<li><strong>Defect repair</strong> fixes a nonconformance in what the project produced — a component or deliverable that does not meet its requirement.</li>
+<li><strong>Update</strong> changes a baseline or another controlled document, such as a plan or a contract, so the approved reference matches what was actually authorized.</li>
 </ol>
-<p>Corrective and preventive action address the performance of the work. Defect repair addresses the thing produced. An update addresses the controlled record itself. A single situation can generate more than one: a failed test may produce a defect repair for the build, corrective action for the review step that let it through, and an update to the schedule baseline if the rework consumes float that was already committed.</p>
+<p>The fastest way to keep them apart: corrective and preventive action are about the <strong>work</strong>, defect repair is about the <strong>product</strong>, and an update is about the <strong>record</strong>. Corrective action answers a variance that has already happened; preventive action answers one that has not.</p>
+<p>One situation can produce several types at once. A failed migration test may generate a defect repair for the build, corrective action for the review step that let the defect through, and an update to the schedule baseline if the rework consumes float that was already committed.</p>
+<h4 id="how-a-change-request-moves-from-need-to-updated-record">How a change request moves from need to updated record</h4>
 <p>The route from need to closed record runs through distinct steps, and skipping one is how projects lose control of their own commitments:</p>
 <ol class="atlas-lifecycle-sequence">
   <li>A need for change is identified, from any source and any stakeholder.</li>
@@ -6253,6 +6296,7 @@
   <li>Affected plans, baselines, documents, configurations, and records are updated under control.</li>
 </ol>
 
+<h4 id="what-a-change-request-does-not-automatically-mean">What a change request does not automatically mean</h4>
 <p>Six qualifications keep this from becoming a reflex:</p>
 <ol>
 <li>Not every issue requires a formal change request; acting within existing authority and recording the result is often the correct response.</li>
@@ -6370,7 +6414,7 @@
 <h2 id="approach-treatment-and-exam-distinctions">Approach treatment and exam distinctions</h2>
 <p>Predictive control often compares performance with broader baselines. Adaptive control uses frequent review of outcomes, flow, quality, and feedback within governance guardrails. Hybrid control must integrate both evidence types without forcing one cadence to masquerade as the other.</p>
 <p>Data, information, and reports are not interchangeable. Corrective action is not automatic baseline change. Only the authorized role or body may approve a controlled change. Approved change implementation must be verified.</p>
-<p>A metric is not its interpretation, and a visualization is not a decision. Corrective action follows a variance that has occurred; preventive action addresses one that has not. Defect repair fixes a nonconforming result; an update changes a controlled document. A backlog change is not a baseline change. Product Owner authority is not governance authority. Sprint Review feedback is not formal acceptance, and verification is not acceptance — that decision belongs to <a href="../acceptance-transition-closure/">Verification, Acceptance, Transition, and Closure</a>.</p>
+<p>A metric is not its interpretation, and a visualization is not a decision. The four types of change requests are not interchangeable: corrective action follows a variance that has occurred; preventive action addresses one that has not; defect repair fixes a nonconforming result; an update changes a controlled document. A backlog change is not a baseline change. Product Owner authority is not governance authority. Sprint Review feedback is not formal acceptance, and verification is not acceptance — that decision belongs to <a href="../acceptance-transition-closure/">Verification, Acceptance, Transition, and Closure</a>.</p>
 <!-- BEGIN GENERATED: lifecycle-connections -->
 <section class="atlas-lifecycle-connections" aria-labelledby="canonical-connections">
 
