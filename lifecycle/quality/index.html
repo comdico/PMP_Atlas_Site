@@ -64,6 +64,8 @@
     
       <link rel="stylesheet" href="../../stylesheets/adaptive-metrics.css">
     
+      <link rel="stylesheet" href="../../stylesheets/quality-visuals.css">
+    
       <link rel="stylesheet" href="../../stylesheets/adaptive-depth.css">
     
       <link rel="stylesheet" href="../../stylesheets/stakeholder-matrix.css">
@@ -754,6 +756,100 @@
       
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quality-tools-and-visual-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quality tools and visual analysis
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Quality tools and visual analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#check-sheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Check sheet
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#histogram" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Histogram
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pareto-chart" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pareto chart
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cause-and-effect-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cause-and-effect diagram
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scatter-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scatter diagram
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#control-chart" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Control chart
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#process-decision-program-chart-pdpc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Process decision program chart (PDPC)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -5979,11 +6075,169 @@
 </div>
 
 <p>Failed inspection does not become acceptance. The team analyzes the defect, determines the authorized response, performs correction or change work, and reinspects. A stakeholder rejection after verification is different: it may reveal an expectation, scope, requirement, or acceptance problem and follows the <a href="../../decisions/quality-inspection-failure/">quality inspection failure decision guide</a> as applicable.</p>
+<h2 id="quality-tools-and-visual-analysis">Quality tools and visual analysis</h2>
+<p>Quality work runs on evidence, and most quality evidence starts as a pile of raw observations that no one can act on yet. The tools below turn that pile into a decision. They are worth learning as a sequence rather than as seven unrelated pictures, because each one answers the question the previous one leaves open.</p>
+<p>A team collects observations with a <strong>check sheet</strong>, looks at how the measurements are spread using a <strong>histogram</strong>, finds the few categories causing most of the trouble with a <strong>Pareto chart</strong>, explores why those categories happen with a <strong>cause-and-effect diagram</strong>, checks whether two things move together using a <strong>scatter diagram</strong>, watches whether the process stays stable over time on a <strong>control chart</strong>, and thinks ahead through what could go wrong using a <strong>process decision program chart</strong>.</p>
+<p>The split the exam cares about is where each tool sits. Data gathering is not data analysis, and neither is root-cause exploration. A check sheet gathers. A histogram, Pareto chart, scatter diagram, and control chart represent what was gathered. A cause-and-effect diagram and a PDPC explore causes and failure paths that the data alone cannot supply.</p>
+<ol class="qv-toolflow">
+  <li><a href="#check-sheet">Check sheet</a><span>What did we actually observe?</span></li>
+  <li><a href="#histogram">Histogram</a><span>How are the measurements spread?</span></li>
+  <li><a href="#pareto-chart">Pareto chart</a><span>Which few categories cause most of it?</span></li>
+  <li><a href="#cause-and-effect-diagram">Cause-and-effect diagram</a><span>What might be causing this problem?</span></li>
+  <li><a href="#scatter-diagram">Scatter diagram</a><span>Do these two variables move together?</span></li>
+  <li><a href="#control-chart">Control chart</a><span>Is the process stable over time?</span></li>
+  <li><a href="#process-decision-program-chart-pdpc">Process decision program chart</a><span>What could go wrong, and what would we do?</span></li>
+</ol>
+
+<p>The course groups these by intent. Quality assurance is proactive and process-oriented — it tries to prevent defects — and leans on process audits, cause-and-effect diagrams, and PDPCs. Quality control is reactive and product-oriented — it finds defects in what was produced — and leans on inspection, statistical sampling, check sheets, histograms, and control charts. The same chart can serve both; what changes is whether you are improving the process or judging the result.</p>
+<h3 id="check-sheet">Check sheet</h3>
+<p>A check sheet is a simple tally form for counting things as they happen. Someone decides the categories in advance, then marks one stroke each time an occurrence is observed. That is the whole tool, and its simplicity is the point: it produces trustworthy counts because recording happens at the moment of observation rather than from memory later.</p>
+<p>Use it whenever you need real frequency data — defect types found in testing, reasons a call was escalated, causes of rework. Everything further down this section depends on it, because a histogram or Pareto chart drawn from guessed numbers is just a decorated guess.</p>
+<p>The ServiceBridge team tallies portal defects during one week of testing:</p>
+<div class="qv-figure">
+<table>
+<caption>ServiceBridge portal defects, test week 12</caption>
+<thead><tr><th>Defect type observed</th><th>Tally</th><th>Count</th></tr></thead>
+<tbody>
+<tr><td>Session timeout</td><td class="qv-tally">||||| ||||| ||</td><td class="qv-count">12</td></tr>
+<tr><td>Validation error</td><td class="qv-tally">||||| ||</td><td class="qv-count">7</td></tr>
+<tr><td>Slow page load</td><td class="qv-tally">|||||</td><td class="qv-count">5</td></tr>
+<tr><td>Broken link</td><td class="qv-tally">|||</td><td class="qv-count">3</td></tr>
+<tr><td>Print layout</td><td class="qv-tally">||</td><td class="qv-count">2</td></tr>
+<tr><td><strong>Total</strong></td><td class="qv-tally"></td><td class="qv-count"><strong>29</strong></td></tr>
+</tbody>
+</table>
+<p class="qv-caption">Original Atlas illustration. One stroke per observed defect, grouped in fives so the counts stay easy to check.</p>
+</div>
+
+<p>Read it by comparing counts across categories, and check that the categories cover everything you might see — an overflowing "Other" row usually means the categories were chosen badly.</p>
+<p><strong>Exam note.</strong> A check sheet collects data; it does not analyze it. Do not confuse it with a checklist, which confirms that required steps or items were completed. One counts occurrences, the other confirms completion.</p>
+<h3 id="histogram">Histogram</h3>
+<p>A histogram is a bar chart showing how often measurements fall into each range, so you can see the shape of a set of data instead of a single average. Bars sit in natural order — smallest range to largest — and touch, because the ranges are continuous.</p>
+<p>Use it when you want to know how much variation exists and where the results cluster. An average of 1.8 seconds tells you very little; a histogram showing a long tail out past three seconds tells you some users are having a much worse experience than the average suggests.</p>
+<div class="qv-figure" role="img" aria-label="Histogram of 47 ServiceBridge portal response-time measurements. Bars by range in seconds: 0.5 to 1.0 has 3, 1.0 to 1.5 has 9, 1.5 to 2.0 has 17, 2.0 to 2.5 has 11, 2.5 to 3.0 has 5, 3.0 to 3.5 has 2. Most results cluster between 1.5 and 2.5 seconds with a tail toward slower responses.">
+<svg viewBox="0 0 660 300" aria-hidden="true" focusable="false"><title>Portal response-time histogram</title><desc>Counts by response-time range: 3, 9, 17, 11, 5, 2.</desc>
+<path class="qv-axis" d="M60 30V250H640"/>
+<text class="qv-text--muted" x="8" y="26">count</text>
+<rect class="qv-bar--muted" x="70" y="214" width="88" height="36"/><text class="qv-text" x="114" y="206" text-anchor="middle">3</text>
+<rect class="qv-bar" x="163" y="142" width="88" height="108"/><text class="qv-text" x="207" y="134" text-anchor="middle">9</text>
+<rect class="qv-bar" x="256" y="46" width="88" height="204"/><text class="qv-text" x="300" y="38" text-anchor="middle">17</text>
+<rect class="qv-bar" x="349" y="118" width="88" height="132"/><text class="qv-text" x="393" y="110" text-anchor="middle">11</text>
+<rect class="qv-bar" x="442" y="190" width="88" height="60"/><text class="qv-text" x="486" y="182" text-anchor="middle">5</text>
+<rect class="qv-bar--muted" x="535" y="226" width="88" height="24"/><text class="qv-text" x="579" y="218" text-anchor="middle">2</text>
+<text class="qv-text--muted" x="114" y="270" text-anchor="middle">0.5–1.0</text><text class="qv-text--muted" x="207" y="270" text-anchor="middle">1.0–1.5</text><text class="qv-text--muted" x="300" y="270" text-anchor="middle">1.5–2.0</text><text class="qv-text--muted" x="393" y="270" text-anchor="middle">2.0–2.5</text><text class="qv-text--muted" x="486" y="270" text-anchor="middle">2.5–3.0</text><text class="qv-text--muted" x="579" y="270" text-anchor="middle">3.0–3.5</text>
+<text class="qv-text--muted" x="350" y="292" text-anchor="middle">portal response time (seconds)</text>
+</svg>
+<p class="qv-caption">Original Atlas illustration. Most responses land between 1.5 and 2.5 seconds, with a thin tail of slow results worth investigating.</p>
+</div>
+
+<p>Read it for three things: where the results center, how wide the spread is, and whether the shape is lopsided or has a tail. Bars in a histogram are <strong>not</strong> ranked by size — their order is fixed by the measurement scale.</p>
+<p><strong>Exam note.</strong> Histogram versus Pareto chart is a favorite distinction. A histogram shows a frequency distribution in natural order and answers "how are results spread?" A Pareto chart ranks categories from largest to smallest and answers "which ones should we fix first?" A Pareto chart is a specific kind of histogram, not the other way round.</p>
+<h3 id="pareto-chart">Pareto chart</h3>
+<p>A Pareto chart is a bar chart of categories ordered from most frequent to least, with a line showing the running cumulative percentage. It exists to answer one question: where will fixing effort do the most good?</p>
+<p>It reflects the 80/20 idea — a large share of the problems usually traces back to a small share of the causes. Use it after a check sheet, when you have real counts by category and limited capacity to fix things.</p>
+<div class="qv-figure" role="img" aria-label="Pareto chart of 29 ServiceBridge portal defects. Bars in descending order: session timeout 12, validation error 7, slow page load 5, broken link 3, print layout 2. The cumulative line reaches 41 percent, 66 percent, 83 percent, 93 percent, and 100 percent. The first two categories account for about two thirds of all defects.">
+<svg viewBox="0 0 660 300" aria-hidden="true" focusable="false"><title>Portal defect Pareto chart</title><desc>Descending defect counts with a cumulative percentage line crossing 80 percent at the third category.</desc>
+<path class="qv-axis" d="M60 30V250H640"/>
+<path class="qv-limit" d="M60 90H600"/><text class="qv-text--accent" x="608" y="94">80%</text>
+<rect class="qv-bar" x="70" y="70" width="90" height="180"/><text class="qv-text" x="115" y="62" text-anchor="middle">12</text>
+<rect class="qv-bar" x="182" y="145" width="90" height="105"/><text class="qv-text" x="227" y="137" text-anchor="middle">7</text>
+<rect class="qv-bar" x="294" y="175" width="90" height="75"/><text class="qv-text" x="339" y="167" text-anchor="middle">5</text>
+<rect class="qv-bar--muted" x="406" y="205" width="90" height="45"/><text class="qv-text" x="451" y="197" text-anchor="middle">3</text>
+<rect class="qv-bar--muted" x="518" y="220" width="90" height="30"/><text class="qv-text" x="563" y="212" text-anchor="middle">2</text>
+<polyline class="qv-cumulative" points="115,167 227,119 339,84 451,64 563,50"/>
+<circle class="qv-point--signal" cx="115" cy="167" r="5"/><circle class="qv-point--signal" cx="227" cy="119" r="5"/><circle class="qv-point--signal" cx="339" cy="84" r="5"/><circle class="qv-point--signal" cx="451" cy="64" r="5"/><circle class="qv-point--signal" cx="563" cy="50" r="5"/>
+<text class="qv-text--muted" x="115" y="270" text-anchor="middle">session</text><text class="qv-text--muted" x="115" y="284" text-anchor="middle">timeout</text>
+<text class="qv-text--muted" x="227" y="270" text-anchor="middle">validation</text><text class="qv-text--muted" x="227" y="284" text-anchor="middle">error</text>
+<text class="qv-text--muted" x="339" y="270" text-anchor="middle">slow page</text><text class="qv-text--muted" x="339" y="284" text-anchor="middle">load</text>
+<text class="qv-text--muted" x="451" y="270" text-anchor="middle">broken</text><text class="qv-text--muted" x="451" y="284" text-anchor="middle">link</text>
+<text class="qv-text--muted" x="563" y="270" text-anchor="middle">print</text><text class="qv-text--muted" x="563" y="284" text-anchor="middle">layout</text>
+</svg>
+<p class="qv-caption">Original Atlas illustration, built from the check-sheet counts above. The cumulative line crosses 80% at the third category, so three defect types explain most of the week's defects.</p>
+</div>
+
+<p>Read the bars left to right and stop where the cumulative line crosses roughly 80%. Those categories are the vital few. Here, session timeouts alone account for about 41% of defects, so they earn the first investigation.</p>
+<p><strong>Exam note.</strong> A Pareto chart tells you <em>where</em> the problems concentrate. It does not tell you <em>why</em> — that is the next tool's job — and it says nothing about severity. Ten cosmetic defects are not automatically more important than one that corrupts data.</p>
+<h3 id="cause-and-effect-diagram">Cause-and-effect diagram</h3>
+<p>A cause-and-effect diagram organizes the possible causes of one problem into categories so a team can explore them systematically instead of arguing about whichever cause comes to mind first. It is also called a <strong>fishbone diagram</strong> because of its shape, or an <strong>Ishikawa diagram</strong> after its originator.</p>
+<p>Use it once you have chosen a problem worth solving — typically the top bar of a Pareto chart. The problem statement goes in the head, category branches come off the spine, and specific candidate causes hang off each branch.</p>
+<div class="qv-figure" role="img" aria-label="Fishbone cause-and-effect diagram for ServiceBridge session timeout errors. Branches above the spine are People with the cause insufficient load-testing skill, and Process with the cause no timeout value in the design standard. Branches below are Technology with the cause session store not shared across servers, and Data with the cause stale session records never purged. All branches point to the effect box, session timeout errors.">
+<svg viewBox="0 0 660 300" aria-hidden="true" focusable="false"><title>Cause-and-effect diagram for session timeout errors</title><desc>Four cause categories — People, Process, Technology, and Data — feeding one effect.</desc>
+<path class="qv-connector" d="M40 150H520"/><path class="qv-arrow" d="M508 142L522 150L508 158Z"/>
+<path class="qv-connector" d="M130 60L182 150"/><text class="qv-text" x="126" y="50" text-anchor="middle">People</text><text class="qv-text--muted" x="126" y="34" text-anchor="middle">thin load-testing skill</text>
+<path class="qv-connector" d="M300 60L352 150"/><text class="qv-text" x="296" y="50" text-anchor="middle">Process</text><text class="qv-text--muted" x="296" y="34" text-anchor="middle">no timeout value in design standard</text>
+<path class="qv-connector" d="M182 240L234 150"/><text class="qv-text" x="178" y="258" text-anchor="middle">Technology</text><text class="qv-text--muted" x="178" y="274" text-anchor="middle">session store not shared across servers</text>
+<path class="qv-connector" d="M352 240L404 150"/><text class="qv-text" x="348" y="258" text-anchor="middle">Data</text><text class="qv-text--muted" x="348" y="274" text-anchor="middle">stale session records never purged</text>
+<rect class="qv-box--problem" x="524" y="118" width="126" height="64" rx="8"/><text class="qv-text--accent" x="587" y="144" text-anchor="middle">session timeout</text><text class="qv-text--accent" x="587" y="162" text-anchor="middle">errors</text>
+</svg>
+<p class="qv-caption">Original Atlas illustration. Categories are chosen to fit the project; People, Process, Technology, and Data suit a software context.</p>
+</div>
+
+<p>Read it as a map of hypotheses, not findings. The branches show where to look; testing or data then confirms which cause is real. Teams often reach the real cause by asking "why?" repeatedly down one branch.</p>
+<p><strong>Exam note.</strong> Every cause on the diagram is a candidate until evidence supports it. The diagram supports root-cause analysis; it is not itself proof of a root cause.</p>
+<h3 id="scatter-diagram">Scatter diagram</h3>
+<p>A scatter diagram plots pairs of values on two axes — one variable across, one up — so you can see whether they appear to move together. Each dot is one observation measured on both variables.</p>
+<p>Use it when you suspect a relationship and want to check it before acting. If timeouts really do rise with the number of concurrent users, capacity is a plausible cause; if the dots form a shapeless cloud, the theory needs rethinking.</p>
+<div class="qv-figure" role="img" aria-label="Scatter diagram of ServiceBridge concurrent users against timeout errors. Twelve points rise from left to right, from about 60 users with 2 errors to about 580 users with 19 errors, showing an apparent positive relationship.">
+<svg viewBox="0 0 660 300" aria-hidden="true" focusable="false"><title>Concurrent users against timeout errors</title><desc>Twelve observations rising from left to right, suggesting a positive relationship.</desc>
+<path class="qv-axis" d="M70 30V250H640"/>
+<text class="qv-text--muted" x="8" y="26">timeout</text><text class="qv-text--muted" x="8" y="42">errors</text>
+<circle class="qv-point" cx="134" cy="230" r="6"/><circle class="qv-point" cx="179" cy="220" r="6"/><circle class="qv-point" cx="215" cy="210" r="6"/><circle class="qv-point" cx="260" cy="200" r="6"/><circle class="qv-point" cx="305" cy="180" r="6"/><circle class="qv-point" cx="350" cy="170" r="6"/><circle class="qv-point" cx="377" cy="140" r="6"/><circle class="qv-point" cx="431" cy="130" r="6"/><circle class="qv-point" cx="467" cy="100" r="6"/><circle class="qv-point" cx="512" cy="90" r="6"/><circle class="qv-point" cx="557" cy="70" r="6"/><circle class="qv-point" cx="602" cy="60" r="6"/>
+<text class="qv-text--muted" x="355" y="292" text-anchor="middle">concurrent users →</text>
+<text class="qv-text--accent" x="620" y="40" text-anchor="end">more users, more timeouts</text>
+</svg>
+<p class="qv-caption">Original Atlas illustration. The upward pattern suggests a relationship worth testing; it does not establish one.</p>
+</div>
+
+<p>Read the pattern, not the individual dots. Points rising left to right suggest a positive relationship, falling points a negative one, and a formless scatter suggests no useful relationship at this scale.</p>
+<p><strong>Exam note.</strong> Correlation is not causation. A scatter diagram can show that two variables move together; it cannot prove that one causes the other, and a third factor may be driving both. Do not confuse it with a control chart either — a scatter diagram compares two variables, while a control chart tracks one variable over time.</p>
+<h3 id="control-chart">Control chart</h3>
+<p>A control chart plots one measurement over time against a center line and upper and lower control limits, so you can tell whether a process is behaving predictably. Control limits describe how the process actually performs; <strong>specification limits</strong> state what the customer or requirement demands, and the two are not the same thing.</p>
+<p>Use it for repetitive processes that produce measurements often enough to show a pattern — build times, defect rates, response times, call handling times.</p>
+<div class="qv-figure" role="img" aria-label="Control chart of ServiceBridge daily average response time over ten days. The center line sits at 2.0 seconds with an upper control limit of 2.8 and a lower control limit of 1.2. Nine points vary between 1.8 and 2.2 seconds; day seven jumps to 3.4 seconds, above the upper control limit, and is flagged for investigation.">
+<svg viewBox="0 0 660 300" aria-hidden="true" focusable="false"><title>Daily average response-time control chart</title><desc>Ten daily points around a 2.0 second center line, with day seven above the upper control limit.</desc>
+<path class="qv-axis" d="M50 30V250H640"/>
+<path class="qv-limit" d="M60 105H548"/><text class="qv-text--accent" x="556" y="109">UCL 2.8</text>
+<path class="qv-center" d="M60 169H548"/><text class="qv-text--muted" x="556" y="173">center 2.0</text>
+<path class="qv-limit" d="M60 234H548"/><text class="qv-text--accent" x="556" y="238">LCL 1.2</text>
+<polyline class="qv-series" points="70,177 122,161 174,169 226,153 278,185 330,169 383,56 435,161 487,177 539,169"/>
+<circle class="qv-point" cx="70" cy="177" r="5"/><circle class="qv-point" cx="122" cy="161" r="5"/><circle class="qv-point" cx="174" cy="169" r="5"/><circle class="qv-point" cx="226" cy="153" r="5"/><circle class="qv-point" cx="278" cy="185" r="5"/><circle class="qv-point" cx="330" cy="169" r="5"/><circle class="qv-point--signal" cx="383" cy="56" r="8"/><circle class="qv-point" cx="435" cy="161" r="5"/><circle class="qv-point" cx="487" cy="177" r="5"/><circle class="qv-point" cx="539" cy="169" r="5"/>
+<text class="qv-text--accent" x="383" y="42" text-anchor="middle">out of control — investigate</text>
+<text class="qv-text--muted" x="350" y="292" text-anchor="middle">day 1 → day 10 (average response time, seconds)</text>
+</svg>
+<p class="qv-caption">Original Atlas illustration. Nine days of ordinary variation and one day that behaves differently.</p>
+</div>
+
+<p>Read it by asking whether the process looks stable. Points wandering randomly inside the limits reflect <strong>common-cause variation</strong> — the normal noise the process always produces, which you change only by changing the process itself. A point outside a limit, or a long run of points on one side, suggests <strong>special-cause variation</strong>: something specific happened on that day, and it is worth investigating. The Atlas covers the same chart applied to cycle time in <a href="../../formulas/adaptive-metrics-and-visual-management/#control-chart">Adaptive Metrics and Visual Management</a>.</p>
+<p><strong>Exam note.</strong> Being inside the control limits does not mean the customer is satisfied — that is what specification limits are for. And the chart flags that something changed; it never tells you what changed.</p>
+<h3 id="process-decision-program-chart-pdpc">Process decision program chart (PDPC)</h3>
+<p>A process decision program chart maps a planned activity into the things that could go wrong at each step and the countermeasure you would use for each one. It is forward-looking: you use it before the work, while there is still time to prevent trouble or to prepare a response.</p>
+<p>Use it for high-stakes steps where failure would be expensive or hard to reverse — a data migration, a cutover, a regulated submission, a single-shot integration test.</p>
+<div class="qv-figure" role="img" aria-label="Process decision program chart for the ServiceBridge identity cutover. The planned step, cut over the portal to the new identity service, branches into two possible problems: migration script fails, and login latency spikes. Each problem has a countermeasure: roll back to the snapshot and retry in the next window, and throttle traffic, enable the cache, and extend the cutover window.">
+<svg viewBox="0 0 660 300" aria-hidden="true" focusable="false"><title>PDPC for the identity cutover</title><desc>One planned step, two possible problems, and a countermeasure for each.</desc>
+<rect class="qv-box" x="180" y="14" width="300" height="48" rx="8"/><text class="qv-text" x="330" y="34" text-anchor="middle">Planned step: cut over the portal</text><text class="qv-text" x="330" y="52" text-anchor="middle">to the new identity service</text>
+<path class="qv-connector" d="M330 62V86H170V112"/><path class="qv-connector" d="M330 62V86H490V112"/>
+<rect class="qv-box--problem" x="50" y="112" width="240" height="46" rx="8"/><text class="qv-text--muted" x="170" y="130" text-anchor="middle">possible problem</text><text class="qv-text" x="170" y="148" text-anchor="middle">migration script fails</text>
+<rect class="qv-box--problem" x="370" y="112" width="240" height="46" rx="8"/><text class="qv-text--muted" x="490" y="130" text-anchor="middle">possible problem</text><text class="qv-text" x="490" y="148" text-anchor="middle">login latency spikes</text>
+<path class="qv-connector" d="M170 158V196"/><path class="qv-connector" d="M490 158V196"/>
+<rect class="qv-box--response" x="50" y="196" width="240" height="62" rx="8"/><text class="qv-text--muted" x="170" y="214" text-anchor="middle">countermeasure</text><text class="qv-text" x="170" y="232" text-anchor="middle">roll back to snapshot;</text><text class="qv-text" x="170" y="250" text-anchor="middle">retry in next window</text>
+<rect class="qv-box--response" x="370" y="196" width="240" height="62" rx="8"/><text class="qv-text--muted" x="490" y="214" text-anchor="middle">countermeasure</text><text class="qv-text" x="490" y="232" text-anchor="middle">throttle traffic, enable cache,</text><text class="qv-text" x="490" y="250" text-anchor="middle">extend cutover window</text>
+<text class="qv-text--muted" x="330" y="288" text-anchor="middle">plan → what could go wrong → what we would do about it</text>
+</svg>
+<p class="qv-caption">Original Atlas illustration. Countermeasures decided in advance become part of the plan rather than an improvisation during the cutover.</p>
+</div>
+
+<p>Read it downward: the step, then each realistic failure, then the response you have already agreed. Anything without a workable countermeasure is a signal to change the plan rather than proceed and hope.</p>
+<p><strong>Exam note.</strong> A PDPC and a cause-and-effect diagram point in opposite directions in time. A cause-and-effect diagram looks backward from a problem that already exists to find why. A PDPC looks forward from a planned activity to what might go wrong and what you would do. A PDPC also overlaps with risk work — the difference is that it stays anchored to the steps of one planned activity.</p>
+<blockquote>
+<p><strong>Source alignment.</strong> Quality assurance as proactive and process-oriented, quality control as reactive and product-oriented, and their common tool sets map to Lesson 6, PDF pages 83–87 (<code>SRC-PMI-COURSE-LESSON-6-2026</code>). The Control Quality data-gathering, data-representation, and data-analysis groupings are on PDF page 105, and the worked check sheet, histogram, Pareto, cause-and-effect, and scatter sequence is on PDF page 106, under ECO Process Task 8 (<code>SRC-PMI-ECO-JULY-2026</code>). All illustrations, the ServiceBridge data, and the tool-by-tool reading guidance are original Atlas work.</p>
+</blockquote>
 <h2 id="roles-authority-and-approaches">Roles, authority, and approaches</h2>
 <p>The project manager ensures integration. Quality specialists and the delivery team plan and perform quality work. Control Quality verifies conformance. The designated customer or sponsor role accepts; quality personnel do not silently substitute for that authority.</p>
 <p>Predictive work may establish broader criteria and planned reviews before production. Adaptive work embeds criteria, review, testing, and feedback in each increment. Hybrid work must maintain consistent evidence and acceptance authority across both cadences.</p>
 <h2 id="exam-distinctions">Exam distinctions</h2>
 <p>Manage Quality concerns the effectiveness and improvement of processes; Control Quality concerns results and conformance evidence. Verification precedes acceptance. Grade and quality are different concepts. Commercial audit or template examples are illustrations, not PMI-prescribed formats; detailed audit claims remain source-limited where the registry lacks current primary verification.</p>
+<p>Among the quality tools: a check sheet gathers data while the charts represent it; a histogram shows a frequency distribution in natural order while a Pareto chart ranks categories to prioritize them; a scatter diagram compares two variables while a control chart tracks one variable over time; correlation on a scatter diagram is not proof of causation; control limits describe the process while specification limits state the requirement; common-cause variation is the process's normal noise while special-cause variation signals that something specific happened; and a cause-and-effect diagram looks backward for why a problem occurred while a process decision program chart looks forward at what could go wrong.</p>
 <!-- BEGIN GENERATED: lifecycle-connections -->
 <section class="atlas-lifecycle-connections" aria-labelledby="canonical-connections">
 

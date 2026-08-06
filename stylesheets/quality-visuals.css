@@ -1,0 +1,93 @@
+/* Original Atlas quality illustrations: check sheet, histogram, Pareto chart,
+   cause-and-effect diagram, scatter diagram, control chart, and PDPC. */
+.qv-figure {
+  overflow-x: auto;
+  margin: 1rem 0 1.25rem;
+  padding: .6rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: .7rem;
+  background: var(--md-code-bg-color);
+}
+
+.qv-figure svg {
+  display: block;
+  width: 100%;
+  min-width: 540px;
+  font: 13px system-ui, sans-serif;
+}
+
+.qv-figure figcaption,
+.qv-caption {
+  margin: .5rem .2rem 0;
+  font-size: .82rem;
+  color: var(--md-default-fg-color--light);
+}
+
+.qv-axis { fill: none; stroke: #2d4263; stroke-width: 2; }
+.qv-grid { fill: none; stroke: #c9d1de; stroke-width: 1; stroke-dasharray: 3 4; }
+.qv-bar { fill: #006d77; }
+.qv-bar--muted { fill: #9ec5c9; }
+.qv-series { fill: none; stroke: #006d77; stroke-width: 3; }
+.qv-cumulative { fill: none; stroke: #a34818; stroke-width: 3; }
+.qv-limit { fill: none; stroke: #a34818; stroke-width: 2; stroke-dasharray: 6 5; }
+.qv-center { fill: none; stroke: #744fc6; stroke-width: 2; stroke-dasharray: 2 4; }
+.qv-connector { fill: none; stroke: #2d4263; stroke-width: 2; }
+/* CSS beats SVG presentation attributes, so the arrowhead needs its own fill. */
+.qv-arrow { fill: #2d4263; stroke: none; }
+.qv-point { fill: #006d77; }
+.qv-point--signal { fill: #a34818; }
+.qv-text { fill: #24313f; }
+.qv-text--muted { fill: #55606d; font-size: 12px; }
+.qv-text--accent { fill: #a34818; font-weight: 700; }
+.qv-box { fill: #eef8f8; stroke: #006d77; stroke-width: 2; }
+.qv-box--problem { fill: #fff4e9; stroke: #a34818; stroke-width: 2; }
+.qv-box--response { fill: #f2edfc; stroke: #744fc6; stroke-width: 2; }
+
+/* Check sheet tally marks stay monospaced so groups of five read as groups. */
+.qv-figure td.qv-tally {
+  font-family: var(--md-code-font-family, monospace);
+  font-size: 1.05rem;
+  letter-spacing: .18em;
+  white-space: nowrap;
+}
+
+.qv-figure table { margin: 0; }
+.qv-figure th, .qv-figure td { padding: .5rem .8rem; }
+.qv-figure td.qv-count { text-align: right; font-variant-numeric: tabular-nums; }
+
+/* Compact index of the seven tools at the top of the section. The theme sets
+   `.md-typeset ol:not([hidden]) { display: flow-root }`, so these selectors
+   have to outrank it or the grid silently collapses to one column. */
+.md-typeset ol.qv-toolflow:not([hidden]) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: .7rem;
+  margin: 1.25rem 0 1.5rem;
+  padding: 0;
+  list-style: none;
+}
+
+.md-typeset ol.qv-toolflow > li {
+  margin: 0;
+  padding: .75rem .85rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-left: 4px solid #006d77;
+  border-radius: .45rem;
+  background: var(--md-default-bg-color);
+}
+
+.md-typeset ol.qv-toolflow > li::marker { content: ""; }
+
+.md-typeset ol.qv-toolflow a { font-weight: 700; }
+
+.md-typeset ol.qv-toolflow span {
+  display: block;
+  margin-top: .2rem;
+  font-size: .85rem;
+  color: var(--md-default-fg-color--light);
+}
+
+@media (max-width: 44rem) {
+  .qv-figure { padding: .4rem; }
+  .md-typeset ol.qv-toolflow:not([hidden]) { grid-template-columns: 1fr; }
+}
