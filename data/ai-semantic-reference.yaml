@@ -9,7 +9,7 @@ metadata:
   yaml_url: https://comdico.github.io/PMP_Atlas_Site/data/ai-semantic-reference.yaml
   version: 1.3.1
   last_reviewed: '2026-08-03'
-  content_hash: sha256:fbdadb26482c74ae0ef8162b29353990fcc50b56b053ba8d5ba9c4ff03221994
+  content_hash: sha256:c2582fc4459c5704261afc906a257422748bd718e8b41351be25a9c794ed7566
 verification_status_labels:
   verified: Verified
   atlas_synthesis: Atlas synthesis
@@ -2663,8 +2663,11 @@ techniques:
   verification_status: verified
   public_url: https://comdico.github.io/PMP_Atlas_Site/processes/tools-and-techniques/#tnt-brainstorming
 - id: TNT-CAUSE-AND-EFFECT-DIAGRAMS
-  name: Cause-and-effect diagrams
-  aliases: []
+  name: Cause-and-Effect Diagram
+  aliases:
+  - Fishbone Diagram
+  - Ishikawa Diagram
+  - 5M+E
   family: data_representation
   type: data_representation
   definition: Organizes project information through cause-and-effect diagrams so relationships, patterns, or status can be interpreted.

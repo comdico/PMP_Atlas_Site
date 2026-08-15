@@ -1,0 +1,72 @@
+/* Original Atlas artifact examples generated from definitions/artifact-resources.yaml. */
+.artifact-instructional-visual {
+  margin: 1.4rem 0;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: .65rem;
+  background: var(--md-code-bg-color);
+  overflow: hidden;
+}
+
+.artifact-instructional-visual > :not(figcaption) { margin: 1rem; }
+.artifact-instructional-visual figcaption { padding: .8rem 1rem; border-top: 1px solid var(--md-default-fg-color--lightest); background: var(--md-default-bg-color); }
+.artifact-instructional-visual ol,
+.artifact-instructional-visual ul,
+.artifact-instructional-visual dl { margin: 0; padding: 0; list-style: none; }
+.artifact-instructional-visual span,
+.artifact-instructional-visual strong,
+.artifact-instructional-visual b { overflow-wrap: anywhere; }
+
+.artifact-table { overflow-x: auto; }
+.artifact-table table { min-width: 38rem; margin: 0; }
+.artifact-table th { white-space: normal; }
+.artifact-table td { min-width: 9rem; }
+
+.artifact-document { max-width: 42rem; border: 1px solid var(--md-default-fg-color--lightest); background: var(--md-default-bg-color); box-shadow: 0 .3rem .8rem rgb(0 0 0 / 8%); }
+.artifact-document header { display: flex; justify-content: space-between; gap: 1rem; padding: 1rem; border-bottom: 4px solid var(--md-primary-fg-color); }
+.artifact-document header span { color: var(--md-default-fg-color--light); text-align: right; }
+.artifact-document ol { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.artifact-document li { display: flex; gap: .65rem; padding: .75rem 1rem; border-bottom: 1px solid var(--md-default-fg-color--lightest); }
+.artifact-document li b { color: var(--md-primary-fg-color); }
+.artifact-document footer { padding: .75rem 1rem; color: var(--md-default-fg-color--light); }
+
+.artifact-report header { display: flex; justify-content: space-between; gap: 1rem; margin-bottom: .75rem; }
+.artifact-report ul { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .6rem; }
+.artifact-report li { min-height: 5.5rem; padding: .75rem; border-top: 4px solid var(--md-primary-fg-color); background: var(--md-default-bg-color); }
+.artifact-report li span,
+.artifact-report li strong { display: block; }
+.artifact-report li span { margin-top: .4rem; }
+
+.artifact-baseline ol { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .55rem; }
+.artifact-baseline li { padding: .7rem; border: 1px solid var(--md-default-fg-color--lightest); background: var(--md-default-bg-color); }
+.artifact-baseline li strong,
+.artifact-baseline li span,
+.artifact-baseline p span { display: block; }
+.artifact-baseline p { margin: .7rem 0 0; padding: .75rem; border: 2px dashed var(--md-primary-fg-color); }
+
+.artifact-state-card { max-width: 42rem; padding: 1rem; border-left: .4rem solid var(--md-primary-fg-color); background: var(--md-default-bg-color); }
+.artifact-state-card h3 { margin-top: 0; }
+.artifact-state-card dl { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .55rem; }
+.artifact-state-card dl div { padding: .55rem; background: var(--md-code-bg-color); }
+.artifact-state-card dt { font-weight: 700; }
+
+.artifact-routing ol { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .55rem; }
+.artifact-routing li { padding: .7rem; border: 1px solid var(--md-default-fg-color--lightest); background: var(--md-default-bg-color); }
+.artifact-routing li strong,
+.artifact-routing li span { display: block; }
+.artifact-routing p { padding: .75rem; text-align: center; background: var(--md-default-bg-color); }
+
+.artifact-gantt { min-width: 38rem; overflow-x: auto; }
+.artifact-gantt > div { display: grid; grid-template-columns: 10rem repeat(4, 1fr); align-items: center; min-height: 2.6rem; border-bottom: 1px solid var(--md-default-fg-color--lightest); }
+.artifact-gantt__months span { font-weight: 700; text-align: center; }
+.artifact-gantt i { grid-column: calc(var(--start) + 1) / span var(--span); padding: .35rem .5rem; border: 2px solid var(--md-primary-fg-color); background: repeating-linear-gradient(135deg, color-mix(in srgb, var(--md-primary-fg-color) 20%, transparent) 0 8px, transparent 8px 12px); font-style: normal; text-align: center; }
+
+@media (max-width: 44rem) {
+  .artifact-document ol,
+  .artifact-report ul,
+  .artifact-baseline ol,
+  .artifact-state-card dl,
+  .artifact-routing ol { grid-template-columns: 1fr; }
+  .artifact-document header,
+  .artifact-report header { display: block; }
+  .artifact-document header span { display: block; margin-top: .35rem; text-align: left; }
+}

@@ -70,6 +70,8 @@
     
       <link rel="stylesheet" href="../../stylesheets/instructional-depth.css">
     
+      <link rel="stylesheet" href="../../stylesheets/artifact-visuals.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -5719,15 +5721,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#velocity" class="md-nav__link">
+  <a href="#velocity-chart" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Velocity
+        Velocity Chart
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Velocity">
+    <nav class="md-nav" aria-label="Velocity Chart">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -5742,10 +5744,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#original-velocity-chart" class="md-nav__link">
+  <a href="#iteration-by-iteration-completed-work" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Original velocity chart
+        Iteration-by-iteration completed work
       
     </span>
   </a>
@@ -5772,7 +5774,7 @@
   <a href="#burndown-chart" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Burndown chart
+        Burndown Chart
       
     </span>
   </a>
@@ -5783,7 +5785,7 @@
   <a href="#burnup-chart" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Burnup chart
+        Burnup Chart
       
     </span>
   </a>
@@ -5791,10 +5793,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#cumulative-flow-diagram" class="md-nav__link">
+  <a href="#cumulative-flow-diagram-cfd" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Cumulative flow diagram
+        Cumulative Flow Diagram (CFD)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compare-the-major-adaptive-visuals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Compare the major adaptive visuals
       
     </span>
   </a>
@@ -6112,7 +6125,7 @@
 <p class="admonition-title">Source boundary</p>
 <p>The July 2026 course supports these measures and visualizations. The current Scrum Guide does <strong>not</strong> prescribe velocity or a particular chart. The May 2025 Kanban Guide requires teams using its minimal definition to track WIP, throughput, work item age, and cycle time. Atlas examples are original ServiceBridge illustrations.</p>
 </div>
-<h2 id="velocity">Velocity</h2>
+<h2 id="velocity-chart">Velocity Chart</h2>
 <p><strong>Velocity is the amount of estimated work fully completed by one team during one iteration, measured using that team’s chosen estimation unit, commonly story points.</strong></p>
 <div class="adm-formula" aria-label="Velocity equals the sum of estimates for items completed to the agreed Definition of Done during the iteration"><strong>Velocity</strong> = Σ estimates of items completed to the agreed Definition of Done during the iteration</div>
 
@@ -6184,10 +6197,11 @@
 </table>
 <p><strong>Average velocity = Σ completed work units ÷ number of iterations = (21 + 25 + 23 + 27) ÷ 4 = 24 story points per Sprint.</strong></p>
 <p>For 100 estimated points remaining, <code>100 ÷ 24 = 4.17</code>, so a whole-Sprint planning forecast rounds <strong>up to five Sprints</strong>. The recent observed velocities range from 21 to 27, producing approximately <strong>four to five Sprints</strong> (<code>100 ÷ 27</code> through <code>100 ÷ 21</code>, rounded up). Neither result is a guaranteed commitment. Inspect variation, team stability, changing estimates or membership, holidays and capacity, technical uncertainty, Definition of Done changes, dependencies, and scope change.</p>
-<h3 id="original-velocity-chart">Original velocity chart</h3>
-<div class="adm-velocity" role="img" aria-label="Completed points for Sprints one through six are 21, 25, 23, 27, 20, and 28. A labeled historical average is 24 points."><div><span style="--value:21" aria-hidden="true"></span><strong>21</strong><small>Sprint 1</small></div><div><span style="--value:25" aria-hidden="true"></span><strong>25</strong><small>Sprint 2</small></div><div><span style="--value:23" aria-hidden="true"></span><strong>23</strong><small>Sprint 3</small></div><div><span style="--value:27" aria-hidden="true"></span><strong>27</strong><small>Sprint 4</small></div><div><span style="--value:20" aria-hidden="true"></span><strong>20</strong><small>Sprint 5</small></div><div><span style="--value:28" aria-hidden="true"></span><strong>28</strong><small>Sprint 6</small></div><i aria-hidden="true">historical average: 24</i></div>
+<h3 id="iteration-by-iteration-completed-work">Iteration-by-iteration completed work</h3>
+<figure class="adm-chart"><div class="adm-velocity" role="img" aria-label="Velocity Chart. Completed points for Sprints one through six are 21, 25, 23, 27, 20, and 28. A labelled historical average is 24 points."><div><span style="--value:21" aria-hidden="true"></span><strong>21</strong><small>Sprint 1</small></div><div><span style="--value:25" aria-hidden="true"></span><strong>25</strong><small>Sprint 2</small></div><div><span style="--value:23" aria-hidden="true"></span><strong>23</strong><small>Sprint 3</small></div><div><span style="--value:27" aria-hidden="true"></span><strong>27</strong><small>Sprint 4</small></div><div><span style="--value:20" aria-hidden="true"></span><strong>20</strong><small>Sprint 5</small></div><div><span style="--value:28" aria-hidden="true"></span><strong>28</strong><small>Sprint 6</small></div><i aria-hidden="true">historical average: 24</i></div><figcaption><strong>Original Atlas illustration.</strong> Completed estimate units are vertical and iterations are horizontal; unfinished work contributes zero.</figcaption></figure>
 
 <p>The columns show completed estimated work, with no partial points. They can help this same team forecast. They do not prove productivity; sudden changes need context, and an upward trend may reflect changed estimating rather than better performance.</p>
+<p><strong>Question answered:</strong> How much estimated work did this team fully complete in each iteration? Read each column as one iteration and compare the pattern with the same team’s recent history. Notice variation rather than chasing a permanently rising line. Do not confuse velocity with throughput: velocity commonly sums team-specific estimate units, while throughput counts finished work items. <strong>PMP exam distinction:</strong> use velocity for contextual same-team forecasting, never as a productivity comparison between teams.</p>
 <h2 id="what-velocity-must-not-be-used-for">What velocity must not be used for</h2>
 <ul>
 <li>Velocity is team-specific because story points have no standard meaning across teams.</li>
@@ -6202,22 +6216,24 @@
 <p class="admonition-title">Exam note</p>
 <p>When asked to calculate iteration velocity, count only work completed to the agreed Definition of Done. Story points are not hours.</p>
 </div>
-<h2 id="burndown-chart">Burndown chart</h2>
+<h2 id="burndown-chart">Burndown Chart</h2>
 <p>A burndown shows <strong>work remaining</strong> vertically over time or iterations horizontally. Its endpoint is zero remaining. The actual line may be compared with an ideal or guideline line, but that guideline is not a mandatory commitment. Scope additions or re-estimation can make remaining work rise; unfinished work stays in the total. Sprint burndown focuses on one Sprint, while release or product burndown covers a broader horizon. Without a visible total-scope series, burndown can obscure why the curve changed.</p>
-<div class="adm-chart" role="img" aria-label="Remaining work by period: 100, 84, 87, 70, 69, 48, 22, 0. It rises after scope is added.">
-<svg viewBox="0 0 660 285" aria-hidden="true" focusable="false"><title>ServiceBridge burndown</title><desc>Remaining work by period: 100, 84, 87, 70, 69, 48, 22, 0. It rises after scope is added.</desc>
+<figure class="adm-chart"><div role="img" aria-label="Remaining work by period: 100, 84, 87, 70, 69, 48, 22, 0. It rises after scope is added.">
+<svg viewBox="0 0 660 285" aria-hidden="true" focusable="false"><title>ServiceBridge Burndown Chart</title><desc>Remaining work by period: 100, 84, 87, 70, 69, 48, 22, 0. It rises after scope is added.</desc>
 <path d="M55 28V245H625" class="adm-axis"/><text x="8" y="32">work</text><text x="555" y="273">time →</text>
-<polyline points="55,109.3 130,131.0 205,126.9 280,150.0 355,151.4 430,179.9 505,215.1 580,245.0" fill="none" stroke="#006D77" stroke-width="4"/><text x="580" y="35" fill="#006D77">actual remaining</text><polyline points="55,109.3 130,128.3 205,148.6 280,167.6 355,186.6 430,205.6 505,226.0 580,245.0" fill="none" stroke="#744FC6" stroke-width="4" stroke-dasharray="8 6"/><text x="580" y="53" fill="#744FC6">guideline, not commitment</text></svg></div>
+<polyline points="55,109.3 130,131.0 205,126.9 280,150.0 355,151.4 430,179.9 505,215.1 580,245.0" fill="none" stroke="#006D77" stroke-width="4"/><text x="580" y="35" fill="#006D77">actual remaining</text><polyline points="55,109.3 130,128.3 205,148.6 280,167.6 355,186.6 430,205.6 505,226.0 580,245.0" fill="none" stroke="#744FC6" stroke-width="4" stroke-dasharray="8 6"/><text x="580" y="53" fill="#744FC6">guideline, not commitment</text></svg></div><figcaption><strong>Original Atlas illustration.</strong> Work remaining is vertical and time is horizontal; flattening means little remaining-work reduction, while a rise can indicate added scope or re-estimation.</figcaption></figure>
 
 <p>At period 2, completed work rises from 16 to 28, yet remaining work rises from 84 to 87 because total scope increases from 100 to 115. The team did work; the denominator also changed.</p>
-<h2 id="burnup-chart">Burnup chart</h2>
+<p><strong>Question answered:</strong> How much work remains as time passes? Read the vertical axis as work remaining and the horizontal axis as time, then compare actual remaining work with the reference trajectory where one is shown. Notice flattening, which can indicate little reduction in remaining work, and upward movement, which can indicate added scope, newly discovered work, or re-estimation. Do not confuse this with a Burnup Chart, whose main line rises as completed work grows. <strong>PMP exam distinction:</strong> a rise is not automatically team failure; first inspect whether scope or estimates changed.</p>
+<h2 id="burnup-chart">Burnup Chart</h2>
 <p>A burnup plots <strong>completed work</strong> increasing toward a separate <strong>total-scope line</strong>. Because the total line steps when scope changes, burnup often makes scope movement easier to understand than burndown.</p>
-<div class="adm-chart" role="img" aria-label="Completed work rises to 130 while total scope steps from 100 to 115 and then 130.">
-<svg viewBox="0 0 660 285" aria-hidden="true" focusable="false"><title>ServiceBridge burnup</title><desc>Completed work rises to 130 while total scope steps from 100 to 115 and then 130.</desc>
+<figure class="adm-chart"><div role="img" aria-label="Completed work rises to 130 while total scope steps from 100 to 115 and then 130.">
+<svg viewBox="0 0 660 285" aria-hidden="true" focusable="false"><title>ServiceBridge Burnup Chart</title><desc>Completed work rises to 130 while total scope steps from 100 to 115 and then 130.</desc>
 <path d="M55 28V245H625" class="adm-axis"/><text x="8" y="32">work</text><text x="555" y="273">time →</text>
-<polyline points="55,245.0 130,223.3 205,207.0 280,183.9 355,162.2 430,133.7 505,98.4 580,68.6" fill="none" stroke="#006D77" stroke-width="4"/><text x="580" y="35" fill="#006D77">completed</text><polyline points="55,109.3 130,109.3 205,88.9 280,88.9 355,68.6 430,68.6 505,68.6 580,68.6" fill="none" stroke="#A34818" stroke-width="4" stroke-dasharray="8 6"/><text x="580" y="53" fill="#A34818">total scope</text></svg></div>
+<polyline points="55,245.0 130,223.3 205,207.0 280,183.9 355,162.2 430,133.7 505,98.4 580,68.6" fill="none" stroke="#006D77" stroke-width="4"/><text x="580" y="35" fill="#006D77">completed</text><polyline points="55,109.3 130,109.3 205,88.9 280,88.9 355,68.6 430,68.6 505,68.6 580,68.6" fill="none" stroke="#A34818" stroke-width="4" stroke-dasharray="8 6"/><text x="580" y="53" fill="#A34818">total scope</text></svg></div><figcaption><strong>Original Atlas illustration.</strong> Completed work is vertical and time is horizontal. The independently moving total-scope line makes two scope increases visible.</figcaption></figure>
 
 <p>Both burn charts use exactly the same data: <code>remaining = scope − completed</code> for every period.</p>
+<p><strong>Question answered:</strong> How much work is complete, and how does it compare with current total scope? Read completed work on the vertical axis over time on the horizontal axis, while watching the total-scope line independently. Notice each scope-line step: the <strong>total-scope line can move independently</strong> even while completion continues. Do not confuse burnup with a CFD; burnup compares completed work with total scope, while a CFD separates several workflow-state inventories. <strong>PMP exam distinction:</strong> burnup usually exposes scope change more clearly than burndown because the scope line can move on its own.</p>
 <table>
 <thead>
 <tr>
@@ -6249,10 +6265,50 @@
 </tr>
 </tbody>
 </table>
-<h2 id="cumulative-flow-diagram">Cumulative flow diagram</h2>
+<h2 id="cumulative-flow-diagram-cfd">Cumulative Flow Diagram (CFD)</h2>
 <p>A cumulative flow diagram shows cumulative work items in workflow states over time. Band thickness represents items in that state; all unfinished bands together reflect WIP. A widening band can show accumulation or a bottleneck, horizontal distance may illustrate elapsed flow time when workflow boundaries permit, and stable parallel bands generally suggest steadier flow. Context is still required.</p>
-<div class="adm-cfd" role="img" aria-label="ServiceBridge cumulative flow across eight periods. Ready inventories are 6 7 7 8 8 8 9 10; In Progress 2 3 3 4 4 4 4 3; Review 1 1 2 3 5 6 5 3; Done cumulative values 1 2 3 4 5 7 9 12. The Review band widens to six items, signaling a bottleneck to investigate."><table><thead><tr><th>Period</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th></tr></thead><tbody><tr><th>Ready</th><td>6</td><td>7</td><td>7</td><td>8</td><td>8</td><td>8</td><td>9</td><td>10</td></tr><tr><th>In Progress</th><td>2</td><td>3</td><td>3</td><td>4</td><td>4</td><td>4</td><td>4</td><td>3</td></tr><tr><th>Review</th><td>1</td><td>1</td><td>2</td><td>3</td><td>5</td><td>6</td><td>5</td><td>3</td></tr><tr><th>Done</th><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>7</td><td>9</td><td>12</td></tr></tbody></table><p><strong>Visible signal:</strong> Review widens from one to six items before recovering—investigate a possible review bottleneck.</p></div>
+<figure class="adm-chart adm-cfd"><div role="img" aria-label="Cumulative Flow Diagram across eight periods with labelled Done, Review, In Progress, and Ready bands. The Review band widens from one to six items before narrowing, indicating an accumulating queue and possible bottleneck."><svg viewBox="0 0 700 285" aria-hidden="true" focusable="false"><title>ServiceBridge Cumulative Flow Diagram</title><desc>Cumulative Flow Diagram across eight periods with labelled Done, Review, In Progress, and Ready bands. The Review band widens from one to six items before narrowing, indicating an accumulating queue and possible bottleneck.</desc><path d="M55 28V245H675" class="adm-axis"/><text x="8" y="32">items</text><text x="555" y="273">period 1 → 8</text><polygon class="adm-cfd-band adm-cfd-band--done" points="55,238.2 130,231.4 205,224.6 280,217.9 355,211.1 430,197.5 505,183.9 580,163.6 580,245.0 505,245.0 430,245.0 355,245.0 280,245.0 205,245.0 130,245.0 55,245.0"/><text class="adm-cfd-label" x="590" y="204.3">Done</text><polygon class="adm-cfd-band adm-cfd-band--review" points="55,231.4 130,224.6 205,211.1 280,197.5 355,177.1 430,156.8 505,150.0 580,143.2 580,163.6 505,183.9 430,197.5 355,211.1 280,217.9 205,224.6 130,231.4 55,238.2"/><text class="adm-cfd-label" x="590" y="153.4">Review</text><polygon class="adm-cfd-band adm-cfd-band--in-progress" points="55,217.9 130,204.3 205,190.7 280,170.4 355,150.0 430,129.6 505,122.9 580,122.9 580,143.2 505,150.0 430,156.8 355,177.1 280,197.5 205,211.1 130,224.6 55,231.4"/><text class="adm-cfd-label" x="590" y="133.0">In Progress</text><polygon class="adm-cfd-band adm-cfd-band--ready" points="55,177.1 130,156.8 205,143.2 280,116.1 355,95.7 430,75.4 505,61.8 580,55.0 580,122.9 505,122.9 430,129.6 355,150.0 280,170.4 205,190.7 130,204.3 55,217.9"/><text class="adm-cfd-label" x="590" y="88.9">Ready</text></svg></div><figcaption><strong>Original Atlas illustration.</strong> Band thickness is the number of items in that workflow state; the widening Review band is the signal to investigate.</figcaption></figure>
 
+<p><strong>Question answered:</strong> Where is work accumulating, and is it flowing through states at a stable rate? Time runs horizontally; cumulative item count runs vertically; each labelled band is one workflow state. Read band thickness as inventory in that state and all unfinished bands as work in progress. Nearly parallel boundaries suggest a steadier system, while a widening band shows an accumulating queue and possible bottleneck. Here, Review widens before narrowing, so investigate review capacity and policy. Do not confuse the CFD with a Kanban or Task Board: the CFD summarizes state counts across time, while the board shows current individual work items. <strong>PMP exam distinction:</strong> a widening band is a signal to investigate, not proof of a root cause.</p>
+<h2 id="compare-the-major-adaptive-visuals">Compare the major adaptive visuals</h2>
+<table>
+<thead>
+<tr>
+<th>Pair</th>
+<th>Distinction to remember</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Velocity Chart vs Burndown Chart</td>
+<td>Velocity records completed estimate units per iteration; burndown tracks work remaining over time.</td>
+</tr>
+<tr>
+<td>Burndown vs Burnup</td>
+<td>Burndown moves toward zero remaining; burnup rises toward a separate total-scope line.</td>
+</tr>
+<tr>
+<td>Burnup vs CFD</td>
+<td>Burnup separates completion from total scope; CFD separates workflow-state inventories over time.</td>
+</tr>
+<tr>
+<td>CFD vs Kanban / Task Board</td>
+<td>CFD is a historical flow pattern; a board is the current work-item view and does not by itself establish Kanban.</td>
+</tr>
+<tr>
+<td>Throughput vs velocity</td>
+<td>Throughput counts completed items per time period; velocity totals a team’s completed estimate units per iteration.</td>
+</tr>
+<tr>
+<td>Cycle time vs lead time</td>
+<td>Cycle time starts at the defined work-start point; lead time starts at an earlier named request, order, or commitment point.</td>
+</tr>
+<tr>
+<td>Work-item age vs completed-item metrics</td>
+<td>Work-item age applies while an item remains unfinished; cycle time and throughput describe completed items.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="task-board-or-kanban-board">Task board or Kanban board</h2>
 <p>The simple path is <strong>Ready → In Progress → Review → Done</strong>. A board visualizes work state, blocked and aging items, ownership, and collaboration. A Kanban system additionally needs a Definition of Workflow with explicit start and finish points, states, policies, WIP controls, and a service level expectation. WIP control enables pull-based movement.</p>
 <div class="adm-board" role="img" aria-label="ServiceBridge four-column board. In Progress limit three and Review limit two. SB-116 is blocked; SB-118 is aging at nine days on May 19."><section><h3>Ready</h3><p>SB-120 · audit export</p><p>SB-121 · notice copy</p></section><section><h3>In Progress <small>WIP 2/3</small></h3><p>SB-116 · identity sync <strong>BLOCKED</strong></p><p>SB-118 · billing rules <strong>AGING 9 DAYS · MAY 19</strong></p></section><section><h3>Review <small>WIP 2/2</small></h3><p>SB-114 · intake form</p><p>SB-115 · search filter</p></section><section><h3>Done</h3><p>SB-109 · case detail</p><p>SB-112 · agent notes</p></section></div>
@@ -6405,10 +6461,10 @@
 </div>
 <h2 id="control-chart">Control chart</h2>
 <p>A control chart plots a process measure over time and may include a center line and control limits. Cycle time is a useful adaptive example. Points or nonrandom patterns outside expected variation may suggest special-cause variation; investigate rather than blame. Control limits describe process behavior and are <strong>not specification limits</strong>.</p>
-<div class="adm-chart" role="img" aria-label="Cycle times [4, 5, 4, 6, 5, 12, 5, 4]; mean 5.625; supplied illustrative lower and upper limits 2 and 9.">
+<figure class="adm-chart"><div role="img" aria-label="Cycle times [4, 5, 4, 6, 5, 12, 5, 4]; mean 5.625; supplied illustrative lower and upper limits 2 and 9.">
 <svg viewBox="0 0 660 285" aria-hidden="true" focusable="false"><title>ServiceBridge control chart</title><desc>Cycle times [4, 5, 4, 6, 5, 12, 5, 4]; mean 5.625; supplied illustrative lower and upper limits 2 and 9.</desc>
 <path d="M55 28V245H625" class="adm-axis"/><text x="8" y="32">work</text><text x="555" y="273">time →</text>
-<polyline points="55,190.7 130,177.1 205,190.7 280,163.6 355,177.1 430,82.1 505,177.1 580,190.7" fill="none" stroke="#006D77" stroke-width="4"/><text x="580" y="35" fill="#006D77">cycle time</text><polyline points="55,168.7 130,168.7 205,168.7 280,168.7 355,168.7 430,168.7 505,168.7 580,168.7" fill="none" stroke="#2D4263" stroke-width="4" stroke-dasharray="6 5"/><text x="580" y="53" fill="#2D4263">mean 5.625</text><polyline points="55,122.9 130,122.9 205,122.9 280,122.9 355,122.9 430,122.9 505,122.9 580,122.9" fill="none" stroke="#A34818" stroke-width="4" stroke-dasharray="4 5"/><text x="580" y="71" fill="#A34818">supplied UCL 9</text><polyline points="55,217.9 130,217.9 205,217.9 280,217.9 355,217.9 430,217.9 505,217.9 580,217.9" fill="none" stroke="#744FC6" stroke-width="4" stroke-dasharray="4 5"/><text x="580" y="89" fill="#744FC6">supplied LCL 2</text></svg></div>
+<polyline points="55,190.7 130,177.1 205,190.7 280,163.6 355,177.1 430,82.1 505,177.1 580,190.7" fill="none" stroke="#006D77" stroke-width="4"/><text x="580" y="35" fill="#006D77">cycle time</text><polyline points="55,168.7 130,168.7 205,168.7 280,168.7 355,168.7 430,168.7 505,168.7 580,168.7" fill="none" stroke="#2D4263" stroke-width="4" stroke-dasharray="6 5"/><text x="580" y="53" fill="#2D4263">mean 5.625</text><polyline points="55,122.9 130,122.9 205,122.9 280,122.9 355,122.9 430,122.9 505,122.9 580,122.9" fill="none" stroke="#A34818" stroke-width="4" stroke-dasharray="4 5"/><text x="580" y="71" fill="#A34818">supplied UCL 9</text><polyline points="55,217.9 130,217.9 205,217.9 280,217.9 355,217.9 430,217.9 505,217.9 580,217.9" fill="none" stroke="#744FC6" stroke-width="4" stroke-dasharray="4 5"/><text x="580" y="89" fill="#744FC6">supplied LCL 2</text></svg></div><figcaption><strong>Original Atlas illustration.</strong> Cycle time is plotted by observation against a center line and supplied illustrative limits.</figcaption></figure>
 
 <p>The arithmetic mean is 5.625 days. The lower limit 2 and upper limit 9 are <strong>supplied illustrative inputs</strong>. The course discusses center lines, limits, and the rule of seven but does not supply an authoritative control-limit calculation, so the Atlas intentionally withholds that formula.</p>
 <h2 id="information-radiator">Information radiator</h2>
@@ -6469,7 +6525,7 @@
 <tbody>
 <tr>
 <td>Expected velocity</td>
-<td><a href="#velocity">Velocity</a></td>
+<td><a href="#velocity-chart">Velocity Chart</a></td>
 <td>Lesson 5, PDF p. 6, “Scope Planning Comparison of Processes” (SRC-PMI-COURSE-LESSON-5-2026)</td>
 <td>fully explained</td>
 </tr>
@@ -6499,7 +6555,7 @@
 </tr>
 <tr>
 <td>Kanban board and cumulative flow</td>
-<td><a href="#cumulative-flow-diagram">Board and cumulative flow</a></td>
+<td><a href="#cumulative-flow-diagram-cfd">Board and cumulative flow</a></td>
 <td>Lesson 5, PDF p. 140, “Approaches for Measuring Project Compliance” (SRC-PMI-COURSE-LESSON-5-2026)</td>
 <td>explained and illustrated</td>
 </tr>
@@ -6511,7 +6567,7 @@
 </tr>
 <tr>
 <td>Velocity and cost per point</td>
-<td><a href="#velocity">Velocity and Estimating</a></td>
+<td><a href="#velocity-chart">Velocity Chart and Estimating</a></td>
 <td>Lesson 5, PDF p. 149, “Resource Cost” (SRC-PMI-COURSE-LESSON-5-2026)</td>
 <td>cost-per-point intentionally excluded because team estimate units are not currency; velocity covered</td>
 </tr>
@@ -6577,7 +6633,7 @@
 </tr>
 <tr>
 <td>Velocity</td>
-<td><a href="#velocity">Velocity</a></td>
+<td><a href="#velocity-chart">Velocity Chart</a></td>
 <td>Lesson 7, PDF p. 23, “Velocity Aiming for Constant Rate” (SRC-PMI-COURSE-LESSON-7-2026)</td>
 <td>explained and illustrated</td>
 </tr>

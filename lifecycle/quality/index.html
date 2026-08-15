@@ -72,6 +72,8 @@
     
       <link rel="stylesheet" href="../../stylesheets/instructional-depth.css">
     
+      <link rel="stylesheet" href="../../stylesheets/artifact-visuals.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -808,7 +810,7 @@
   <a href="#cause-and-effect-diagram" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Cause-and-effect diagram
+        Cause-and-Effect Diagram
       
     </span>
   </a>
@@ -6158,19 +6160,22 @@
 
 <p>Read the bars left to right and stop where the cumulative line crosses roughly 80%. Those categories are the vital few. Here, session timeouts alone account for about 41% of defects, so they earn the first investigation.</p>
 <p><strong>Exam note.</strong> A Pareto chart tells you <em>where</em> the problems concentrate. It does not tell you <em>why</em> — that is the next tool's job — and it says nothing about severity. Ten cosmetic defects are not automatically more important than one that corrupts data.</p>
-<h3 id="cause-and-effect-diagram">Cause-and-effect diagram</h3>
-<p>A cause-and-effect diagram organizes the possible causes of one problem into categories so a team can explore them systematically instead of arguing about whichever cause comes to mind first. It is also called a <strong>fishbone diagram</strong> because of its shape, or an <strong>Ishikawa diagram</strong> after its originator.</p>
-<p>Use it once you have chosen a problem worth solving — typically the top bar of a Pareto chart. The problem statement goes in the head, category branches come off the spine, and specific candidate causes hang off each branch.</p>
-<div class="qv-figure" role="img" aria-label="Fishbone cause-and-effect diagram for ServiceBridge session timeout errors. Branches above the spine are People with the cause insufficient load-testing skill, and Process with the cause no timeout value in the design standard. Branches below are Technology with the cause session store not shared across servers, and Data with the cause stale session records never purged. All branches point to the effect box, session timeout errors.">
-<svg viewBox="0 0 660 300" aria-hidden="true" focusable="false"><title>Cause-and-effect diagram for session timeout errors</title><desc>Four cause categories — People, Process, Technology, and Data — feeding one effect.</desc>
+<h3 id="cause-and-effect-diagram">Cause-and-Effect Diagram</h3>
+<p>A <strong>Cause-and-Effect Diagram</strong> organizes the possible causes of one problem into categories so a team can explore them systematically instead of arguing about whichever cause comes to mind first. It is also called a <strong>Fishbone Diagram</strong> because of its shape, or an <strong>Ishikawa Diagram</strong> after its originator.</p>
+<p>Use it once you have chosen a problem worth solving — typically the top bar of a Pareto chart. The problem statement goes in the head, category branches come off the spine, and specific candidate causes hang off each branch. The learner-friendly <strong>5M+E</strong> model uses <strong>Manpower / People, Machine, Method, Material, Measurement, and Environment</strong>. It corresponds closely to the traditional manufacturing-oriented “6M” formulation, using Environment for the environmental category. PMI does not mandate one universal category set; teams may tailor branches to the problem and context.</p>
+<div class="qv-figure" role="img" aria-label="5M plus E Fishbone Cause-and-Effect Diagram for ServiceBridge session timeout errors. Six branches feed the effect: Manpower or People, Machine, Method, Material, Measurement, and Environment.">
+<svg viewBox="0 0 660 320" aria-hidden="true" focusable="false"><title>5M+E Cause-and-Effect Diagram for session timeout errors</title><desc>Six categories—Manpower or People, Machine, Method, Material, Measurement, and Environment—feed one effect.</desc>
 <path class="qv-connector" d="M40 150H520"/><path class="qv-arrow" d="M508 142L522 150L508 158Z"/>
-<path class="qv-connector" d="M130 60L182 150"/><text class="qv-text" x="126" y="50" text-anchor="middle">People</text><text class="qv-text--muted" x="126" y="34" text-anchor="middle">thin load-testing skill</text>
-<path class="qv-connector" d="M300 60L352 150"/><text class="qv-text" x="296" y="50" text-anchor="middle">Process</text><text class="qv-text--muted" x="296" y="34" text-anchor="middle">no timeout value in design standard</text>
-<path class="qv-connector" d="M182 240L234 150"/><text class="qv-text" x="178" y="258" text-anchor="middle">Technology</text><text class="qv-text--muted" x="178" y="274" text-anchor="middle">session store not shared across servers</text>
-<path class="qv-connector" d="M352 240L404 150"/><text class="qv-text" x="348" y="258" text-anchor="middle">Data</text><text class="qv-text--muted" x="348" y="274" text-anchor="middle">stale session records never purged</text>
+<text class="qv-text--accent" x="40" y="24">5M+E</text>
+<path class="qv-connector" d="M105 62L160 150"/><text class="qv-text" x="105" y="38" text-anchor="middle">Manpower / People</text><text class="qv-text--muted" x="105" y="54" text-anchor="middle">limited load-test skill</text>
+<path class="qv-connector" d="M245 62L300 150"/><text class="qv-text" x="245" y="38" text-anchor="middle">Machine</text><text class="qv-text--muted" x="245" y="54" text-anchor="middle">session store not shared</text>
+<path class="qv-connector" d="M385 62L440 150"/><text class="qv-text" x="385" y="38" text-anchor="middle">Method</text><text class="qv-text--muted" x="385" y="54" text-anchor="middle">timeout omitted from standard</text>
+<path class="qv-connector" d="M175 238L230 150"/><text class="qv-text" x="175" y="262" text-anchor="middle">Material</text><text class="qv-text--muted" x="175" y="278" text-anchor="middle">stale configuration package</text>
+<path class="qv-connector" d="M315 238L370 150"/><text class="qv-text" x="315" y="262" text-anchor="middle">Measurement</text><text class="qv-text--muted" x="315" y="278" text-anchor="middle">no peak-load telemetry</text>
+<path class="qv-connector" d="M455 238L510 150"/><text class="qv-text" x="455" y="262" text-anchor="middle">Environment</text><text class="qv-text--muted" x="455" y="278" text-anchor="middle">test traffic unlike production</text>
 <rect class="qv-box--problem" x="524" y="118" width="126" height="64" rx="8"/><text class="qv-text--accent" x="587" y="144" text-anchor="middle">session timeout</text><text class="qv-text--accent" x="587" y="162" text-anchor="middle">errors</text>
 </svg>
-<p class="qv-caption">Original Atlas illustration. Categories are chosen to fit the project; People, Process, Technology, and Data suit a software context.</p>
+<p class="qv-caption">Original Atlas illustration. The 5M+E branches organize candidate causes; evidence must still confirm which cause is real.</p>
 </div>
 
 <p>Read it as a map of hypotheses, not findings. The branches show where to look; testing or data then confirms which cause is real. Teams often reach the real cause by asking "why?" repeatedly down one branch.</p>

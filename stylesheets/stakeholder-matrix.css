@@ -63,7 +63,20 @@
     min-width: 38rem;
   }
 }
-.power-interest-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .8rem; margin: 1.5rem 0; }
+.power-interest-figure { display: grid; grid-template-columns: 2.5rem 1fr; gap: .5rem; align-items: stretch; }
+.power-interest-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .8rem; margin: 0; }
 .power-interest-quadrant { min-height: 9rem; padding: 1rem; border: 2px solid var(--md-default-fg-color--lightest); border-left: .35rem solid var(--md-primary-fg-color); border-radius: .45rem; }
 .power-interest-quadrant h3 { margin-top: 0; }
-@media (max-width: 650px) { .power-interest-grid { grid-template-columns: 1fr; } }
+.power-interest-axis { font-weight: 700; letter-spacing: .02em; }
+.power-interest-axis--power { writing-mode: vertical-rl; transform: rotate(180deg); text-align: center; }
+.power-interest-axis--interest { grid-column: 2; text-align: center; }
+@media (max-width: 650px) {
+  .power-interest-figure { grid-template-columns: 1fr; }
+  .power-interest-grid { grid-template-columns: 1fr; }
+  .power-interest-axis--power { writing-mode: horizontal-tb; transform: none; text-align: left; }
+  .power-interest-axis--interest { grid-column: 1; text-align: left; }
+  .power-interest-quadrant--high-low { order: 1; }
+  .power-interest-quadrant--high-high { order: 2; }
+  .power-interest-quadrant--low-low { order: 3; }
+  .power-interest-quadrant--low-high { order: 4; }
+}
